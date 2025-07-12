@@ -1,0 +1,962 @@
+[
+  {
+    "datetime": "2023-12-08T15:30:00Z",
+    "description": "Consultation for seasonal allergies",
+    "type": "consultation",
+    "medical_specialty": "Allergology",
+    "name_of_doctor": "Dr. Camila Rojas",
+    "symptoms_experienced": "Sneezing, nasal congestion, itchy eyes",
+    "hospital_or_facility": "AllergyCare Clinic Buenos Aires",
+    "medications_prescribed": [
+      {
+        "name": "Cetirizine",
+        "dosage": "10mg"
+      },
+      {
+        "name": "Fluticasone nasal spray",
+        "dosage": "",
+        "frequency": "twice daily"
+      }
+    ],
+    "notes": "Symptoms expected to improve in 2 weeks. Follow-up if no relief."
+  },
+  {
+    "datetime": "2023-12-15T10:00:00Z",
+    "description": "Annual flu vaccine",
+    "type": "preventative care",
+    "medical_specialty": "General Practice",
+    "name_of_doctor": "Dr. Maria Gonzales",
+    "symptoms_experienced": "",
+    "hospital_or_facility": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": []
+  },
+  {
+    "datetime": "2024-01-05T10:20:00Z",
+    "description": "Annual dental check-up and cleaning",
+    "type": "check-up",
+    "medical_specialty": "Dentistry",
+    "name_of_doctor": "Dr. Isabel Torres",
+    "symptoms_experienced": "None, routine visit",
+    "hospital_or_facility": "Buenos Aires Dental Care",
+    "notes": "No cavities, recommended wisdom tooth monitoring."
+  },
+  {
+    "datetime": "2024-01-12T08:45:00Z",
+    "description": "Blood pressure monitoring follow-up",
+    "type": "check-up",
+    "medical_specialty": "Cardiology",
+    "name_of_doctor": "Dr. Luis Rodriguez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "results": [
+      {
+        "type": "Blood pressure reading",
+        "value": [
+          "120/80 mmHg"
+        ]
+      }
+    ],
+    "description_of_study": "",
+    "medications_prescribed": [],
+    "therapy_received": [],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": []
+  },
+  {
+    "datetime": "2023-06-06T09:00:00Z",
+    "description": "Follow-up for cholesterol management",
+    "type": "follow-up",
+    "medical_specialty": "Cardiology",
+    "name_of_doctor": "Dr. Luis Rodriguez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "CardioCare Specialists",
+    "medications_prescribed": [
+      {
+        "name": "Atorvastatin",
+        "dosage": "20mg",
+        "frequency": "once daily at night"
+      }
+    ],
+    "notes": "Cholesterol levels improving; continue current treatment and diet plan."
+  },
+  {
+    "datetime": "2023-06-16T11:15:00Z",
+    "description": "Screening mammogram as part of annual check-up",
+    "type": "screening",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "hospital_or_facility": "",
+    "description_of_study": "",
+    "results": [],
+    "medications_prescribed ": [],
+    "therapy_received": [],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  },
+  {
+    "datetime": "2023-07-04T15:20:00Z",
+    "description": "Evaluation for episodes of dizziness",
+    "type": "consultation",
+    "medical_specialty": "Neurology",
+    "name_of_doctor": "Dr. Ana Silva",
+    "symptoms_experienced": "Occasional dizziness, especially in the morning.",
+    "hospital_or_facility": "Buenos Aires Neurological Institute",
+    "notes": "Normal neurological exam; recommended hydration and monitoring blood pressure. Further tests planned if symptoms persist."
+  },
+  {
+    "datetime": "2023-07-12T10:30:00Z",
+    "description": "Routine colonoscopy as part of preventive health care",
+    "type": "procedure",
+    "medical_specialty": "Gastroenterology",
+    "name_of_doctor": "Dr. Eduardo Martinez",
+    "hospital_or_facility": "Central Digestive Health Clinic",
+    "results": [
+      {
+        "type": "Colonoscopy report",
+        "findings": "Benign polyp removed; no signs of malignancy."
+      }
+    ],
+    "notes": "Recommended follow-up in three years or sooner if symptoms develop."
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  },
+  {
+    "datetime": "2023-09-05T10:10:00Z",
+    "description": "Consultation due to persistent headaches",
+    "type": "consultation",
+    "medical_specialty": "Neurology",
+    "name_of_doctor": "Dr. Ana Silva",
+    "symptoms_experienced": "Frequent migraines with light sensitivity",
+    "hospital_or_facility": "Buenos Aires Neurological Institute",
+    "medications_prescribed": [
+      {
+        "name": "Sumatriptan",
+        "dosage": "50mg",
+        "frequency": "as needed at onset of migraine"
+      }
+    ],
+    "notes": "Advised to monitor frequency and triggers of migraines, maintain headache diary."
+  },
+  {
+    "datetime": "2023-09-15T15:45:00Z",
+    "description": "Routine bloodwork and lab tests",
+    "type": "lab tests",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "hospital_or_facility": "Central Diagnostic Lab",
+    "results": [
+      {
+        "type": "Lipid profile",
+        "value": "Slightly elevated LDL",
+        "notes": "Monitor dietary intake of fats"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  },
+  {
+    "datetime": "2023-04-03T10:30:00Z",
+    "description": "Annual skin cancer screening due to family history",
+    "type": "screening",
+    "medical_specialty": "Dermatology",
+    "name_of_doctor": "Dr. Carla Diaz",
+    "symptoms_experienced": "Regular check for moles or unusual skin changes",
+    "hospital_or_facility": "Skin Health Dermatology Clinic",
+    "notes": "No suspicious lesions found; continued use of SPF recommended."
+  },
+  {
+    "datetime": "2023-04-11T16:00:00Z",
+    "description": "Consultation for persistent heartburn and acid reflux",
+    "type": "consultation",
+    "medical_specialty": "Gastroenterology",
+    "name_of_doctor": "Dr. Eduardo Martinez",
+    "symptoms_experienced": "Heartburn, acid reflux particularly after meals",
+    "hospital_or_facility": "Central Digestive Health Clinic",
+    "medications_prescribed": [
+      {
+        "name": "Omeprazole",
+        "dosage": "20mg",
+        "frequency": "once daily before breakfast"
+      }
+    ],
+    "notes": "Recommended dietary modifications including smaller meals, avoiding spicy foods and caffeine."
+  },
+  {
+    "datetime": "2024-03-05T14:30:00Z",
+    "description": "Annual check-up and blood work",
+    "type": "check-up",
+    "medical_specialty": "General Practice",
+    "name_of_doctor": "Dr. Maria Gonzales",
+    "description_of_study": "Complete blood count, Lipid profile",
+    "symptoms_experienced": "None, routine check-up",
+    "hospital_or_facility": "Buenos Aires General Hospital",
+    "notes": "All within normal range, except for slightly elevated cholesterol levels."
+  },
+  {
+    "datetime": "2024-03-12T09:00:00Z",
+    "description": "Consultation for elevated cholesterol levels",
+    "type": "specialist visit",
+    "medical_specialty": "Cardiology",
+    "name_of_doctor": "Dr. Luis Rodriguez",
+    "description_of_study": "Echocardiogram, Exercise stress test",
+    "symptoms_experienced": "Occasional palpitations",
+    "hospital_or_facility": "CardioCare Specialists",
+    "medications_prescribed": [
+      {
+        "name": "Atorvastatin",
+        "dosage": "20mg",
+        "frequency": "once daily at night"
+      }
+    ],
+    "notes": "Advised lifestyle and diet changes, follow-up in six months."
+  },
+  {
+    "datetime": "2024-03-20T10:45:00Z",
+    "description": "Nutritionist visit for diet planning",
+    "type": "consultation",
+    "medical_specialty": "Nutrition",
+    "name_of_doctor": "Dr. Sofia Moreno",
+    "symptoms_experienced": "N/A",
+    "hospital_or_facility": "Health & Nutrition Consultancy",
+    "therapy_received": [
+      {
+        "type": "Dietary plan",
+        "description": "Low cholesterol and low sodium diet, increased physical activity"
+      }
+    ],
+    "notes": "Provided personalized meal plan, recommended weekly monitoring of blood pressure at home."
+  },
+  {
+    "datetime": "2024-03-28T15:20:00Z",
+    "description": "Follow-up on wrist pain",
+    "type": "specialist visit",
+    "medical_specialty": "Orthopedics",
+    "name_of_doctor": "Dr. Elena Suarez",
+    "description_of_study": "X-ray of right wrist",
+    "symptoms_experienced": "Pain and limited movement in right wrist, possible strain from computer use",
+    "hospital_or_facility": "OrthoCare Clinic",
+    "medications_prescribed": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "every 8 hours as needed for pain"
+      }
+    ],
+    "notes": "Recommended wrist brace and rest, physical therapy if no improvement in two weeks."
+  },
+  {
+    "datetime": "2023-08-07T09:30:00Z",
+    "description": "Annual vaccination against flu",
+    "type": "preventative care",
+    "medical_specialty": "Immunology",
+    "name_of_doctor": "Dr. Mateo N\u00fa\u00f1ez",
+    "hospital_or_facility": "Buenos Aires Health Clinic",
+    "notes": "Influenza vaccine administered without immediate side effects."
+  },
+  {
+    "datetime": "2023-08-14T14:00:00Z",
+    "description": "Orthopedic consultation for knee pain",
+    "type": "specialist visit",
+    "medical_specialty": "Orthopedics",
+    "name_of_doctor": "Dr. Sofia Iglesias",
+    "symptoms_experienced": "Pain in right knee during jogging",
+    "hospital_or_facility": "Advanced Orthopedics Center",
+    "results": [
+      {
+        "type": "MRI scan of right knee",
+        "findings": "Minor meniscal wear without need for immediate intervention"
+      }
+    ],
+    "medications_prescribed": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "every 8 hours for pain"
+      }
+    ],
+    "notes": "Advised rest, use of knee support when jogging, and follow-up if pain persists."
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  },
+    {
+      "datetime": "2023-12-08T15:30:00Z",
+      "description": "Consultation for seasonal allergies",
+      "type": "consultation",
+      "medical_specialty": "Allergology",
+      "name_of_doctor": "Dr. Camila Rojas",
+      "symptoms_experienced": "Sneezing, nasal congestion, itchy eyes",
+      "hospital_or_facility": "AllergyCare Clinic Buenos Aires",
+      "medications_prescribed": [
+        {
+          "name": "Cetirizine",
+          "dosage": "10mg",
+          "frequency": "once daily"
+        },
+        {
+          "name": "Fluticasone nasal spray",
+          "dosage": "",
+          "frequency": "twice daily"
+        }
+      ],
+      "notes": "Symptoms expected to improve in 2 weeks. Follow-up if no relief."
+    },
+    {
+      "datetime": "2023-12-15T10:00:00Z",
+      "description": "Annual flu vaccine",
+      "type": "preventative care",
+      "medical_specialty": "General Practice",
+      "name_of_doctor": "Dr. Maria Gonzales",
+      "symptoms_experienced": "",
+      "hospital_or_facility": ""
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": []
+    },
+    {
+      "datetime": "2024-01-05T10:20:00Z",
+      "description": "Annual dental check-up and cleaning",
+      "type": "check-up",
+      "medical_specialty": "Dentistry",
+      "name_of_doctor": "Dr. Isabel Torres",
+      "symptoms_experienced": "None, routine visit",
+      "hospital_or_facility": "Buenos Aires Dental Care",
+      "notes": "No cavities, recommended wisdom tooth monitoring."
+    },
+    {
+      "datetime": "2024-01-12T08:45:00Z",
+      "description": "Blood pressure monitoring follow-up",
+      "type": "check-up",
+      "medical_specialty": "Cardiology",
+      "name_of_doctor": "Dr. Luis Rodriguez",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "results": [
+        {
+          "type": "Blood pressure reading",
+          "value": [
+            "120/80 mmHg"
+          ]
+        }
+      ],
+      "description_of_study": "",
+      "medications_prescribed": [],
+      "therapy_received": [],
+      "notes": ""
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": []
+    },
+    {
+      "datetime": "2023-06-06T09:00:00Z",
+      "description": "Follow-up for cholesterol management",
+      "type": "follow-up",
+      "medical_specialty": "Cardiology",
+      "name_of_doctor": "Dr. Luis Rodriguez",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "CardioCare Specialists",
+      "medications_prescribed": [
+        {
+          "name": "Atorvastatin",
+          "dosage": "20mg",
+          "frequency": "once daily at night"
+        }
+      ],
+      "notes": "Cholesterol levels improving; continue current treatment and diet plan."
+    },
+    {
+      "datetime": "2023-06-16T11:15:00Z",
+      "description": "Screening mammogram as part of annual check-up",
+      "type": "screening",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "hospital_or_facility": "",
+      "description_of_study": "",
+      "results": [],
+      "medications_prescribed ": [],
+      "therapy_received": [],
+      "notes": ""
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": [],
+      "notes": ""
+    },
+    {
+      "datetime": "2023-07-04T15:20:00Z",
+      "description": "Evaluation for episodes of dizziness",
+      "type": "consultation",
+      "medical_specialty": "Neurology",
+      "name_of_doctor": "Dr. Ana Silva",
+      "symptoms_experienced": "Occasional dizziness, especially in the morning.",
+      "hospital_or_facility": "Buenos Aires Neurological Institute",
+      "notes": "Normal neurological exam; recommended hydration and monitoring blood pressure. Further tests planned if symptoms persist."
+    },
+    {
+      "datetime": "2023-07-12T10:30:00Z",
+      "description": "Routine colonoscopy as part of preventive health care",
+      "type": "procedure",
+      "medical_specialty": "Gastroenterology",
+      "name_of_doctor": "Dr. Eduardo Martinez",
+      "hospital_or_facility": "Central Digestive Health Clinic",
+      "results": [
+        {
+          "type": "Colonoscopy report",
+          "findings": "Benign polyp removed; no signs of malignancy."
+        }
+      ],
+      "notes": "Recommended follow-up in three years or sooner if symptoms develop."
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": [],
+      "notes": ""
+    },
+    {
+      "datetime": "2023-09-05T10:10:00Z",
+      "description": "Consultation due to persistent headaches",
+      "type": "consultation",
+      "medical_specialty": "Neurology",
+      "name_of_doctor": "Dr. Ana Silva",
+      "symptoms_experienced": "Frequent migraines with light sensitivity",
+      "hospital_or_facility": "Buenos Aires Neurological Institute",
+      "medications_prescribed": [
+        {
+          "name": "Sumatriptan",
+          "dosage": "50mg",
+          "frequency": "as needed at onset of migraine"
+        }
+      ],
+      "notes": "Advised to monitor frequency and triggers of migraines, maintain headache diary."
+    },
+    {
+      "datetime": "2023-09-15T15:45:00Z",
+      "description": "Routine bloodwork and lab tests",
+      "type": "lab tests",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "hospital_or_facility": "Central Diagnostic Lab",
+      "results": [
+        {
+          "type": "Lipid profile",
+          "value": "Slightly elevated LDL",
+          "notes": "Monitor dietary intake of fats"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": [],
+      "notes": ""
+    },
+    {
+      "datetime": "2023-04-03T10:30:00Z",
+      "description": "Annual skin cancer screening due to family history",
+      "type": "screening",
+      "medical_specialty": "Dermatology",
+      "name_of_doctor": "Dr. Carla Diaz",
+      "symptoms_experienced": "Regular check for moles or unusual skin changes",
+      "hospital_or_facility": "Skin Health Dermatology Clinic",
+      "notes": "No suspicious lesions found; continued use of SPF recommended."
+    },
+    {
+      "datetime": "2023-04-11T16:00:00Z",
+      "description": "Consultation for persistent heartburn and acid reflux",
+      "type": "consultation",
+      "medical_specialty": "Gastroenterology",
+      "name_of_doctor": "Dr. Eduardo Martinez",
+      "symptoms_experienced": "Heartburn, acid reflux particularly after meals",
+      "hospital_or_facility": "Central Digestive Health Clinic",
+      "medications_prescribed": [
+        {
+          "name": "Omeprazole",
+          "dosage": "20mg",
+          "frequency": "once daily before breakfast"
+        }
+      ],
+      "notes": "Recommended dietary modifications including smaller meals, avoiding spicy foods and caffeine."
+    },
+    {
+      "datetime": "2024-03-05T14:30:00Z",
+      "description": "Annual check-up and blood work",
+      "type": "check-up",
+      "medical_specialty": "General Practice",
+      "name_of_doctor": "Dr. Maria Gonzales",
+      "description_of_study": "Complete blood count, Lipid profile",
+      "symptoms_experienced": "None, routine check-up",
+      "hospital_or_facility": "Buenos Aires General Hospital",
+      "notes": "All within normal range, except for slightly elevated cholesterol levels."
+    },
+    {
+      "datetime": "2024-03-12T09:00:00Z",
+      "description": "Consultation for elevated cholesterol levels",
+      "type": "specialist visit",
+      "medical_specialty": "Cardiology",
+      "name_of_doctor": "Dr. Luis Rodriguez",
+      "description_of_study": "Echocardiogram, Exercise stress test",
+      "symptoms_experienced": "Occasional palpitations",
+      "hospital_or_facility": "CardioCare Specialists",
+      "medications_prescribed": [
+        {
+          "name": "Atorvastatin",
+          "dosage": "20mg",
+          "frequency": "once daily at night"
+        }
+      ],
+      "notes": "Advised lifestyle and diet changes, follow-up in six months."
+    },
+    {
+      "datetime": "2024-03-20T10:45:00Z",
+      "description": "Nutritionist visit for diet planning",
+      "type": "consultation",
+      "medical_specialty": "Nutrition",
+      "name_of_doctor": "Dr. Sofia Moreno",
+      "symptoms_experienced": "N/A",
+      "hospital_or_facility": "Health & Nutrition Consultancy",
+      "therapy_received": [
+        {
+          "type": "Dietary plan",
+          "description": "Low cholesterol and low sodium diet, increased physical activity"
+        }
+      ],
+      "notes": "Provided personalized meal plan, recommended weekly monitoring of blood pressure at home."
+    },
+    {
+      "datetime": "2024-03-28T15:20:00Z",
+      "description": "Follow-up on wrist pain",
+      "type": "specialist visit",
+      "medical_specialty": "Orthopedics",
+      "name_of_doctor": "Dr. Elena Suarez",
+      "description_of_study": "X-ray of right wrist",
+      "symptoms_experienced": "Pain and limited movement in right wrist, possible strain from computer use",
+      "hospital_or_facility": "OrthoCare Clinic",
+      "medications_prescribed": [
+        {
+          "name": "Ibuprofen",
+          "dosage": "400mg",
+          "frequency": "every 8 hours as needed for pain"
+        }
+      ],
+      "notes": "Recommended wrist brace and rest, physical therapy if no improvement in two weeks."
+    },
+    {
+      "datetime": "2023-08-07T09:30:00Z",
+      "description": "Annual vaccination against flu",
+      "type": "preventative care",
+      "medical_specialty": "Immunology",
+      "name_of_doctor": "Dr. Mateo N\u00fa\u00f1ez",
+      "hospital_or_facility": "Buenos Aires Health Clinic",
+      "notes": "Influenza vaccine administered without immediate side effects."
+    },
+    {
+      "datetime": "2023-08-14T14:00:00Z",
+      "description": "Orthopedic consultation for knee pain",
+      "type": "specialist visit",
+      "medical_specialty": "Orthopedics",
+      "name_of_doctor": "Dr. Sofia Iglesias",
+      "symptoms_experienced": "Pain in right knee during jogging",
+      "hospital_or_facility": "Advanced Orthopedics Center",
+      "results": [
+        {
+          "type": "MRI scan of right knee",
+          "findings": "Minor meniscal wear without need for immediate intervention"
+        }
+      ],
+      "medications_prescribed": [
+        {
+          "name": "Ibuprofen",
+          "dosage": "400mg",
+          "frequency": "every 8 hours for pain"
+        }
+      ],
+      "notes": "Advised rest, use of knee support when jogging, and follow-up if pain persists."
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": [],
+      "notes": ""
+    },
+    {
+      "datetime": "2023-05-02T14:30:00Z",
+      "description": "Consultation with endocrinologist for thyroid function check",
+      "type": "specialist visit",
+      "medical_specialty": "Endocrinology",
+      "name_of_doctor": "Dr. Esteban Rios",
+      "symptoms_experienced": "Feeling of fatigue and occasional palpitations",
+      "hospital_or_facility": "Capital Health Endocrinology Clinic",
+      "results": [
+        {
+          "test_name": "Thyroid Stimulating Hormone (TSH) level",
+          "result": "Slightly elevated"
+        }
+      ],
+      "medications_prescribed": [
+        {
+          "name": "Levothyroxine",
+          "dosage": "50 mcg",
+          "frequency": "once daily in the morning"
+        }
+      ],
+      "notes": "Advised to avoid consuming foods rich in iodine and to recheck levels in 6 months."
+    },
+    {
+      "datetime": "2023-05-15T09:15:00Z",
+      "description": "Routine physical therapy session for chronic lower back pain",
+      "type": "therapy received",
+      "medical_specialty": "Physical Therapy",
+      "name_of_physiotherapist": "Lucia Fernandez",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "description_of_study": "",
+      "therapy_received": [
+        {
+          "type": "",
+          "description": ""
+        }
+      ],
+      "results": [],
+      "medications_prescribed": [],
+      "notes": ""
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": []
+    },
+    {
+      "datetime": "2024-02-03T11:30:00Z",
+      "description": "Dermatology appointment for skin assessment",
+      "type": "specialist visit",
+      "medical_specialty": "Dermatology",
+      "name_of_doctor": "Dr. Carla Diaz",
+      "symptoms_experienced": "Skin rash on the forearm",
+      "hospital_or_facility": "Skin Health Dermatology Clinic",
+      "notes": "Diagnosed with eczema, prescribed topical corticosteroid cream."
+    },
+    {
+      "datetime": "2024-02-10T15:00:00Z",
+      "description": "Emergency visit for acute back pain",
+      "type": "emergency assistance",
+      "medical_specialty": "Emergency Medicine",
+      "name_of_doctor": "Dr. Roberto Alvarez",
+      "symptoms_experienced": "Sudden onset of lower back pain after lifting heavy object",
+      "hospital_or_facility": "Buenos Aires Emergency Hospital",
+      "medications_prescribed": [
+        {
+          "name": "Naproxen",
+          "dosage": "500mg",
+          "frequency": "twice daily"
+        }
+      ],
+      "notes": "Advised rest, application of heat, and follow-up with orthopedist if not improved. No signs of severe injury."
+    },
+    {
+      "datetime": "2024-02-17T09:20:00Z",
+      "description": "Physiotherapy session for back pain recovery",
+      "type": "therapy received",
+      "medical_specialty": "Physical Therapy",
+      "name_of_physiotherapist": "Lucia Fernandez",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "Physical Health and Rehab Center",
+      "therapy_received": [
+        {
+          "type": "Manual therapy and exercise program",
+          "description": ""
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "datetime": "2024-02-24T13:45:00Z",
+      "description": "Follow-up appointment with orthopedist for back pain assessment",
+      "type": "specialist visit",
+      "medical_specialty": "Orthopedics",
+      "name_of_doctor": "",
+      "description_of_study": ""
+    },
+    {
+      "datetime": "2023-11-04T09:30:00Z",
+      "description": "Routine eye examination and vision test",
+      "type": "check-up",
+      "medical_specialty": "Ophthalmology",
+      "name_of_doctor": "Dr. Hernan Suarez",
+      "symptoms_experienced": "Slight difficulty reading small print",
+      "hospital_or_facility": "VisionFirst Eye Care Center",
+      "notes": "Prescription for reading glasses given, no signs of cataracts or glaucoma."
+    },
+    {
+      "datetime": "2023-11-14T16:30:00Z",
+      "description": "Physical therapy session for chronic lower back pain",
+      "type": "therapy received",
+      "medical_specialty": "Physical Therapy",
+      "name_of_physiotherapist": "Lucia Fernandez",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "description_of_study": "",
+      "therapy_received": [
+        {
+          "type": "",
+          "description": ""
+        }
+      ],
+      "results": [],
+      "medications_prescribed": [],
+      "notes": ""
+    },
+    {
+      "datetime": "-",
+      "description": "",
+      "type": "",
+      "medical_specialty": "",
+      "name_of_doctor": "",
+      "description_of_study": "",
+      "symptoms_experienced": "",
+      "hospital_or_facility": "",
+      "medications_prescribed ": []
+    },
+    {
+    "datetime": "2023-05-02T14:30:00Z",
+    "description": "Consultation with endocrinologist for thyroid function check",
+    "type": "specialist visit",
+    "medical_specialty": "Endocrinology",
+    "name_of_doctor": "Dr. Esteban Rios",
+    "symptoms_experienced": "Feeling of fatigue and occasional palpitations",
+    "hospital_or_facility": "Capital Health Endocrinology Clinic",
+    "results": [
+      {
+        "test_name": "Thyroid Stimulating Hormone (TSH) level",
+        "result": "Slightly elevated"
+      }
+    ],
+    "medications_prescribed": [
+      {
+        "name": "Levothyroxine",
+        "dosage": "50 mcg",
+        "frequency": "once daily in the morning"
+      }
+    ],
+    "notes": "Advised to avoid consuming foods rich in iodine and to recheck levels in 6 months."
+  },
+  {
+    "datetime": "2023-05-15T09:15:00Z",
+    "description": "Routine physical therapy session for chronic lower back pain",
+    "type": "therapy received",
+    "medical_specialty": "Physical Therapy",
+    "name_of_physiotherapist": "Lucia Fernandez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "description_of_study": "",
+    "therapy_received": [
+      {
+        "type": "",
+        "description": ""
+      }
+    ],
+    "results": [],
+    "medications_prescribed": [],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": []
+  },
+  {
+    "datetime": "2024-02-03T11:30:00Z",
+    "description": "Dermatology appointment for skin assessment",
+    "type": "specialist visit",
+    "medical_specialty": "Dermatology",
+    "name_of_doctor": "Dr. Carla Diaz",
+    "symptoms_experienced": "Skin rash on the forearm",
+    "hospital_or_facility": "Skin Health Dermatology Clinic",
+    "notes": "Diagnosed with eczema, prescribed topical corticosteroid cream."
+  },
+  {
+    "datetime": "2024-02-10T15:00:00Z",
+    "description": "Emergency visit for acute back pain",
+    "type": "emergency assistance",
+    "medical_specialty": "Emergency Medicine",
+    "name_of_doctor": "Dr. Roberto Alvarez",
+    "symptoms_experienced": "Sudden onset of lower back pain after lifting heavy object",
+    "hospital_or_facility": "Buenos Aires Emergency Hospital",
+    "medications_prescribed": [
+      {
+        "name": "Naproxen",
+        "dosage": "500mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "notes": "Advised rest, application of heat, and follow-up with orthopedist if not improved. No signs of severe injury."
+  },
+  {
+    "datetime": "2024-02-17T09:20:00Z",
+    "description": "Physiotherapy session for back pain recovery",
+    "type": "therapy received",
+    "medical_specialty": "Physical Therapy",
+    "name_of_physiotherapist": "Lucia Fernandez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "Physical Health and Rehab Center",
+    "therapy_received": [
+      {
+        "type": "Manual therapy and exercise program",
+        "description": ""
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "datetime": "2024-02-24T13:45:00Z",
+    "description": "Follow-up appointment with orthopedist for back pain assessment",
+    "type": "specialist visit",
+    "medical_specialty": "Orthopedics",
+    "name_of_doctor": "",
+    "description_of_study": ""
+  },
+  {
+    "datetime": "2023-11-04T09:30:00Z",
+    "description": "Routine eye examination and vision test",
+    "type": "check-up",
+    "medical_specialty": "Ophthalmology",
+    "name_of_doctor": "Dr. Hernan Suarez",
+    "symptoms_experienced": "Slight difficulty reading small print",
+    "hospital_or_facility": "VisionFirst Eye Care Center",
+    "notes": "Prescription for reading glasses given, no signs of cataracts or glaucoma."
+  },
+  {
+    "datetime": "2023-11-14T16:30:00Z",
+    "description": "Physical therapy session for chronic lower back pain",
+    "type": "therapy received",
+    "medical_specialty": "Physical Therapy",
+    "name_of_physiotherapist": "Lucia Fernandez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "description_of_study": "",
+    "therapy_received": [
+      {
+        "type": "",
+        "description": ""
+      }
+    ],
+    "results": [],
+    "medications_prescribed": [],
+    "notes": ""
+  }
+]

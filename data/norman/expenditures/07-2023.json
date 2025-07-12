@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-07-01T08:00:00Z",
+    "description": "Home A/C unit maintenance",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 150.0,
+    "total_cost": 150.0,
+    "payment_method": "debit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-07-03T12:00:00Z",
+    "description": "Family pool passes for the summer",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "pass",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-07-06T10:30:00Z",
+    "description": "Weekend trip lodging reservation",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "booking",
+    "unit_price": 600.0,
+    "total_cost": 600.0,
+    "payment_method": "credit card",
+    "area_of_life": "travel"
+  },
+  {
+    "datetime": "2023-07-09T17:00:00Z",
+    "description": "Grocery shopping for the week",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 180.0,
+    "total_cost": 180.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-07-13T15:45:00Z",
+    "description": "Summer camp deposit for twins",
+    "type": "one-time",
+    "amount": 2,
+    "unit_of_measure": "registration",
+    "unit_price": 300.0,
+    "total_cost": 600.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-07-16T09:00:00Z",
+    "description": "Renewal of professional engineering association membership",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "membership",
+    "unit_price": 120.0,
+    "total_cost": 120.0,
+    "payment_method": "direct debit",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2023-07-19T20:00:00Z",
+    "description": "Outdoor grill purchase",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 450.0,
+    "total_cost": 450.0,
+    "payment_method": "credit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-07-23T18:30:00Z",
+    "description": "Dining out with family at beachside restaurant",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 35.0,
+    "total_cost": 140.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-07-27T10:00:00Z",
+    "description": "Children's swimming lessons",
+    "type": "subscription",
+    "amount": 2,
+    "unit_of_measure": "course",
+    "unit_price": 100.0,
+    "total_cost": 200.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-07-30T12:00:00Z",
+    "description": "New books and video games for vacation",
+    "type": "one-time",
+    "amount": 5,
+    "unit_of_measure": "item",
+    "unit_price": 40.0,
+    "total_cost": 200.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  }
+]

@@ -1,0 +1,114 @@
+[
+    {
+      "given_name": "Julia",
+      "_key": "Julia",
+      "family_name": "Gonzalez",
+      "age": 40,
+      "relationship_to_master_node": "wife"
+    },
+    {
+      "given_name": "Lucas",
+      "_key": "Lucas",
+      "family_name": "Gonzalez",
+      "age": 10,
+      "relationship_to_master_node": "son"
+    },
+    {
+      "given_name": "Julia",
+      "_key": "q3498fqwp98fqpw9e8fj",
+      "family_name": "Hernandez",
+      "age": 10,
+      "relationship_to_master_node": "sons_girlfriend"
+    },
+    {
+      "given_name": "Mia",
+      "_key": "Mia",
+      "family_name": "Gonzalez",
+      "age": 8,
+      "relationship_to_master_node": "daughter"
+    },
+    {
+      "given_name": "Eva",
+      "_key": "Eva",
+      "family_name": "Gonzalez",
+      "age": 8,
+      "relationship_to_master_node": "daughter"
+    },
+    {
+      "given_name": "Carlos",
+      "_key": "Carlos",
+      "family_name": "Gonzalez",
+      "age": 68,
+      "relationship_to_master_node": "father"
+    },
+    {
+      "given_name": "Isabel",
+      "_key": "Isabel",
+      "family_name": "Gonzalez",
+      "age": 65,
+      "relationship_to_master_node": "mother"
+    },
+    {
+      "given_name": "Mario",
+      "_key": "Mario",
+      "family_name": "Gonzalez",
+      "age": 45,
+      "relationship_to_master_node": "brother"
+    },
+    {
+      "given_name": "Ana",
+      "_key": "Ana",
+      "family_name": "Martinez",
+      "age": 43,
+      "relationship_to_master_node": "sister_in_law"
+    },
+    {
+      "given_name": "Pedro",
+      "_key": "Pedro",
+      "family_name": "Gonzalez",
+      "age": 38,
+      "relationship_to_master_node": "brother"
+    },
+    {
+      "given_name": "Sofia",
+      "_key": "Sofia",
+      "family_name": "",
+      "age": 42,
+      "relationship_to_master_node": "friend"
+    },
+    {
+      "given_name": "Rafael",
+      "_key": "Rafael",
+      "family_name": "Lopez",
+      "age": 36,
+      "relationship_to_master_node": "friend"
+    },
+    {
+      "given_name": "Liam",
+      "_key": "Liam",
+      "family_name": "Lopez",
+      "age": 68,
+      "relationship_to_master_node": "friend"
+    },
+    {
+      "given_name": "Olivia",
+      "_key": "Olivia",
+      "family_name": "",
+      "age": 45,
+      "relationship_to_master_node": "friend"
+    },
+    {
+      "given_name": "Ethan",
+      "_key": "Ethan",
+      "family_name": "",
+      "age": 72,
+      "relationship_to_master_node": "friend"
+    },
+    {
+      "given_name": "Amelia",
+      "_key": "Amelia",
+      "family_name": "",
+      "age": 55,
+      "relationship_to_master_node": "friend"
+    }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "datetime": "2023-06-06T09:00:00Z",
+    "description": "Follow-up for cholesterol management",
+    "type": "follow-up",
+    "medical_specialty": "Cardiology",
+    "name_of_doctor": "Dr. Luis Rodriguez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "CardioCare Specialists",
+    "medications_prescribed": [
+      {
+        "name": "Atorvastatin",
+        "dosage": "20mg",
+        "frequency": "once daily at night"
+      }
+    ],
+    "notes": "Cholesterol levels improving; continue current treatment and diet plan."
+  },
+  {
+    "datetime": "2023-06-16T11:15:00Z",
+    "description": "Screening mammogram as part of annual check-up",
+    "type": "screening",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "hospital_or_facility": "",
+    "description_of_study": "",
+    "results": [],
+    "medications_prescribed ": [],
+    "therapy_received": [],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  }
+]

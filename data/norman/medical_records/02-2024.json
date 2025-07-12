@@ -1,0 +1,53 @@
+[
+  {
+    "datetime": "2024-02-03T11:30:00Z",
+    "description": "Dermatology appointment for skin assessment",
+    "type": "specialist visit",
+    "medical_specialty": "Dermatology",
+    "name_of_doctor": "Dr. Carla Diaz",
+    "symptoms_experienced": "Skin rash on the forearm",
+    "hospital_or_facility": "Skin Health Dermatology Clinic",
+    "notes": "Diagnosed with eczema, prescribed topical corticosteroid cream."
+  },
+  {
+    "datetime": "2024-02-10T15:00:00Z",
+    "description": "Emergency visit for acute back pain",
+    "type": "emergency assistance",
+    "medical_specialty": "Emergency Medicine",
+    "name_of_doctor": "Dr. Roberto Alvarez",
+    "symptoms_experienced": "Sudden onset of lower back pain after lifting heavy object",
+    "hospital_or_facility": "Buenos Aires Emergency Hospital",
+    "medications_prescribed": [
+      {
+        "name": "Naproxen",
+        "dosage": "500mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "notes": "Advised rest, application of heat, and follow-up with orthopedist if not improved. No signs of severe injury."
+  },
+  {
+    "datetime": "2024-02-17T09:20:00Z",
+    "description": "Physiotherapy session for back pain recovery",
+    "type": "therapy received",
+    "medical_specialty": "Physical Therapy",
+    "name_of_physiotherapist": "Lucia Fernandez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "Physical Health and Rehab Center",
+    "therapy_received": [
+      {
+        "type": "Manual therapy and exercise program",
+        "description": ""
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "datetime": "2024-02-24T13:45:00Z",
+    "description": "Follow-up appointment with orthopedist for back pain assessment",
+    "type": "specialist visit",
+    "medical_specialty": "Orthopedics",
+    "name_of_doctor": "",
+    "description_of_study": ""
+  }
+]

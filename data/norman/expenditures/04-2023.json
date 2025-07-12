@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-04-01T09:00:00Z",
+    "description": "Electricity bill",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 80.0,
+    "total_cost": 80.0,
+    "payment_method": "direct debit",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-04-03T15:30:00Z",
+    "description": "Annual antivirus software subscription",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "license",
+    "unit_price": 50.0,
+    "total_cost": 50.0,
+    "payment_method": "credit card",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2023-04-06T18:45:00Z",
+    "description": "Dining out with family at Japanese restaurant",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 25.0,
+    "total_cost": 100.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-04-09T12:00:00Z",
+    "description": "New bicycle for son's birthday",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-04-12T07:00:00Z",
+    "description": "Water bill",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 40.0,
+    "total_cost": 40.0,
+    "payment_method": "direct debit",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-04-15T10:15:00Z",
+    "description": "Gardening supplies for spring planting",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "batch",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "debit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-04-18T16:30:00Z",
+    "description": "Movie night at home (rental films)",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "event",
+    "unit_price": 10.0,
+    "total_cost": 10.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-04-21T14:00:00Z",
+    "description": "Haircut and styling",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 30.0,
+    "total_cost": 30.0,
+    "payment_method": "cash",
+    "area_of_life": "personal"
+  },
+  {
+    "datetime": "2023-04-24T11:00:00Z",
+    "description": "Books for personal and professional development",
+    "type": "one-time",
+    "amount": 3,
+    "unit_of_measure": "book",
+    "unit_price": 20.0,
+    "total_cost": 60.0,
+    "payment_method": "debit card",
+    "area_of_life": "personal development"
+  },
+  {
+    "datetime": "2023-04-27T08:30:00Z",
+    "description": "Car wash and interior detailing",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 50.0,
+    "total_cost": 50.0,
+    "payment_method": "cash",
+    "area_of_life": "transportation"
+  }
+]

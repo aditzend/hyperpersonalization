@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2024-01-02T10:30:00Z",
+    "description": "New Year's party supplies",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "bundle",
+    "unit_price": 120.0,
+    "total_cost": 120.0,
+    "payment_method": "debit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2024-01-05T16:00:00Z",
+    "description": "Membership renewal for coding platform",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 80.0,
+    "total_cost": 80.0,
+    "payment_method": "credit card",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2024-01-08T14:00:00Z",
+    "description": "Grocery shopping",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 160.0,
+    "total_cost": 160.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2024-01-12T09:00:00Z",
+    "description": "Electricity bill",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 90.0,
+    "total_cost": 90.0,
+    "payment_method": "direct debit",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2024-01-15T17:30:00Z",
+    "description": "Annual car insurance",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "policy",
+    "unit_price": 600.0,
+    "total_cost": 600.0,
+    "payment_method": "credit card",
+    "area_of_life": "transportation"
+  },
+  {
+    "datetime": "2024-01-20T11:45:00Z",
+    "description": "Dining out with family",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 30.0,
+    "total_cost": 120.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2024-01-22T08:00:00Z",
+    "description": "Personal trainer session (pack of 5 sessions)",
+    "type": "one-time",
+    "amount": 5,
+    "unit_of_measure": "session",
+    "unit_price": 50.0,
+    "total_cost": 250.0,
+    "payment_method": "debit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2024-01-26T12:30:00Z",
+    "description": "Home office equipment (desk and chair)",
+    "type": "one-time",
+    "amount": 2,
+    "unit_of_measure": "item",
+    "unit_price": 300.0,
+    "total_cost": 600.0,
+    "payment_method": "debit card",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2024-01-29T19:00:00Z",
+    "description": "Subscription to a healthy eating magazine",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 40.0,
+    "total_cost": 40.0,
+    "payment_method": "credit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2024-01-31T13:00:00Z",
+    "description": "Donation to children's education charity",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "donation",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "credit card",
+    "area_of_life": "social responsibility"
+  }
+]

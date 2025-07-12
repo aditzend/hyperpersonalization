@@ -1,0 +1,39 @@
+[
+  {
+    "datetime": "2023-07-04T15:20:00Z",
+    "description": "Evaluation for episodes of dizziness",
+    "type": "consultation",
+    "medical_specialty": "Neurology",
+    "name_of_doctor": "Dr. Ana Silva",
+    "symptoms_experienced": "Occasional dizziness, especially in the morning.",
+    "hospital_or_facility": "Buenos Aires Neurological Institute",
+    "notes": "Normal neurological exam; recommended hydration and monitoring blood pressure. Further tests planned if symptoms persist."
+  },
+  {
+    "datetime": "2023-07-12T10:30:00Z",
+    "description": "Routine colonoscopy as part of preventive health care",
+    "type": "procedure",
+    "medical_specialty": "Gastroenterology",
+    "name_of_doctor": "Dr. Eduardo Martinez",
+    "hospital_or_facility": "Central Digestive Health Clinic",
+    "results": [
+      {
+        "type": "Colonoscopy report",
+        "findings": "Benign polyp removed; no signs of malignancy."
+      }
+    ],
+    "notes": "Recommended follow-up in three years or sooner if symptoms develop."
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  }
+]

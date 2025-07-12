@@ -1,0 +1,42 @@
+[
+  {
+    "datetime": "2024-01-05T10:20:00Z",
+    "description": "Annual dental check-up and cleaning",
+    "type": "check-up",
+    "medical_specialty": "Dentistry",
+    "name_of_doctor": "Dr. Isabel Torres",
+    "symptoms_experienced": "None, routine visit",
+    "hospital_or_facility": "Buenos Aires Dental Care",
+    "notes": "No cavities, recommended wisdom tooth monitoring."
+  },
+  {
+    "datetime": "2024-01-12T08:45:00Z",
+    "description": "Blood pressure monitoring follow-up",
+    "type": "check-up",
+    "medical_specialty": "Cardiology",
+    "name_of_doctor": "Dr. Luis Rodriguez",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "results": [
+      {
+        "type": "Blood pressure reading",
+        "value": ["120/80 mmHg"]
+      }
+    ],
+    "description_of_study": "",
+    "medications_prescribed": [],
+    "therapy_received": [],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": []
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "datetime": "2024-03-01T15:00:00Z",
+    "description": "Groceries for the week",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 150.0,
+    "total_cost": 150.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2024-03-03T10:00:00Z",
+    "description": "Monthly gym membership",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "month",
+    "unit_price": 50.0,
+    "total_cost": 50.0,
+    "payment_method": "credit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2024-03-05T18:30:00Z",
+    "description": "Dining out at Italian restaurant",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 25.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2024-03-10T13:00:00Z",
+    "description": "Books (2 novels, 1 travel guide)",
+    "type": "one-time",
+    "amount": 3,
+    "unit_of_measure": "book",
+    "unit_price": 20.0,
+    "total_cost": 60.0,
+    "payment_method": "debit card",
+    "area_of_life": "personal development"
+  },
+  {
+    "datetime": "2024-03-15T08:00:00Z",
+    "description": "Online course subscription on mobile app development",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "course",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2024-03-20T16:45:00Z",
+    "description": "Children's school supplies",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "set",
+    "unit_price": 75.0,
+    "total_cost": 75.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2024-03-22T19:30:00Z",
+    "description": "Tickets to a football match for the family",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "ticket",
+    "unit_price": 30.0,
+    "total_cost": 120.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2024-03-25T14:00:00Z",
+    "description": "Medical check-up",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "appointment",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "debit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2024-03-30T12:00:00Z",
+    "description": "Fuel for the car",
+    "type": "one-time",
+    "amount": 50,
+    "unit_of_measure": "liter",
+    "unit_price": 1.2,
+    "total_cost": 60.0,
+    "payment_method": "debit card",
+    "area_of_life": "transportation"
+  }
+]

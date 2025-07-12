@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-09-01T08:00:00Z",
+    "description": "Annual school tuition fee for children",
+    "type": "one-time",
+    "amount": 3,
+    "unit_of_measure": "tuition",
+    "unit_price": 1200.0,
+    "total_cost": 3600.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-09-03T12:30:00Z",
+    "description": "Lunch out with family at local diner",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 15.0,
+    "total_cost": 60.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-09-05T09:00:00Z",
+    "description": "Coffee machine replacement",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 250.0,
+    "total_cost": 250.0,
+    "payment_method": "debit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-09-08T15:00:00Z",
+    "description": "Monthly streaming service subscription",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 12.0,
+    "total_cost": 12.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-09-12T18:00:00Z",
+    "description": "New soccer shoes for son",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "pair",
+    "unit_price": 80.0,
+    "total_cost": 80.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-09-15T14:00:00Z",
+    "description": "Groceries",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-09-18T07:30:00Z",
+    "description": "Annual gym membership renewal",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "year",
+    "unit_price": 480.0,
+    "total_cost": 480.0,
+    "payment_method": "credit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2023-09-22T20:00:00Z",
+    "description": "Dinner date with spouse",
+    "type": "one-time",
+    "amount": 2,
+    "unit_of_measure": "person",
+    "unit_price": 45.0,
+    "total_cost": 90.0,
+    "payment_method": "credit card",
+    "area_of_life": "relationship"
+  },
+  {
+    "datetime": "2023-09-25T12:00:00Z",
+    "description": "Birth month charity donation",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "donation",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "debit card",
+    "area_of_life": "social responsibility"
+  },
+  {
+    "datetime": "2023-09-29T16:00:00Z",
+    "description": "Home office desk chair",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 150.0,
+    "total_cost": 150.0,
+    "payment_method": "debit card",
+    "area_of_life": "career"
+  }
+]

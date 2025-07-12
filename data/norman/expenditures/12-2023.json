@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-12-01T10:00:00Z",
+    "description": "Monthly subscription to streaming service",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 15.0,
+    "total_cost": 15.0,
+    "payment_method": "direct debit",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-12-05T16:00:00Z",
+    "description": "Christmas tree and decorations",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "set",
+    "unit_price": 150.0,
+    "total_cost": 150.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-12-08T14:00:00Z",
+    "description": "Grocery shopping for holiday meals",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-12-12T18:30:00Z",
+    "description": "Gifts for family and friends",
+    "type": "one-time",
+    "amount": 10,
+    "unit_of_measure": "item",
+    "unit_price": 50.0,
+    "total_cost": 500.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-12-15T20:00:00Z",
+    "description": "Office holiday party contribution",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "event",
+    "unit_price": 30.0,
+    "total_cost": 30.0,
+    "payment_method": "cash",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2023-12-18T13:00:00Z",
+    "description": "Fuel for visiting relatives",
+    "type": "one-time",
+    "amount": 70,
+    "unit_of_measure": "liter",
+    "unit_price": 1.1,
+    "total_cost": 77.0,
+    "payment_method": "debit card",
+    "area_of_life": "transportation"
+  },
+  {
+    "datetime": "2023-12-21T12:00:00Z",
+    "description": "Holiday getaway reservation deposit",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "booking",
+    "unit_price": 300.0,
+    "total_cost": 300.0,
+    "payment_method": "credit card",
+    "area_of_life": "travel"
+  },
+  {
+    "datetime": "2023-12-24T09:00:00Z",
+    "description": "Last-minute holiday groceries",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-12-27T11:00:00Z",
+    "description": "End of year charity donation",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "donation",
+    "unit_price": 250.0,
+    "total_cost": 250.0,
+    "payment_method": "credit card",
+    "area_of_life": "social responsibility"
+  },
+  {
+    "datetime": "2023-12-31T15:00:00Z",
+    "description": "New Year's Eve party supplies",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "bundle",
+    "unit_price": 80.0,
+    "total_cost": 80.0,
+    "payment_method": "debit card",
+    "area_of_life": "entertainment"
+  }
+]

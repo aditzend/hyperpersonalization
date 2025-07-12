@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-05-02T08:45:00Z",
+    "description": "Monthly cell phone bill",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 90.0,
+    "total_cost": 90.0,
+    "payment_method": "direct debit",
+    "area_of_life": "communication"
+  },
+  {
+    "datetime": "2023-05-04T17:30:00Z",
+    "description": "Mother's Day flowers and gift for Julia",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 120.0,
+    "total_cost": 120.0,
+    "payment_method": "credit card",
+    "area_of_life": "relationship"
+  },
+  {
+    "datetime": "2023-05-08T14:00:00Z",
+    "description": "Bi-weekly cleaning service",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "debit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-05-12T13:00:00Z",
+    "description": "Annual subscription to a coding tutorial platform",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "access",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "credit card",
+    "area_of_life": "career"
+  },
+  {
+    "datetime": "2023-05-15T09:00:00Z",
+    "description": "Grocery shopping",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 250.0,
+    "total_cost": 250.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-05-19T20:00:00Z",
+    "description": "Dinner out with family at local seafood restaurant",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 40.0,
+    "total_cost": 160.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-05-22T07:30:00Z",
+    "description": "Premium coffee beans subscription",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "delivery",
+    "unit_price": 30.0,
+    "total_cost": 30.0,
+    "payment_method": "debit card",
+    "area_of_life": "personal"
+  },
+  {
+    "datetime": "2023-05-25T18:45:00Z",
+    "description": "New books for summer reading",
+    "type": "one-time",
+    "amount": 5,
+    "unit_of_measure": "book",
+    "unit_price": 20.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "personal development"
+  },
+  {
+    "datetime": "2023-05-28T11:00:00Z",
+    "description": "Gasoline for family car",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "fill-up",
+    "unit_price": 60.0,
+    "total_cost": 60.0,
+    "payment_method": "debit card",
+    "area_of_life": "transportation"
+  },
+  {
+    "datetime": "2023-05-31T15:30:00Z",
+    "description": "New summer clothing and accessories",
+    "type": "one-time",
+    "amount": 2,
+    "unit_of_measure": "outfit",
+    "unit_price": 150.0,
+    "total_cost": 300.0,
+    "payment_method": "credit card",
+    "area_of_life": "personal"
+  }
+]

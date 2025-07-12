@@ -1,0 +1,29 @@
+[
+  {
+    "datetime": "2023-04-03T10:30:00Z",
+    "description": "Annual skin cancer screening due to family history",
+    "type": "screening",
+    "medical_specialty": "Dermatology",
+    "name_of_doctor": "Dr. Carla Diaz",
+    "symptoms_experienced": "Regular check for moles or unusual skin changes",
+    "hospital_or_facility": "Skin Health Dermatology Clinic",
+    "notes": "No suspicious lesions found; continued use of SPF recommended."
+  },
+  {
+    "datetime": "2023-04-11T16:00:00Z",
+    "description": "Consultation for persistent heartburn and acid reflux",
+    "type": "consultation",
+    "medical_specialty": "Gastroenterology",
+    "name_of_doctor": "Dr. Eduardo Martinez",
+    "symptoms_experienced": "Heartburn, acid reflux particularly after meals",
+    "hospital_or_facility": "Central Digestive Health Clinic",
+    "medications_prescribed": [
+      {
+        "name": "Omeprazole",
+        "dosage": "20mg",
+        "frequency": "once daily before breakfast"
+      }
+    ],
+    "notes": "Recommended dietary modifications including smaller meals, avoiding spicy foods and caffeine."
+  }
+]

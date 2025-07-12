@@ -1,0 +1,74 @@
+[
+  {
+    "year": 2000,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Barcelona, Spain",
+    "airline": "Iberia Airlines",
+    "dollars_spent": 3000,
+    "family_members": ["Norman", "Julia"]
+  },
+  {
+    "year": 2003,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Rio de Janeiro, Brazil",
+    "airline": "LATAM Airlines",
+    "dollars_spent": 1500,
+    "family_members": ["Norman", "Julia", "son"]
+  },
+  {
+    "year": 2005,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Cancun, Mexico",
+    "airline": "Aerolíneas Argentinas",
+    "dollars_spent": 4000,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  },
+  {
+    "year": 2008,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Rome, Italy",
+    "airline": "Alitalia",
+    "dollars_spent": 5500,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  },
+  {
+    "year": 2012,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Sydney, Australia",
+    "airline": "Qantas",
+    "dollars_spent": 8500,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  },
+  {
+    "year": 2015,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Tokyo, Japan",
+    "airline": "Japan Airlines",
+    "dollars_spent": 9500,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  },
+  {
+    "year": 2018,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Cape Town, South Africa",
+    "airline": "South African Airways",
+    "dollars_spent": 10000,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  },
+  {
+    "year": 2021,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Vancouver, Canada",
+    "airline": "Air Canada",
+    "dollars_spent": 8000,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  },
+  {
+    "year": 2024,
+    "origin_city": "Buenos Aires, Argentina",
+    "destination_city": "Athens, Greece",
+    "airline": "British Airways",
+    "dollars_spent": 11000,
+    "family_members": ["Norman", "Julia", "son", "twin_1", "twin_2"]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "datetime": "2024-03-05T14:30:00Z",
+    "description": "Annual check-up and blood work",
+    "type": "check-up",
+    "medical_specialty": "General Practice",
+    "name_of_doctor": "Dr. Maria Gonzales",
+    "description_of_study": "Complete blood count, Lipid profile",
+    "symptoms_experienced": "None, routine check-up",
+    "hospital_or_facility": "Buenos Aires General Hospital",
+    "notes": "All within normal range, except for slightly elevated cholesterol levels."
+  },
+  {
+    "datetime": "2024-03-12T09:00:00Z",
+    "description": "Consultation for elevated cholesterol levels",
+    "type": "specialist visit",
+    "medical_specialty": "Cardiology",
+    "name_of_doctor": "Dr. Luis Rodriguez",
+    "description_of_study": "Echocardiogram, Exercise stress test",
+    "symptoms_experienced": "Occasional palpitations",
+    "hospital_or_facility": "CardioCare Specialists",
+    "medications_prescribed": [
+      {
+        "name": "Atorvastatin",
+        "dosage": "20mg",
+        "frequency": "once daily at night"
+      }
+    ],
+    "notes": "Advised lifestyle and diet changes, follow-up in six months."
+  },
+  {
+    "datetime": "2024-03-20T10:45:00Z",
+    "description": "Nutritionist visit for diet planning",
+    "type": "consultation",
+    "medical_specialty": "Nutrition",
+    "name_of_doctor": "Dr. Sofia Moreno",
+    "symptoms_experienced": "N/A",
+    "hospital_or_facility": "Health & Nutrition Consultancy",
+    "therapy_received": [
+      {
+        "type": "Dietary plan",
+        "description": "Low cholesterol and low sodium diet, increased physical activity"
+      }
+    ],
+    "notes": "Provided personalized meal plan, recommended weekly monitoring of blood pressure at home."
+  },
+  {
+    "datetime": "2024-03-28T15:20:00Z",
+    "description": "Follow-up on wrist pain",
+    "type": "specialist visit",
+    "medical_specialty": "Orthopedics",
+    "name_of_doctor": "Dr. Elena Suarez",
+    "description_of_study": "X-ray of right wrist",
+    "symptoms_experienced": "Pain and limited movement in right wrist, possible strain from computer use",
+    "hospital_or_facility": "OrthoCare Clinic",
+    "medications_prescribed": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "every 8 hours as needed for pain"
+      }
+    ],
+    "notes": "Recommended wrist brace and rest, physical therapy if no improvement in two weeks."
+  }
+]

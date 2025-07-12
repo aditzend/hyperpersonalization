@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-06-01T08:00:00Z",
+    "description": "Monthly gym membership",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 40.0,
+    "total_cost": 40.0,
+    "payment_method": "direct debit",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2023-06-03T17:30:00Z",
+    "description": "Garden landscaping services",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 500.0,
+    "total_cost": 500.0,
+    "payment_method": "credit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-06-07T15:00:00Z",
+    "description": "Annual car maintenance and inspection",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 300.0,
+    "total_cost": 300.0,
+    "payment_method": "debit card",
+    "area_of_life": "transportation"
+  },
+  {
+    "datetime": "2023-06-10T09:00:00Z",
+    "description": "Weekend family zoo visit",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "ticket",
+    "unit_price": 25.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-06-13T12:30:00Z",
+    "description": "Biweekly groceries",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 200.0,
+    "total_cost": 200.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-06-16T18:00:00Z",
+    "description": "Father's Day gift for Norman's father",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 150.0,
+    "total_cost": 150.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-06-20T10:00:00Z",
+    "description": "New summer clothing for children",
+    "type": "one-time",
+    "amount": 3,
+    "unit_of_measure": "set",
+    "unit_price": 100.0,
+    "total_cost": 300.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-06-24T20:30:00Z",
+    "description": "Dinner at Italian restaurant for Norman and Julia's anniversary",
+    "type": "one-time",
+    "amount": 2,
+    "unit_of_measure": "person",
+    "unit_price": 50.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "relationship"
+  },
+  {
+    "datetime": "2023-06-27T14:00:00Z",
+    "description": "Upgrade to home entertainment system",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "item",
+    "unit_price": 800.0,
+    "total_cost": 800.0,
+    "payment_method": "credit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-06-30T11:00:00Z",
+    "description": "Donation to local animal shelter",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "donation",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "debit card",
+    "area_of_life": "social responsibility"
+  }
+]

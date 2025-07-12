@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-10-01T09:00:00Z",
+    "description": "Monthly public transportation card",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 45.0,
+    "total_cost": 45.0,
+    "payment_method": "debit card",
+    "area_of_life": "transportation"
+  },
+  {
+    "datetime": "2023-10-03T17:30:00Z",
+    "description": "Dining out with family at a Chinese restaurant",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "person",
+    "unit_price": 25.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-10-07T13:00:00Z",
+    "description": "Quarterly pest control service",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 90.0,
+    "total_cost": 90.0,
+    "payment_method": "debit card",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-10-10T18:20:00Z",
+    "description": "Cinema tickets for family (movie night)",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "ticket",
+    "unit_price": 12.0,
+    "total_cost": 48.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-10-15T10:00:00Z",
+    "description": "Grocery shopping",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 170.0,
+    "total_cost": 170.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-10-18T15:00:00Z",
+    "description": "New running shoes",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "pair",
+    "unit_price": 110.0,
+    "total_cost": 110.0,
+    "payment_method": "credit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2023-10-21T08:30:00Z",
+    "description": "Home internet and cable subscription",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "bundle",
+    "unit_price": 80.0,
+    "total_cost": 80.0,
+    "payment_method": "direct debit",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-10-23T17:45:00Z",
+    "description": "Halloween costumes for the children",
+    "type": "one-time",
+    "amount": 3,
+    "unit_of_measure": "costume",
+    "unit_price": 30.0,
+    "total_cost": 90.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-10-27T12:00:00Z",
+    "description": "Tickets for a Halloween event",
+    "type": "one-time",
+    "amount": 4,
+    "unit_of_measure": "ticket",
+    "unit_price": 15.0,
+    "total_cost": 60.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-10-30T16:00:00Z",
+    "description": "Donation to a wildlife conservation charity",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "donation",
+    "unit_price": 50.0,
+    "total_cost": 50.0,
+    "payment_method": "credit card",
+    "area_of_life": "social responsibility"
+  }
+]

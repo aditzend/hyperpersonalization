@@ -1,0 +1,47 @@
+[
+  {
+    "datetime": "2023-09-05T10:10:00Z",
+    "description": "Consultation due to persistent headaches",
+    "type": "consultation",
+    "medical_specialty": "Neurology",
+    "name_of_doctor": "Dr. Ana Silva",
+    "symptoms_experienced": "Frequent migraines with light sensitivity",
+    "hospital_or_facility": "Buenos Aires Neurological Institute",
+    "medications_prescribed": [
+      {
+        "name": "Sumatriptan",
+        "dosage": "50mg",
+        "frequency": "as needed at onset of migraine"
+      }
+    ],
+    "notes": "Advised to monitor frequency and triggers of migraines, maintain headache diary."
+  },
+  {
+    "datetime": "2023-09-15T15:45:00Z",
+    "description": "Routine bloodwork and lab tests",
+    "type": "lab tests",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "hospital_or_facility": "Central Diagnostic Lab",
+    "results": [
+      {
+        "type": "Lipid profile",
+        "value": "Slightly elevated LDL",
+        "notes": "Monitor dietary intake of fats"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  }
+]

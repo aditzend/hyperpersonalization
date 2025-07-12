@@ -1,0 +1,112 @@
+[
+  {
+    "datetime": "2023-08-02T11:00:00Z",
+    "description": "Electricity bill payment",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "direct debit",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-08-04T14:30:00Z",
+    "description": "Family weekend movie streaming rental",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "rental",
+    "unit_price": 4.0,
+    "total_cost": 4.0,
+    "payment_method": "credit card",
+    "area_of_life": "entertainment"
+  },
+  {
+    "datetime": "2023-08-07T09:30:00Z",
+    "description": "Annual vehicle registration renewal",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 80.0,
+    "total_cost": 80.0,
+    "payment_method": "debit card",
+    "area_of_life": "transportation"
+  },
+  {
+    "datetime": "2023-08-10T17:00:00Z",
+    "description": "School supplies for children",
+    "type": "one-time",
+    "amount": 3,
+    "unit_of_measure": "set",
+    "unit_price": 50.0,
+    "total_cost": 150.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-08-14T12:00:00Z",
+    "description": "Bi-weekly grocery shopping",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "cart",
+    "unit_price": 220.0,
+    "total_cost": 220.0,
+    "payment_method": "debit card",
+    "area_of_life": "family"
+  },
+  {
+    "datetime": "2023-08-17T18:20:00Z",
+    "description": "Dinner at sushi restaurant for anniversary",
+    "type": "one-time",
+    "amount": 2,
+    "unit_of_measure": "person",
+    "unit_price": 60.0,
+    "total_cost": 120.0,
+    "payment_method": "credit card",
+    "area_of_life": "relationship"
+  },
+  {
+    "datetime": "2023-08-21T10:30:00Z",
+    "description": "Water bill payment",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 40.0,
+    "total_cost": 40.0,
+    "payment_method": "direct debit",
+    "area_of_life": "home"
+  },
+  {
+    "datetime": "2023-08-23T15:45:00Z",
+    "description": "New pair of running shoes for morning jog",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "pair",
+    "unit_price": 100.0,
+    "total_cost": 100.0,
+    "payment_method": "credit card",
+    "area_of_life": "health"
+  },
+  {
+    "datetime": "2023-08-27T13:00:00Z",
+    "description": "Charitable donation to environmental NGO",
+    "type": "one-time",
+    "amount": 1,
+    "unit_of_measure": "donation",
+    "unit_price": 150.0,
+    "total_cost": 150.0,
+    "payment_method": "debit card",
+    "area_of_life": "social responsibility"
+  },
+  {
+    "datetime": "2023-08-30T16:00:00Z",
+    "description": "Subscription renewal for professional software",
+    "type": "subscription",
+    "amount": 1,
+    "unit_of_measure": "service",
+    "unit_price": 250.0,
+    "total_cost": 250.0,
+    "payment_method": "credit card",
+    "area_of_life": "career"
+  }
+]

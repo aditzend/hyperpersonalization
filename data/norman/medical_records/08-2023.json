@@ -1,0 +1,46 @@
+[
+  {
+    "datetime": "2023-08-07T09:30:00Z",
+    "description": "Annual vaccination against flu",
+    "type": "preventative care",
+    "medical_specialty": "Immunology",
+    "name_of_doctor": "Dr. Mateo Núñez",
+    "hospital_or_facility": "Buenos Aires Health Clinic",
+    "notes": "Influenza vaccine administered without immediate side effects."
+  },
+  {
+    "datetime": "2023-08-14T14:00:00Z",
+    "description": "Orthopedic consultation for knee pain",
+    "type": "specialist visit",
+    "medical_specialty": "Orthopedics",
+    "name_of_doctor": "Dr. Sofia Iglesias",
+    "symptoms_experienced": "Pain in right knee during jogging",
+    "hospital_or_facility": "Advanced Orthopedics Center",
+    "results": [
+      {
+        "type": "MRI scan of right knee",
+        "findings": "Minor meniscal wear without need for immediate intervention"
+      }
+    ],
+    "medications_prescribed": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "every 8 hours for pain"
+      }
+    ],
+    "notes": "Advised rest, use of knee support when jogging, and follow-up if pain persists."
+  },
+  {
+    "datetime": "-",
+    "description": "",
+    "type": "",
+    "medical_specialty": "",
+    "name_of_doctor": "",
+    "description_of_study": "",
+    "symptoms_experienced": "",
+    "hospital_or_facility": "",
+    "medications_prescribed ": [],
+    "notes": ""
+  }
+]
