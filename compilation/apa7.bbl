@@ -103,7 +103,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Banca Empresa - Tasas Activas por Líneas de Préstamos}
+      \field{title}{Banca empresa - tasas activas por líneas de préstamos}
       \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
@@ -177,7 +177,7 @@
       \field{labeltitlesource}{title}
       \field{month}{8}
       \field{note}{Blog de proveedor; contexto cualitativo}
-      \field{title}{Estadísticas clave de Chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
+      \field{title}{Estadísticas clave de chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
       \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
@@ -218,6 +218,39 @@
       \endverb
       \verb{url}
       \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
+      \endverb
+    \endentry
+    \entry{ElPais2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ce37d15c64b42bac2336e16e83d2bea0}{%
+           family={{Cinco Días (El País)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{fullhash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{fullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{bibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authorbibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authornamehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authorfullhash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authorfullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{Artículo periodístico; contexto cualitativo}
+      \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
+      \endverb
+      \verb{url}
+      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
       \endverb
     \endentry
     \entry{CMSWire2023}{misc}{}{}
@@ -351,39 +384,6 @@
       \endverb
       \verb{url}
       \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
-      \endverb
-    \endentry
-    \entry{ElPais2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=53b34a29169dfc4935d26a70a39e1a29}{%
-           family={{El País}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{fullhash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{fullhashraw}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{bibnamehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authorbibnamehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authornamehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authorfullhash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authorfullhashraw}{53b34a29169dfc4935d26a70a39e1a29}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{Artículo periodístico; contexto cualitativo}
-      \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
-      \endverb
-      \verb{url}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
       \endverb
     \endentry
     \entry{emergen_virtual_assistants_2023}{misc}{}{}
@@ -1206,7 +1206,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Learning to Reason with LLMs}
+      \field{title}{Learning to reason with LLMs}
       \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
@@ -1502,7 +1502,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{title}{Estados Unidos - Bono soberano a 10 años}
+      \field{title}{Estados Unidos - bono soberano a 10 años}
       \field{year}{2025}
       \true{nocite}
       \verb{urlraw}
@@ -1755,7 +1755,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Banca Empresa - Tasas Activas por Líneas de Préstamos}
+      \field{title}{Banca empresa - tasas activas por líneas de préstamos}
       \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
@@ -1829,7 +1829,7 @@
       \field{labeltitlesource}{title}
       \field{month}{8}
       \field{note}{Blog de proveedor; contexto cualitativo}
-      \field{title}{Estadísticas clave de Chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
+      \field{title}{Estadísticas clave de chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
       \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
@@ -1870,6 +1870,39 @@
       \endverb
       \verb{url}
       \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
+      \endverb
+    \endentry
+    \entry{ElPais2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ce37d15c64b42bac2336e16e83d2bea0}{%
+           family={{Cinco Días (El País)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{fullhash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{fullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{bibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authorbibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authornamehash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authorfullhash}{ce37d15c64b42bac2336e16e83d2bea0}
+      \strng{authorfullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{Artículo periodístico; contexto cualitativo}
+      \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
+      \endverb
+      \verb{url}
+      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
       \endverb
     \endentry
     \entry{CMSWire2023}{misc}{}{}
@@ -2003,39 +2036,6 @@
       \endverb
       \verb{url}
       \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
-      \endverb
-    \endentry
-    \entry{ElPais2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=53b34a29169dfc4935d26a70a39e1a29}{%
-           family={{El País}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{fullhash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{fullhashraw}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{bibnamehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authorbibnamehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authornamehash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authorfullhash}{53b34a29169dfc4935d26a70a39e1a29}
-      \strng{authorfullhashraw}{53b34a29169dfc4935d26a70a39e1a29}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{Artículo periodístico; contexto cualitativo}
-      \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
-      \endverb
-      \verb{url}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
       \endverb
     \endentry
     \entry{emergen_virtual_assistants_2023}{misc}{}{}
@@ -2858,7 +2858,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Learning to Reason with LLMs}
+      \field{title}{Learning to reason with LLMs}
       \field{year}{2024}
       \true{nocite}
       \verb{urlraw}
@@ -3154,7 +3154,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{title}{Estados Unidos - Bono soberano a 10 años}
+      \field{title}{Estados Unidos - bono soberano a 10 años}
       \field{year}{2025}
       \true{nocite}
       \verb{urlraw}

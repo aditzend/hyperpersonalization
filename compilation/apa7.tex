@@ -22,11 +22,12 @@
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{references.bib}
 
-% Evitar transformaciones automáticas de mayúsculas en títulos
+% Evitar transformaciones automáticas de mayúsculas en títulos y aplicar cursiva
 \DeclareFieldFormat{titlecase}{#1}
-\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1}
-\DeclareFieldFormat[misc]{title}{#1}
-\DeclareFieldFormat[online]{title}{#1}
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{\textit{#1}}
+\DeclareFieldFormat[misc]{title}{\textit{#1}}
+\DeclareFieldFormat[online]{title}{\textit{#1}}
+\DeclareFieldFormat[book]{title}{\textit{#1}}
 
 % Evitar que las notas al pie se partan entre páginas
 \interfootnotelinepenalty=10000
