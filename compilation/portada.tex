@@ -1,35 +1,4 @@
-\documentclass[a4paper,12pt]{article}
-
-% Márgenes
-\usepackage[left=2.5cm, right=2cm]{geometry}
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usepackage[absolute,overlay]{textpos}
-
-% Fuente Arial (usar XeLaTeX o LuaLaTeX)
-\usepackage{fontspec}
-\setmainfont{Arial}
-
-% ============
-% Comandos personalizados
-% ============
-\newcommand{\titulo}[1]{\def\eltitulo{#1}}
-\newcommand{\autor}[1]{\def\elautor{#1}}
-\newcommand{\carrera}[1]{\def\lacarrera{#1}}
-\newcommand{\director}[1]{\def\eldirector{#1}}
-\newcommand{\jurados}[1]{\def\losjurados{#1}}
-\newcommand{\fecha}[1]{\def\lafecha{#1}}
-
-% Valores por defecto
-\titulo{Hiperpersonalización aplicada al desarrollo de asistentes virtuales}
-\autor{Alexander Ditzend}
-\carrera{Ingeniería Industrial}
-\director{Dr. Xavier I. González, Ing. Marcelo E. Chidichimo}
-\jurados{Por definir}
-\fecha{Buenos Aires,Enero 2025}
-
-\begin{document}
+% Contenido de la portada
 \thispagestyle{empty}
 
 % Barra lateral naranja
@@ -75,5 +44,3 @@
     {\itshape\fontsize{10pt}{10pt}\selectfont \lafecha}
   \end{flushright}
 \end{textblock*}
-
-\end{document}

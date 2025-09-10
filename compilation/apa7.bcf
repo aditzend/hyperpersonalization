@@ -3075,18 +3075,23 @@
     <bcf:citekey order="3" intorder="1">McKinsey2021</bcf:citekey>
     <bcf:citekey order="4" intorder="1">TwilioSegment2023</bcf:citekey>
     <bcf:citekey order="5" intorder="1">McKinsey2021</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Outgrow2023</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Ninetailed2024</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Zendesk2024</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">emergen_virtual_assistants_2023</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">emergen_virtual_assistants_2023</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">emergen_hyperpersonalization_2024</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">emergen_hyperpersonalization_2024</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">informes_expertos_latam_2024</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">informes_expertos_latam_2024</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">mentzer2005sales</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">mentzer2005sales</bcf:citekey>
-    <bcf:citekey order="17" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">McKinsey2020</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">GrandViewResearch2023</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">McKinsey2021</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">TwilioSegment2023</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">McKinsey2021</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Outgrow2023</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Ninetailed2024</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Zendesk2024</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">emergen_virtual_assistants_2023</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">emergen_virtual_assistants_2023</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">emergen_hyperpersonalization_2024</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">emergen_hyperpersonalization_2024</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">informes_expertos_latam_2024</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">informes_expertos_latam_2024</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">mentzer2005sales</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">mentzer2005sales</bcf:citekey>
+    <bcf:citekey order="22" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

@@ -1,0 +1,147 @@
+\section{Resumen Ejecutivo}
+
+\subsection{Introducción}
+
+El advenimiento de los grandes modelos de lenguaje, o \textit{Large Language Models} (LLMs), ha provocado una revolución en la manera en que los seres humanos interactúan con los sistemas digitales. Un ejemplo paradigmático de este cambio es la transición del uso tradicional del explorador web y sus motores de búsqueda al empleo de asistentes conversacionales potenciados por LLMs. En un futuro cercano, la mayoría del código informático será producido por LLMs, bajo la guía, supervisión y acompañamiento de seres humanos. Esta transformación del rol del programador puede entenderse como una antesala de lo que ocurrirá en otras profesiones y, en general, en la interfaz que conecta a los seres humanos con sus fuentes de información.
+
+En este nuevo paradigma, los asistentes virtuales tenderán a ocupar una posición dominante, al ofrecer una interfaz basada en la conversación natural—ya sea hablada o escrita—para interactuar con datos y servicios. Sin embargo, para que los asistentes virtuales evolucionen más allá de simples herramientas de consulta o gestión de citas, es fundamental que puedan recordar información pasada de manera estructurada. De lo contrario, su funcionalidad quedará limitada a interacciones impersonales y de corto alcance temporal, lo que afectaría negativamente su adopción y utilidad.
+
+\subsubsection{Planteo del Problema}
+
+En el contexto de un asistente virtual, la distinción entre personalización e hiperpersonalización se manifiesta no solo en recomendaciones u ofertas, sino también en la calidad de la asistencia o soporte brindado. A continuación, se ejemplifica esta diferencia mediante una simulación de conversación entre un asistente virtual (A) y una usuaria o usuario (U) en un sitio de reservas de viajes.
+
+\paragraph{Sin personalización}
+\begin{quote}
+	\begin{tabbing}
+		A: \= Hola, ¿cómo puedo ayudarle hoy? \\
+		U: \> Quiero sacar un pasaje a Río de Janeiro con la familia. \\
+		A: \> Entiendo, ¿puede indicarme desde dónde partirá? \\
+		U: \> Buenos Aires. \\
+		A: \> ¿Cuántas personas? \\
+		U: \> Cinco. \\
+		A: \> ¿Cuántos menores? \\
+		U: \> Dos.
+	\end{tabbing}
+\end{quote}
+
+El sistema no se apoya en datos contextuales de la persona. En cada sesión deben ingresarse nuevamente todos los datos. Este es el punto clave que genera fricción en el uso cotidiano e impacta en las ventas y la satisfacción del cliente.
+
+\paragraph{Hiperpersonalización}
+\begin{quote}
+	\begin{tabbing}
+		A: \= Hola, ¿cómo puedo ayudarle hoy? ¿Desea ver opciones para paquetes a Río de Janeiro? \\
+		U: \> Sí, sí, iría con la familia. Mi madre no se suma esta vez, lo único. \\
+		A: \> Entiendo. Veo que se encuentra en Buenos Aires, ¿va a partir desde esa ciudad? \\
+		U: \> Sí. \\
+		A: \> ¿Viajará entonces con sus dos hijas menores y su esposa? \\
+		U: \> Sí.
+	\end{tabbing}
+\end{quote}
+
+El sistema combina datos de comportamiento en tiempo real (como navegación) con información de localización y acceso a una base estructurada de datos personales que permite comprender la composición familiar y formular respuestas adecuadas al contexto actual.
+
+\subsubsection{Justificación e Impacto}
+
+La implementación de estrategias de hiperpersonalización genera, en promedio, un incremento del 15\% anual en ventas, con picos del 25\% dependiendo de la industria \parencite{McKinsey2020}. Paralelamente se estima un crecimiento del 37.3\% en el mercado de inteligencia artificial, lo que sugiere una aceleración en la demanda de asistentes virtuales, incluso sin personalización avanzada \parencite{GrandViewResearch2023}.
+
+Las empresas que lideran en personalización generan, en promedio, un 40\% más de ingresos que aquellas que no la implementan. Se estima que, en las industrias de Estados Unidos, mejorar el desempeño hasta ubicirse en el cuartil superior en términos de personalización podría generar más de un billón de dólares en valor agregado \parencite{McKinsey2021}.
+
+El 62\% de los líderes empresariales citan la mejora en la retención de clientes como uno de los beneficios clave de la personalización \parencite{TwilioSegment2023}. Asimismo, el 72\% de los consumidores espera que las empresas con las que interactúan los reconozcan como individuos y conozcan sus intereses \parencite{McKinsey2021}.
+
+\subsection{Metodología}
+
+Se propone una metodología de descomposición del problema en situaciones atómicas, que se resuelven con técnicas de \textit{prompting} sobre modelos de lenguaje. Con los hallazgos que se obtienen en cada una de las situaciones se avanza hacia una solución general.
+
+\subsubsection{Etapas de trabajo}
+
+El trabajo de investigación se divide en las siguientes etapas:
+
+\begin{enumerate}
+	\item Experimentos de \textit{prompting} sobre problemas de alcance muy focalizado (menos de 10 ejemplos), utilizando datos generados ex profeso.
+	\item Creación de conjuntos de datos a partir de documentación real.
+	\item Generación de conjuntos de datos sintéticos.
+	\item Generalización hacia conjuntos de datos de alcance intermedio (aproximadamente un año).
+\end{enumerate}
+
+\subsubsection{Enfoque Experimental}
+
+Un asistente virtual con capacidades de hiperpersonalización es un sistema de mensajes por turnos en el que existe un vasto repositorio de información sobre el usuario en curso y esa información es aprovechada por el asistente para resolver el problema del usuario en la menor cantidad de interacciones.
+
+Mediante diferentes experimentos se intenta encontrar una arquitectura que identifique información sobre un usuario, la guarde ordenadamente y la pueda usar como contexto en cualquier conversación.
+
+Durante los experimentos se hace referencia a bases vectoriales que contienen motores de búsqueda especiales para encontrar eficientemente los $k$ vectores más cercanos a un vector de consulta, siendo $k$ el parámetro de búsqueda que controla cuántos resultados se desea recibir en la respuesta. Estos espacios vectoriales tienen entre 300 y 4000 dimensiones dependiendo del modelo de \textit{embeddings} que se utilice para hacer la codificación del texto.
+
+Los \textit{embeddings} son representaciones matemáticas que permiten transformar datos, como palabras o elementos de un conjunto, en vectores de números de una dimensión fija, de forma tal que las relaciones semánticas o estructurales entre los elementos se preserven en el espacio vectorial resultante. En el contexto del presente trabajo se utiliza el modelo text-embedding-3-small que utiliza 1536 dimensiones.
+
+\subsubsection{Patrón de Desarrollo}
+
+Se siguió el siguiente patrón:
+
+\begin{enumerate}
+    \item Se seleccionó una problemática enunciada como un caso de uso que hoy es imposible de resolver sin hiperpersonalización.
+    \item Se describió una estrategia de ataque a esa problemática y se desarrolló un prototipo.
+    \item Se registraron los resultados para alimentar un repositorio de prompts exitosos.
+    \item Se repitió el proceso hasta encontrar una solución satisfactoria.
+\end{enumerate}
+
+\subsection{Resultados}
+
+\subsubsection{Arquitectura del Sistema}
+
+En el desarrollo se implementa un prototipo que integra Redis para el almacenamiento transitorio de sesiones y FAISS para la búsqueda de similitud en espacios vectoriales. A través de sucesivos experimentos —incluidos la desagregación de problemas macro en casos de uso unitarios, la vectorización de mensajes de usuario y la incorporación de marcas temporales— se evidencia que la distancia coseno aplicada tras un filtrado por identificador logra recuperar de forma fiable la información pertinente, aun cuando el corpus crece en complejidad.
+
+Esta capacidad es validada, por ejemplo, al responder correctamente preguntas sobre la edad de un familiar o las preferencias de viaje de las hijas del usuario, demostrando que el sistema puede razonar sobre datos cronológicos y semánticos combinados.
+
+\subsubsection{Componentes del Sistema}
+
+Los componentes necesarios para la implementación son los siguientes:
+
+\begin{itemize}
+    \item Un servicio para extraer información y estructurarla a partir de una conversación en curso.
+    \item Una base de datos con capacidad para calcular similitud vectorial e idealmente también búsqueda por texto para poder hacer frente a necesidades de búsqueda híbrida.
+    \item Un servicio de inserción de nuevas piezas de información en la base de datos.
+    \item Un servicio de amplificación de mensajes de usuario con manejo de contexto de conversación.
+    \item Un servicio de generación de respuestas a base de contexto histórico.
+\end{itemize}
+
+Además de la base de datos se necesita acceso a un servicio que reciba texto y devuelva embeddings y un servicio de modelo de lenguaje. Ambos pueden correrse en una computadora de escritorio con suficiente capacidad o consumirse mediante subscripciones a proveedores de primera línea como OpenAI, Google Cloud Platform y Amazon Web Services, entre muchos otros.
+
+\subsubsection{Validación Experimental}
+
+El prototipo, que integra Redis para sesiones y FAISS para búsquedas por similitud, demostró que la distancia coseno, aplicada tras un filtrado por identificador, recupera información pertinente aun en corpora crecientes; el sistema resolvió consultas cronológicas y semánticas combinadas con alta precisión.
+
+Los resultados confirman la viabilidad del enfoque: la combinación de modelos de lenguaje preentrenados y \textit{embeddings} resulta suficiente para procesar y recuperar la información necesaria, siempre que el motor de búsqueda vectorial pueda manejar eficientemente el volumen de datos almacenado.
+
+\subsection{Conclusiones}
+
+\subsubsection{Viabilidad Técnica}
+
+Los experimentos efectuados demuestran que el mecanismo diseñado cumple la premisa dotando de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y embeddings es suficiente para procesar la información necesaria siempre que la cantidad de información almacenada pueda ser procesada efectivamente por el motor de búsqueda de la base vectorial.
+
+Se concluye que la estrategia es técnicamente factible y escalable, siempre que el motor vectorial gestione eficientemente el volumen de datos; no obstante, persisten retos ligados a la memoria conversacional continua y a la adaptación de modelos menos potentes.
+
+\subsubsection{Limitaciones Identificadas}
+
+Los experimentos sobre problemas de razonamiento cronológico usando modelos ya deprecados al finalizar este trabajo como gpt-3.5 requerían retrabajo de las fuentes de información. Con el propio avance de los modelos de lenguaje estas reconfiguraciones para facilitar las tareas de razonamiento pueden no ser necesarias pero las técnicas vistas pueden servir en el caso de aplicar hiperpersonalización en modelos menos potentes, particularmente de entre mil y siete mil millones de parámetros.
+
+El sistema planteado como solución no cuenta con manejo de memoria de conversación. Todos los mensajes se responden sin interconexión y esto claramente es inviable en un entorno productivo. Un servicio de observación debe estar corriendo en paralelo al servicio principal de la conversación extrayendo y estructurando toda la información necesaria de la conversación.
+
+Como ya se mencionó en el apartado de desarrollo, el sistema no es capaz de responder sobre más de una temática en una misma iteración. Ésta es una característica de producto que debe validarse en el mercado previamente antes de comenzar con el desarrollo.
+
+\subsubsection{Proyecciones Futuras}
+
+Luego de estas mejoras se debe pensar en los desafíos que se presentan fuera del ámbito académico, saliendo de la esfera de pensamiento para entrar en el complejo mundo de la implementación. No se puede esperar que una persona vuelque la información de todos los campos de su vida en una base de datos sin garantizar la privacidad y el control de lo que comparte.
+
+Es por este motivo que el siguiente paso en el camino hacia un mundo con asistentes virtuales hiperpersonalizados debe centrarse en los mecanismos para almacenar, leer y permisionar datos en una cadena de bloques, más conocida como blockchain.
+
+Este tipo de base de datos se caracteriza por la confiabilidad de los procesos de manejo de data, ya que es físicamente imposible alterar un bloque una vez que es parte de la cadena. Además su almacenamiento es distribuido y compartido entre entidades diferentes, lo que hace imposible el control central y monopólico de los datos.
+
+La propuesta para el siguiente paso es desarrollar esa tecnología. Cuando se alcancen los objetivos antes mencionados, las operaciones sobre bases de datos mencionadas en este trabajo se reemplazarán por escrituras y lecturas sobre una blockchain. Los usuarios finales, los verdaderos dueños de los datos, podrán llevarse su información personal al servicio de inteligencia artificial que gusten. Expresado de otra manera, podrán permisionar sus datos a voluntad.
+
+\subsubsection{Impacto y Contribuciones}
+
+En suma, el trabajo demuestra experimentalmente que la hiperpersonalización en asistentes virtuales no solo es técnicamente factible sino también operativamente viable con recursos accesibles. Sus aportes metodológicos sientan las bases para futuras implementaciones industriales, encaminadas a transformar la experiencia de usuario y a potenciar la eficiencia de los sistemas conversacionales en múltiples dominios.
+
+El equilibrio perfecto entre disfrutar de las comodidades que nos puede traer la inteligencia artificial y hacer valer nuestro derecho a la privacidad requiere diseño, trabajo y la confluencia de variadas tecnologías. El futuro que deseamos no ocurre por acción de la entropía, debe ser creado.
+
+Como proyección, la tesis plantea que el próximo paso para la adopción masiva de asistentes hiperpersonalizados reside en garantizar la privacidad y el control de los datos mediante tecnologías distribuidas como blockchain, capaces de ofrecer inmutabilidad y gobernanza descentralizada de la información del usuario. Con ello, se aspira a habilitar un ecosistema donde cada individuo comparta —de forma segura y auditable— los fragmentos de su vida digital que considere convenientes, permitiendo a los asistentes virtuales convertirse en verdaderos acompañantes inteligentes, capaces de anticipar necesidades y ofrecer soluciones a medida.
