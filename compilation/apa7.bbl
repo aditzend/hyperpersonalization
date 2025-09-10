@@ -40,12 +40,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Global Banking Consumer Study}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2022}
+      \field{title}{Global banking consumer study}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.accenture.com/content/dam/accenture/final/industry/banking/document/Accenture-Banking-Consumer-Study.pdf
@@ -76,12 +72,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{title}{Consumers Welcome Personalized Offerings but Businesses Are Struggling to Deliver, Finds Accenture Interactive Personalization Research}
-      \field{urlday}{13}
-      \field{urlmonth}{10}
-      \field{urlyear}{2016}
+      \field{title}{Consumers welcome personalized offerings but businesses are struggling to deliver, finds Accenture Interactive personalization research}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://newsroom.accenture.com/news/2016/consumers-welcome-personalized-offerings-but-businesses-are-struggling-to-deliver-finds-accenture-interactive-personalization-research
@@ -111,18 +103,55 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Tasa de Interés para PyMEs}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Banca Empresa - Tasas Activas por Líneas de Préstamos}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://www.bancoprovincia.com.ar
+      \verb https://www.bancoprovincia.com.ar/CDN/Get/A5388_Banca_Empresa_tasas_costos_condiciones_vigentes
       \endverb
       \verb{url}
-      \verb https://www.bancoprovincia.com.ar
+      \verb https://www.bancoprovincia.com.ar/CDN/Get/A5388_Banca_Empresa_tasas_costos_condiciones_vigentes
+      \endverb
+    \endentry
+    \entry{Bhattacharya2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=284f0094a65cbdae56a338d0a439d1f6}{%
+           family={Bhattacharya},
+           familyi={B\bibinitperiod},
+           given={Moumita},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3f2415d27da3ee510f085d3ee22638d}{%
+           family={Lamkhede},
+           familyi={L\bibinitperiod},
+           given={Sudarshan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{fullhash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{fullhashraw}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{bibnamehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authorbibnamehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authornamehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authorfullhash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authorfullhashraw}{b76dad03dd0f9823af3c937bacfaee45}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2206.02254}
+      \field{title}{Augmenting Netflix search with in-session adapted recommendations}
+      \field{year}{2022}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2206.02254
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2206.02254
       \endverb
     \endentry
     \entry{Botpress2024}{misc}{}{}
@@ -147,12 +176,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
+      \field{note}{Blog de proveedor; contexto cualitativo}
       \field{title}{Estadísticas clave de Chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
-      \field{urlday}{21}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://botpress.com/es/blog/key-chatbot-statistics
@@ -183,12 +209,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
-      \field{title}{THE MESSAGING APPS REPORT: Messaging apps are now bigger than social networks}
-      \field{urlday}{20}
-      \field{urlmonth}{9}
-      \field{urlyear}{2016}
+      \field{note}{Reporte de prensa; contexto cualitativo}
+      \field{title}{The messaging apps report: Messaging apps are now bigger than social networks}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
@@ -219,12 +242,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{title}{AI in Ecommerce: True One-on-One Personalization Is Coming}
-      \field{urlday}{21}
-      \field{urlmonth}{4}
-      \field{urlyear}{2023}
+      \field{note}{Blog especializado; contexto cualitativo}
+      \field{title}{AI in ecommerce: True one-on-one personalization is coming}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.cmswire.com/customer-experience/ai-in-ecommerce-true-one-on-one-personalization-is-coming/
@@ -255,12 +275,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Blog tecnológico; contexto cualitativo}
       \field{title}{Las 10 empresas líderes en inteligencia artificial y machine learning en 2024}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://cronica.tech/tecnologia/software/las-empresas-lideres-en-inteligencia-artificial-y-machine-learning-en-2023/
@@ -293,18 +310,14 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Country Risk Premiums and Betas by Sector}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Country risk premiums and betas by sector}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://pages.stern.nyu.edu/~adamodar/
+      \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
       \verb{url}
-      \verb https://pages.stern.nyu.edu/~adamodar/
+      \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
     \endentry
     \entry{DigitalCommerce2023}{misc}{}{}
@@ -329,12 +342,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Blog especializado en comercio; contexto cualitativo}
       \field{title}{Lowe's lower web traffic doesn't hurt sales in Q1}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
@@ -365,12 +375,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
+      \field{note}{Artículo periodístico; contexto cualitativo}
       \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
@@ -402,12 +409,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Virtual Assistant Market Size, Share, Trends, By Type, By Application, By End Use, and By Region Forecast to 2032}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{Virtual assistant market size, share, trends, by type, by application, by end use, and by region forecast to 2032}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.emergenresearch.com/industry-report/virtual-assistant-market
       \endverb
@@ -439,12 +442,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{title}{Las 10 mejores Empresas en el Mercado de Asistentes Virtuales Inteligentes (IVA) en 2023}
-      \field{urlday}{13}
-      \field{urlmonth}{7}
-      \field{urlyear}{2023}
+      \field{note}{Blog de empresa de reportes; contexto orientativo}
+      \field{title}{Las 10 mejores empresas en el mercado de asistentes virtuales inteligentes (IVA) en 2023}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.emergenresearch.com/es/blog/las-10-principales-empresas-en-el-mercado-de-asistentes-virtuales-inteligentes-en-2023
@@ -470,61 +470,18 @@
       \field{extraname}{3}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Hyper-Personalization Market Size, Share, Growth Analysis Report, 2024-2032}
-      \field{urlday}{15}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Hyper-personalization market size, share, growth analysis report, 2024-2032}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.emergenresearch.com/industry-report/hyper-personalization-market
       \endverb
       \verb{url}
       \verb https://www.emergenresearch.com/industry-report/hyper-personalization-market
-      \endverb
-    \endentry
-    \entry{EmergenResearchHyper2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e84e5ae285bab83912ec19bc0bfe10c1}{%
-           family={{Emergen Research}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{fullhash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{fullhashraw}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{bibnamehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authorbibnamehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authornamehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authorfullhash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authorfullhashraw}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \field{extraname}{4}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{8}
-      \field{title}{Mercado de Hiperpersonalización, Por Componente (Soluciones de Software, Servicios), Por Tipo (basado en Could, en las instalaciones), Por Vertical de la Industria (BFSI, Minorista, Comercio Electrónico, Salud y Ciencias Biológicas, Medios y Entretenimiento, Educación, Otros), y Por Región Previsión para 2033}
-      \field{urlday}{1}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.emergenresearch.com/es/industry-report/mercado-de-hiperpersonalización
-      \endverb
-      \verb{url}
-      \verb https://www.emergenresearch.com/es/industry-report/mercado-de-hiperpersonalizaci%C3%B3n
       \endverb
     \endentry
     \entry{Forbes2017}{misc}{}{}
@@ -549,12 +506,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{title}{AI By The Numbers: 33 Facts And Forecasts About Chatbots And Voice Assistants}
-      \field{urlday}{15}
-      \field{urlmonth}{5}
-      \field{urlyear}{2017}
+      \field{note}{Artículo de prensa; contexto cualitativo}
+      \field{title}{AI by the numbers: 33 facts and forecasts about chatbots and voice assistants}
       \field{year}{2017}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731
@@ -584,12 +538,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Son argentinos, crean chatbots para miles de empresas y facturan decenas de millones de dólares}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2022}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.forbesargentina.com/innovacion/son-argentinos-crean-chatbots-miles-empresas-facturan-decenas-millones-dolares-n11885?utm_source=chatgpt.com
@@ -620,12 +571,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Forbes AI 50 2022 | Las empresas norteamericanas de inteligencia artificial que dan forma al futuro}
-      \field{urlday}{10}
-      \field{urlmonth}{5}
-      \field{urlyear}{2022}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://forbes.es/listas/159519/forbes-ai-50-2022-las-empresas-norteamericanas-de-inteligencia-artificial-que-dan-forma-al-futuro/
@@ -656,12 +604,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{title}{Lista Forbes IA 50: estas son las principales empresas emergentes de inteligencia artificial}
-      \field{urlday}{11}
-      \field{urlmonth}{4}
-      \field{urlyear}{2024}
+      \field{note}{Artículo de prensa; contexto cualitativo}
+      \field{title}{Lista Forbes IA 50: Estas son las principales empresas emergentes de inteligencia artificial}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://forbes.com.mx/lista-forbes-ia-50-estas-son-las-principales-empresas-emergentes-de-inteligencia-artificial/
@@ -692,12 +637,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{title}{AI Will Fundamentally Transform Customer Service}
-      \field{urlday}{27}
-      \field{urlmonth}{7}
-      \field{urlyear}{2017}
+      \field{note}{Blog de empresa consultora; contexto cualitativo}
+      \field{title}{AI will fundamentally transform customer service}
       \field{year}{2017}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.forrester.com/blogs/ai-will-fundamentally-transform-customer-service/
@@ -728,12 +670,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
-      \field{title}{Estas son las 45 empresas líderes en Inteligencia Artificial}
-      \field{urlday}{17}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
+      \field{title}{Estas son las 45 empresas líderes en inteligencia artificial}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.fundacionbankinter.org/noticias/estas-son-las-45-empresas-lideres-en-inteligencia-artificial/?_adin=11551547647
@@ -764,12 +702,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
-      \field{title}{CRM Strategies and Technologies to Understand, Grow and Manage Customer Experiences}
-      \field{urlday}{30}
-      \field{urlmonth}{3}
-      \field{urlyear}{2011}
+      \field{title}{CRM strategies and technologies to understand, grow and manage customer experiences}
       \field{year}{2011}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf
@@ -799,12 +733,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Artificial Intelligence Market Size, Share \& Trends Analysis Report By Solution (Hardware, Software, Services), By Technology (Deep Learning, Machine Learning, NLP), By Function, By End-use, By Region, And Segment Forecasts, 2023 - 2030}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{Artificial intelligence market size, share \& trends analysis report by solution (hardware, software, services), by technology (deep learning, machine learning, NLP), by function, by end-use, by region, and segment forecasts, 2023 - 2030}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-market
       \endverb
@@ -834,12 +764,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
+      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Personalización de IA}
-      \field{urlday}{5}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.ibm.com/mx-es/think/topics/ai-personalization
@@ -870,12 +797,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{11}
+      \field{note}{Blog especializado en turismo; contexto cualitativo}
       \field{title}{La gestión de datos, los asistentes virtuales, la hiperpersonalización de la experiencia o la sostenibilidad, claves de la aplicación de la IA al turismo}
-      \field{urlday}{21}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.imamcomunicacion.com/2024/11/la-gestion-de-datos-los-asistentes-virtuales-la-hiperpersonalizacion-de-la-experiencia-o-la-sostenibilidad-claves-de-la-aplicacion-de-la-ia-al-turismo/
@@ -906,12 +830,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Mercado de Asistentes Virtuales Inteligentes en América Latina}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
@@ -942,12 +862,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Mercado de Asistentes Virtuales Inteligentes en América Latina 2024-2032}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024-2032}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.informesdeexpertos.com/mercado-asistentes-virtuales-inteligentes-america-latina
       \endverb
@@ -1025,12 +941,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{6}
-      \field{title}{Chatbots: Vector Analysis, Competitor Leaderboard \& Market Forecasts 2023-2028}
-      \field{urlday}{19}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
+      \field{title}{Chatbots: Vector analysis, competitor leaderboard \& market forecasts 2023-2028}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.juniperresearch.com/research/telecoms-connectivity/communication-services/conversational-commerce-research-report/
@@ -1061,12 +973,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{title}{AI Chatbot Market Size Research Report [2023-2030]}
-      \field{urlday}{13}
-      \field{urlmonth}{10}
-      \field{urlyear}{2023}
+      \field{note}{Post de LinkedIn; contexto orientativo}
+      \field{title}{AI chatbot market size research report [2023-2030]}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/
@@ -1099,11 +1008,7 @@
       \field{labeltitlesource}{title}
       \field{month}{8}
       \field{title}{Los imperativos para el éxito de la automatización}
-      \field{urlday}{25}
-      \field{urlmonth}{8}
-      \field{urlyear}{2020}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.mckinsey.com/capabilities/operations/our-insights/the-imperatives-for-automation-success/es-ES
       \endverb
@@ -1135,11 +1040,7 @@
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{The value of getting personalization right—or wrong—is multiplying}
-      \field{urlday}{12}
-      \field{urlmonth}{11}
-      \field{urlyear}{2021}
       \field{year}{2021}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying
       \endverb
@@ -1185,7 +1086,7 @@
       \field{labeltitlesource}{title}
       \field{edition}{2}
       \field{isbn}{978-0761929833}
-      \field{title}{Sales Forecasting Management: A Demand Management Approach}
+      \field{title}{Sales forecasting management: A demand management approach}
       \field{year}{2005}
     \endentry
     \entry{MordorIntelligence2024}{misc}{}{}
@@ -1210,53 +1111,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Análisis de participación y tamaño del mercado de asistente virtual inteligente tendencias de crecimiento y pronósticos (2024-2029)}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.mordorintelligence.com/es/industry-reports/intelligent-virtual-assistant-market
       \endverb
       \verb{url}
       \verb https://www.mordorintelligence.com/es/industry-reports/intelligent-virtual-assistant-market
-      \endverb
-    \endentry
-    \entry{NetflixResearch2022}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f0dc233f5484d11aa9e862dc1e0a9c12}{%
-           family={{Netflix Research}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{fullhash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{fullhashraw}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{bibnamehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authorbibnamehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authornamehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authorfullhash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authorfullhashraw}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{6}
-      \field{title}{Augmenting Netflix Search with In-Session Adapted Recommendations}
-      \field{urlday}{5}
-      \field{urlmonth}{6}
-      \field{urlyear}{2022}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://research.netflix.com/publication/Augmenting Netflix Search with In-Session Adapted Recommendations
-      \endverb
-      \verb{url}
-      \verb https://research.netflix.com/publication/Augmenting%20Netflix%20Search%20with%20In-Session%20Adapted%20Recommendations
       \endverb
     \endentry
     \entry{Ninetailed2024}{misc}{}{}
@@ -1281,12 +1142,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{title}{58 Personalization Statistics \& Facts for 2024 You Shouldn't Ignore}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{note}{Entrada de blog; citada como contexto cualitativo}
+      \field{title}{58 personalization statistics \& facts for 2024 you shouldn't ignore}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://ninetailed.io/blog/personalization-statistics/
       \endverb
@@ -1316,12 +1174,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{OpenAI Embeddings API}
-      \field{urlday}{25}
-      \field{urlmonth}{8}
-      \field{urlyear}{2023}
+      \field{title}{OpenAI embeddings API}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://platform.openai.com/docs/embeddings
@@ -1353,11 +1207,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Learning to Reason with LLMs}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://openai.com/index/learning-to-reason-with-llms/
@@ -1387,12 +1237,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Personalization Statistics}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{note}{Entrada de blog; contexto, no evidencia cuantitativa}
+      \field{title}{Personalization statistics}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://outgrow.co/blog/personalization-statistics
       \endverb
@@ -1425,11 +1272,7 @@
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{Bolsa Argentina revierte tendencia por tomas de ganancias tras marcar récord histórico}
-      \field{urlday}{3}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.reuters.com/latam/negocio/PROBFYGHPFL7ZLN3TT6QALTYTA-2025-01-03/
@@ -1463,11 +1306,7 @@
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{Mercados de Argentina avanzan frente a desafiante 2025}
-      \field{urlday}{2}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.reuters.com/latam/negocio/CITVB67STVPH5K642KE7DAMYMI-2025-01-02/
@@ -1498,12 +1337,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Blog de industria musical; contexto cualitativo}
       \field{title}{Spotify expanding personalisation after Discover Weekly's 5 billion streams}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2016}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://routenote.com/blog/spotify-expanding-personalisation-after-discover-weeklys-5-billion-streams/
@@ -1534,12 +1370,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
-      \field{title}{Recommendation Engines: How Amazon and Netflix Are Winning the Personalization Battle}
-      \field{urlday}{16}
-      \field{urlmonth}{12}
-      \field{urlyear}{2021}
+      \field{note}{Blog comercial; contexto cualitativo}
+      \field{title}{Recommendation engines: How Amazon and Netflix are winning the personalization battle}
       \field{year}{2021}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.spiceworks.com/marketing/customer-experience/articles/recommendation-engines-how-amazon-and-netflix-are-winning-the-personalization-battle/
@@ -1570,12 +1403,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
+      \field{note}{Blog financiero; contexto cualitativo}
       \field{title}{HSBC is using AI to personalize its rewards program}
-      \field{urlday}{20}
-      \field{urlmonth}{3}
-      \field{urlyear}{2018}
       \field{year}{2018}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/
@@ -1606,12 +1436,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
+      \field{note}{Blog tecnológico; contexto cualitativo}
       \field{title}{Las 50 startups de IA que explotarán en 2024}
-      \field{urlday}{30}
-      \field{urlmonth}{9}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.techopedia.com/es/mejores-startups-ia
@@ -1642,12 +1469,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
-      \field{title}{The Future of Chatbots: 80+ Chatbot Statistics for 2024}
-      \field{urlday}{21}
-      \field{urlmonth}{2}
-      \field{urlyear}{2024}
+      \field{note}{Blog comercial; contexto cualitativo}
+      \field{title}{The future of chatbots: 80+ chatbot statistics for 2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.tidio.com/blog/chatbot-statistics/
@@ -1679,11 +1503,7 @@
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{Estados Unidos - Bono soberano a 10 años}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://es.tradingeconomics.com/united-states/government-bond-yield
@@ -1713,12 +1533,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{State of Personalization Report}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{State of personalization report}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://segment.com/state-of-personalization-report/
       \endverb
@@ -1748,12 +1564,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
+      \field{note}{Blog especializado en IA; contexto cualitativo}
       \field{title}{Los 10 mejores asistentes de inteligencia artificial (diciembre de 2024)}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.unite.ai/es/10-mejores-asistentes-de-inteligencia-artificial/
@@ -1783,12 +1596,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Blog de empresa de reportes; contexto orientativo}
       \field{title}{Revolución de la atención médica virtual: las 10 principales empresas de asistentes virtuales de atención médica}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.verifiedmarketreports.com/es/blog/top-10-companies-in-healthcare-virtual-assistants/
@@ -1819,11 +1629,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{MMLU}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/MMLU
@@ -1853,12 +1659,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Consumers expect AI to radically transform service}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.zendesk.com/blog/consumer-perceptions-ai/
       \endverb
@@ -1889,12 +1692,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Global Banking Consumer Study}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2022}
+      \field{title}{Global banking consumer study}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.accenture.com/content/dam/accenture/final/industry/banking/document/Accenture-Banking-Consumer-Study.pdf
@@ -1925,12 +1724,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{title}{Consumers Welcome Personalized Offerings but Businesses Are Struggling to Deliver, Finds Accenture Interactive Personalization Research}
-      \field{urlday}{13}
-      \field{urlmonth}{10}
-      \field{urlyear}{2016}
+      \field{title}{Consumers welcome personalized offerings but businesses are struggling to deliver, finds Accenture Interactive personalization research}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://newsroom.accenture.com/news/2016/consumers-welcome-personalized-offerings-but-businesses-are-struggling-to-deliver-finds-accenture-interactive-personalization-research
@@ -1960,18 +1755,55 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Tasa de Interés para PyMEs}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Banca Empresa - Tasas Activas por Líneas de Préstamos}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://www.bancoprovincia.com.ar
+      \verb https://www.bancoprovincia.com.ar/CDN/Get/A5388_Banca_Empresa_tasas_costos_condiciones_vigentes
       \endverb
       \verb{url}
-      \verb https://www.bancoprovincia.com.ar
+      \verb https://www.bancoprovincia.com.ar/CDN/Get/A5388_Banca_Empresa_tasas_costos_condiciones_vigentes
+      \endverb
+    \endentry
+    \entry{Bhattacharya2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=284f0094a65cbdae56a338d0a439d1f6}{%
+           family={Bhattacharya},
+           familyi={B\bibinitperiod},
+           given={Moumita},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3f2415d27da3ee510f085d3ee22638d}{%
+           family={Lamkhede},
+           familyi={L\bibinitperiod},
+           given={Sudarshan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{fullhash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{fullhashraw}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{bibnamehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authorbibnamehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authornamehash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authorfullhash}{b76dad03dd0f9823af3c937bacfaee45}
+      \strng{authorfullhashraw}{b76dad03dd0f9823af3c937bacfaee45}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2206.02254}
+      \field{title}{Augmenting Netflix search with in-session adapted recommendations}
+      \field{year}{2022}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2206.02254
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2206.02254
       \endverb
     \endentry
     \entry{Botpress2024}{misc}{}{}
@@ -1996,12 +1828,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
+      \field{note}{Blog de proveedor; contexto cualitativo}
       \field{title}{Estadísticas clave de Chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
-      \field{urlday}{21}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://botpress.com/es/blog/key-chatbot-statistics
@@ -2032,12 +1861,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
-      \field{title}{THE MESSAGING APPS REPORT: Messaging apps are now bigger than social networks}
-      \field{urlday}{20}
-      \field{urlmonth}{9}
-      \field{urlyear}{2016}
+      \field{note}{Reporte de prensa; contexto cualitativo}
+      \field{title}{The messaging apps report: Messaging apps are now bigger than social networks}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
@@ -2068,12 +1894,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{title}{AI in Ecommerce: True One-on-One Personalization Is Coming}
-      \field{urlday}{21}
-      \field{urlmonth}{4}
-      \field{urlyear}{2023}
+      \field{note}{Blog especializado; contexto cualitativo}
+      \field{title}{AI in ecommerce: True one-on-one personalization is coming}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.cmswire.com/customer-experience/ai-in-ecommerce-true-one-on-one-personalization-is-coming/
@@ -2104,12 +1927,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Blog tecnológico; contexto cualitativo}
       \field{title}{Las 10 empresas líderes en inteligencia artificial y machine learning en 2024}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://cronica.tech/tecnologia/software/las-empresas-lideres-en-inteligencia-artificial-y-machine-learning-en-2023/
@@ -2142,18 +1962,14 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Country Risk Premiums and Betas by Sector}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Country risk premiums and betas by sector}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://pages.stern.nyu.edu/~adamodar/
+      \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
       \verb{url}
-      \verb https://pages.stern.nyu.edu/~adamodar/
+      \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
     \endentry
     \entry{DigitalCommerce2023}{misc}{}{}
@@ -2178,12 +1994,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Blog especializado en comercio; contexto cualitativo}
       \field{title}{Lowe's lower web traffic doesn't hurt sales in Q1}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2023}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
@@ -2214,12 +2027,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
+      \field{note}{Artículo periodístico; contexto cualitativo}
       \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
@@ -2251,12 +2061,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Virtual Assistant Market Size, Share, Trends, By Type, By Application, By End Use, and By Region Forecast to 2032}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{Virtual assistant market size, share, trends, by type, by application, by end use, and by region forecast to 2032}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.emergenresearch.com/industry-report/virtual-assistant-market
       \endverb
@@ -2288,12 +2094,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{title}{Las 10 mejores Empresas en el Mercado de Asistentes Virtuales Inteligentes (IVA) en 2023}
-      \field{urlday}{13}
-      \field{urlmonth}{7}
-      \field{urlyear}{2023}
+      \field{note}{Blog de empresa de reportes; contexto orientativo}
+      \field{title}{Las 10 mejores empresas en el mercado de asistentes virtuales inteligentes (IVA) en 2023}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.emergenresearch.com/es/blog/las-10-principales-empresas-en-el-mercado-de-asistentes-virtuales-inteligentes-en-2023
@@ -2319,61 +2122,18 @@
       \field{extraname}{3}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Hyper-Personalization Market Size, Share, Growth Analysis Report, 2024-2032}
-      \field{urlday}{15}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Hyper-personalization market size, share, growth analysis report, 2024-2032}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.emergenresearch.com/industry-report/hyper-personalization-market
       \endverb
       \verb{url}
       \verb https://www.emergenresearch.com/industry-report/hyper-personalization-market
-      \endverb
-    \endentry
-    \entry{EmergenResearchHyper2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e84e5ae285bab83912ec19bc0bfe10c1}{%
-           family={{Emergen Research}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{fullhash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{fullhashraw}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{bibnamehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authorbibnamehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authornamehash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authorfullhash}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \strng{authorfullhashraw}{e84e5ae285bab83912ec19bc0bfe10c1}
-      \field{extraname}{4}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{8}
-      \field{title}{Mercado de Hiperpersonalización, Por Componente (Soluciones de Software, Servicios), Por Tipo (basado en Could, en las instalaciones), Por Vertical de la Industria (BFSI, Minorista, Comercio Electrónico, Salud y Ciencias Biológicas, Medios y Entretenimiento, Educación, Otros), y Por Región Previsión para 2033}
-      \field{urlday}{1}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.emergenresearch.com/es/industry-report/mercado-de-hiperpersonalización
-      \endverb
-      \verb{url}
-      \verb https://www.emergenresearch.com/es/industry-report/mercado-de-hiperpersonalizaci%C3%B3n
       \endverb
     \endentry
     \entry{Forbes2017}{misc}{}{}
@@ -2398,12 +2158,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{title}{AI By The Numbers: 33 Facts And Forecasts About Chatbots And Voice Assistants}
-      \field{urlday}{15}
-      \field{urlmonth}{5}
-      \field{urlyear}{2017}
+      \field{note}{Artículo de prensa; contexto cualitativo}
+      \field{title}{AI by the numbers: 33 facts and forecasts about chatbots and voice assistants}
       \field{year}{2017}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731
@@ -2433,12 +2190,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Son argentinos, crean chatbots para miles de empresas y facturan decenas de millones de dólares}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2022}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.forbesargentina.com/innovacion/son-argentinos-crean-chatbots-miles-empresas-facturan-decenas-millones-dolares-n11885?utm_source=chatgpt.com
@@ -2469,12 +2223,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Forbes AI 50 2022 | Las empresas norteamericanas de inteligencia artificial que dan forma al futuro}
-      \field{urlday}{10}
-      \field{urlmonth}{5}
-      \field{urlyear}{2022}
       \field{year}{2022}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://forbes.es/listas/159519/forbes-ai-50-2022-las-empresas-norteamericanas-de-inteligencia-artificial-que-dan-forma-al-futuro/
@@ -2505,12 +2256,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{title}{Lista Forbes IA 50: estas son las principales empresas emergentes de inteligencia artificial}
-      \field{urlday}{11}
-      \field{urlmonth}{4}
-      \field{urlyear}{2024}
+      \field{note}{Artículo de prensa; contexto cualitativo}
+      \field{title}{Lista Forbes IA 50: Estas son las principales empresas emergentes de inteligencia artificial}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://forbes.com.mx/lista-forbes-ia-50-estas-son-las-principales-empresas-emergentes-de-inteligencia-artificial/
@@ -2541,12 +2289,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{title}{AI Will Fundamentally Transform Customer Service}
-      \field{urlday}{27}
-      \field{urlmonth}{7}
-      \field{urlyear}{2017}
+      \field{note}{Blog de empresa consultora; contexto cualitativo}
+      \field{title}{AI will fundamentally transform customer service}
       \field{year}{2017}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.forrester.com/blogs/ai-will-fundamentally-transform-customer-service/
@@ -2577,12 +2322,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
-      \field{title}{Estas son las 45 empresas líderes en Inteligencia Artificial}
-      \field{urlday}{17}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
+      \field{title}{Estas son las 45 empresas líderes en inteligencia artificial}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.fundacionbankinter.org/noticias/estas-son-las-45-empresas-lideres-en-inteligencia-artificial/?_adin=11551547647
@@ -2613,12 +2354,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
-      \field{title}{CRM Strategies and Technologies to Understand, Grow and Manage Customer Experiences}
-      \field{urlday}{30}
-      \field{urlmonth}{3}
-      \field{urlyear}{2011}
+      \field{title}{CRM strategies and technologies to understand, grow and manage customer experiences}
       \field{year}{2011}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf
@@ -2648,12 +2385,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Artificial Intelligence Market Size, Share \& Trends Analysis Report By Solution (Hardware, Software, Services), By Technology (Deep Learning, Machine Learning, NLP), By Function, By End-use, By Region, And Segment Forecasts, 2023 - 2030}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{Artificial intelligence market size, share \& trends analysis report by solution (hardware, software, services), by technology (deep learning, machine learning, NLP), by function, by end-use, by region, and segment forecasts, 2023 - 2030}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-market
       \endverb
@@ -2683,12 +2416,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
+      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Personalización de IA}
-      \field{urlday}{5}
-      \field{urlmonth}{8}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.ibm.com/mx-es/think/topics/ai-personalization
@@ -2719,12 +2449,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{11}
+      \field{note}{Blog especializado en turismo; contexto cualitativo}
       \field{title}{La gestión de datos, los asistentes virtuales, la hiperpersonalización de la experiencia o la sostenibilidad, claves de la aplicación de la IA al turismo}
-      \field{urlday}{21}
-      \field{urlmonth}{11}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.imamcomunicacion.com/2024/11/la-gestion-de-datos-los-asistentes-virtuales-la-hiperpersonalizacion-de-la-experiencia-o-la-sostenibilidad-claves-de-la-aplicacion-de-la-ia-al-turismo/
@@ -2755,12 +2482,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Mercado de Asistentes Virtuales Inteligentes en América Latina}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
@@ -2791,12 +2514,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Mercado de Asistentes Virtuales Inteligentes en América Latina 2024-2032}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024-2032}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.informesdeexpertos.com/mercado-asistentes-virtuales-inteligentes-america-latina
       \endverb
@@ -2874,12 +2593,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{6}
-      \field{title}{Chatbots: Vector Analysis, Competitor Leaderboard \& Market Forecasts 2023-2028}
-      \field{urlday}{19}
-      \field{urlmonth}{6}
-      \field{urlyear}{2023}
+      \field{title}{Chatbots: Vector analysis, competitor leaderboard \& market forecasts 2023-2028}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.juniperresearch.com/research/telecoms-connectivity/communication-services/conversational-commerce-research-report/
@@ -2910,12 +2625,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{title}{AI Chatbot Market Size Research Report [2023-2030]}
-      \field{urlday}{13}
-      \field{urlmonth}{10}
-      \field{urlyear}{2023}
+      \field{note}{Post de LinkedIn; contexto orientativo}
+      \field{title}{AI chatbot market size research report [2023-2030]}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/
@@ -2948,11 +2660,7 @@
       \field{labeltitlesource}{title}
       \field{month}{8}
       \field{title}{Los imperativos para el éxito de la automatización}
-      \field{urlday}{25}
-      \field{urlmonth}{8}
-      \field{urlyear}{2020}
       \field{year}{2020}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.mckinsey.com/capabilities/operations/our-insights/the-imperatives-for-automation-success/es-ES
       \endverb
@@ -2984,11 +2692,7 @@
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{The value of getting personalization right—or wrong—is multiplying}
-      \field{urlday}{12}
-      \field{urlmonth}{11}
-      \field{urlyear}{2021}
       \field{year}{2021}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying
       \endverb
@@ -3034,7 +2738,7 @@
       \field{labeltitlesource}{title}
       \field{edition}{2}
       \field{isbn}{978-0761929833}
-      \field{title}{Sales Forecasting Management: A Demand Management Approach}
+      \field{title}{Sales forecasting management: A demand management approach}
       \field{year}{2005}
     \endentry
     \entry{MordorIntelligence2024}{misc}{}{}
@@ -3059,53 +2763,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Análisis de participación y tamaño del mercado de asistente virtual inteligente tendencias de crecimiento y pronósticos (2024-2029)}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.mordorintelligence.com/es/industry-reports/intelligent-virtual-assistant-market
       \endverb
       \verb{url}
       \verb https://www.mordorintelligence.com/es/industry-reports/intelligent-virtual-assistant-market
-      \endverb
-    \endentry
-    \entry{NetflixResearch2022}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f0dc233f5484d11aa9e862dc1e0a9c12}{%
-           family={{Netflix Research}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{fullhash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{fullhashraw}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{bibnamehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authorbibnamehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authornamehash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authorfullhash}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \strng{authorfullhashraw}{f0dc233f5484d11aa9e862dc1e0a9c12}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{6}
-      \field{title}{Augmenting Netflix Search with In-Session Adapted Recommendations}
-      \field{urlday}{5}
-      \field{urlmonth}{6}
-      \field{urlyear}{2022}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://research.netflix.com/publication/Augmenting Netflix Search with In-Session Adapted Recommendations
-      \endverb
-      \verb{url}
-      \verb https://research.netflix.com/publication/Augmenting%20Netflix%20Search%20with%20In-Session%20Adapted%20Recommendations
       \endverb
     \endentry
     \entry{Ninetailed2024}{misc}{}{}
@@ -3130,12 +2794,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{title}{58 Personalization Statistics \& Facts for 2024 You Shouldn't Ignore}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
+      \field{note}{Entrada de blog; citada como contexto cualitativo}
+      \field{title}{58 personalization statistics \& facts for 2024 you shouldn't ignore}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://ninetailed.io/blog/personalization-statistics/
       \endverb
@@ -3165,12 +2826,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{OpenAI Embeddings API}
-      \field{urlday}{25}
-      \field{urlmonth}{8}
-      \field{urlyear}{2023}
+      \field{title}{OpenAI embeddings API}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://platform.openai.com/docs/embeddings
@@ -3202,11 +2859,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Learning to Reason with LLMs}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://openai.com/index/learning-to-reason-with-llms/
@@ -3236,12 +2889,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Personalization Statistics}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{note}{Entrada de blog; contexto, no evidencia cuantitativa}
+      \field{title}{Personalization statistics}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://outgrow.co/blog/personalization-statistics
       \endverb
@@ -3274,11 +2924,7 @@
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{Bolsa Argentina revierte tendencia por tomas de ganancias tras marcar récord histórico}
-      \field{urlday}{3}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.reuters.com/latam/negocio/PROBFYGHPFL7ZLN3TT6QALTYTA-2025-01-03/
@@ -3312,11 +2958,7 @@
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{Mercados de Argentina avanzan frente a desafiante 2025}
-      \field{urlday}{2}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.reuters.com/latam/negocio/CITVB67STVPH5K642KE7DAMYMI-2025-01-02/
@@ -3347,12 +2989,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
+      \field{note}{Blog de industria musical; contexto cualitativo}
       \field{title}{Spotify expanding personalisation after Discover Weekly's 5 billion streams}
-      \field{urlday}{25}
-      \field{urlmonth}{5}
-      \field{urlyear}{2016}
       \field{year}{2016}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://routenote.com/blog/spotify-expanding-personalisation-after-discover-weeklys-5-billion-streams/
@@ -3383,12 +3022,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
-      \field{title}{Recommendation Engines: How Amazon and Netflix Are Winning the Personalization Battle}
-      \field{urlday}{16}
-      \field{urlmonth}{12}
-      \field{urlyear}{2021}
+      \field{note}{Blog comercial; contexto cualitativo}
+      \field{title}{Recommendation engines: How Amazon and Netflix are winning the personalization battle}
       \field{year}{2021}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.spiceworks.com/marketing/customer-experience/articles/recommendation-engines-how-amazon-and-netflix-are-winning-the-personalization-battle/
@@ -3419,12 +3055,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
+      \field{note}{Blog financiero; contexto cualitativo}
       \field{title}{HSBC is using AI to personalize its rewards program}
-      \field{urlday}{20}
-      \field{urlmonth}{3}
-      \field{urlyear}{2018}
       \field{year}{2018}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/
@@ -3455,12 +3088,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
+      \field{note}{Blog tecnológico; contexto cualitativo}
       \field{title}{Las 50 startups de IA que explotarán en 2024}
-      \field{urlday}{30}
-      \field{urlmonth}{9}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.techopedia.com/es/mejores-startups-ia
@@ -3491,12 +3121,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
-      \field{title}{The Future of Chatbots: 80+ Chatbot Statistics for 2024}
-      \field{urlday}{21}
-      \field{urlmonth}{2}
-      \field{urlyear}{2024}
+      \field{note}{Blog comercial; contexto cualitativo}
+      \field{title}{The future of chatbots: 80+ chatbot statistics for 2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.tidio.com/blog/chatbot-statistics/
@@ -3528,11 +3155,7 @@
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{Estados Unidos - Bono soberano a 10 años}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
       \field{year}{2025}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://es.tradingeconomics.com/united-states/government-bond-yield
@@ -3562,12 +3185,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{State of Personalization Report}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
+      \field{title}{State of personalization report}
       \field{year}{2023}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://segment.com/state-of-personalization-report/
       \endverb
@@ -3597,12 +3216,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
+      \field{note}{Blog especializado en IA; contexto cualitativo}
       \field{title}{Los 10 mejores asistentes de inteligencia artificial (diciembre de 2024)}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.unite.ai/es/10-mejores-asistentes-de-inteligencia-artificial/
@@ -3632,12 +3248,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Blog de empresa de reportes; contexto orientativo}
       \field{title}{Revolución de la atención médica virtual: las 10 principales empresas de asistentes virtuales de atención médica}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.verifiedmarketreports.com/es/blog/top-10-companies-in-healthcare-virtual-assistants/
@@ -3668,11 +3281,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{MMLU}
-      \field{urlday}{1}
-      \field{urlmonth}{1}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/MMLU
@@ -3702,12 +3311,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Consumers expect AI to radically transform service}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
       \field{year}{2024}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.zendesk.com/blog/consumer-perceptions-ai/
       \endverb

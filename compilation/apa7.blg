@@ -1,50 +1,48 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'apa7.blg'
-[34] biber-darwin:340> INFO - === Sun Aug 10, 2025, 12:03:03
-[42] Biber.pm:420> INFO - Reading 'apa7.bcf'
-[87] Biber.pm:991> INFO - Using all citekeys in bib section 0
-[96] Biber.pm:4463> INFO - Processing section 0
-[102] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[103] bibtex.pm:1713> INFO - LaTeX decoding ...
-[119] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[238] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[238] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[238] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[278] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[278] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[278] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[301] bbl.pm:676> INFO - Writing 'apa7.bbl' with encoding 'UTF-8'
-[319] bbl.pm:779> INFO - Output to apa7.bbl
-[319] Biber.pm:131> WARN - legacy month field 'June' in entry 'NetflixResearch2022' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'March' in entry 'Tearsheet2018' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'November' in entry 'ImamComunicacion2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'January' in entry 'TradingEconomics2025' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'November' in entry 'McKinsey2021' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'January' in entry 'Reuters2025a' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'December' in entry 'ElPais2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'May' in entry 'Forbes2017' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'May' in entry 'ForbesEspana2022' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'September' in entry 'BusinessInsider2016' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'June' in entry 'JuniperResearch2023' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'October' in entry 'KingpingMarket2023' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'May' in entry 'Routenote2016' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'August' in entry 'EmergenResearchHyper2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'May' in entry 'CronicaTech2023' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'December' in entry 'Spiceworks2021' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'July' in entry 'Forrester2017' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'January' in entry 'Ninetailed2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'February' in entry 'Tidio2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'October' in entry 'AccentureInteractive2016' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'August' in entry 'McKinsey2020' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'August' in entry 'Botpress2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'July' in entry 'EmergenResearch2023' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'April' in entry 'ForbesMexico2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'March' in entry 'Gartner2011' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'August' in entry 'IBM2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'February' in entry 'FundacionBankinter2020' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'September' in entry 'Techopedia2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'December' in entry 'UniteAI2024' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'May' in entry 'DigitalCommerce2023' is not an integer - this will probably not sort properly.
-[319] Biber.pm:131> WARN - legacy month field 'April' in entry 'CMSWire2023' is not an integer - this will probably not sort properly.
-[320] Biber.pm:131> WARN - legacy month field 'January' in entry 'Reuters2025b' is not an integer - this will probably not sort properly.
-[320] Biber.pm:133> INFO - WARNINGS: 32
+[39] biber-darwin:340> INFO - === Wed Sep 10, 2025, 10:14:52
+[51] Biber.pm:420> INFO - Reading 'apa7.bcf'
+[105] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[119] Biber.pm:4463> INFO - Processing section 0
+[127] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[129] bibtex.pm:1713> INFO - LaTeX decoding ...
+[169] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[343] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[343] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[343] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[394] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[394] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[394] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[421] bbl.pm:676> INFO - Writing 'apa7.bbl' with encoding 'UTF-8'
+[444] bbl.pm:779> INFO - Output to apa7.bbl
+[444] Biber.pm:131> WARN - legacy month field 'March' in entry 'Gartner2011' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'March' in entry 'Tearsheet2018' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'May' in entry 'CronicaTech2023' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'January' in entry 'TradingEconomics2025' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'August' in entry 'Botpress2024' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'June' in entry 'JuniperResearch2023' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'February' in entry 'Tidio2024' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'May' in entry 'Routenote2016' is not an integer - this will probably not sort properly.
+[444] Biber.pm:131> WARN - legacy month field 'November' in entry 'ImamComunicacion2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'November' in entry 'McKinsey2021' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'January' in entry 'Reuters2025b' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'July' in entry 'Forrester2017' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'December' in entry 'UniteAI2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'August' in entry 'McKinsey2020' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'January' in entry 'Ninetailed2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'September' in entry 'Techopedia2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'October' in entry 'KingpingMarket2023' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'January' in entry 'Reuters2025a' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'December' in entry 'Spiceworks2021' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'May' in entry 'DigitalCommerce2023' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'April' in entry 'CMSWire2023' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'May' in entry 'Forbes2017' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'August' in entry 'IBM2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'February' in entry 'FundacionBankinter2020' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'December' in entry 'ElPais2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'September' in entry 'BusinessInsider2016' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'April' in entry 'ForbesMexico2024' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'May' in entry 'ForbesEspana2022' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'July' in entry 'EmergenResearch2023' is not an integer - this will probably not sort properly.
+[445] Biber.pm:131> WARN - legacy month field 'October' in entry 'AccentureInteractive2016' is not an integer - this will probably not sort properly.
+[445] Biber.pm:133> INFO - WARNINGS: 30
