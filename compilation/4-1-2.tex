@@ -1,0 +1,77 @@
+\subsubsection{Creación de una Base de Mensajes del Usuario y Activación de Filtros}
+
+En un entorno productivo, lo visto en el apartado anterior no es aplicable. Es necesario hacer una búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id} de manera estricta. En la misma iteración se experimenta con la creación de una base vectorial en la que cada vector es un mensaje que el usuario tuvo con el asistente. En ese mensaje el usuario brinda una partícula de información importante que refuerza el nivel de conocimiento que el sistema tiene del usuario.
+
+La recuperación se da entonces mediante un filtrado por \texttt{person\_id} y luego por similitud semántica entre una pregunta y el mensaje del usuario que mayor relación tenga con esa pregunta.
+
+El código de la notebook\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/2.ipynb}} realiza una búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id}, con el objetivo de encontrar el mensaje del usuario que más relación tenga con una pregunta mediante similitud semántica. A continuación se describen los pasos:
+
+\paragraph{Importación de Librerías y Configuración}
+
+\textbf{Creación de embeddings:} Se genera un objeto embeddings usando \texttt{OpenAIEmbeddings}, que se usará para transformar texto en vectores numéricos, permitiendo calcular la similitud entre textos.
+
+\textbf{Generación de metadatos:} Se crea un diccionario con la información del usuario (\texttt{person\_id} y \texttt{person\_name}), que se añadirá como metadatos a cada mensaje guardado en la base de datos vectorial.
+
+\textbf{Creación de un mensaje:} Se crea un mensaje con el contenido ``hola, quiero ir a Río'' y un timestamp que marca el momento de creación. Este mensaje será transformado en un vector.
+
+\paragraph{Procesamiento y Almacenamiento}
+
+\textbf{Conversión a texto y vectorización:} El contenido del mensaje se convierte a texto con \texttt{str(message)} y luego es transformado en un vector mediante \texttt{FAISS.from\_texts()}. El índice vectorial se almacena junto con los metadatos.
+
+\textbf{Almacenamiento de la base vectorial:} El índice de vectores se guarda localmente con \texttt{conversations.save\_local()}, que crea un archivo en la ruta especificada para almacenar el índice.
+
+\paragraph{Búsqueda por Similitud Semántica}
+
+Se realiza una búsqueda usando \texttt{conversations.similarity\_search\_with\_score()}. La pregunta es ``¿A dónde quería ir el cliente?'' y se filtra por \texttt{person\_id} ``alexander.ditzend''. Se busca el mensaje más similar semánticamente a la pregunta.
+
+\begin{APACode}
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+import os
+import sys
+import redis
+from datetime import datetime
+from dotenv import load_dotenv
+
+sys.path.append('/Users/alexander/Projects/hyperpersonalization/app/tools')
+from vectordb import connect_to_redis, check_index_existance, add_message_to_db
+
+load_dotenv()
+
+redis_host = os.getenv("REDIS_HOST") or "localhost"
+redis_port = os.getenv("REDIS_PORT") or 6379
+
+embeddings = OpenAIEmbeddings()
+metadatas = [{"person_id": "alexander.ditzend", "person_name": "Alexander"}]
+timestamp = datetime.now().isoformat()
+message = {"timestamp": timestamp, "content": "hola, quiero ir a Río"}
+text = str(message)
+conversations = FAISS.from_texts(texts=[text], embedding=embeddings, 
+                                metadatas=metadatas)
+conversations.save_local(folder_path="../indexes/conversations", 
+                        index_name="conversations")
+
+conversations.similarity_search_with_score(
+    query="¿A dónde quería ir el cliente?", 
+    filter={"person_id": "alexander.ditzend"}
+)
+\end{APACode}
+
+\paragraph{Conclusiones de la segunda iteración}
+
+El resultado devuelto es el mensaje ``hola, quiero ir a Río'' con un puntaje de similitud de 0.50811493. Este puntaje resulta de la comparación mediante la distancia coseno entre la pregunta y el contenido del mensaje:
+
+\begin{APACode}
+[(Document(page_content="{'timestamp': '2023-07-12T12:00:22.538965', 
+                        'content': 'hola, quiero ir a Río'}", 
+          metadata={'person_id': 'alexander.ditzend', 
+                   'person_name': 'Alexander'}), 
+  0.50811493)]
+\end{APACode}
+
+
+Se menciona que la distancia coseno no es útil en un conjunto con un solo vector, ya que no hay otros vectores con los cuales comparar. Sin embargo, el ejemplo demuestra la factibilidad de la aproximación en búsquedas por similitud semántica.
+
+El sistema filtra los vectores por un identificador de usuario y realiza una búsqueda semántica usando la distancia coseno para encontrar el mensaje que más se asemeja a la consulta planteada, permitiendo recuperar información relevante basada en los mensajes previos del usuario. Se busca ahora hacer una búsqueda por similitud semántica entre una pregunta y una pieza de información provista por el usuario.
+
+Claramente la distancia coseno no es un parámetro válido en un conjunto donde hay un solo vector pero con este simple ejemplo alcanza para comprobar la factibilidad de la aproximación. 

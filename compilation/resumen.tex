@@ -1,0 +1,16 @@
+\section{Resumen}
+
+Este trabajo analiza la viabilidad de dotar a los asistentes virtuales de un nivel de hiperpersonalización que combine datos semánticos y estructurados del usuario. Plantea la hipótesis de que, a partir del análisis de interacciones previas y la ingestión de documentos relevantes, es posible construir una base de datos híbrida capaz de aportar contexto en tiempo real a la generación de respuestas.
+
+Para contrastar esta premisa se diseñó una metodología experimental en cuatro etapas:
+
+\begin{enumerate}
+\item Experimentos de \textit{prompting} acotados
+\item Ingestión de documentos para ampliar el corpus contextual
+\item Generación de conjuntos de datos sintéticos
+\item Almacenamiento de dichos conjuntos en bases vectoriales y de grafos, con filtros específicos por usuario
+\end{enumerate}
+
+El prototipo, que integra Redis para sesiones y FAISS para búsquedas por similitud, demostró que la distancia coseno, aplicada tras un filtrado por identificador, recupera información pertinente aun en corpora crecientes; el sistema resolvió consultas cronológicas y semánticas combinadas con alta precisión.
+
+Se concluye que la estrategia es técnicamente factible y escalable, siempre que el motor vectorial gestione eficientemente el volumen de datos; no obstante, persisten retos ligados a la memoria conversacional continua y a la adaptación de modelos menos potentes.

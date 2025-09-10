@@ -1,0 +1,6 @@
+\xpg@aux {}{spanish}
+\contentsline {section}{Resumen}{3}{Doc-Start}%
+\contentsline {section}{Síntesis Ejecutiva}{3}{Doc-Start}%
+\contentsline {section}{Conclusiones}{3}{Doc-Start}%
+\contentsline {section}{Bibliografía}{3}{Doc-Start}%
+\contentsline {section}{Anexos}{3}{Doc-Start}%

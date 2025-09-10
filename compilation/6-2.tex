@@ -1,0 +1,159 @@
+\subsection{Análisis estratégico}
+
+\subsubsection{Análisis FODA}
+
+\paragraph{Fortalezas (Internas)}
+
+\begin{itemize}
+    \item \textbf{Diferenciación}: Combina múltiples fuentes de datos y optimiza la hiperpersonalización en tiempo real. No existen competidores aún.
+    \item \textbf{Privacidad y seguridad}: La instalación local o en un entorno controlado por el cliente reduce las preocupaciones sobre la transferencia de datos.
+    \item \textbf{Compatibilidad}: Diseñado para integrarse con diferentes sistemas y bases de datos (e.g., CRM, ERP).
+    \item \textbf{Escalabilidad}: Puede adaptarse a diversas industrias y volúmenes de datos, desde pequeñas empresas hasta grandes corporaciones.
+    \item \textbf{Valor estratégico}: Ayuda a las empresas a maximizar la eficiencia de sus asistentes virtuales, mejorando la experiencia del cliente y optimizando recursos.
+\end{itemize}
+
+\paragraph{Debilidades (Internas)}
+
+\begin{itemize}
+    \item \textbf{Requiere personalización inicial}: Cada cliente puede necesitar adaptaciones específicas para integrar el middleware con sus sistemas.
+    \item \textbf{Costos de desarrollo y mantenimiento}: Mantener compatibilidad con múltiples sistemas y ofrecer soporte técnico puede requerir recursos significativos.
+    \item \textbf{Curva de aprendizaje}: Empresas con menor madurez tecnológica podrían tener dificultades para comprender o implementar la solución.
+\end{itemize}
+
+\paragraph{Oportunidades (Externas)}
+
+\begin{itemize}
+    \item \textbf{Crecimiento del mercado de IA}: Aumento explosivo en la adopción de asistentes virtuales en sectores clave como salud, comercio y finanzas.
+    \item \textbf{Cumplimiento de regulaciones}: Empresas buscan soluciones que les permitan cumplir con normas de seguridad y protección de datos mientras implementan personalización avanzada.
+    \item \textbf{Tendencia hacia la descentralización}: Preferencia por soluciones que no requieran enviar datos a terceros.
+\end{itemize}
+
+\paragraph{Amenazas (Externas)}
+
+\begin{itemize}
+    \item \textbf{Competencia}: Grandes empresas podrían ofrecer soluciones integradas a su oferta actual de productos.
+    \item \textbf{Barreras de adopción}: Resistencia inicial de las empresas a instalar software intermedio sin ver resultados claros.
+    \item \textbf{Dependencia tecnológica}: Cambios en los sistemas base de los clientes podrían requerir actualizaciones constantes.
+    \item \textbf{Cambio en prioridades del mercado}: La aparición de nuevas tecnologías podría desviar el interés hacia otras soluciones.
+\end{itemize}
+
+\subsubsection{Propuesta de valor}
+
+\paragraph{Problema a resolver}
+
+\subparagraph{Desconexión entre datos y asistentes virtuales existentes}:
+Las empresas tienen múltiples fuentes de datos (CRM, ERP, bases de datos internas) que no están integradas con sus asistentes virtuales. Los bots suelen carecer de contexto relevante para ofrecer respuestas personalizadas y efectivas.
+
+\subparagraph{Incapacidad de los asistentes virtuales actuales para entender el contexto dinámico}:
+La falta de hiperpersonalización reduce la calidad de la interacción y la satisfacción del cliente. Esto puede llevar a pérdida de ventas, frustración del usuario y mayor carga para los canales tradicionales (como atención telefónica).
+
+\subparagraph{Privacidad y cumplimiento normativo}:
+Muchas empresas no pueden alojar o transmitir sus datos fuera de sus centros de datos propios por preocupaciones legales y de seguridad.
+
+\paragraph{Especificación de la propuesta de valor}
+
+\subparagraph{Para las empresas}:
+\begin{itemize}
+    \item \textbf{Optimización de interacciones}: Permite que los bots ofrezcan respuestas personalizadas en tiempo real utilizando múltiples fuentes de datos.
+    \item \textbf{Cumplimiento normativo}: Los datos permanecen en el entorno seguro de la empresa.
+    \item \textbf{Mejor integración}: Facilita la conexión entre sistemas existentes y el motor del bot, sin necesidad de rediseñar infraestructuras completas.
+    \item \textbf{Reducción de costos}: Disminuye la necesidad de intervención humana en las interacciones repetitivas.
+\end{itemize}
+
+\subparagraph{Para los usuarios finales}:
+\begin{itemize}
+    \item \textbf{Experiencia superior}: Interacciones más relevantes y fluidas, adaptadas a sus necesidades específicas.
+    \item \textbf{Respuesta rápida}: Menor tiempo para resolver problemas o acceder a información personalizada.
+\end{itemize}
+
+\subsubsection{Ejemplos de impacto por industria}
+
+\paragraph{Comercio electrónico: Pasajes}
+
+A continuación se detallan los problemas comunes en el sector:
+
+\subparagraph{Altos volúmenes de consultas repetitivas}: Cambios de vuelo, estado del itinerario o políticas de equipaje.
+
+\subparagraph{Falta de personalización}: Bots actuales no tienen en cuenta el historial del cliente, lo que lleva a experiencias impersonales como preguntar repetidamente por preferencias de asiento o necesidades especiales.
+
+\subparagraph{Necesidad de cumplimiento normativo}: Las aerolíneas manejan datos sensibles (nombres, pasaportes, métodos de pago) que requieren altos estándares de seguridad.
+
+Aplicando la propuesta de valor a esta industria se recalca que el middleware actúa como un intermediario entre los sistemas internos de la empresa y el motor del bot, permitiendo acceso contextualizado a los datos, integrando CRM, sistemas de reservas (e.g., Amadeus, Sabre), y registros de clientes frecuentes. Además la hiperpersonalización en tiempo real proporciona respuestas relevantes basadas en el historial del cliente, preferencias previas y datos actuales. Por el lado del cumplimiento de normativas el aporte recae en que los datos no abandonan los servidores de la aerolínea, garantizando privacidad y seguridad.
+
+\subparagraph{Escenario práctico: Cliente frecuente solicita información}
+
+\begin{enumerate}
+    \item Sin middleware:
+    \begin{itemize}
+        \item Bot: ``¿Cuál es su número de vuelo?''
+        \item Usuario: Proporciona información varias veces.
+        \item Bot: Da respuestas genéricas sobre cambios de vuelo o equipaje.
+    \end{itemize}
+    
+    \item Con middleware:
+    \begin{itemize}
+        \item Bot: ``Hola, Alexander. Veo que tenés un vuelo a Río de Janeiro mañana desde Buenos Aires. ¿Querés modificar tu asiento o agregar equipaje?''
+        \item Usuario: ``Sí, prefiero una ventana.''
+        \item Bot: ``Listo, te cambié a una ventana en el asiento 12A. ¿Necesitás algo más?''
+    \end{itemize}
+\end{enumerate}
+
+\subparagraph{Resultados esperados}
+
+Las empresas de transporte podrían reducir entre un 30\% y un 50\% las consultas manejadas por humanos. Según Botpress, los chatbots pueden responder hasta el 79\% de las consultas rutinarias en atención al cliente. Pero se toma un valor más conservador dado que cada implementación tiene fuerte dependencia del contexto.
+
+No solo se verificaría un ahorro de costos sino un incremento sustancial en ventas adicionales (asientos, equipaje, upgrades) con un engagement superior en tiempo real. McKinsey \& Company indica que la personalización puede aumentar los ingresos entre un 10\% y un 15\%, dependiendo del sector y la capacidad de ejecución. En el mismo trabajo se indica que el 71\% de los consumidores espera interacciones personalizadas, y el 76\% se siente frustrado cuando no las recibe.
+
+\paragraph{Industria bancaria}
+
+En esta industria se encuentran generalmente los siguientes inconvenientes:
+
+Consultas repetitivas sobre saldos, estados de cuenta, transferencias y pagos recurrentes. Estas interacciones ocupan tiempo del personal y generan frustración en los clientes si los bots no proporcionan respuestas rápidas y precisas. Los bots actuales no consideran el historial financiero del cliente, lo que resulta en recomendaciones genéricas en lugar de sugerir opciones pensadas para la situación real de cada cliente. Los bancos manejan datos financieros sensibles y deben cumplir estrictas regulaciones, como GDPR, CCPA y normativas locales de privacidad.
+
+El middleware actúa como un intermediario entre los sistemas internos del banco y el motor del bot, permitiendo acceso contextualizado a los datos: Integra CRM, sistemas transaccionales y datos de clientes, proporcionando información relevante en tiempo real. La hiperpersonalización en tiempo real permite responder con precisión basándose en el historial de transacciones, hábitos financieros y necesidades específicas del cliente.
+
+\subparagraph{Escenario práctico: Cliente solicita información sobre su cuenta}
+
+\begin{enumerate}
+    \item Sin middleware:
+    \begin{itemize}
+        \item Bot: ``¿Cuál es el número de tu cuenta?''
+        \item Usuario: Proporciona la información varias veces.
+        \item Bot: Da respuestas genéricas sobre saldos o transferencias.
+    \end{itemize}
+    
+    \item Con middleware:
+    \begin{itemize}
+        \item Bot: ``Hola, María. Tu cuenta principal tiene un saldo de \$12,500. ¿Querés programar una transferencia o conocer los detalles de tu última transacción?''
+        \item Usuario: ``Sí, necesito transferir \$2,000.''
+        \item Bot: ``Listo, programé la transferencia. ¿Te gustaría recibir una notificación cuando se complete?''
+    \end{itemize}
+\end{enumerate}
+
+Los clientes reciben respuestas rápidas y personalizadas, mejorando su experiencia con los servicios bancarios. Se disminuye la carga de trabajo de los agentes humanos, optimizando recursos operativos y las recomendaciones personalizadas aumentan las ventas de productos financieros, como créditos o inversiones. Una experiencia personalizada refuerza la relación con los clientes, promoviendo la fidelización. En números, los resultados esperados coinciden con el apartado anterior.
+
+\paragraph{Servicios de salud}
+
+Los problemas comunes de atención al cliente en las organizaciones de provisión de servicios de salud se enmarcan en preguntas frecuentes sobre cobertura, turnos médicos, y autorizaciones de estudios o tratamientos. Estas consultas ocupan un tiempo considerable del personal de atención y pueden generar demoras, lo que afecta la satisfacción de los pacientes. Por otro lado, los bots actuales no consideran el historial médico del paciente ni sus preferencias, lo que lleva a experiencias impersonales. Al igual que los ejemplos anteriores, las empresas de medicina prepaga manejan información altamente sensible (historial médico, tratamientos, datos de asegurados) y deben cumplir con regulaciones de protección de datos personales y estándares internacionales de privacidad.
+
+El middleware actúa como un intermediario entre los sistemas internos de la empresa de medicina prepaga y el motor del bot, permitiendo acceso contextualizado a los datos porque, al igual que los casos anteriores, integra CRM, historial médico y sistemas de gestión de turnos, proporcionando información precisa en tiempo real. Los bots hiperpersonalizados pueden generar respuestas adaptadas al historial del paciente, sus consultas previas y las características de su plan. Todo esto garantizando que los datos médicos permanezcan dentro del entorno seguro de la empresa, cumpliendo con las regulaciones aplicables.
+
+\subparagraph{Escenario práctico: Paciente solicita un turno médico}
+
+\begin{enumerate}
+    \item Sin middleware:
+    \begin{itemize}
+        \item Bot: ``¿Qué especialidad necesitas?''
+        \item Usuario: Proporciona información básica y espera varios pasos para obtener opciones disponibles.
+        \item Bot: Da respuestas genéricas sobre médicos sin considerar antecedentes o ubicaciones preferidas.
+    \end{itemize}
+    
+    \item Con middleware:
+    \begin{itemize}
+        \item Bot: ``Hola, Martín. Veo que necesitas un turno con un cardiólogo, como en tu consulta anterior. ¿Querés agendar con el Dr. López en la clínica cercana a tu domicilio?''
+        \item Usuario: ``Sí, por favor.''
+        \item Bot: ``Listo, tu turno es el lunes a las 14:00. ¿Querés recibir un recordatorio el día anterior?''
+    \end{itemize}
+\end{enumerate}
+
+Los pacientes reciben respuestas rápidas y personalizadas, reduciendo su frustración y mejorando su experiencia. Además se disminuye la carga operativa de los agentes humanos, liberando recursos para tareas más complejas sin contar la optimización en la asignación de citas, considerando la disponibilidad y preferencias de los pacientes. 

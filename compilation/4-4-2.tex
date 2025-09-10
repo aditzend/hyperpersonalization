@@ -1,0 +1,222 @@
+\subsubsection{Inserción en base de documentos con soporte vectorial y consultas}
+
+Habiendo descartado a las bases de grafos como soporte de los conocimientos usados para hiperpersonalización se experimenta en este punto con MongoDB, una base no SQL, que almacena documentos que no necesariamente tienen que responder a una estructura predefinida, lo que la hace ideal para administrar en una misma colección registros relacionados con diferentes áreas de la vida de un usuario. En el presente caso debemos insertar unidades de información relacionadas con personas, gastos y visitas al médico.
+
+En una primera etapa se decidió crear colecciones separadas para cada tipo de registro pero rápidamente la solución fue descartada porque agregaría un paso de selección de tipo de registro. Por ejemplo si el asistente recibe una consulta como ``cuántos años tiene mi sobrina más chica?'', el sistema tendría que recorrer todas las colecciones disponibles para el usuario en curso y luego seleccionar en cuál de ellas hacer una búsqueda. Esto agrega probabilidad de error además de tiempo e ineficiencia. El código correspondiente a esta solución se omite del presente trabajo por no ser de relevancia.
+
+La arquitectura seleccionada consiste en tomar una pieza de información, como la del siguiente ejemplo y calcularle los embeddings antes de guardarla en la base.
+
+\begin{APACode}
+{
+    "datetime": "2023-12-01T10:00:00Z",
+    "description": "Monthly subscription to streaming service", 
+    "type": "subscription",
+    "amount": 1, 
+    "unit_of_measure": "service", 
+    "unit_price": 15.0,
+    "total_cost": 15.0, 
+    "payment_method": "direct debit", 
+    "area_of_life": "entertainment"
+}
+\end{APACode}
+
+Todo el objeto se convierte a texto plano antes de la conversión y al obtener el vector se guarda en el campo `vector' y se inserta en la colección única llamada `Records'.
+
+Para que se pueda efectuar la búsqueda vectorial es necesario crear un índice de búsqueda vectorial en MongoDB Atlas, el servicio provisto por la misma empresa que desarrolla y mantiene la base de datos.
+
+Se ha probado correr una instancia local del mismo servicio con éxito pero para guardar de manera más confiable los datos de este trabajo y asegurar su posterior uso se decidió usar la capa gratuita de MongoDB Atlas en la nube.
+
+Para crear un índice de búsqueda se debe especificar el campo dentro de cada documento en el que se encuentran los embeddings, en este caso el campo se llama ``vector''. Luego se especifican las dimensiones del vector, en este caso, al usar text-embeddings-3-large el largo del vector es 3072. Por último se define qué tipo de algoritmo usar para calcular la distancia vectorial. Por el tipo de aplicación la distancia más apropiada es la coseno explicada en la introducción al capítulo.
+
+El valor está entre 0 y 2, donde 0 indica que los vectores son idénticos en dirección y 2 que son opuestos. Generalmente como puntaje de similitud se usa 1 - distancia coseno para hacer más fácilmente interpretable el resultado. Entonces los valores más cercanos a 1 son los más similares.
+
+Siguiendo este mecanismo se procesaron todos los conjuntos de datos sintéticos creados para simular información extraída sobre la vida de Norman, el sujeto ficticio que es el centro del presente trabajo. Como ya se explicó, todos los tipos de registros se insertaron en la misma colección llamada ``Records'' con un agregado previo para identificar el tipo de registro y quién es el dueño de ese registro, para dar lugar a posibles búsquedas filtradas si es que fueran necesarias en el futuro.
+
+La base de conocimientos sobre Norman alcanzó los 187 documentos sobre personas en su vida, registros médicos y gastos.
+
+A continuación se procede a comprobar la eficacia de esta solución simulando una conversación entre el usuario y su asistente personal con hiperpersonalización. El primer paso consiste en amplificar el mensaje del usuario para mejorar la recuperación de registros.
+
+Por ejemplo, ``hace cuánto no voy al dentista?'' se amplifica a: ``estoy pensando en mi última visita al dentista cuánto tiempo ha pasado desde que fui al dentista registro del dentista última vez que fui al odontólogo fechas de visita al dentista registros de citas dentales fichero de dentista''. Con esta versión amplificada se calculan los embeddings para comenzar la búsqueda por similitud vectorial. Se puede ajustar el parámetro k que controla cuántos resultados se deben traer de la base. Generalmente se comienza con un valor de 5 y se ajusta a medida que se evalúa la exactitud de las respuestas en función de k.
+
+La búsqueda vectorial, también llamada semántica, consiste en calcular la distancia coseno entre el vector que representa a la consulta ampliada y los diferentes vectores que representan las piezas de información. Se utilizan algoritmos que evitan tener que atravesar todo el universo de vectores, de lo contrario el sistema sería imposible de aplicar en un entorno de atención en tiempo real.
+
+Una vez seleccionados los k vectores más cercanos a la consulta ampliada se procede a llamar a un modelo de lenguaje para que tome la pregunta inicial, siguiendo el ejemplo ``hace cuánto no voy al dentista?'' y la combine con el contexto para responder. El contexto es la suma de los k resultados en formato texto, ya que los embeddings no le son de utilidad y además generan un alto costo de implementación. Si en una consulta se comete el error de enviar los datos de contexto con sus embeddings es común obtener un error de overflow de tokens. En este punto es oportuno recordar que cada uno de los resultados de la base cuentan con un vector de embeddings, y usando el modelo mencionado los mismos cuentan con una dimensión de 3072. Pero además de eso cada número tiene una alta precisión y equivale aproximadamente a 10 tokens. Si k=5 y por error se envían los vectores de los resultados se exceden fácilmente los 150.000 tokens. Unos 20.000 más de lo autorizado por los más poderosos modelos de OpenAI a la fecha.
+
+Al final de la notebook se ejecutan diferentes preguntas con resultados satisfactorios salvo en el caso de una pregunta combinada que debido a un error en la amplificación y recuperación no trae el contexto adecuado para la parte de generación de la respuesta.
+
+Este punto puede ser resuelto por un paso anterior a la amplificación que reformule una pregunta combinada como dos preguntas separadas. Cada pregunta recibe el tratamiento existente y se combinan al final los contextos.
+
+A continuación el código de los procesos detallados\footnote{Código completo disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/34-populate-records-in-atlas.ipynb}}.
+
+\paragraph{Configuración inicial y conexión a MongoDB Atlas}
+
+\begin{APACode}
+import os
+from pymongo import MongoClient
+
+# Connect to local MongoDB Atlas 
+mongo_uri = os.getenv("MONGODB_URI") 
+if not mongo_uri:
+    raise ValueError("MONGODB_URI environment variable is not set")
+
+client = MongoClient(mongo_uri) 
+db = client.get_database("hyper")
+
+print(f"Connected to database: {db.name}")
+\end{APACode}
+
+\paragraph{Clase cliente para Atlas}
+
+\begin{APACode}
+class AtlasClient():
+    def __init__(self, atlas_uri, dbname): 
+        self.mongodb_client = MongoClient(atlas_uri) 
+        self.database = self.mongodb_client[dbname]
+
+    def ping(self):
+        self.mongodb_client.admin.command('ping')
+
+    def get_collection(self, collection_name): 
+        collection = self.database[collection_name] 
+        return collection
+
+    def find(self, collection_name, filter={}, limit=10): 
+        collection = self.database[collection_name]
+        items = list(collection.find(filter=filter, limit=limit)) 
+        return items
+
+    def vector_search(self, collection_name, index_name, attr_name, 
+                     embedding_vector, limit=5): 
+        collection = self.database[collection_name]
+        results = collection.aggregate([
+            {
+                '$vectorSearch': { 
+                    "index": index_name, 
+                    "path": attr_name,
+                    "queryVector": embedding_vector, 
+                    "numCandidates": 50,
+                    "limit": limit,
+                }
+            },
+            {
+                "$project": {
+                    '_id': 1,
+                    'title': 1,
+                    'plot': 1,
+                    'year': 1,
+                    "search_score": {"$meta": "vectorSearchScore"}
+                }
+            }
+        ])
+        return list(results)
+
+    def close_connection(self): 
+        self.mongodb_client.close()
+\end{APACode}
+
+\paragraph{Procesamiento y carga de registros médicos}
+
+\begin{APACode}
+from openai import OpenAI
+import json
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def get_embedding(text):
+    response = client.embeddings.create( 
+        input=text,
+        model="text-embedding-3-large"
+    )
+    return response.data[0].embedding
+
+# Load the medical_records.json file
+with open('../../data/norman/medical_records/medical_records.json', 'r') as file: 
+    medical_records_data = json.load(file)
+
+# Process each medical record and add embeddings 
+for record in medical_records_data:
+    if record['datetime'] != "-":
+        record["record_owner"] = "Norman" 
+        record["record_type"] = "medical_record" 
+        record_text = json.dumps(record)
+        embedding = get_embedding(record_text) 
+        record['vector'] = embedding
+\end{APACode}
+
+\paragraph{Inserción en la colección Records}
+
+\begin{APACode}
+Records = atlas_client.get_collection('Records')
+
+# Insert each record into the Records collection 
+for record in medical_records_with_embeddings:
+    if len(record.get('datetime', '')) > 10:
+        if isinstance(record['vector'], str):
+            record['vector'] = json.loads(record['vector'])
+        
+        result = Records.insert_one(record)
+        print(f"Inserted record with ID: {result.inserted_id}")
+    else:
+        print(f"Skipping record with invalid datetime: {record.get('datetime', 'N/A')}")
+\end{APACode}
+
+\paragraph{Amplificación de consultas y búsqueda vectorial}
+
+\begin{APACode}
+from pydantic import BaseModel, Field
+from typing import Literal
+
+class AmplifiedQuery(BaseModel): 
+    expanded_query: str
+    record_type: Literal['medical_record', 'person_record', 'bank_record'] = Field(
+        ...,
+        description="Type of record to search for"
+    )
+
+# Query amplification using OpenAI completions 
+user_input = "cuántos años tienen mis hijas?"
+
+amplification = client.beta.chat.completions.parse(
+    model="gpt-4o-2024-08-06",
+    messages=[
+        {"role": "system", "content": f"You are a helpful assistant that expands user queries of the record owner Norman to improve search results using cosine distance in a vector database using text embeddings"},
+        {"role": "user", "content": f"Expand this query for better search results, concatenate all query variations into a single string under the key 'expanded_query'. Then choose the most appropriate record_type to pick the answer from. The user input is: `{user_input}`"}
+    ],
+    max_tokens=1000, 
+    response_format=AmplifiedQuery
+).choices[0].message.parsed
+
+query_embedding = get_embedding(amplification.expanded_query)
+
+# Perform vector search using Atlas client 
+results = atlas_client.vector_search(
+    collection_name="Records", 
+    index_name="RecordsSearchIndex", 
+    attr_name='vector', 
+    embedding_vector=query_embedding, 
+    limit=3
+)
+\end{APACode}
+
+\paragraph{Generación de respuesta final}
+
+\begin{APACode}
+context = []
+for result in results:
+    full_doc = Records.find_one({"_id": result["_id"]})
+    context.append(str(full_doc))
+
+context_str = "\n".join(context)
+final_answer = client.chat.completions.create( 
+    model="gpt-4o-2024-08-06",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant that answers questions based on the given context."},
+        {"role": "user", "content": f"Context:\n{context_str}\n\nQuestion: {user_input}\n\nAnswer the question based on the context."}
+    ],
+    max_tokens=150
+).choices[0].message.content
+\end{APACode}
+
+El sistema demostró capacidad para responder correctamente preguntas específicas como ``cuántos años tienen mis hijas?'' obteniendo la respuesta ``Tus hijas tienen 8 años. Los datos proporcionados mencionan a Mia y Eva, quienes son etiquetadas con la relación `daughter' (hija) y ambas tienen la edad de 8 años.''
+
+Para consultas más complejas que combinan diferentes tipos de registros, el sistema requiere mejoras en la estrategia de amplificación para manejar preguntas compuestas que abarcan múltiples categorías de información. 

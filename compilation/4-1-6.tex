@@ -1,0 +1,211 @@
+\subsubsection{Análisis del enfoque en la recuperación de información sobre un pariente del usuario}
+
+En la notebook 6 (\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/6.ipynb}) se experimenta con el cambio de foco en una conversación, dirigiéndola hacia un pariente cercano del usuario para corroborar a quién corresponde la información proporcionada y verificar si el sistema puede recuperar correctamente esa información. A continuación, se analizan los pasos del experimento:
+
+\paragraph{Carga de librerías y configuración}
+
+Se configuran las librerías necesarias, como FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de los mensajes. También se incluye una función para interactuar con el modelo de lenguaje GPT-3.5 a través de una API.
+
+\begin{APACode}
+import requests
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+index_name = "conversations"
+index_path = "../indexes/conversations"
+embeddings = OpenAIEmbeddings()
+
+db = FAISS.load_local(folder_path=index_path, index_name=index_name, 
+                      embeddings=embeddings)
+\end{APACode}
+
+La función para interactuar con GPT-3.5 se define como:
+
+\begin{APACode}
+def gpt35_system_user(system_message: str, user_message: str):
+    try:
+        response = requests.post(
+            url="https://yoizenia.openai.azure.com/openai/deployments/GPT35Turbo/chat/completions",
+            params={
+                "api-version": "2023-05-15",
+                "temperature": "0",
+            },
+            headers={
+                "Content-Type": "application/json",
+                "api-key": "bd6603c266fc49389659225a451ff03d",
+            },
+            data=json.dumps({
+                "messages": [
+                    {
+                        "content": system_message,
+                        "role": "system"
+                    },
+                    {
+                        "content": user_message,
+                        "role": "user"
+                    }
+                ]
+            })
+        )
+        choices = response.json()['choices']
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]['message'],
+        }
+        return answer
+    except requests.exceptions.RequestException:
+        print('HTTP Request failed')
+        return None
+\end{APACode}
+
+\paragraph{Simulación de una conversación}
+
+Se simula una conversación en la que el usuario solicita un turno para su madre. A lo largo de la conversación, el asistente le pide detalles adicionales, como el nombre y la edad de su madre. Estos intercambios se almacenan con sus respectivos metadatos, como \texttt{session\_id}, \texttt{person\_id}, \texttt{message\_id} y la marca temporal (\texttt{created\_at}).
+
+Ejemplos de mensajes:
+\begin{itemize}
+    \item Usuario: ``Quiero un turno para mi madre''.
+    \item Asistente: ``¿Cuál es el nombre de tu madre?''.
+    \item Usuario: ``Alba''.
+    \item Asistente: ``¿Qué edad tiene?''.
+    \item Usuario: ``66''.
+\end{itemize}
+
+La estructura de datos utilizada para almacenar los mensajes es:
+
+\begin{APACode}
+sessions = [
+    {
+        "message": {
+            "role": "user",
+            "content": "Quiero un turno para mi madre"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-1",
+            "created_at": "20230825T12:00:00.000Z",
+        },
+    },
+    {
+        "message": {
+            "role": "system",
+            "content": "cual es el nombre de tu madre?"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-2",
+            "created_at": "20230825T12:01:00.000Z"
+        }
+    },
+    {
+        "message": {
+            "role": "user",
+            "content": "Alba"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-3",
+            "created_at": "20230825T13:00:00.000Z",
+        },
+    },
+    {
+        "message": {
+            "role": "system",
+            "content": "y que edad tiene?"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-4",
+            "created_at": "20230825T13:01:00.000Z"
+        }
+    },
+    {
+        "message": {
+            "role": "user",
+            "content": "66"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-5",
+            "created_at": "20230825T14:00:00.000Z",
+        },
+    },
+    {
+        "message": {
+            "role": "system",
+            "content": "perfecto, tiene turno para el 30 de agosto a las 15:00"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-6",
+            "created_at": "20230825T14:01:00.000Z"
+        }
+    }
+]
+\end{APACode}
+
+\paragraph{Vectorización y almacenamiento}
+
+Cada mensaje de la conversación se convierte en texto plano y luego se vectoriza utilizando embeddings. Estos vectores se almacenan en FAISS junto con los metadatos para permitir una búsqueda eficiente en futuras consultas.
+
+\begin{APACode}
+for session in sessions:
+    print(str(session['message']))
+    print(session['metadata'])
+    db.add_texts(
+        texts=[str(session['message'])],
+        metadatas=[session['metadata']],
+    )
+\end{APACode}
+
+\paragraph{Consulta sobre el pariente del usuario}
+
+Se realiza una consulta del usuario (``¿qué sabes de mi madre?'') para verificar si el sistema puede recuperar la información relevante proporcionada en conversaciones anteriores. FAISS busca en la base de datos de vectores utilizando similitud semántica, y el sistema trata de usar el resultado como contexto para generar una respuesta con el modelo GPT-3.5.
+
+\begin{APACode}
+user_input_1 = "que sabes de mi madre?"
+filter = {"person_id": "20"}
+db_results_1 = db.similarity_search_with_score(query=user_input_1, 
+                                               embeddings=embeddings, 
+                                               filter=filter, k=10)
+context_1 = "{ message: " + db_results_1[0][0].page_content + 
+            ", metadata: " + str(db_results_1[0][0].metadata) + " }"
+print(f"CONTEXT:{context_1}")
+
+system_prompt_1 = f"""
+Answer the user's question this message as context. 
+Previous message: {context_1}
+"""
+answer_1 = gpt35_system_user(system_message=system_prompt_1, 
+                           user_message=user_input_1)
+answer_1["text"]["content"]
+\end{APACode}
+
+\paragraph{Problema en la recuperación de información}
+
+A pesar de que el sistema encuentra el mensaje relevante (``¿Cuál es el nombre de tu madre?''), el modelo de lenguaje no logra utilizar adecuadamente el contexto para generar una respuesta precisa. En lugar de utilizar la información sobre el nombre y la edad de la madre proporcionados anteriormente, el modelo responde de forma incorrecta, indicando que no tiene información sobre la madre del usuario.
+
+El contexto recuperado fue:
+\begin{APACode}
+CONTEXT:{ message: {'role': 'system', 'content': 'cual es el nombre de tu madre?'}, 
+metadata: {'session_id': '1', 'person_id': '20', 'message_id': '1-2', 
+'created_at': '20230825T12:01:00.000Z'} }
+\end{APACode}
+
+Sin embargo, la respuesta del modelo fue:
+\begin{quote}
+``Lo siento, pero no sé nada de tu madre. La pregunta anterior estaba siendo dirigida a un asistente virtual o chatbot. Si hay algo más en lo que pueda ayudarte, por favor házmelo saber.''
+\end{quote}
+
+El modelo falla en tomar la información brindada en el contexto para elaborar la respuesta.
+
+\paragraph{Conclusiones de la sexta iteración}
+
+La notebook 6 muestra un experimento en el que se intenta recuperar información sobre un pariente del usuario a partir de una conversación previa. Aunque FAISS parece recuperar los mensajes relevantes, el modelo de lenguaje no utiliza correctamente el contexto para generar una respuesta precisa. Esto sugiere que el manejo del contexto y la integración entre la base de datos de vectores y el modelo de lenguaje necesitan ser refinados para mejorar la precisión en la recuperación de información. 

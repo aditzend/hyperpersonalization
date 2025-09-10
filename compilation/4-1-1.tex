@@ -1,0 +1,130 @@
+
+
+\subsubsection{Primera Iteración}
+
+\paragraph{Herramientas a utilizar}
+
+\subparagraph{Redis}
+
+Redis es una base de datos NoSQL de código abierto, en memoria, que se utiliza principalmente como un almacén clave-valor de alta velocidad. A diferencia de las bases de datos tradicionales que almacenan datos en disco, Redis guarda todos sus datos en la memoria RAM, lo que permite tiempos de lectura y escritura extremadamente rápidos. Esto la convierte en una opción ideal para aplicaciones donde la velocidad es crítica, como el almacenamiento de sesiones, caché, colas de mensajes y procesamiento en tiempo real.
+
+Redis es más que un simple almacén clave-valor. Soporta varios tipos de datos estructurados, como cadenas, listas, conjuntos, mapas (hashes), conjuntos ordenados, entre otros. Además, ofrece operaciones avanzadas sobre estos tipos de datos, lo que lo hace más flexible y potente que otros sistemas de caché como Memcached.
+
+Redis presenta varias características clave que lo distinguen como una solución eficiente para el almacenamiento de datos en aplicaciones de alta demanda. En primer lugar, todos los datos se mantienen en memoria RAM, lo que garantiza una velocidad de acceso extremadamente rápida. No obstante, Redis también permite la persistencia opcional en disco, de modo que los datos pueden recuperarse después de un reinicio del sistema.
+
+Otra característica importante es el soporte para múltiples tipos de datos. Redis permite trabajar con diferentes estructuras como cadenas, listas, conjuntos, mapas y otros, lo que proporciona una flexibilidad significativa y facilita su uso en diversas aplicaciones. Aunque su función principal es el almacenamiento en memoria, Redis ofrece opciones de persistencia mediante técnicas como snapshots o el registro de operaciones en un archivo de log denominado AOF (Append-Only File), lo que posibilita la recuperación de datos tras un fallo o reinicio.
+
+En cuanto a la distribución y escalabilidad, Redis permite la distribución de datos entre varios nodos a través de Redis Cluster. Esto facilita la escalabilidad horizontal en sistemas distribuidos y mejora la disponibilidad del servicio. Además, ofrece operaciones atómicas para asegurar la consistencia de los datos, incluso en entornos concurrentes, y permite la ejecución de transacciones.
+
+Por último, Redis soporta la replicación maestro-esclavo, lo que posibilita la creación de réplicas de una instancia para mejorar la disponibilidad y la tolerancia a fallos. Estas características en conjunto hacen de Redis una herramienta robusta y versátil para el desarrollo de sistemas que requieren alta velocidad y confiabilidad en el manejo de datos.
+
+Gracias a estas características, Redis se ha convertido en una solución popular en aplicaciones que requieren respuestas rápidas, como sistemas de recomendación, almacenamiento temporal de datos, colas de trabajo, sistemas de monitoreo y análisis en tiempo real.
+
+\subparagraph{FAISS}    
+
+FAISS (Facebook AI Similarity Search) es una biblioteca de código abierto desarrollada por Facebook que permite realizar búsquedas eficientes de similitud y clustering en grandes conjuntos de datos de vectores. Está optimizada para manejar búsquedas de alta dimensión, lo que la hace ideal para trabajar con embeddings en aplicaciones como el procesamiento de lenguaje natural, la búsqueda de imágenes, la recomendación de contenido y más.
+
+FAISS está diseñada para buscar vecinos más cercanos (nearest neighbors) en grandes bases de datos, y puede realizar tanto búsquedas exactas como aproximadas. Esto es especialmente útil cuando se trabaja con datos de alta dimensionalidad, como vectores que representan palabras, imágenes o cualquier tipo de datos complejos, donde la búsqueda exacta puede ser computacionalmente costosa.
+
+FAISS presenta varias características clave que lo convierten en una herramienta eficiente y versátil para la búsqueda de similitud en grandes volúmenes de datos. En primer lugar, está optimizado para manejar conjuntos de datos que pueden alcanzar millones o incluso miles de millones de vectores, utilizando tanto la CPU como la GPU para acelerar los tiempos de búsqueda. Esta optimización permite que FAISS sea altamente eficiente en contextos donde la escala y la velocidad son fundamentales.
+
+Otra característica importante es su capacidad para realizar búsquedas de vecinos más cercanos, lo cual resulta esencial en tareas de recuperación de información, recomendación de productos o detección de elementos similares. Además, FAISS soporta tanto búsquedas exactas, que garantizan encontrar los vecinos más cercanos, como búsquedas aproximadas, que sacrifican algo de precisión a cambio de una mayor velocidad, adaptándose así a diferentes necesidades de rendimiento.
+
+El soporte para GPUs es una de las principales ventajas de FAISS, ya que permite mejorar considerablemente el rendimiento en búsquedas de alta dimensionalidad. Esto resulta especialmente útil cuando se requiere procesar grandes volúmenes de datos de manera rápida. Asimismo, FAISS implementa técnicas avanzadas de indexación, como el Product Quantization (PQ) y el Inverted File Index (IVF), que facilitan la organización eficiente de los datos y reducen la complejidad de las búsquedas.
+
+Por último, FAISS es una solución multiplataforma, compatible tanto con sistemas que utilizan CPU como con aquellos que emplean GPU, lo que le otorga flexibilidad en términos de hardware y facilita su integración en distintos entornos tecnológicos.
+
+FAISS se ha convertido en una herramienta clave para realizar búsquedas de similitud en grandes bases de datos de vectores, mejorando el rendimiento y la escalabilidad de aplicaciones de inteligencia artificial y machine learning que dependen de la búsqueda de alta precisión y rapidez.
+
+\subparagraph{LangChain}
+
+LangChain es un marco de desarrollo diseñado para crear aplicaciones que integran modelos de lenguaje, como los de OpenAI, con otras fuentes de datos y herramientas. Su objetivo principal es ayudar a los desarrolladores a construir aplicaciones que aprovechen el poder de los modelos de lenguaje, pero con la capacidad de interactuar de manera eficiente con bases de datos, APIs y entornos externos, brindando respuestas más precisas y útiles.
+
+Este marco permite estructurar las interacciones de los modelos de lenguaje en torno a dos componentes principales. Por un lado, las cadenas de pasos (\textit{chains}) representan flujos de trabajo secuenciales o ramificados que conectan varias operaciones o transformaciones de datos. En LangChain, es posible encadenar múltiples llamadas a modelos de lenguaje o integrar pasos adicionales, como consultas a bases de datos o procesamiento de resultados. Por otro lado, los agentes permiten la interacción con herramientas o servicios externos, como motores de búsqueda, APIs o sistemas de archivos. Estos agentes posibilitan que los modelos de lenguaje ejecuten acciones como obtener información en tiempo real, interactuar con otras plataformas o realizar cálculos.
+
+Entre las aplicaciones más comunes de LangChain se encuentran los asistentes conversacionales avanzados, que permiten a los modelos de lenguaje acceder a información dinámica desde bases de datos, realizar consultas o interactuar con sistemas de terceros, mejorando así la calidad y utilidad de las respuestas. También es útil para la automatización de flujos de trabajo, ya que al integrar modelos de lenguaje con servicios externos, LangChain ayuda a automatizar tareas complejas que requieren varios pasos, como la generación de informes, el análisis de datos o el procesamiento de texto. Además, facilita la recuperación de información, permitiendo construir aplicaciones que no solo generan texto, sino que también lo relacionan con datos almacenados en fuentes externas, como bases de datos o documentos, optimizando la precisión de las respuestas.
+
+LangChain es una herramienta poderosa para aprovechar las capacidades de los modelos de lenguaje y conectarlas con sistemas del mundo real, facilitando el desarrollo de aplicaciones más inteligentes y funcionales.
+
+\paragraph{Búsqueda por similitud utilizando la distancia coseno}
+
+La distancia coseno es una métrica utilizada para medir la similitud entre dos vectores en un espacio multidimensional, especialmente en el contexto de \textit{embeddings} o representaciones vectoriales. A diferencia de otras medidas como la distancia euclidiana, que se enfoca en la magnitud de los vectores, la distancia coseno se centra en el ángulo entre ellos.
+
+El concepto clave detrás de la distancia coseno es evaluar cuán alineados están dos vectores, sin importar su tamaño. Si dos vectores están en la misma dirección, el ángulo entre ellos será cercano a 0 grados, y por lo tanto, el coseno de ese ángulo será cercano a 1, lo que indica una alta similitud. Por el contrario, si los vectores están en direcciones completamente opuestas (ángulo de 180 grados), el coseno del ángulo será -1, lo que sugiere que los vectores son completamente diferentes.
+
+La fórmula de la distancia coseno se define como:
+
+\begin{equation}
+\text{distancia coseno} = 1 - \frac{A \cdot B}{||A|| \times ||B||}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item $A$ y $B$ son los dos vectores.
+    \item $A \cdot B$ es el producto punto entre los dos vectores.
+    \item $||A||$ y $||B||$ son las magnitudes (normas) de los vectores $A$ y $B$, respectivamente.
+\end{itemize}
+
+El valor resultante de la distancia coseno varía entre 0 y 1. Un valor de 0 indica que los vectores son completamente similares (idénticos en dirección), mientras que un valor de 1 indica que los vectores son completamente diferentes (perpendiculares o sin relación en términos de dirección).
+
+Esta medida es especialmente útil cuando se trabaja con datos de alta dimensionalidad, como en el procesamiento de lenguaje natural o la búsqueda de imágenes, ya que permite encontrar elementos similares basándose en sus representaciones vectoriales, sin verse afectada por la magnitud de los vectores, solo por la orientación relativa de los mismos.
+
+\paragraph{Desarrollo de la primera iteración}
+
+Como primera opción se crea un sistema compuesto por un caché de mensajes alojado en una base local de Redis y una base de vectores alojada en una instancia local de FAISS. En la base de vectores se guardarán los datos que se vayan recabando de los usuarios. Cada dato estará identificado por un campo llamado \texttt{person\_id}.
+
+En las dos bases se guardará información de diferentes personas.
+
+Se comienza importando la librería langchain para facilitar la interacción con las diferentes herramientas.
+
+Se prueba guardar un solo dato para comprobar el funcionamiento de punta a punta del sistema.
+
+El código implementado puede consultarse en detalle en el repositorio\footnote{\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/1.ipynb}}:
+
+\begin{APACode}
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+import os
+import redis
+
+from dotenv import load_dotenv
+load_dotenv()
+redis_host = os.getenv("REDIS_HOST") or "localhost"
+redis_port = os.getenv("REDIS_PORT") or 6379
+
+def connect_to_redis():
+    return redis.Redis(host=redis_host, port=redis_port, db=0)
+
+def check_index_existance(index="main") -> bool:
+    redis_conn = connect_to_redis()
+    index_key = f"indexes:{index}"
+    if redis_conn.get(index_key) is None:
+        return False
+    else:
+        return True
+
+messages = ["Hello, my name is John. I am a software engineer."]
+index = "main"
+
+# FAISS
+# langchain.vectorstores.faiss.FAISS
+# Creamos un index general y accedemos a la data del usuario por metadata.
+# {person_id:str}
+
+embeddings = OpenAIEmbeddings()
+metadatas = [{"person_id": "john", "person_name": "John"}]
+conversations = FAISS.from_texts(texts=["hi"], embedding=embeddings, 
+                                metadatas=metadatas)
+
+metadatas = [{"person_id": "mary", "person_name": "Mary"}]
+conversations.add_texts(texts=["hi whats up?"], metadatas=metadatas)
+# ['027065ea-f01a-448d-aae2-93c05ca62768']
+
+conversations.similarity_search(query="hi", k=2, filter={"person_id": "mary"})
+# [Document(page_content='hi whats up?', 
+#           metadata={'person_id': 'mary', 'person_name': 'Mary'})]
+\end{APACode}
+
+Como conclusión se extrae que no se necesita un filtrado estricto por \texttt{person\_id} sino que en condiciones de laboratorio se puede acceder a la información propia de un usuario mediante distancia coseno, que es el algoritmo por defecto del motor de búsqueda de la base vectorial FAISS.
+
+No es necesario armar indexes para cada persona, ni siquiera ser estricto con el schema, uno puede extraer el vector que quiera por similitud semántica. 

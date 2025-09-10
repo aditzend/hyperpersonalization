@@ -1,0 +1,414 @@
+\subsection{Ingestión a base de datos de los datos sintéticos}
+
+\subsubsection{Ingestión a base de grafos}
+
+En este paso se experimenta con una base de datos de grafos llamada ArangoDB, este tipo de base de datos crea un vínculo complejo entre cada pieza de información, llamada nodo. A diferencia de una base relacional, una base de grafos guarda información sobre el tipo de vínculo que hay entre dos nodos además de navegar la información a través de los mismos, haciendo que las consultas relacionales sean más rápidas y económicas.
+
+Es ideal para investigación ya que puede correrse fácilmente en un servidor propio sin tener que pagar licencia o suscripción.
+
+Con los archivos estructurados generados en el apartado anterior se hicieron las inserciones correspondientes en una instancia local de ArangoDB y se le aplicaron las preguntas de los experimentos con problemas focalizados de la sección 4.1.
+
+El siguiente es el resultado de insertar el archivo de familia en la base de datos y luego simular las preguntas que podría hacer el usuario para comprobar que el grafo familiar se navega correctamente. Luego la experimentación va un paso más allá, intentando modificar la consulta de lectura por una de escritura, obteniendo un resultado inesperadamente efectivo, ya que se logra un ingreso correcto en el grafo usando solamente una oración en lenguaje natural.
+
+El resultado no es satisfactorio ya que la conversión entre la pregunta del usuario y la consulta a la base contiene errores de interpretación.
+
+A continuación se encuentra el código descripto, disponible en el repositorio del proyecto\footnote{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/26-arango-norman.ipynb}.
+
+\paragraph{Inserción de los datos de Norman en la base de datos de ArangoDB}
+
+\begin{APACode}
+from dotenv import load_dotenv
+load_dotenv()
+OPENAI_API_TYPE = "openai"
+
+# Instantiate ArangoDB Database
+import json
+from adb_cloud_connector import get_temp_credentials
+from arango import ArangoClient
+
+con = get_temp_credentials()
+
+db = ArangoClient(hosts=con["url"]).db(
+    con["dbName"], con["username"], con["password"], verify=True
+)
+
+print(json.dumps(con, indent=2))
+\end{APACode}
+
+Resultado:
+\begin{APACode}
+Success: reusing cached credentials
+{
+  "dbName": "TUTj7i7fm55rmp58xz4lw6skg",
+  "username": "TUTbu0jwwiqud451fyooi8ww4",
+  "password": "TUTue5dopxl90qrvij44492e",
+  "hostname": "tutorials.arangodb.cloud",
+  "port": 8529,
+  "url": "https://tutorials.arangodb.cloud:8529"
+}
+\end{APACode}
+
+Se elimina el grafo Norman si ya existe:
+
+\begin{APACode}
+if db.has_graph("Norman"):
+    db.delete_graph("Norman", drop_collections=True)
+\end{APACode}
+
+Se crean las colecciones necesarias:
+
+\begin{APACode}
+db.create_graph(
+    "Norman",
+    edge_definitions=[
+        {
+            "edge_collection": "is_son_of",
+            "from_vertex_collections": ["Persons"],
+            "to_vertex_collections": ["Persons"],
+        },
+        {
+            "edge_collection": "is_father_of",
+            "from_vertex_collections": ["Persons"],
+            "to_vertex_collections": ["Persons"],
+        },
+    ],
+)
+
+normans_family_members = [
+    {
+        "name": "Norman",
+        "_key": "Norman",
+        "family_name": "Gonzalez",
+        "age": 41,
+    },
+    {
+        "name": "Julia",
+        "_key": "Julia",
+        "family_name": "Gonzalez",
+        "age": 40,
+        "relationship_to_Norman": "Wife"
+    },
+    {
+        "name": "Lucas",
+        "_key": "Lucas",
+        "family_name": "Gonzalez",
+        "age": 10,
+        "relationship_to_Norman": "Son"
+    },
+    {
+        "name": "Mia",
+        "_key": "Mia",
+        "family_name": "Gonzalez",
+        "age": 8,
+        "relationship_to_Norman": "Daughter"
+    },
+    {
+        "name": "Eva",
+        "_key": "Eva",
+        "family_name": "Gonzalez",
+        "age": 8,
+        "relationship_to_Norman": "Daughter"
+    },
+    {
+        "name": "Carlos",
+        "_key": "Carlos",
+        "family_name": "Gonzalez",
+        "age": 68,
+        "relationship_to_Norman": "Father"
+    },
+    {
+        "name": "Isabel",
+        "_key": "Isabel",
+        "family_name": "Gonzalez",
+        "age": 65,
+        "relationship_to_Norman": "Mother"
+    },
+    {
+        "name": "Mario",
+        "_key": "Mario",
+        "family_name": "Gonzalez",
+        "age": 45,
+        "relationship_to_Norman": "Brother"
+    },
+    {
+        "name": "Ana",
+        "_key": "Ana",
+        "family_name": "Martinez",
+        "age": 43,
+        "relationship_to_Norman": "Sister-in-law (Mario's wife)"
+    },
+    {
+        "name": "Pedro",
+        "_key": "Pedro",
+        "family_name": "Gonzalez",
+        "age": 38,
+        "relationship_to_Norman": "Brother"
+    },
+    {
+        "name": "Sofia",
+        "_key": "Sofia",
+        "family_name": "",
+        "age": 42,
+        "relationship_to_Norman": ""
+    },
+    {
+        "name": "Rafael",
+        "_key": "Rafael",
+        "family_name": "Lopez",
+        "age": 36
+    },
+    {
+        "name": "Liam",
+        "_key": "Liam",
+        "family_name": "Lopez",
+        "age": 12
+    },
+    {
+        "name": "Olivia",
+        "_key": "Olivia",
+        "family_name": "",
+        "age": 10
+    },
+    {
+        "name": "Ethan",
+        "_key": "Ethan",
+        "family_name": "",
+        "age": 7
+    },
+    {
+        "name": "Amelia",
+        "_key": "Amelia",
+        "family_name": "",
+        "age": 5
+    }
+]
+
+child_of_edges = [
+    {"_from": "Persons/Lucas", "_to": "Persons/Norman"},
+    {"_from": "Persons/Mia", "_to": "Persons/Norman"},
+    {"_from": "Persons/Eva", "_to": "Persons/Norman"},
+    {"_from": "Persons/Norman", "_to": "Persons/Carlos"},
+]
+
+father_of_edges = [
+    {"_from": "Persons/Norman", "_to": "Persons/Lucas"},
+    {"_from": "Persons/Norman", "_to": "Persons/Mia"},
+    {"_from": "Persons/Norman", "_to": "Persons/Eva"},
+    {"_from": "Persons/Carlos", "_to": "Persons/Norman"},
+]
+
+db.collection("Persons").import_bulk(normans_family_members)
+db.collection("is_son_of").import_bulk(child_of_edges)
+db.collection("is_father_of").import_bulk(father_of_edges)
+\end{APACode}
+
+Resultado:
+\begin{APACode}
+{'error': False,
+ 'created': 4,
+ 'errors': 0,
+ 'empty': 0,
+ 'updated': 0,
+ 'ignored': 0,
+ 'details': []}
+\end{APACode}
+
+Instantiate the ArangoDB-LangChain Graph:
+
+\begin{APACode}
+from langchain_community.graphs import ArangoGraph
+graph = ArangoGraph(db)
+graph.set_schema()
+
+# We can now view the generated schema
+import json
+print(json.dumps(graph.schema, indent=4))
+\end{APACode}
+
+Resultado del esquema generado:
+\begin{APACode}
+{
+    "Graph Schema": [
+        {
+            "graph_name": "Norman",
+            "edge_definitions": [
+                {
+                    "edge_collection": "is_father_of",
+                    "from_vertex_collections": [
+                        "Persons"
+                    ],
+                    "to_vertex_collections": [
+                        "Persons"
+                    ]
+                },
+                {
+                    "edge_collection": "is_son_of",
+                    "from_vertex_collections": [
+                        "Persons"
+                    ],
+                    "to_vertex_collections": [
+                        "Persons"
+                    ]
+                }
+            ]
+        }
+    ],
+    "Collection Schema": [
+        {
+            "collection_name": "is_father_of",
+            "collection_type": "edge",
+            "edge_properties": [
+                {
+                    "name": "_key",
+                    "type": "str"
+                },
+                {
+                    "name": "_id",
+                    "type": "str"
+                },
+                {
+                    "name": "_from",
+                    "type": "str"
+                },
+                {
+                    "name": "_to",
+                    "type": "str"
+                },
+                {
+                    "name": "_rev",
+                    "type": "str"
+                }
+            ],
+            "example_edge": {
+                "_key": "266257375170",
+                "_id": "is_father_of/266257375170",
+                "_from": "Persons/Norman",
+                "_to": "Persons/Lucas"
+            }
+        }
+    ]
+}
+\end{APACode}
+
+Configuración de la cadena de consultas:
+
+\begin{APACode}
+from langchain.chains import ArangoGraphQAChain
+from langchain_openai import ChatOpenAI
+
+chain = ArangoGraphQAChain.from_llm(
+    ChatOpenAI(temperature=0),
+    graph=graph,
+    verbose=True,
+    allow_dangerous_requests=True
+)
+\end{APACode}
+
+\paragraph{Pruebas de consultas en lenguaje natural}
+
+Se procede a hacer una pregunta desde un tercero ajeno a la persona de estudio en lenguaje natural:
+
+\begin{APACode}
+chain.run("de quien es hijo Norman?")
+\end{APACode}
+
+Resultado:
+\begin{APACode}
+Entering new ArangoGraphQAChain chain...
+AQL Query (1):
+WITH Persons, is_father_of
+FOR v, e, p IN 1..1 OUTBOUND 'Persons/Norman' is_father_of
+RETURN v
+
+AQL Result:
+[{'_key': 'Eva', '_id': 'Persons/Eva', '_rev': '_iho5hiW--C',
+  'name': 'Eva', 'family_name': 'Gonzalez', 'age': 8, ...}]
+
+Finished chain.
+'Norman tiene varios hijos. Entre ellos se encuentran Eva, Mia y Lucas. Lucas es el hijo de Norman.'
+\end{APACode}
+
+Segunda consulta:
+
+\begin{APACode}
+chain.run("quienes son los hijos de Norman?")
+\end{APACode}
+
+Resultado:
+\begin{APACode}
+Entering new ArangoGraphQAChain chain...
+AQL Query (1):
+WITH Persons, ChildOf
+FOR v, e IN 1..1 OUTBOUND 'Persons/Norman' ChildOf
+RETURN v
+
+AQL Result:
+[{'_key': 'Carlos', '_id': 'Persons/Carlos', '_rev': '_ihop_Sa--E',
+  'name': 'Carlos', 'family_name': 'Gonzalez', 'age': 68}]
+
+Finished chain.
+"Summary: The children of Norman are Carlos. Carlos is 68 years old and is identified as Norman's father in the database."
+\end{APACode}
+
+\paragraph{Prueba de escritura en la base de datos}
+
+Se prueba la capacidad de escritura usando lenguaje natural:
+
+\begin{APACode}
+chain.run("add a new son of Norman named Xavier")
+\end{APACode}
+
+Resultado:
+\begin{APACode}
+Entering new ArangoGraphQAChain chain...
+AQL Query (1):
+WITH Persons, ChildOf
+LET norman = (
+    FOR person IN Persons
+    FILTER person.name == 'Norman'
+    RETURN person
+)[0]
+
+LET xavier = {
+    "_key": "Xavier",
+    "name": "Xavier",
+    "family_name": "Gonzalez",
+    "age": 0
+}
+INSERT xavier INTO Persons
+LET edge = {
+    "_from": norman._id,
+    "_to": CONCAT('Persons/', xavier._key)
+}
+
+INSERT edge INTO ChildOf
+
+AQL Result:
+[]
+
+Finished chain.
+'A new son named Xavier has been successfully added to Norman in the database.'
+\end{APACode}
+
+Verificación de la inserción:
+
+\begin{APACode}
+chain.run("Norman tiene un hijo Xavier?")
+\end{APACode}
+
+Resultado:
+\begin{APACode}
+Entering new ArangoGraphQAChain chain...
+AQL Query (1):
+WITH Persons, ChildOf
+FOR v, e, p IN 1..1 OUTBOUND 'Persons/Norman' ChildOf
+FILTER v.name == 'Xavier'
+RETURN v
+
+AQL Result:
+[{'_key': 'Xavier', '_id': 'Persons/Xavier', '_rev': '_hux4B6W---',
+  'name': 'Xavier', 'family_name': 'Gonzalez', 'age': 0}]
+
+Finished chain.
+"Summary: Yes, Norman has a son named Xavier. According to the database query results, Xavier is related to Norman as his son, with the same family name 'Gonzalez'."
+\end{APACode} 

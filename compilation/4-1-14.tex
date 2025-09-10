@@ -1,0 +1,188 @@
+\subsubsection{Experimentos Combinados sobre Fechas y Manejo de Cantidades}
+
+En la \textit{notebook} 14\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/14.ipynb}} se realiza un experimento que combina la extracción de información de conversaciones con el razonamiento cronológico y el manejo de datos personales utilizando GPT-3.5 y GPT-4. A continuación se detallan los pasos principales del experimento:
+
+\paragraph{Carga de Librerías y Configuración}
+
+Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
+
+\begin{APACode}
+import os
+import requests
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+index_name = "conversations"
+index_path = "../indexes/conversations"
+embeddings = OpenAIEmbeddings()
+
+def gpt_system_user(
+    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
+):
+    """Para usar en notebooks"""
+    try:
+        response = requests.post(
+            url="https://api.openai.com/v1/chat/completions",
+            params={"temperature": "0"},
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+            },
+            data=json.dumps({
+                "model": model,
+                "messages": [
+                    {"content": system_message, "role": "system"},
+                    {"content": user_message, "role": "user"},
+                ]
+            }),
+            timeout=10,
+        )
+        choices = response.json()["choices"]
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]["message"],
+        }
+        return answer
+    except requests.exceptions.RequestException:
+        print("HTTP Request failed")
+        return None
+\end{APACode}
+
+\paragraph{Simulación de Conversaciones}
+
+Se crean contextos de conversación donde el usuario interactúa con el asistente virtual para realizar acciones como comprar pasajes para su familia de Buenos Aires a Córdoba o mejorar su categoría en un programa de viajero frecuente. Los datos proporcionados por el usuario, como nombres, edades y millas disponibles, se extraen y se almacenan en FAISS para su posterior consulta.
+
+Ejemplos de mensajes:
+\begin{itemize}
+\item Usuario: ``Voy a sacar un pasaje para la familia de Buenos Aires a Córdoba''.
+\item Asistente: ``¿Quiénes son los pasajeros?''.
+\item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María''.
+\item Usuario: ``Quiero subir de categoría en el programa de viajero frecuente''.
+\end{itemize}
+
+\begin{APACode}
+condensed_contexts = [
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Voy a sacar un pasaje para la familia de buenos aires a cordoba"
+            },
+            {
+                "role": "assistant",
+                "content": "quienes son los pasajeros?"
+            },
+            {
+                "role": "user",
+                "content": "Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María"
+            },
+            {
+                "role": "assistant",
+                "content": "en que fecha quiere viajar?"
+            },
+            {
+                "role": "user",
+                "content": "del 20 de agosto al 30 de agosto"
+            }
+        ],
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "context_id": "1",
+            "created_at": "20200825T12:00:00.000Z",
+        }
+    }
+]
+\end{APACode}
+
+\paragraph{Extracción de Datos}
+
+El modelo GPT-3.5 se utiliza para extraer información relevante de las conversaciones, como los nombres, las edades, las millas acumuladas y las fechas de viaje. Esta información se almacena en FAISS junto con los metadatos correspondientes para facilitar su recuperación en futuras consultas.
+
+Ejemplo de extracción: ``Pedro tiene una hija llamada Ana de 20 años y un hijo llamado Juan de 10 años. Quiere viajar con su familia de Buenos Aires a Córdoba del 20 al 30 de agosto''.
+
+\begin{APACode}
+db = FAISS.from_texts(texts=['notebook-14'], embedding=embeddings)
+for context in condensed_contexts:
+    messages = ''.join([str(message) for message in context['messages']])
+    extraction = gpt_system_user(
+        system_message="""
+Extract every meaningful information about the user from the provided conversation.
+Ask yourself, what happened in the conversation?
+What data about the user did you learn?
+At what date and time was this data gathered?
+
+Create a summary of everything you learned about the user. Use this format:
+On [date] at [time] the [user's / user's related person] [action] [data learned about the user].
+        """,
+        user_message=f"METADATA: ```{context['metadata']}``` CONVERSATION: ```{messages}```",
+        model="gpt-3.5-turbo",
+    )
+    
+    if extraction['status_code'] != 200:
+        print(f"Error: OpenAI API returned status code {extraction['status_code']}")
+        continue
+    else:
+        print(f"{extraction['text']['content']}")
+        db.add_texts(
+            texts=[extraction['text']['content']],
+            metadatas=[context['metadata']],
+        )
+\end{APACode}
+
+\paragraph{Consultas sobre Millas y Viajes}
+
+Se plantea una pregunta como ``¿Cuántas millas tenía en el momento de hacer el viaje a Córdoba?''. El sistema intenta combinar la información obtenida de varios contextos para responder a la consulta. Sin embargo, se detecta un error en el razonamiento: el sistema responde que Pedro tenía 200 millas al momento del viaje, lo cual es incorrecto, ya que las millas se usaron para el pasaje.
+
+\begin{APACode}
+user_input = "cuantas millas tenia en el momento de hacer el viaje a cordoba?"
+filter = {"person_id": "20"}
+db_results = db.similarity_search_with_score(
+    query=user_input, 
+    embeddings=embeddings, 
+    filter=filter, 
+    k=2
+)
+
+context_k2 = [f'\n {db_results[i][0].page_content} {db_results[i][0].metadata}\n' 
+              for i in range(len(db_results))]
+
+system_prompt = f"""
+You are the best personal assistant of SAIA Air. Your job is to help users in their travel needs.
+Use the user's name in your answers.
+You will find past conversations between you and the user between backticks.
+Use them to answer the user's question.
+To reason about dates, have in mind that today is September 13th, 2023.
+Take a deep breath and work on this problem step-by-step.
+
+```{context_k2}```
+"""
+
+answer = gpt_system_user(
+    system_message=system_prompt, 
+    user_message=user_input, 
+    model="gpt-3.5-turbo"
+)
+\end{APACode}
+
+\paragraph{Conclusiones de la catorceava iteración}
+
+El sistema respondió: ``Según la información recopilada en las conversaciones anteriores, en el momento de hacer el viaje a Córdoba, Pedro tenía 200 millas disponibles''. 
+
+Este resultado presenta un error de razonamiento, ya que no considera correctamente el orden cronológico de los eventos ni el uso de las millas para el pasaje.
+
+\paragraph{Posibles Mejoras}
+
+Se identifican algunos problemas de razonamiento, particularmente al intentar unir información de diferentes contextos. Se proponen futuros pasos para mejorar el modelo:
+
+\begin{itemize}
+\item Navegar el grafo de relaciones del usuario y cambiar el foco de la conversación (``este turno es para mi madre'')
+\item Usar el mismo método para guardar información como ``La madre del usuario tiene un turno para el dentista el 1 de enero de 2021''
+\item Agregar más datos personales para evitar confusiones en el futuro
+\item Simular llamados a APIs desde diferentes relaciones del usuario y evaluar posibles confusiones
+\end{itemize}
+
+La \textit{notebook} 14 muestra un experimento que combina la extracción de datos y el razonamiento sobre múltiples contextos. Si bien el sistema es capaz de recuperar y manejar información relevante, presenta errores al unir datos de diferentes contextos, especialmente cuando se trata de razonamiento cronológico y manejo de cantidades, como las millas disponibles. 

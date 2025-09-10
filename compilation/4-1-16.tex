@@ -1,0 +1,221 @@
+\subsubsection{Manejo de Datos Personales y Errores de Contexto en la Gestión de Citas Médicas con GPT-3.5}
+
+En la notebook 16\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/16.ipynb}} se realiza un experimento utilizando información proporcionada por un usuario sobre una cita médica para su madre y se busca combinar datos personales del usuario con los de su madre para completar y gestionar citas a través de un modelo de lenguaje (GPT-3.5). A continuación, se detallan los pasos principales del experimento:
+
+\paragraph{Carga de Librerías y Configuración}
+
+Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 a través de la API de OpenAI.
+
+\begin{APACode}
+import os
+import requests 
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings 
+from langchain.vectorstores import FAISS
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+index_name = "conversations"
+index_path = "../indexes/conversations" 
+embeddings = OpenAIEmbeddings()
+\end{APACode}
+
+\paragraph{Simulación de Conversaciones}
+
+Se simulan varios intercambios entre el usuario y el asistente virtual, donde el usuario proporciona información sobre su madre para sacar un turno médico. Se incluyen detalles como el nombre de la madre, su correo electrónico, número de teléfono, DNI y especialidad médica solicitada.
+
+Ejemplos de mensajes:
+
+\begin{itemize}
+\item Usuario: ``Soy Alexander, mi madre se llama Sylvia, te paso los datos de ella mail: sylvia@gmail.com''.
+\item Asistente: ``Excelente Alexander, ¿cómo puedo ayudarte?''.
+\item Usuario: ``Quiero sacar un turno para ella porque no entiende de tecnología''.
+\item Asistente: ``No hay problema, sacamos el turno para ella. ¿Cuál es el DNI de ella?''.
+\end{itemize}
+
+\begin{APACode}
+condensed_contexts = [
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Soy Alexander, mi madre se llama Sylvia, te paso los datos de ella mail: sylvia@gmail.com celu 1123343434"
+            },
+            {
+                "role": "assistant",
+                "content": "Excelente Alexander, como puedo ayudarte?"
+            },
+            {
+                "role": "user",
+                "content": "quiero sacar un turno para ella porque no entiende nada de tecnologia y los turnos se sacan por aca"
+            },
+            {
+                "role": "assistant",
+                "content": "No hay problema, sacamos el turno para ella, cual es el DNI de ella?"
+            },
+            {
+                "role": "user", 
+                "content": "12668992"
+            },
+            {
+                "role": "assistant",
+                "content": "perfecto, digame que especialidad?"
+            },
+            {
+                "role": "user", 
+                "content": "ginecologia"
+            },
+            {
+                "role": "assistant",
+                "content": "Tengo turnos disponibles con el Dr. Facundo Farias para el 27 de agosto a las 10:00hs, le parece bien?"
+            },
+            {
+                "role": "user",
+                "content": "si"
+            },
+            {
+                "role": "assistant",
+                "content": "confirmado entonces el turno para Sylvia para el 27 de agosto a las 10:00hs con el Dr. Facundo Farias"
+            }
+        ],
+        "metadata": { 
+            "session_id": "1",
+            "person_id": "20",
+            "context_id": "1",
+            "created_at": "20200825T12:00:00.000Z",
+        },
+    },
+]
+\end{APACode}
+
+\paragraph{Extracción de Datos}
+
+El sistema GPT-3.5 es utilizado para extraer la información de la conversación, como el nombre de la madre, su email y DNI, y se almacena en FAISS junto con los metadatos de la conversación, lo que permite una búsqueda eficiente en consultas posteriores.
+
+\begin{APACode}
+def gpt_system_user(
+    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
+):
+    """Para usar en notebooks"""
+    try:
+        messages = [
+            {"content": system_message, "role": "system"},
+            {"content": user_message, "role": "user"},
+        ]
+        
+        functions = [
+            {
+                "name": "create_appointment",
+                "description": "Create a medical appointment", 
+                "parameters": {
+                    "type": "object", 
+                    "properties": {
+                        "patient_name": { 
+                            "type": "string",
+                            "description": "Name of the patient",
+                        },
+                        "patient_email": { 
+                            "type": "string",
+                            "description": "Email of the patient",
+                        },
+                        "medic_name": { 
+                            "type": "string",
+                            "description": "Name of the medic",
+                        },
+                        "appointment_datetime": { 
+                            "type": "string",
+                            "description": "Date and time of the appointment",
+                        },
+                    },
+                    "required": ["patient_name", "patient_email", "medic_name", "appointment_datetime"],
+                },
+            }
+        ]
+        
+        response = requests.post( 
+            url="https://api.openai.com/v1/chat/completions", 
+            params={"temperature": "0"},
+            headers={
+                "Content-Type": "application/json", 
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+            },
+            data=json.dumps({
+                "model": model, 
+                "messages": messages, 
+                "functions": functions, 
+                "function_call": "auto"
+            }),
+            timeout=10,
+        )
+        
+        choices = response.json()["choices"] 
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]["message"],
+        }
+        return answer
+
+    except requests.exceptions.RequestException: 
+        print("HTTP Request failed")
+        return None
+\end{APACode}
+
+Ejemplo de extracción:
+
+``El usuario proporcionó los siguientes datos: el nombre de la madre es Sylvia, su email es sylvia@gmail.com, su DNI es 12668992 y la especialidad médica es ginecología''.
+
+\begin{APACode}
+extraction = gpt_system_user(
+    system_message="""
+    Extract every meaningful information about the user from the provided conversation. 
+    Ask yourself, what happened in the conversation?
+    What data about the user did you learn?
+    At what date and time was this data gathered?
+
+    Create a summary of everything you learned about the user. Use this format:
+    On [date] at [time] the [user's / user's related person] [data learned about the user or user's related person]
+    """,
+    user_message=f" METADATA: ```{context['metadata']} CONVERSATION: ```{messages}``` ```", 
+    model="gpt-3.5-turbo",
+)
+\end{APACode}
+
+\paragraph{Consulta sobre Turnos}
+
+Se realiza una consulta como ``¿Tengo algún turno asignado?''. El sistema recupera los datos sobre la madre del usuario y genera una respuesta que combina información de varios contextos. Sin embargo, ocurre un error donde el sistema mezcla la información del usuario con la de su madre, creando confusión sobre quién tiene el turno asignado.
+
+\begin{APACode}
+user_input = "yo tengo algun turno asignado?" 
+filter = {"person_id": "20"}
+db_results = db.similarity_search_with_score(query=user_input, embeddings=embeddings, filter=filter, k=2)
+context_k2 = [f'\n {db_results[i][0].page_content} {db_results[i][0].metadata}\n---------------\n\n' for i in range(len(db_results))]
+context = context_k2
+
+system_prompt = f"""
+You are the personal assistant of the user. Use the user's name in your answers.
+Direct your answers to the user in the second person.
+You will find past conversations between you and the user between backticks. Use them to answer the user's question.
+To reason about dates, have in mind that today is September 13th, 2023. Wait before answering, check when the data was gathered first.
+Take a deep breath and work on this problem step-by-step.
+
+```{context}``` """
+
+answer = gpt_system_user(system_message=system_prompt, user_message=user_input)
+\end{APACode}
+
+\paragraph{Conclusiones de la dieciseisava iteración}
+
+A pesar de extraer correctamente la información sobre la madre del usuario, el sistema genera respuestas que mezclan los datos personales de ambos, lo que lleva a inconsistencias en la respuesta del asistente virtual. Por ejemplo, se asigna el nombre del usuario (Alexander) a los detalles del turno de su madre.
+
+\begin{APACode}
+answer
+{'status_code': 200,
+ 'text': {'role': 'assistant',
+          'content': 'Déjame verificar tus datos para ver si tienes algún turno asignado. Por favor, espera un momento.', 
+          'function_call': {'name': 'create_appointment',
+                           'arguments': '{\n "patient_name": "Alexander",\n "patient_email": "sylvia@gmail.com",\n "medic_name": "",\n "appointment_datetime": ""\n}'}}}
+\end{APACode}
+
+Como se observa en el resultado, el sistema mezcla incorrectamente el nombre del usuario (Alexander) con el email de su madre (sylvia@gmail.com), demostrando la confusión en el manejo de datos personales de múltiples personas en el contexto de la conversación.
+
+La notebook 16 muestra cómo el sistema es capaz de extraer y organizar la información de las conversaciones, pero presenta errores al combinar los datos personales del usuario con los de su madre en las respuestas. Esto sugiere la necesidad de mejorar la forma en que el modelo maneja múltiples fuentes de información para evitar la confusión de datos entre personas diferentes, especialmente en contextos médicos o personales sensibles. 

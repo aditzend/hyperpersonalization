@@ -1,0 +1,68 @@
+\subsubsection{Creación de datos familiares}
+
+Se comenzó el trabajo de creación de datos sintéticos desarrollando un prompt para GPT4 que creara información estructurada de la familia de un personaje inventado, de nombre ``Norman'' (contracción de Normal Man). El primer problema encontrado era la limitación en la cantidad de palabras generadas por el modelo. No era posible en un solo pedido lograr obtener información sobre más de 5 miembros, por lo que se tuvo que cambiar el prompt para hacer llamados sucesivos tomando lo que ya se había creado previamente como contexto.
+
+A continuación se presenta el resultado del proceso descrito.
+
+La estructura es apta para ser subida a diferentes bases de datos que formarán parte de la etapa final de la tesis.
+
+El código completo se encuentra disponible en el repositorio de GitHub: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/29-mongo-family-ingestion.ipynb}
+
+\textbf{norman-family.json}
+
+\begin{APACode}
+{
+"family_members": [
+{
+"name": "Julia",
+"_key": "Julia", "family_name": "Gonzalez", "age": 40,
+"relationship_to_Norman": "Wife"
+},
+{
+"name": "Lucas",
+"_key": "Lucas", "family_name": "Gonzalez", "age": 10, 
+"relationship_to_Norman": "Son"
+},
+{
+"name": "Julia",
+"_key": "q3498fqwp98fqpw9e8fj", "family_name": "Hernandez", "age": 10,
+"relationship_to_Norman": "NoviaDelHijo"
+},
+{
+"name": "Mia",
+"_key": "Mia", "family_name": "Gonzalez", "age": 8,
+"relationship_to_Norman": "Daughter"
+},
+{
+"name": "Eva",
+"_key": "Eva", "family_name": "Gonzalez", "age": 8,
+"relationship_to_Norman": "Daughter"
+},
+{
+"name": "Carlos",
+"_key": "Carlos", "family_name": "Gonzalez", "age": 68,
+"relationship_to_Norman": "Father"
+},
+{
+"name": "Isabel",
+"_key": "Isabel", "family_name": "Gonzalez", "age": 65,
+"relationship_to_Norman": "Mother"
+},
+{
+"name": "Mario",
+"_key": "Mario", "family_name": "Gonzalez", "age": 45,
+"relationship_to_Norman": "Brother"
+},
+{
+"name": "Ana",
+"_key": "Ana", "family_name": "Martinez", "age": 43,
+"relationship_to_Norman": "Sister-in-law (Mario's wife)"
+},
+{
+"name": "Pedro",
+"_key": "Pedro", "family_name": "Gonzalez", "age": 38,
+"relationship_to_Norman": "Brother"
+}
+]
+}
+\end{APACode} 

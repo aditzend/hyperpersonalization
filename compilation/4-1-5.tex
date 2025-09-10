@@ -1,0 +1,154 @@
+\subsubsection{Análisis del Proceso de Vectorización de Conversaciones y Búsqueda Semántica}
+
+En la notebook 5 (\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/5.ipynb}) se simula una base de datos de conversaciones entre un asistente y un usuario, y se explora cómo el sistema puede navegar cronológicamente por esa base para extraer información útil durante una conversación. A continuación, se analizan los pasos que se han llevado a cabo:
+
+\paragraph{Carga de Librerías y Configuración Inicial}
+
+Se utiliza FAISS para almacenar y buscar de manera eficiente textos vectorizados basados en las conversaciones entre el asistente y el usuario. Se cargan las embeddings de OpenAI, y se define la ruta para el almacenamiento de los vectores.
+
+\begin{APACode}
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+index_name = "conversations"
+index_path = "../indexes/conversations"
+embeddings = OpenAIEmbeddings()
+
+db = FAISS.load_local(folder_path=index_path, index_name=index_name, 
+                      embeddings=embeddings)
+\end{APACode}
+
+\paragraph{Simulación de una Base de Datos de Conversaciones}
+
+Se crea una lista con varios mensajes entre el usuario y el sistema, donde cada mensaje contiene metadatos como \texttt{session\_id}, \texttt{person\_id}, \texttt{message\_id} y un timestamp (\texttt{created\_at}). Cada intercambio de mensajes entre el usuario y el asistente queda registrado cronológicamente, incluyendo preguntas y respuestas como ``¿Cuál es la capital de Argentina?'' y ``Buenos Aires''.
+
+\begin{APACode}
+conversation_db = [
+    {
+        "message": {
+            "role": "user",
+            "content": "Cual es la capital de Argentina?"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-1",
+            "created_at": "20230825T12:00:00.000Z",
+        },
+    },
+    {
+        "message": {
+            "role": "system",
+            "content": "Buenos Aires"
+        },
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "message_id": "1-2",
+            "created_at": "20230825T12:01:00.000Z"
+        }
+    },
+    # ... más mensajes sobre Chile, Perú y Colombia
+]
+\end{APACode}
+
+\paragraph{Vectorización de los Mensajes}
+
+Los mensajes de las conversaciones son convertidos en texto plano y luego vectorizados. Los embeddings resultantes se añaden a la base vectorial de FAISS junto con los metadatos, lo que permite que las búsquedas futuras no solo tengan en cuenta el contenido del mensaje, sino también su contexto, como el identificador de la sesión y el momento en que fue creado.
+
+\begin{APACode}
+for item in conversation_db:
+    print(str(item['message']))
+    print(item['metadata'])
+    db.add_texts(
+        texts=[str(item['message'])],
+        metadatas=[item['metadata']],
+    )
+\end{APACode}
+
+\paragraph{Búsqueda Semántica y Razonamiento Contextual}
+
+Se realizan búsquedas basadas en las consultas del usuario, como ``¿Hace cuánto hablamos de Perú?'' o ``¿Te pregunté por Brasil?''. FAISS busca el mensaje más relevante utilizando similitud semántica. Una vez que se encuentra el mensaje adecuado, se genera un contexto que se pasa como entrada al modelo de lenguaje GPT-3.5. Esto permite al sistema recordar detalles previos de la conversación, como fechas y temas discutidos, y generar una respuesta precisa.
+
+\begin{APACode}
+user_input_1 = "hace cuanto hablamos de peru?"
+filter = {"person_id": "20"}
+db_results_1 = db.similarity_search_with_score(query=user_input_1, 
+                                               embeddings=embeddings, 
+                                               filter=filter, k=1)
+
+context_1 = "{ message: " + db_results_1[0][0].page_content + 
+            ", metadata: " + str(db_results_1[0][0].metadata) + " }"
+\end{APACode}
+
+\paragraph{Uso del Modelo de Lenguaje para Respuestas Informadas}
+
+Se construyen prompts basados en los resultados de la búsqueda semántica, los cuales incluyen tanto el contenido del mensaje como los metadatos asociados. El sistema utiliza este contexto para generar respuestas informadas. Por ejemplo, al preguntar ``¿Alguna vez hablamos de Colombia?'', el modelo responde que el usuario había preguntado sobre Colombia en una sesión anterior, proporcionando el contexto cronológico y de contenido correspondiente.
+
+\begin{APACode}
+def gpt35_system_user(system_message: str, user_message: str):
+    try:
+        response = requests.post(
+            url="https://yoizenia.openai.azure.com/openai/deployments/GPT35Turbo/chat/completions",
+            params={
+                "api-version": "2023-05-15",
+                "temperature": "0",
+            },
+            headers={
+                "Content-Type": "application/json",
+                "api-key": "bd6603c266fc49389659225a451ff03d",
+            },
+            data=json.dumps({
+                "messages": [
+                    {
+                        "content": system_message,
+                        "role": "system"
+                    },
+                    {
+                        "content": user_message,
+                        "role": "user"
+                    }
+                ]
+            })
+        )
+        choices = response.json()['choices']
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]['message'],
+        }
+        return answer
+    except requests.exceptions.RequestException:
+        print('HTTP Request failed')
+        return None
+\end{APACode}
+
+\paragraph{Mejora con la Inclusión de Marcas Temporales}
+
+Se incorporan marcas temporales en los mensajes para que el asistente pueda proporcionar respuestas más precisas, especificando cuándo se discutió un tema determinado. Esto mejora la capacidad del sistema para manejar consultas que requieren un entendimiento temporal, como ``¿Hace cuánto te pregunté por Argentina?''.
+
+\begin{APACode}
+user_input_3 = "hace cuanto te habia preguntado por argentina?"
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(query=user_input_3, 
+                                               embeddings=embeddings, 
+                                               filter=filter, k=1)
+
+context_3 = "{ message: " + db_results_3[0][0].page_content + 
+            ", metadata: " + str(db_results_3[0][0].metadata) + " }"
+
+system_prompt_3 = f"""
+You are a personal assistant.
+You have access to all previous conversations with your user.
+All your responses should be based on the previous message provided.
+Previous message: {context_3}
+"""
+
+answer_3 = gpt35_system_user(system_message=system_prompt_3, 
+                            user_message=user_input_3)
+\end{APACode}
+
+El resultado de esta consulta fue: ``Según la metadata de la conversación, me preguntaste sobre la capital de Argentina el 25 de Agosto del 2023 a las 12:00:00 PM (UTC). ¿Hay algo más en lo que te pueda ayudar?''
+
+\paragraph{Conclusiones de la quinta iteración}
+
+Se ha implementado un sistema en el que las conversaciones del usuario con el asistente son vectorizadas y almacenadas. El uso de metadatos y marcas temporales mejora la precisión de las respuestas generadas por el modelo de lenguaje, proporcionando un razonamiento contextual cronológicamente coherente. Este enfoque permite al sistema mantener una memoria conversacional efectiva y responder preguntas sobre interacciones pasadas con precisión temporal y contextual. 

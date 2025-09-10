@@ -1,0 +1,137 @@
+\subsubsection{Proyección de Ventas}
+
+Según \textcite{mentzer2005sales}, los métodos cualitativos son los más adecuados para hacer pronósticos en el largo plazo. Para empresas nuevas, sin datos históricos, los autores recomiendan el método Delphi, que es una técnica cualitativa de pronóstico que se utiliza para obtener un consenso de expertos sobre un tema en particular, como las estimaciones de ventas futuras. Este método es especialmente útil cuando no se dispone de datos históricos confiables o cuando se trata de predecir escenarios complejos e inciertos.
+
+\paragraph{Detalle del método Delphi:}
+
+\begin{enumerate}
+    \item \textbf{Selección del panel de expertos:} Se eligen especialistas en el área relevante (por ejemplo, mercado, ventas, industria) que puedan aportar conocimiento y experiencia. El panel puede incluir expertos internos (empleados) o externos a la empresa.
+    
+    \item \textbf{Definición del problema:} Se establece claramente el objetivo del pronóstico, como estimar las ventas en un nuevo mercado o predecir la demanda de un producto en desarrollo.
+    
+    \item \textbf{Primera ronda de consultas:} Cada experto responde un cuestionario sobre el tema de interés. Las respuestas son recopiladas de forma anónima para evitar sesgos o influencias entre los participantes.
+    
+    \item \textbf{Análisis de las respuestas:} Los facilitadores (coordinadores del proceso Delphi) analizan y resumen las respuestas, destacando áreas de acuerdo y desacuerdo. Se calcula un promedio o rango de las estimaciones iniciales.
+    
+    \item \textbf{Segunda ronda de consultas:} Los expertos reciben un resumen de las respuestas del grupo junto con las estimaciones promedio. Se les pide que revisen sus respuestas iniciales a la luz de esta información y, si cambian de opinión, expliquen las razones.
+    
+    \item \textbf{Repetición de rondas:} El proceso de consulta y revisión continúa en múltiples rondas (generalmente 2-3) hasta que se alcanza un consenso razonable o las respuestas muestran estabilidad.
+    
+    \item \textbf{Presentación del pronóstico final:} El resultado final es una estimación basada en el consenso de los expertos, que puede incluir rangos o escenarios para reflejar las incertidumbres.
+\end{enumerate}
+
+En este caso, al no tener empleados se seleccionan cinco perfiles de la industria latinoamericana de asistentes virtuales o relacionados con la inteligencia artificial.
+
+Ante la imposibilidad de generar un encuentro físico con expertos reales, se ha simulado el desarrollo del método remplazando las visiones de cada experto por simulaciones con el modelo de lenguaje ``openai o1-2024-12-17'', el más avanzado a la fecha de confección de este trabajo, que ha superado a expertos humanos en el test MMLU por un margen promedio de 2.5\% (92.3\% vs. 89.8\%).
+
+\paragraph{Justificación de métodos para predicción de ventas}
+
+Al tratarse de un producto nuevo desarrollado por una empresa emergente que ingresa en un mercado competitivo como el de los asistentes virtuales en América Latina, no es viable aplicar métodos cuantitativos tradicionales, como regresiones o promedios móviles, para la predicción de ventas. Estos enfoques requieren datos históricos confiables que no están disponibles para este caso, ya que no existen ventas previas que permitan modelar tendencias y la industria de asistentes virtuales está en rápida evolución, lo que dificulta basarse en datos históricos de otros productos como referencia. Las variables clave, como adopción tecnológica, estrategias de marketing y competitividad, introducen incertidumbre significativa en el análisis. En su lugar, es más apropiado utilizar métodos cualitativos como el método Delphi, que permite obtener proyecciones fundamentadas a través del consenso de expertos.
+
+\subsubsection{Simulación con el Método Delphi}
+
+\paragraph{Definición del Método}
+
+El método Delphi es una técnica estructurada de previsión que recopila y sintetiza las opiniones de expertos en varias rondas para alcanzar un consenso. Los expertos revisan y ajustan sus estimaciones después de cada ronda, no conocen la identidad de los demás, lo que evita sesgos de influencia. Un moderador recopila, analiza y redistribuye las respuestas de manera objetiva.
+
+\paragraph{Simulación}
+
+El objetivo es predecir el volumen de ventas durante los primeros tres años del middleware de hiperpersonalización. Cinco especialistas en inteligencia artificial, tecnología empresarial y mercado de asistentes virtuales. Se simulan un analista de mercado, un CEO de startup, un investigador académico, un gerente de producto y un consultor de tecnología y se les hacen las siguientes preguntas:
+
+\begin{itemize}
+    \item ¿Cuántos clientes creen que podrían adoptarlo en el primer año considerando las características del producto y el mercado objetivo?
+    \item ¿Qué tasa de crecimiento anual proyectan para el segundo y tercer año?
+    \item ¿Cuáles son los principales factores que influirán en las ventas (positivos y negativos)?
+\end{itemize}
+
+\paragraph{Primera Ronda}
+
+Se distribuye la pregunta inicial a los expertos, quienes responden de forma independiente.
+
+\begin{center}
+\captionof{table}{Ronda 1 - Proyección de clientes por perfil de experto}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Ronda 1 - Clientes} & \textbf{Año 1} & \textbf{Año 2} & \textbf{Año 3} \\
+\hline
+CEO Startup & 8-15 & 23-45 & 50-70 \\
+\hline
+Gerente de producto & 8-15 & 15-30 & 22-50 \\
+\hline
+Analista de mercado & 10-20 & 18-44 & 27-75 \\
+\hline
+Consultor en tecnología & 8-12 & 20-30 & 40-60 \\
+\hline
+Investigador académico & 8-12 & 16-30 & 30-60 \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Análisis y Retroalimentación}
+
+Se promedian estos resultados y se vuelven a correr las consultas para dar lugar a las predicciones de la segunda ronda.
+
+\begin{center}
+\captionof{table}{Ronda 2 - Proyección de clientes por perfil de experto}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Ronda 2 - Clientes} & \textbf{Año 1} & \textbf{Año 2} & \textbf{Año 3} \\
+\hline
+CEO Startup & 10-15 & 20-30 & 35-50 \\
+\hline
+Gerente de producto & 10-18 & 18-40 & 30-60 \\
+\hline
+Analista de mercado & 10-15 & 20-33 & 30-60 \\
+\hline
+Consultor en tecnología & 12-15 & 25-35 & 21-35 \\
+\hline
+Investigador académico & 10-15 & 20-35 & 40-60 \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Resultados Finales}
+
+Se utiliza el promedio como base para las proyecciones:
+\begin{itemize}
+    \item Año 1: 10 clientes pesimista, 15 optimista
+    \item Año 2: 21 clientes pesimista, 35 optimista
+    \item Año 3: 36 clientes pesimista, 58 optimista
+\end{itemize}
+
+Luego del año 3 se supone un crecimiento en paralelo al del mercado, de 12,9\% anual en el escenario pesimista y de 50\% sobre este valor (19,35\%) para el escenario optimista. El análisis continúa solo con la rama pesimista.
+
+\paragraph{Conclusión}
+
+El método Delphi permitió establecer proyecciones de ventas basadas en el conocimiento experto condensado dentro del modelo liberando al proceso de estimación de los sesgos que aparecen cuando los mismos creadores de los productos proyectan las ventas futuras de los mismos.
+
+\subsubsection{Proyección Monetaria}
+
+Dado que el precio del middleware se ajusta a un modelo de licencia con soporte, se estima un costo anual de USD 12,000 por cliente (USD 1000 por mes). Con esta base, se proyectan las ventas anuales desde el inicio del proyecto hasta su consolidación en el mercado, utilizando datos de mercado y tasas de adopción conservadoras.
+
+Las implementaciones se establecen en USD 10,000 y se cobran al inicio del proyecto, una única vez.
+
+\paragraph{Proyección de clientes y ventas anuales}
+
+\begin{center}
+\captionof{table}{Proyección de ventas por año}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Año} & \textbf{Licencias activas} & \textbf{Implementaciones} & \textbf{Ingresos Totales [kUSD]} \\
+\hline
+1 & 10 & 10 & 220 \\
+\hline
+2 & 21 & 11 & 362 \\
+\hline
+3 & 36 & 15 & 582 \\
+\hline
+4 & 41 & 5 & 542 \\
+\hline
+5 & 46 & 5 & 602 \\
+\hline
+6 & 52 & 6 & 684 \\
+\hline
+7 & 58 & 7 & 756 \\
+\hline
+\end{tabular}
+\end{center}

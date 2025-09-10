@@ -1,0 +1,203 @@
+\subsubsection{Agregado de un Paso de Extracción y Limpieza a un Conjunto de Datos con 4 Miembros de un Grupo Familiar}
+
+En la notebook 10\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/10.ipynb}} se trabaja con un conjunto de datos que incluye a cuatro miembros de un grupo familiar, y se implementa un proceso de extracción y limpieza de datos, además de experimentos para verificar si el modelo de lenguaje puede razonar cronológicamente sobre la información proporcionada. A continuación, se detallan los pasos principales del experimento:
+
+\paragraph{Carga de Librerías y Configuración}
+
+Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI.
+
+\begin{APACode}
+import os
+import requests
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+index_name = "conversations"
+index_path = "../indexes/conversations"
+embeddings = OpenAIEmbeddings()
+
+def gpt_system_user(
+    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
+):
+    """Para usar en notebooks"""
+    try:
+        response = requests.post(
+            url="https://api.openai.com/v1/chat/completions",
+            params={
+                "temperature": "0",
+            },
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+            },
+            data=json.dumps(
+                {
+                    "model": model,
+                    "messages": [
+                        {"content": system_message, "role": "system"},
+                        {"content": user_message, "role": "user"},
+                    ]
+                }
+            ),
+            timeout=10,
+        )
+        choices = response.json()["choices"]
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]["message"],
+        }
+        return answer
+    except requests.exceptions.RequestException:
+        print("HTTP Request failed")
+        return None
+\end{APACode}
+
+\paragraph{Creación de un Conjunto de Datos Familiar}
+
+Se simulan varias conversaciones en las que un usuario proporciona información sobre su familia. Por ejemplo, el usuario menciona que tiene una hija mayor llamada Ana de 20 años, un hijo menor llamado Juan de 10 años, y su esposa se llama María. Las fechas y detalles sobre un viaje familiar a Córdoba también son registrados, incluyendo las fechas de salida y regreso.
+
+\paragraph{Ejemplos de mensajes:}
+\begin{itemize}
+    \item Usuario: ``Voy a sacar un pasaje para la familia de Buenos Aires a Córdoba''.
+    \item Asistente: ``¿Quiénes son los pasajeros?''.
+    \item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María''.
+\end{itemize}
+
+\begin{APACode}
+condensed_contexts = [
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Voy a sacar un pasaje para la familia de buenos aires a cordoba"
+            },
+            {
+                "role": "system",
+                "content": "quienes son los pasajeros?"
+            },
+            {
+                "role": "user",
+                "content": "Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María"
+            },
+            {
+                "role": "system",
+                "content": "en que fecha quiere viajar?"
+            },
+            {
+                "role": "user",
+                "content": "del 20 de agosto al 30 de agosto"
+            },
+            {
+                "role": "system",
+                "content": "perfecto, salen el 20 de agosto a las 10:00 y vuelven el 30 de agosto a las 18:00. El precio total es 1000 dolares"
+            },
+            {
+                "role": "user",
+                "content": "si"
+            },
+            {
+                "role": "system",
+                "content": "Gracias por su compra"
+            }
+        ],
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "context_id": "1",
+            "created_at": "20200825T12:00:00.000Z",
+        },
+    }
+]
+\end{APACode}
+
+\paragraph{Extracción de Datos}
+
+El modelo GPT-3.5 se utiliza para extraer la información significativa de cada conversación. Estos datos incluyen detalles sobre los miembros de la familia, las edades, las fechas de viaje y otros aspectos relevantes. La información extraída se almacena en FAISS junto con los metadatos, lo que facilita su recuperación posterior.
+
+\begin{APACode}
+db = FAISS.from_texts(texts=['notebook-9'], embedding=embeddings)
+for context in condensed_contexts:
+    messages = ''.join([str(message) for message in context['messages']])
+    extraction = gpt_system_user(
+        system_message="""
+        Extract every meaningful information about the user from the provided conversation. 
+        Ask yourself, what happened in the conversation?
+        What data about the user did you learn?
+        At what date and time was this data gathered?
+        """,
+        user_message=f"METADATA: ```{context['metadata']} CONVERSATION: ```{messages}```",
+        model="gpt-3.5-turbo",
+    )
+    db.add_texts(
+        texts=[extraction['text']['content']],
+        metadatas=[context['metadata']],
+    )
+\end{APACode}
+
+\paragraph{Ejemplo de extracción:}
+``Pedro tiene una hija mayor llamada Ana, que tiene 20 años, y un hijo menor llamado Juan, que tiene 10 años. Su esposa se llama María''.
+
+\paragraph{Consultas sobre Edades}
+
+Se plantea una consulta simple: ``¿Qué edad tiene mi hija mayor?''. El sistema encuentra el contexto relevante y responde que Ana tiene 20 años, sin tener en cuenta que estamos en 2023, lo que indica una falta de razonamiento cronológico adecuado.
+
+\begin{APACode}
+user_input_3 = "que edad tiene mi hija mayor?"
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(
+    query=user_input_3, 
+    embeddings=embeddings, 
+    filter=filter, 
+    k=1
+)
+context_3 = "{ message: " + db_results_3[0][0].page_content + ", metadata: " + str(db_results_3[0][0].metadata) + " }"
+
+system_prompt_3 = f"""
+You are a personal assistant. You will find past conversations between you and the user between backticks. 
+Use them to answer the user's question.
+```{context_3}```
+"""
+answer_3 = gpt_system_user(system_message=system_prompt_3, user_message=user_input_3)
+\end{APACode}
+
+Respuesta: ``Tu hija mayor, Ana, tiene 20 años.''
+
+\paragraph{Razonamiento Cronológico}
+
+Luego se realiza una pregunta más compleja: ``¿Qué edad tenía mi hija mayor cuando hicimos el viaje a Córdoba?''. En este caso, el modelo responde correctamente que Ana tenía 20 años durante el viaje, que ocurrió en 2020. Este resultado muestra que el modelo puede realizar un razonamiento correcto cuando se proporciona contexto cronológico.
+
+\begin{APACode}
+user_input_3 = "que edad tenía mi hija mayor cuando hicimos el viaje a cordoba?"
+# [mismo código de búsqueda]
+answer_3 = gpt_system_user(system_message=system_prompt_3, user_message=user_input_3)
+\end{APACode}
+
+Respuesta: ``Tu hija mayor, Ana, tenía 20 años cuando hicieron el viaje a Córdoba.''
+
+\paragraph{Errores en el Cálculo de la Fecha de Nacimiento}
+
+Se le pregunta al modelo: ``¿En qué año nació mi hija mayor?''. Inicialmente, el modelo hace bien los cálculos y responde que Ana nació en el año 2000, pero no toma en cuenta que el año actual es 2023 de acuerdo a la fecha de realización del experimento, lo que debería ajustar la edad de Ana a 23 años. Tras ajustar el prompt y proporcionar la fecha actual explícitamente, el modelo aún comete errores, sugiriendo que Ana nació en 2003, lo que es incorrecto.
+
+\begin{APACode}
+system_prompt_3 = f"""
+You are a personal assistant.
+You will find past conversations between you and the user between backticks. 
+Use them to answer the user's question.
+
+To reason about dates, have in mind that today is September 13th, 2023. 
+You are now located in Buenos Aires, Argentina.
+Take a deep breath and work on this problem step-by-step.
+```{context_3}```
+"""
+\end{APACode}
+
+Primera respuesta: ``Según la información que tengo, su hija mayor, Ana, tiene 20 años. Si restamos 20 años a la fecha actual, podemos determinar que Ana nació en el año 2000.''
+
+Segunda respuesta (con fecha explícita): ``Según la información que tengo, tu hija mayor, Ana, tiene 20 años y la fecha actual es el 13 de septiembre de 2023. Si hacemos el cálculo, Ana nació en el año 2003.''
+
+\paragraph{Conclusiones de la décima iteración}
+
+La notebook 10 muestra que, si bien los modelos de lenguaje pueden extraer y responder preguntas sobre datos familiares, tienen dificultades cuando se trata de razonamiento cronológico preciso. Aunque el sistema responde correctamente a consultas simples, como las edades durante eventos pasados, todavía comete errores al calcular edades en función de la fecha actual. Esto sugiere la necesidad de mejorar la forma en que los modelos manejan fechas y razonamientos basados en el tiempo. 

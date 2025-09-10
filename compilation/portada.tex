@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt]{article}
+
+% Márgenes
+\usepackage[left=2.5cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+
+% Fuente Arial (usar XeLaTeX o LuaLaTeX)
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+% ============
+% Comandos personalizados
+% ============
+\newcommand{\titulo}[1]{\def\eltitulo{#1}}
+\newcommand{\autor}[1]{\def\elautor{#1}}
+\newcommand{\carrera}[1]{\def\lacarrera{#1}}
+\newcommand{\director}[1]{\def\eldirector{#1}}
+\newcommand{\jurados}[1]{\def\losjurados{#1}}
+\newcommand{\fecha}[1]{\def\lafecha{#1}}
+
+% Valores por defecto
+\titulo{Hiperpersonalización aplicada al desarrollo de asistentes virtuales}
+\autor{Alexander Ditzend}
+\carrera{Ingeniería Industrial}
+\director{Dr. Xavier I. González, Ing. Marcelo E. Chidichimo}
+\jurados{Por definir}
+\fecha{Buenos Aires,Enero 2025}
+
+\begin{document}
+\thispagestyle{empty}
+
+% Barra lateral naranja
+% \begin{tikzpicture}[remember picture,overlay]
+%   \fill[orange] (current page.south west) rectangle ([xshift=1.2cm]current page.north west);
+% \end{tikzpicture}
+
+% Logo arriba a la derecha
+\begin{textblock*}{7cm}(12.5cm,3cm)
+  \includegraphics[width=6cm]{logo_fiuba.png} 
+\end{textblock*}
+
+% Barra naranja arriba a la izquierda
+\begin{textblock*}{1.2cm}(-0.5cm,0cm)
+  \includegraphics[height=\paperheight]{barra_naranja.png}
+\end{textblock*}
+
+
+% Título alineado a la derecha
+\vspace*{8cm}
+\begin{flushright}
+  {\bfseries\fontsize{33pt}{33pt}\selectfont \eltitulo}\\[1cm]
+  {\fontsize{20pt}{20pt}\selectfont \elautor}\\[1cm]
+  {\fontsize{15pt}{15pt}\selectfont \lacarrera}
+\end{flushright}
+
+\vfill
+
+% Director y Jurados abajo a la derecha
+\begin{textblock*}{10cm}(8.5cm,23cm)
+  \begin{flushright}
+    Director: \\
+  {\fontsize{11pt}{11pt}\selectfont \eldirector} \\[0.5cm]
+  Jurados:
+   \\
+  {\fontsize{11pt}{11pt}\selectfont \losjurados} 
+    \end{flushright}
+\end{textblock*}
+
+% Fecha y lugar abajo a la derecha en cursiva, alineado a la derecha respetando el margen
+\begin{textblock*}{\textwidth}(2.5cm,28cm)
+  \begin{flushright}
+    {\itshape\fontsize{10pt}{10pt}\selectfont \lafecha}
+  \end{flushright}
+\end{textblock*}
+
+\end{document}

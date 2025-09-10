@@ -1,0 +1,104 @@
+\section{Introducción / Planteo del Problema}
+
+\subsection{Motivaciones}
+
+El advenimiento de los grandes modelos de lenguaje, o \textit{Large Language Models} (LLMs, por sus siglas en inglés), ha provocado una revolución en la manera en que los seres humanos interactúan con los sistemas digitales. Un ejemplo paradigmático de este cambio es la transición del uso tradicional del explorador web y sus motores de búsqueda al empleo de asistentes conversacionales potenciados por LLMs. Otro caso relevante es el de los entornos de desarrollo utilizados por programadores, donde los LLMs se integran para asistir en la generación de código.
+
+Pocos dudan que, en un futuro cercano, la mayoría del código informático será producido por LLMs, bajo la guía, supervisión y acompañamiento de seres humanos. Esta transformación del rol del programador puede entenderse como una antesala de lo que ocurrirá en otras profesiones y, en general, en la interfaz que conecta a los seres humanos con sus fuentes de información. En este nuevo paradigma, los asistentes virtuales tenderán a ocupar una posición dominante, al ofrecer una interfaz basada en la conversación natural—ya sea hablada o escrita—para interactuar con datos y servicios.
+
+Sin embargo, para que los asistentes virtuales evolucionen más allá de simples herramientas de consulta o gestión de citas, es fundamental que puedan recordar información pasada de manera estructurada. De lo contrario, su funcionalidad quedará limitada a interacciones impersonales y de corto alcance temporal, lo que afectaría negativamente su adopción y utilidad.
+
+En consecuencia, se vuelve necesario desarrollar técnicas que permitan clasificar, ingerir y recuperar información sobre una persona, de modo que los asistentes virtuales puedan operar con un contexto dinámico y relevante al momento de interactuar con distintas fuentes de datos.
+
+La implementación de estrategias de hiperpersonalización genera, en promedio, un incremento del 15\% anual en ventas, con picos del 25\% dependiendo de la industria \parencite{McKinsey2020}. Paralelamente se estima un crecimiento del 37.3\% en el mercado de inteligencia artificial, lo que sugiere una aceleración en la demanda de asistentes virtuales, incluso sin personalización avanzada \parencite{GrandViewResearch2023}.
+
+Las interrelaciones entre estas dos tendencias son complejas e imposibles de predecir con la precisión necesaria para establecer un nivel óptimo de inversión. No obstante, los niveles de crecimiento observados evidencian una demanda creciente tanto por soluciones de inteligencia artificial como por experiencias personalizadas.
+
+Esta tesis propone una metodología que busca unir ambas dimensiones—la inteligencia artificial y la hiperpersonalización—de manera segura, performante y económica, mediante un enfoque abierto y accesible para cualquier persona u organización interesada en implementarlo.
+
+\subsubsection{Antecedentes}
+
+La industria de los asistentes virtuales tiene una dependencia directa con la de los bots de automatización de conversaciones que comenzaron a surgir en la década del 2000. Los mensajes generados por estos sistemas seguían un patrón basado en plantillas completadas con información extraída de bases de datos. Un ejemplo habitual es el mensaje emitido por una entidad bancaria que incluye el nombre completo del receptor y el monto de una deuda pendiente. Esta forma de personalizar mensajes continúa siendo ampliamente utilizada en la actualidad, debido a su simplicidad y bajo costo de implementación.
+
+En el campo de los asistentes virtuales, sin embargo, no se registran desarrollos significativos orientados a organizar y procesar toda la información que un asistente pueda acumular sobre su contraparte humana. La comunidad científica vinculada al procesamiento del lenguaje natural ha centrado su interés en el desarrollo de modelos generalistas, capaces de razonar y resolver tareas cada vez más complejas con una cantidad decreciente de datos y recursos.
+
+Paralelamente, el ámbito del marketing y la publicidad ha experimentado avances importantes tanto en la comprensión del comportamiento humano como en la tecnología necesaria para entregar un anuncio a la persona con mayor probabilidad de conversión. Las limitaciones en la disponibilidad de datos individualizados llevaron a que, en la mayoría de los casos, se opere con agregaciones a nivel de grupo. En este contexto, el término \textit{personalización} refiere al uso de datos sobre una persona para generar ofertas relevantes. La \textit{hiperpersonalización}, en cambio, se distingue por la extensión, profundidad y cantidad de datos involucrados, así como por la capacidad de reacción inmediata ante la obtención de nueva información. Mientras que una solución personalizada se basa en datos históricos, la hiperpersonalización incorpora la actividad presente del usuario para generar respuestas ajustadas al momento.
+
+
+Como se analiza en la introducción, el estudio de múltiples puntos de datos sobre una misma persona para predecir su comportamiento futuro es ampliamente aplicado en el ámbito del marketing, especialmente desde la irrupción del comercio digital. El uso de esta información para maximizar ventas constituye el enfoque más lucrativo de la técnica, lo que explica su temprana adopción en ese sector.
+
+En este contexto, se observa la construcción de modelos orientados a recomendar compras futuras o productos complementarios. También se utilizan para la colocación personalizada de anuncios y la predicción de acciones posteriores, entre otras aplicaciones relacionadas con el ciclo de compra del consumidor.
+
+Las empresas que lideran en personalización generan, en promedio, un 40\% más de ingresos que aquellas que no la implementan. Se estima que, en las industrias de Estados Unidos, mejorar el desempeño hasta ubicarse en el cuartil superior en términos de personalización podría generar más de un billón de dólares en valor agregado \parencite{McKinsey2021}.
+
+El 62\% de los líderes empresariales citan la mejora en la retención de clientes como uno de los beneficios clave de la personalización \parencite{TwilioSegment2023}.
+
+Asimismo, el 72\% de los consumidores esperan que las empresas con las que interactúan los reconozcan como individuos y conozcan sus intereses \parencite{McKinsey2021}.
+
+El 90\% de los consumidores declara preferir, recomendar o pagar más por marcas que ofrecen una experiencia o servicio personalizado \parencite{Outgrow2023}.
+
+Según Esat Artug, el 91\% de los consumidores tiene más probabilidades de comprar en marcas que reconocen sus preferencias y proporcionan ofertas relevantes. A su vez, el 80\% estaría dispuesto a gastar más en empresas que brindan servicios personalizados \parencite{Ninetailed2024}.
+
+Estas cifras muestran que la hiperpersonalización no solo mejora la satisfacción y fidelización del cliente, sino que también tiene un impacto directo en los ingresos y en la eficiencia de las estrategias de marketing.
+
+
+La evolución de la inteligencia artificial conversacional es significativa, avanzando desde simples \textit{chatbots} hacia sistemas altamente personalizados. Gracias al procesamiento del lenguaje natural (NLP), los asistentes digitales adquieren la capacidad de comprender las intenciones de los usuarios y adaptar sus respuestas, haciendo las conversaciones más relevantes, fluidas y atractivas.
+
+Las expectativas de los consumidores también evolucionan: el 70\% anticipa que las empresas utilizan inteligencia artificial para generar interacciones y ofertas personalizadas. En ese marco, alrededor del 61\% de los consumidores prefiere tratar con marcas que ofrecen recorridos de usuario rápidos y ajustados a sus preferencias. Además, el 66\% espera que las empresas reconozcan sus necesidades particulares.
+
+La hiperpersonalización en IA conversacional responde de forma eficaz a estas expectativas, enriqueciendo la relación con la marca, fomentando la lealtad del cliente y mejorando los resultados comerciales. Los consumidores están incluso más dispuestos a compartir información personal con estos sistemas: un informe de Zendesk revela que dos tercios de los compradores aceptan intercambiar más datos a cambio de una experiencia más individualizada si esta está impulsada por inteligencia artificial \parencite{Zendesk2024}.
+
+No obstante, a pesar del potencial demostrado, las herramientas tecnológicas actuales para construir asistentes virtuales aún no logran ofrecer soluciones efectivas para implementar sistemas de hiperpersonalización. El principal obstáculo radica en la integración de fuentes de datos: en la mayoría de los casos, cada fuente está administrada por distintos proveedores, con formatos y repositorios dispares. Esta integración suele quedar fuera del alcance operativo de muchas organizaciones, al no ser parte de su núcleo de actividades.
+
+Superado ese primer desafío, el siguiente consiste en organizar dichos datos de modo que un asistente virtual pueda interpretarlos y emplearlos efectivamente en beneficio del usuario. En esta área, no se encuentran desarrollos ni investigaciones específicas, lo que motiva la realización del presente trabajo.
+
+\subsubsection{Planteo del Problema}
+
+En el contexto de un asistente virtual, la distinción entre personalización e hiperpersonalización se manifiesta no solo en recomendaciones u ofertas, sino también en la calidad de la asistencia o soporte brindado. A continuación, se ejemplifica esta diferencia mediante una simulación de conversación entre un asistente virtual (A) y una usuaria o usuario (U) en un sitio de reservas de viajes.
+
+\paragraph{Sin personalización}
+\begin{quote}
+	\begin{tabbing}
+		A: \= Hola, ¿cómo puedo ayudarle hoy? \\
+		U: \> Quiero sacar un pasaje a Río de Janeiro con la familia. \\
+		A: \> Entiendo, ¿puede indicarme desde dónde partirá? \\
+		U: \> Buenos Aires. \\
+		A: \> ¿Cuántas personas? \\
+		U: \> Cinco. \\
+		A: \> ¿Cuántos menores? \\
+		U: \> Dos.
+	\end{tabbing}
+\end{quote}
+
+El sistema no se apoya en datos contextuales de la persona. En cada sesión deben ingresarse nuevamente todos los datos. Este es el punto clave que genera fricción en el uso cotidiano e impacta en las ventas y la satisfacción del cliente.
+
+\paragraph{Personalización}
+\begin{quote}
+	\begin{tabbing}
+		A: \= Hola, ¿cómo puedo ayudarle hoy? \\
+		U: \> Quiero sacar un pasaje a Río de Janeiro con la familia. \\
+		A: \> Entiendo, su último viaje fue desde Buenos Aires, ¿partirá desde el mismo lugar? \\
+		U: \> Sí. \\
+		A: \> ¿Cuántas personas? \\
+		U: \> Cinco. \\
+		A: \> ¿Cuántos menores? \\
+		U: \> Dos.
+	\end{tabbing}
+\end{quote}
+
+El sistema accede al historial de compras del cliente mediante su número de identificación, pero sólo recupera parcialmente la información relevante, como el origen del vuelo, sin contemplar la composición del grupo familiar.
+
+\paragraph{Hiperpersonalización}
+\begin{quote}
+	\begin{tabbing}
+		A: \= Hola, ¿cómo puedo ayudarle hoy? ¿Desea ver opciones para paquetes a Río de Janeiro? \\
+		U: \> Sí, sí, iría con la familia. Mi madre no se suma esta vez, lo único. \\
+		A: \> Entiendo. Veo que se encuentra en Buenos Aires, ¿va a partir desde esa ciudad? \\
+		U: \> Sí. \\
+		A: \> ¿Viajará entonces con sus dos hijas menores y su esposa? \\
+		U: \> Sí.
+	\end{tabbing}
+\end{quote}
+
+El sistema combina datos de comportamiento en tiempo real (como navegación) con información de localización y acceso a una base estructurada de datos personales que permite comprender la composición familiar y formular respuestas adecuadas al contexto actual.
+

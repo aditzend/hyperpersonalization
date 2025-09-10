@@ -1,0 +1,196 @@
+\subsubsection{Mejora del Razonamiento Cronológico en Conversaciones Familiares Utilizando GPT-3.5 y GPT-4}
+
+En el notebook 12\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/12.ipynb}} se implementa un experimento para extraer datos de conversaciones con un usuario y mejorar el razonamiento cronológico utilizando tanto GPT-3.5 como GPT-4. A continuación, se detallan los pasos principales del experimento:
+
+\paragraph{Carga de Librerías y Configuración}
+
+Se utilizan FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar las conversaciones. Además, se configura una función que interactúa con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
+
+\begin{APACode}
+import os
+import requests
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+index_name = "conversations"
+index_path = "../indexes/conversations"
+embeddings = OpenAIEmbeddings()
+
+def gpt_system_user(
+    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
+):
+    """Para usar en notebooks"""
+    try:
+        response = requests.post(
+            url="https://api.openai.com/v1/chat/completions",
+            params={
+                "temperature": "0",
+            },
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+            },
+            data=json.dumps(
+                {
+                    "model": model,
+                    "messages": [
+                        {"content": system_message, "role": "system"},
+                        {"content": user_message, "role": "user"},
+                    ]
+                }
+            ),
+            timeout=10,
+        )
+        choices = response.json()["choices"]
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]["message"],
+        }
+        return answer
+    except requests.exceptions.RequestException:
+        print("HTTP Request failed")
+        return None
+\end{APACode}
+
+\paragraph{Simulación de Conversaciones Familiares}
+
+Se crean varias conversaciones simuladas en las que el usuario menciona que está planeando un viaje con su familia de Buenos Aires a Córdoba. Proporciona información sobre los miembros de su familia, como su hija mayor, Ana, de 20 años, y su hijo menor, Juan, de 10 años. También se incluyen detalles sobre el itinerario de viaje, como las fechas de salida y regreso.
+
+Ejemplos de mensajes:
+\begin{itemize}
+    \item Usuario: ``Voy a sacar un pasaje para la familia de Buenos Aires a Córdoba''
+    \item Asistente: ``¿Quiénes son los pasajeros?''
+    \item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años''
+\end{itemize}
+
+\begin{APACode}
+condensed_contexts = [
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Voy a sacar un pasaje para la familia de buenos aires a cordoba"
+            },
+            {
+                "role": "system",
+                "content": "quienes son los pasajeros?"
+            },
+            {
+                "role": "user",
+                "content": "Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama Ma"
+            },
+            {
+                "role": "system",
+                "content": "en que fecha quiere viajar?"
+            },
+            {
+                "role": "user",
+                "content": "del 20 de agosto al 30 de agosto"
+            },
+            {
+                "role": "system",
+                "content": "perfecto, salen el 20 de agosto a las 10:00 y vuelven el 30 de agosto a las 18:00. El precio t"
+            },
+            {
+                "role": "user",
+                "content": "si"
+            },
+            {
+                "role": "system",
+                "content": "Gracias por su compra"
+            }
+        ],
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "context_id": "1",
+            "created_at": "20200825T12:00:00.000Z",
+        },
+    }
+]
+\end{APACode}
+
+\paragraph{Extracción de Datos}
+
+Se utiliza un prompt para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, como los nombres y edades de los familiares, y las fechas de viaje. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior.
+
+\begin{APACode}
+db = FAISS.from_texts(texts=['notebook-11'], embedding=embeddings)
+for context in condensed_contexts:
+    messages = ''.join([str(message) for message in context['messages']])
+    extraction = gpt_system_user(
+        system_message="""
+        Extract every meaningful information about the user from the provided conversation. 
+        Ask yourself, what happened in the conversation?
+        What data about the user did you learn?
+        At what date and time was this data gathered?
+        
+        Create a summary of everything you learned about the user.
+        """,
+        user_message=f" METADATA: ```{context['metadata']} CONVERSATION: ```{messages}``` ```",
+        model="gpt-3.5-turbo",
+    )
+    if extraction['status_code'] != 200:
+        print(f"Error: {extraction['text']}")
+        continue
+    else:
+        print(f"{extraction['text']['content']}")
+        db.add_texts(
+            texts=[extraction['text']['content']],
+            metadatas=[context['metadata']],
+        )
+\end{APACode}
+
+Ejemplos de extracción:
+``Pedro quiere viajar con su familia de Buenos Aires a Córdoba. Su hija Ana tiene 20 años y su hijo Juan tiene 10 años''.
+
+\paragraph{Consultas sobre la Edad}
+
+Se realiza una consulta preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde que Ana tiene 20 años, pero no ajusta la edad al año actual (2023, de acuerdo a la fecha de realización del experimento). El modelo no corrige la edad de Ana, lo que revela un problema de razonamiento cronológico.
+
+\begin{APACode}
+user_input_3 = "que edad tiene mi hija mayor?"
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(
+    query=user_input_3, embeddings=embeddings, filter=filter, k=1
+)
+context_3 = "{ message: " + db_results_3[0][0].page_content + ", metadata: " + str(db_results_3[0][0].metadata) + " }"
+
+system_prompt_3 = f"""
+You are a personal assistant. You will find past conversations between you and the user between backticks. 
+Use them to answer the user's question.
+To reason about dates, have in mind that today is September 13th, 2023. 
+Wait before answering, check when the data was gathered first.
+Take a deep breath and work on this problem step-by-step.
+```{context_3}```
+"""
+
+answer_3 = gpt_system_user(system_message=system_prompt_3, user_message=user_input_3)
+\end{APACode}
+
+\paragraph{Conclusiones de la doceava iteración}
+
+El modelo responde incorrectamente que Ana tiene 20 años, ya que no actualiza la edad basándose en la fecha actual, lo que indica un fallo en la interpretación temporal.
+
+Respuesta obtenida: ``Según la información que tenemos en la conversación, tu hija mayor, Ana, tiene 20 años.''
+
+\paragraph{Prueba con GPT-4}
+
+Se realiza la misma consulta usando GPT-4. En este caso, GPT-4 razona correctamente que Ana tenía 20 años en 2020 y ajusta la respuesta, indicando que Ana debería tener 23 años en 2023.
+
+\begin{APACode}
+answer_3 = gpt_system_user(
+    system_message=system_prompt_3, 
+    user_message=user_input_3, 
+    model="gpt-4"
+)
+\end{APACode}
+
+Respuesta de GPT-4: ``Su hija Ana tenía 20 años en agosto de 2020. Dado que hoy es 13 de septiembre de 2023, Ana ahora debería tener 23 años.''
+
+Esto demuestra una mejora en la capacidad de razonamiento cronológico de GPT-4 en comparación con GPT-3.5.
+
+El notebook 12 muestra que, mientras que GPT-3.5 tiene dificultades para razonar correctamente sobre fechas y ajustarlas en función del tiempo, GPT-4 puede manejar mejor el razonamiento cronológico y dar respuestas más precisas. Esto sugiere que el uso de GPT-4 mejora significativamente el manejo de datos temporales en este tipo de conversaciones. 

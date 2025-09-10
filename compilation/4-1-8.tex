@@ -1,0 +1,199 @@
+\subsubsection{Análisis de la Interpretación de Fechas y Razonamiento Cronológico}
+
+En este experimento se evalúa la capacidad de los modelos de lenguaje GPT-3.5 y GPT-4 para interpretar fechas y realizar razonamiento cronológico. El objetivo es determinar si estos modelos pueden entender y calcular correctamente la edad de una persona en base a fechas y datos previamente proporcionados. El código completo de este análisis está disponible en el repositorio\footnote{\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/8.ipynb}}.
+
+\paragraph{Configuración del Entorno}
+
+Se utilizan FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de mensajes. Se define una función para interactuar con los modelos GPT-3.5 y GPT-4 mediante la API de OpenAI.
+
+\begin{APACode}
+import os
+import requests
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+index_name = "conversations"
+index_path = "../indexes/conversations"
+embeddings = OpenAIEmbeddings()
+
+db = FAISS.load_local(folder_path=index_path, index_name=index_name, 
+                      embeddings=embeddings)
+
+def gpt_system_user(
+    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
+):
+    """Para usar en notebooks"""
+    try:
+        response = requests.post(
+            url="https://api.openai.com/v1/chat/completions",
+            params={"temperature": "0"},
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+            },
+            data=json.dumps({
+                "model": model,
+                "messages": [
+                    {"content": system_message, "role": "system"},
+                    {"content": user_message, "role": "user"},
+                ]
+            }),
+            timeout=10,
+        )
+        choices = response.json()["choices"]
+        answer = {
+            "status_code": response.status_code,
+            "text": choices[0]["message"],
+        }
+        return answer
+    except requests.exceptions.RequestException:
+        print("HTTP Request failed")
+        return None
+\end{APACode}
+
+\paragraph{Creación de Contextos Conversacionales}
+
+Se crean varios contextos que contienen conversaciones simuladas entre el usuario y el sistema. En uno de los contextos, el usuario solicita un turno para su madre, llamada Alba, y menciona que tiene 66 años. Otro contexto incluye una pregunta sobre la capital de Colombia.
+
+\begin{APACode}
+condensed_contexts = [
+    {
+        "messages": [
+            {"role": "user", "content": "Quiero un turno para mi madre"},
+            {"role": "system", "content": "cual es el nombre de tu madre?"},
+            {"role": "user", "content": "Alba"},
+            {"role": "system", "content": "y que edad tiene?"},
+            {"role": "user", "content": "66"},
+            {"role": "system", 
+             "content": "perfecto, tiene turno para el 30 de agosto a las 15:00"}
+        ],
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "context_id": "1",
+            "created_at": "20230825T12:00:00.000Z",
+        },
+    },
+    {
+        "messages": [
+            {"role": "user", "content": "Cual es la capital de Colombia?"},
+            {"role": "system", "content": "Bogota"}
+        ],
+        "metadata": {
+            "session_id": "1",
+            "person_id": "20",
+            "context_id": "2",
+            "created_at": "20230825T18:00:00.000Z",
+        }
+    }
+]
+\end{APACode}
+
+\paragraph{Vectorización y Almacenamiento}
+
+Los mensajes de estos contextos se vectorizan utilizando embeddings y se almacenan en FAISS junto con sus respectivos metadatos, lo que permite realizar búsquedas y recuperar información relacionada.
+
+\begin{APACode}
+for context in condensed_contexts:
+    # Join all messages in one string by a comma
+    messages = ''.join([str(message) for message in context['messages']])
+    print(messages)
+    print(context['metadata'])
+    db.add_texts(
+        texts=[messages],
+        metadatas=[context['metadata']],
+    )
+\end{APACode}
+
+\paragraph{Consulta Simple sobre la Edad}
+
+Se realiza una consulta simple: ``¿Qué edad tiene Alba?''. FAISS encuentra el contexto relevante, y el modelo GPT-3.5 responde correctamente que ``Alba tiene 66 años'', basándose en la información previamente proporcionada.
+
+\begin{APACode}
+user_input_3 = "que edad tiene alba?"
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(
+    query=user_input_3, embeddings=embeddings, filter=filter, k=1)
+context_3 = "{ message: " + db_results_3[0][0].page_content + \
+            ", metadata: " + str(db_results_3[0][0].metadata) + " }"
+print(f"CONTEXT:{context_3}")
+
+system_prompt_3 = f"""
+You are a personal assistant. You will find past conversations between you 
+and the user between backticks. Use them to answer the user's question.
+```{context_3}```
+"""
+answer_3 = gpt_system_user(system_message=system_prompt_3, 
+                          user_message=user_input_3)
+answer_3["text"]["content"]
+\end{APACode}
+
+El resultado obtenido fue: ``Alba tiene 66 años.''
+
+\paragraph{Razonamiento Cronológico con GPT-3.5}
+
+A continuación, se plantea una pregunta más compleja: ``¿Qué edad tenía Alba en 2020?''. Aquí se espera que el modelo entienda que si Alba tiene 66 años en 2023 (año actual de acuerdo a la fecha de realización del experimento), entonces en 2020 tendría 63 años. Sin embargo, GPT-3.5 falla en su respuesta.
+
+\begin{APACode}
+user_input_3 = "que edad tenía alba en 2020?"
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(
+    query=user_input_3, embeddings=embeddings, filter=filter, k=1)
+context_3 = "{ message: " + db_results_3[0][0].page_content + \
+            ", metadata: " + str(db_results_3[0][0].metadata) + " }"
+print(f"CONTEXT:{context_3}")
+
+system_prompt_3 = f"""
+You are a personal assistant. You will find past conversations between you 
+and the user between backticks. Use them to answer the user's question.
+```{context_3}```
+"""
+answer_3 = gpt_system_user(system_message=system_prompt_3, 
+                          user_message=user_input_3)
+answer_3["text"]["content"]
+\end{APACode}
+
+GPT-3.5 responde incorrectamente: ``En el contexto de la conversación anterior, Alba tenía 66 años en 2020.'', indicando que el modelo no ajusta la edad de acuerdo con la fecha solicitada.
+
+\paragraph{Prueba con GPT-4}
+
+Se realiza la misma consulta sobre la edad de Alba en 2020, esta vez utilizando GPT-4.
+
+\begin{APACode}
+user_input_3 = "que edad tenía alba en 2020?"
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(
+    query=user_input_3, embeddings=embeddings, filter=filter, k=1)
+context_3 = "{ message: " + db_results_3[0][0].page_content + \
+            ", metadata: " + str(db_results_3[0][0].metadata) + " }"
+print(f"CONTEXT:{context_3}")
+
+system_prompt_3 = f"""
+You are a personal assistant. You will find past conversations between you 
+and the user between backticks. Use them to answer the user's question.
+```{context_3}```
+"""
+answer_3 = gpt_system_user(system_message=system_prompt_3, 
+                          user_message=user_input_3, model="gpt-4-0613")
+answer_3["text"]["content"]
+\end{APACode}
+
+GPT-4 responde: ``Alba nació en 1966. Por lo tanto, en 2020, tenía 54 años.'' Aunque GPT-4 realiza el cálculo correctamente, comete un error inicial al interpretar la edad como el año de nacimiento. A pesar de corregir el cálculo, este error inicial demuestra una falla en la comprensión de los datos proporcionados.
+
+\paragraph{Conclusiones de la octava iteración}
+
+Tanto GPT-3.5 como GPT-4 presentan dificultades significativas al interpretar fechas y realizar razonamientos cronológicos basados en la edad de una persona. Mientras que GPT-3.5 no realiza el cálculo de la edad correctamente, GPT-4 comete un error de interpretación antes de realizar el cálculo adecuado.
+
+Los resultados demuestran que:
+
+\begin{itemize}
+    \item Los modelos pueden manejar consultas simples sobre datos proporcionados directamente
+    \item Presentan serias dificultades cuando se les pide razonar cronológicamente
+    \item GPT-3.5 no ajusta la edad según diferentes fechas
+    \item GPT-4 malinterpreta inicialmente los datos numéricos (edad vs.\ año de nacimiento)
+\end{itemize}
+
+Esto sugiere que ambos modelos necesitan mejoras en la interpretación de datos numéricos y cronológicos cuando se extraen de contextos conversacionales. Es necesario implementar mecanismos adicionales para extraer y procesar datos numéricos correctamente en aplicaciones de hiperpersonalización. 

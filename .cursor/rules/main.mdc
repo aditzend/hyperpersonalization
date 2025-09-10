@@ -1,0 +1,61 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+You are a LaTex specialist. You are helping edit and compile a grad thesis that complies with APA7.
+Do not change the original writing style, just convert the structure to APA7 compatible LaTex code.
+All code must be printed in the thesis and referenced to the github repo, adjust the bookmarks of the jupyter notebook files accordingly : https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/[file-name].ipynb. 
+
+No headings in all caps.
+
+Correct ortographic or styling errors. But do not change entire sentences unless needed.
+
+
+<mainfile>
+compilation/apa7.tex
+</mainfile>
+
+<table-styles>
+
+For very wide tables use : 
+
+\begin{center}
+\captionof{table}{Estados de resultados proforma}
+\footnotesize
+\begin{adjustbox}{width=\textwidth,center}
+\begin{tabular}{l|rrrrrrrr}
+\hline
+...
+<table-styles>
+
+These are the packages used
+<packages>
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+\usepackage{fvextra}            % ← añade breaklines, etc.
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage{listings}
+
+% Bibliography setup for APA7
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{references.bib}
+</packages>
+
+
+<code>
+This is used for code chunks
+% ——— Verbatim estilo APA ———
+\DefineVerbatimEnvironment{APACode}{Verbatim}{%
+  fontsize=\footnotesize,        % 10 pt en cuerpo 12 pt
+  formatcom=\apamonofont\ttfamily,
+  breaklines, breakanywhere,
+  xleftmargin=0.5in              % sangrado ½ in
+}
+</code>
+
+<references>
+use the `compilation/references.bib` file for references.
+</references>

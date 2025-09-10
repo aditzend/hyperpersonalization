@@ -1,0 +1,170 @@
+\subsubsection{Similitud entre consultas y extractos de conversaciones}
+
+En la notebook 3\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/3.ipynb}} se realiza un experimento en el que se utiliza la búsqueda semántica en un espacio vectorial basado en las conversaciones del usuario. El objetivo es encontrar, mediante similitud semántica, la información más relevante de las interacciones del usuario con el asistente, siempre filtrando por el identificador de persona (\texttt{person\_id}). A continuación, se describen los pasos observados:
+
+\paragraph{Carga de librerías y configuración}
+
+Se importan las librerías necesarias para generar embeddings y realizar búsquedas vectoriales utilizando FAISS, además de cargar Redis y las variables de entorno necesarias para configurar el sistema.
+
+\begin{APACode}
+from langchain.embeddings.openai import OpenAIEmbeddings 
+from langchain.vectorstores import FAISS
+import os 
+import sys 
+import redis
+from datetime import datetime 
+from dotenv import load_dotenv
+
+sys.path.append('/Users/alexander/Projects/hyperpersonalization/app/tools') 
+from vectordb import connect_to_redis, check_index_existance, add_message_to_db
+
+load_dotenv()
+
+redis_host = os.getenv("REDIS_HOST") or "localhost" 
+redis_port = os.getenv("REDIS_PORT") or 6379 
+index_name = "conversations"
+index_path = "../indexes/conversations" 
+embeddings = OpenAIEmbeddings()
+
+db = FAISS.load_local(folder_path=index_path, index_name=index_name, 
+                      embeddings=embeddings)
+\end{APACode}
+
+\paragraph{Carga de un índice previamente almacenado}
+
+Se carga un índice de vectores existente desde el almacenamiento local. Este índice contiene las conversaciones previas del usuario y se utiliza para realizar las búsquedas posteriores. Los embeddings permiten comparar los textos de manera semántica.
+
+\paragraph{Adición de mensajes a la base vectorial}
+
+Cada fragmento de conversación del usuario se convierte en un vector mediante el cálculo de embeddings, y se almacena en la base vectorial junto con los metadatos, como el \texttt{person\_id} y el \texttt{person\_name}. Esto permite compartimentalizar la información y facilitar el filtrado por usuario.
+
+\subparagraph{Ejemplos de mensajes añadidos}
+
+\begin{itemize}
+    \item ``mi madre se llama Alicia, tiene 66, es jubilada''
+    \item ``mis hijas se llaman Aurora y Alba, Aurora tiene 12 y Alba 9''
+    \item ``a mis hijas no les gusta estar en el pasillo, siempre ventana''
+\end{itemize}
+
+\begin{APACode}
+metadatas = [{"person_id": "alexander.ditzend", "person_name": "Alexander"}] 
+timestamp = datetime.now().isoformat()
+message = {"timestamp": timestamp, 
+           "content": "mi madre se llama Alicia, tiene 66, es jubilada"} 
+text = str(message)
+db.add_texts(texts=[text], embedding=embeddings, metadatas=metadatas)
+
+# Resultado: ['2b4e7776-2ba1-40c6-a5b8-4c52c7bfd09d']
+\end{APACode}
+
+\begin{APACode}
+metadatas = [{"person_id": "alexander.ditzend", "person_name": "Alexander"}] 
+timestamp = datetime.now().isoformat()
+message = {"timestamp": timestamp, 
+           "content": "mis hijas se llaman Aurora y Alba, Aurora tiene 12 y Alba 9"} 
+text = str(message)
+db.add_texts(texts=[text], embedding=embeddings, metadatas=metadatas)
+
+# Resultado: ['8365053e-e582-4bdb-9892-36d2499a78a1']
+\end{APACode}
+
+\begin{APACode}
+metadatas = [{"person_id": "alexander.ditzend", "person_name": "Alexander"}] 
+timestamp = datetime.now().isoformat()
+message = {"timestamp": timestamp, 
+           "content": "a mis hijas no les gusta estar en el pasillo, siempre ventana"} 
+text = str(message)
+db.add_texts(texts=[text], embedding=embeddings, metadatas=metadatas)
+
+# Resultado: ['89b188cb-5eed-44fe-92d8-cc62c077e676']
+\end{APACode}
+
+\paragraph{Realización de consultas semánticas}
+
+Se formulan diversas preguntas al sistema, que se comparan con las conversaciones almacenadas, aplicando siempre un filtro por \texttt{person\_id} para obtener únicamente los datos del usuario relevante.
+
+\textbf{Consulta 1: ``¿Cuántos años tiene la madre del cliente?''}
+
+El sistema devuelve el mensaje ``mi madre se llama Alicia, tiene 66, es jubilada'' con un puntaje de similitud.
+
+\begin{APACode}
+query = "cuantos años tiene la madre del cliente?" 
+filter = {"person_id": "alexander.ditzend"}
+db.similarity_search_with_score(query=query, embeddings=embeddings, 
+                                filter=filter, k=1)
+
+# Resultado:
+# [(Document(page_content="{'timestamp': '2023-07-12T12:20:08.065627', 
+#    'content': 'mi madre se llama Alicia, tiene 66, es jubilada'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}),
+#   0.43335056)]
+\end{APACode}
+
+\textbf{Consulta 2: ``¿Tiene hijos?''}
+
+Se devuelven dos mensajes: ``a mis hijas no les gusta estar en el pasillo, siempre ventana'' y ``mis hijas se llaman Aurora y Alba, Aurora tiene 12 y Alba 9''.
+
+\begin{APACode}
+query = "tiene hijos?"
+filter = {"person_id": "alexander.ditzend"} 
+db.similarity_search_with_score(query=query, embeddings=embeddings, 
+                                filter=filter, k=2)
+
+# Resultado:
+# [(Document(page_content="{'timestamp': '2023-07-12T12:23:34.853229', 
+#    'content': 'a mis hijas no les gusta estar en el pasillo, siempre ventana'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}),
+#   0.45402932),
+#  (Document(page_content="{'timestamp': '2023-07-12T12:22:19.835459', 
+#    'content': 'mis hijas se llaman Aurora y Alba, Aurora tiene 12 y Alba 9'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}), 
+#   0.46825188)]
+\end{APACode}
+
+\textbf{Consulta 3: ``¿Cuáles son las preferencias de los hijos?''}
+
+El sistema devuelve que las hijas prefieren sentarse junto a la ventana.
+
+\begin{APACode}
+query = "cuales son las preferencias de los hijos?" 
+filter = {"person_id": "alexander.ditzend"}
+db.similarity_search_with_score(query=query, embeddings=embeddings, 
+                                filter=filter, k=2)
+
+# Resultado:
+# [(Document(page_content="{'timestamp': '2023-07-12T12:23:34.853229', 
+#    'content': 'a mis hijas no les gusta estar en el pasillo, siempre ventana'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}),
+#   0.48871845),
+#  (Document(page_content="{'timestamp': '2023-07-12T12:22:19.835459', 
+#    'content': 'mis hijas se llaman Aurora y Alba, Aurora tiene 12 y Alba 9'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}),
+#   0.53449)]
+\end{APACode}
+
+\textbf{Consulta 4: ``¿Edad de la hija mayor?''}
+
+El sistema devuelve el mensaje con la edad de Aurora, la hija mayor.
+
+\begin{APACode}
+query = "edad de la hija mayor"
+filter = {"person_id": "alexander.ditzend"} 
+db.similarity_search_with_score(query=query, embeddings=embeddings, 
+                                filter=filter, k=2)
+
+# Resultado:
+# [(Document(page_content="{'timestamp': '2023-07-12T12:22:19.835459', 
+#    'content': 'mis hijas se llaman Aurora y Alba, Aurora tiene 12 y Alba 9'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}),
+#   0.42045504),
+#  (Document(page_content="{'timestamp': '2023-07-12T12:23:34.853229', 
+#    'content': 'a mis hijas no les gusta estar en el pasillo, siempre ventana'}", 
+#    metadata={'person_id': 'alexander.ditzend', 'person_name': 'Alexander'}),
+#   0.44310012)]
+\end{APACode}
+
+\paragraph{Conclusiones de la tercera iteración}
+
+En todos los casos, las respuestas del sistema son correctas, lo que confirma que la búsqueda por similitud usando embeddings es efectiva en este experimento. No obstante, se aclara que el experimento es limitado por el pequeño número de vectores, y las conclusiones no pueden extrapolarse a un escenario real de mayor escala.
+
+La notebook 3 implementa un proceso en el cual se añaden fragmentos de conversación a una base vectorial, se asocian con metadatos, y luego se realizan búsquedas semánticas para recuperar el mensaje más relevante. El filtrado por \texttt{person\_id} garantiza que las búsquedas se limiten a la información específica del usuario relevante. 

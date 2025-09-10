@@ -1,0 +1,101 @@
+\subsection{Proyección de costos}
+
+\subsubsection{Desarrollo del sistema}
+
+A continuación se desglosan las tareas necesarias para el desarrollo de cada componente y se estima el costo con base en la complejidad y el perfil de los desarrolladores requeridos.
+
+Se toma un costo de USD 50 para los perfiles Sr. y USD 40 Jr.
+
+\paragraph{Endpoint de generación de contexto hiperpersonalizado}
+
+Este es el componente principal que usarán los clientes para mejorar las respuestas de sus bots.
+
+Tareas:
+\begin{itemize}
+    \item Diseño y desarrollo del endpoint (Sr.): 40 horas.
+    \item Implementación de lógica de generación de contexto (Sr.): 60 horas.
+    \item Pruebas y optimización (Sr.): 20 horas.
+\end{itemize}
+
+\paragraph{Módulo agencial de consulta de información personal}
+
+Funciona en segundo plano y garantiza consultas seguras de fuentes privadas.
+
+Tareas:
+\begin{itemize}
+    \item Diseño del sistema agencial (Sr.): 50 horas.
+    \item Desarrollo de la lógica de consulta segura (Sr.): 80 horas.
+    \item Pruebas de seguridad y optimización (Sr.): 30 horas.
+\end{itemize}
+
+\paragraph{Conectores a bases de datos más difundidas}
+
+Incluye conectores para MySQL, SQL Server, MongoDB y Oracle.
+
+Tareas:
+\begin{itemize}
+    \item Desarrollo de conectores para cada base de datos:
+    \begin{itemize}
+        \item MySQL y SQL Server (Jr.): 40 horas cada uno.
+        \item MongoDB y Oracle (Sr.): 40 horas cada uno.
+    \end{itemize}
+    \item Pruebas de integración y optimización (Sr.): 20 horas.
+\end{itemize}
+
+\paragraph{Conectores a CRMs y ERPs más conocidos}
+
+Incluye conectores para SalesForce y SAP.
+
+Tareas:
+\begin{itemize}
+    \item Desarrollo de conectores para SalesForce y SAP (Sr.): 60 horas cada uno.
+    \item Pruebas de integración (Sr.): 20 horas.
+\end{itemize}
+
+\paragraph{Módulo de configuración con interfaz gráfica}
+
+Permite a los clientes configurar el sistema mediante una interfaz intuitiva.
+
+Tareas:
+\begin{itemize}
+    \item Diseño y desarrollo de la interfaz gráfica (Sr.): 80 horas.
+    \item Implementación de la lógica de configuración (Sr.): 60 horas.
+    \item Pruebas de usuario (Jr.): 20 horas.
+\end{itemize}
+
+\paragraph{Contador de uso}
+
+Monitorea el consumo de tokens para interpretar información y generar respuestas.
+
+Tareas:
+\begin{itemize}
+    \item Desarrollo del sistema de conteo de tokens (Sr.): 40 horas.
+    \item Pruebas de precisión y optimización (Sr.): 20 horas.
+\end{itemize}
+
+\paragraph{Resumen}
+
+\begin{center}
+\captionof{table}{Proyección de Costos por Componente}
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Componente} & \textbf{Costo (USD)} \\
+\hline
+Endpoint de generación de contexto & 6,000 \\
+\hline
+Sistema agencial de consulta segura & 8,000 \\
+\hline
+Conectores a bases de datos & 8,200 \\
+\hline
+Conectores a CRM y ERP & 7,000 \\
+\hline
+Módulo de configuración con interfaz gráfica & 7,600 \\
+\hline
+Contador de uso & 3,000 \\
+\hline
+\textbf{Total} & \textbf{39,800} \\
+\hline
+\end{tabular}
+\end{center}
+
+El costo estimado para completar el desarrollo del middleware y convertirlo en un producto listo para ser vendido como licencia es USD 39,800. Este cálculo incluye todas las tareas necesarias para asegurar que el producto sea funcional, seguro y fácil de integrar en los sistemas de los clientes. 

@@ -1,0 +1,279 @@
+\subsubsection{Análisis de la Mejora en la Estructura del Contexto para la Recuperación de Información}
+
+En la notebook 7 se experimenta con la reconfiguración de la estructura del contexto brindado al modelo, con el objetivo de mejorar la claridad y limpieza de los datos que se le proporcionan, y comprobar si este enfoque permite al modelo recuperar la información solicitada de manera más efectiva. El código completo está disponible en el repositorio: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/7.ipynb}. A continuación, se analizan los pasos seguidos en esta notebook:
+
+\paragraph{Carga de Librerías y Configuración}
+
+Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de los mensajes. Además, se implementa una función para interactuar con el modelo GPT-3.5 a través de la API.
+
+\begin{APACode}
+import requests 
+import json
+from langchain.embeddings.openai import OpenAIEmbeddings 
+from langchain.vectorstores import FAISS
+
+index_name = "conversations"
+index_path = "../indexes/conversations" 
+embeddings = OpenAIEmbeddings()
+
+db = FAISS.load_local(folder_path=index_path, index_name=index_name, 
+                      embeddings=embeddings)
+\end{APACode}
+
+\paragraph{Estructura de Contextos}
+
+Se crean varios contextos de conversación simulados. Estos contienen mensajes entre el usuario y el sistema, relacionados con temas específicos como la solicitud de un turno para la madre del usuario y una consulta sobre la capital de Colombia. Cada conversación incluye metadatos como \texttt{session\_id}, \texttt{person\_id}, \texttt{message\_id} y la marca temporal (\texttt{created\_at}), lo que facilita su organización y recuperación posterior.
+
+\subparagraph{Ejemplos de mensajes:}
+\begin{itemize}
+    \item Usuario: ``Quiero un turno para mi madre''.
+    \item Asistente: ``¿Cuál es el nombre de tu madre?''.
+    \item Usuario: ``Alba''.
+    \item Asistente: ``¿Y qué edad tiene?''.
+    \item Usuario: ``66''.
+    \item Asistente: ``El turno es para el 30 de agosto a las 15:00''.
+\end{itemize}
+
+\begin{APACode}
+contexts = [
+[
+{
+"message": {
+"role": "user",
+"content": "Quiero un turno para mi madre"
+},
+"metadata": { 
+"session_id": "1",
+"person_id": "20",
+"message_id": "1-1",
+"created_at": "20230825T12:00:00.000Z",
+},
+},
+{
+"message": {
+"role": "system",
+"content": "cual es el nombre de tu madre?"
+},
+"metadata": {
+"session_id": "1",
+"person_id": "20",
+"message_id": "1-2",
+"created_at": "20230825T12:01:00.000Z"
+}
+},
+{
+"message": {
+"role": "user",
+"content": "Alba"
+},
+"metadata": {
+"session_id": "1",
+"person_id": "20",
+"message_id": "1-3",
+"created_at": "20230825T13:00:00.000Z",
+},
+},
+{
+"message": {
+"role": "system",
+"content": "y que edad tiene?"
+},
+"metadata": {
+"session_id": "1",
+"person_id": "20",
+"message_id": "1-4",
+"created_at": "20230825T13:01:00.000Z"
+}
+},
+{
+"message": {
+"role": "user",
+"content": "66"
+},
+"metadata": {
+"session_id": "1",
+"person_id": "20",
+"message_id": "1-5",
+"created_at": "20230825T14:00:00.000Z",
+},
+},
+{
+"message": {
+"role": "system",
+"content": "perfecto, tiene turno para el 30 de agosto a las 15:00"
+},
+"metadata": {
+"session_id": "1",
+"person_id": "20",
+"message_id": "1-6",
+"created_at": "20230825T14:01:00.000Z"
+}
+}
+], 
+[
+{
+"message": {
+"role": "user",
+"content": "Cual es la capital de Colombia?"
+},
+"metadata": {
+"session_id": "4",
+"person_id": "20",
+"message_id": "4-1",
+"created_at": "20230825T15:00:00.000Z",
+},
+},
+{
+"message": {
+"role": "system",
+"content": "Bogota"
+},
+"metadata": {
+"session_id": "4",
+"person_id": "20",
+"message_id": "4-2",
+"created_at": "20230825T15:01:00.000Z"
+}
+}
+]
+]
+\end{APACode}
+
+\paragraph{Vectorización y Almacenamiento}
+
+Los contextos se convierten en texto plano y se vectorizan utilizando embeddings. Estos vectores se almacenan en FAISS con sus respectivos metadatos, lo que permite realizar búsquedas semánticas y recuperar la conversación completa cuando sea necesario.
+
+\begin{APACode}
+condensed_contexts = [
+{
+"messages": [
+{
+"role": "user",
+"content": "Quiero un turno para mi madre"
+},
+{
+"role": "system",
+"content": "cual es el nombre de tu madre?"
+},
+{
+"role": "user",
+"content": "Alba"
+},
+{
+"role": "system",
+"content": "y que edad tiene?"
+},
+{
+"role": "user",
+"content": "66"
+},
+{
+"role": "system",
+"content": "perfecto, tiene turno para el 30 de agosto a las 15:00"
+}
+],
+"metadata": { 
+"session_id": "1",
+"person_id": "20",
+"context_id": "1",
+"created_at": "20230825T12:00:00.000Z",
+},
+},
+{
+"messages": [
+{
+"role": "user",
+"content": "Cual es la capital de Colombia?"
+},
+{
+"role": "system", 
+"content": "Bogota"
+}
+],
+"metadata": {
+"session_id": "1",
+"person_id": "20",
+"context_id": "2",
+"created_at": "20230825T18:00:00.000Z",
+}
+}
+]
+\end{APACode}
+
+\paragraph{Consulta sobre el Pariente del Usuario}
+
+Se realiza una consulta del usuario (``¿qué sabes de mi madre?'') para ver si el sistema puede recuperar correctamente la información relacionada con la madre proporcionada en conversaciones anteriores. FAISS encuentra el mensaje adecuado, pero el modelo de lenguaje no logra responder de manera precisa. El sistema responde que no tiene información adicional sobre la madre del usuario, lo cual sugiere un problema en la comprensión del contexto.
+
+\begin{APACode}
+user_input_1 = "que sabes de mi madre?" 
+filter = {"person_id": "20"}
+db_results_1 = db.similarity_search_with_score(query=user_input_1, 
+                                               embeddings=embeddings, 
+                                               filter=filter, k=1) 
+context_1 = "{ message: " + db_results_1[0][0].page_content + 
+            ", metadata: " + str(db_results_1[0][0].metadata) + " }" 
+print(f"CONTEXT:{context_1}")
+system_prompt_1 = f"""
+Answer the user's question this message as context. 
+Previous message: {context_1}
+"""
+answer_1 = gpt35_system_user(system_message=system_prompt_1, 
+                             user_message=user_input_1) 
+answer_1["text"]["content"]
+\end{APACode}
+
+\textbf{Resultado:} El modelo vuelve a fallar con una pregunta general, respondiendo: ``Lo siento, como sistema de procesamiento de datos mi memoria solo retiene la información necesaria para responder a la solicitud de turnos de tu madre. No tengo acceso a información personal adicional sobre ella. ¿Hay algo más en lo que pueda ayudarte?''
+
+\paragraph{Pregunta Específica sobre un Tema}
+
+Luego, se realiza una consulta más específica (``¿Una vez te pregunté por Colombia, no?''). En este caso, el sistema responde correctamente, recordando que la capital de Colombia es Bogotá. Esto demuestra que el sistema tiene un mejor rendimiento cuando la consulta es más directa y se enfoca en un tema específico previamente discutido.
+
+\begin{APACode}
+user_input_2 = "Una vez te pregunte por colombia no?" 
+filter = {"person_id": "20"}
+db_results_2 = db.similarity_search_with_score(query=user_input_2, 
+                                               embeddings=embeddings, 
+                                               filter=filter, k=1) 
+context_2 = "{ message: " + db_results_2[0][0].page_content + 
+            ", metadata: " + str(db_results_2[0][0].metadata) + " }" 
+print(f"CONTEXT:{context_2}")
+system_prompt_2 = f"""
+You are a personal assistant. You will find past conversations between 
+you and the user between backticks. Use them to answer the user's question.
+```{context_2}``` 
+"""
+answer_2 = gpt35_system_user(system_message=system_prompt_2, 
+                             user_message=user_input_2) 
+answer_2["text"]["content"]
+\end{APACode}
+
+\textbf{Resultado:} Con una pregunta específica sobre otro tema no tiene problemas. El sistema responde: ``Sí, me hiciste una pregunta sobre Colombia y te respondí que la capital es Bogotá. ¿Puedo ayudarte en algo más?''
+
+\paragraph{Mejora en la Recuperación de Información}
+
+Se vuelve a probar con una pregunta relacionada con el turno de la madre del usuario (``¿Te acuerdas cuándo era el turno de mi madre?''). Esta vez, el sistema logra recuperar correctamente la información, indicando que el turno es para el 30 de agosto a las 15:00. Esto sugiere que el problema inicial podría estar relacionado con la ambigüedad o generalidad de la primera consulta.
+
+\begin{APACode}
+user_input_3 = "Te acordas cuando era el turno de mi vieja?" 
+filter = {"person_id": "20"}
+db_results_3 = db.similarity_search_with_score(query=user_input_3, 
+                                               embeddings=embeddings, 
+                                               filter=filter, k=1) 
+context_3 = "{ message: " + db_results_3[0][0].page_content + 
+            ", metadata: " + str(db_results_3[0][0].metadata) + " }" 
+print(f"CONTEXT:{context_3}")
+system_prompt_3 = f"""
+You are a personal assistant. You will find past conversations between 
+you and the user between backticks. Use them to answer the user's question.
+```{context_3}``` 
+"""
+answer_3 = gpt35_system_user(system_message=system_prompt_3, 
+                             user_message=user_input_3) 
+answer_3["text"]["content"]
+\end{APACode}
+
+\textbf{Resultado:} Con otra pregunta específica sobre el tema que generó la falla anteriormente, se observa que se puede hacer una recuperación satisfactoria. El sistema responde: ``Sí, el turno de tu madre es para el 30 de agosto a las 15:00 horas.''
+
+\paragraph{Conclusiones de la séptima iteración}
+
+La notebook 7 muestra que al reconfigurar y limpiar la estructura del contexto, se mejora la precisión en la recuperación de información en consultas específicas. Aunque el modelo sigue teniendo dificultades con preguntas generales, las consultas más directas y bien estructuradas generan respuestas más precisas y satisfactorias. Esto resalta la importancia de organizar adecuadamente el contexto para mejorar la interacción con modelos de lenguaje como GPT-3.5. 
