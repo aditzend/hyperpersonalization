@@ -6,14 +6,14 @@ Según \textcite{mentzer2005sales}, los métodos cualitativos son los más adecu
 
 Para estimar variables de demanda y unit economics realizamos un Delphi simulado asistido por IA. A diferencia del método Delphi ortodoxo, que requiere un panel de expertos humanos que itera en rondas anónimas hasta lograr consenso, aquí simulamos perfiles de expertos con un modelo de lenguaje (LLM), ejecutando múltiples rondas y consolidando métricas de consenso (mediana, IQR).
 
-El procedimiento constó de: (i) definición de variables a estimar (nuevos clientes por año, ACV/precio, CAC, churn anual, tiempo de implementación); (ii) fijación de anclas empíricas a partir de fuentes primarias (reportes sectoriales) para acotar rangos; (iii) generación de 5–7 "perfiles de experto" (p. ej., VC SaaS LATAM, CTO de proveedor, Head of CS, economista macro AR, consultor pricing B2B) con ronda 1 de estimaciones; (iv) ronda 2 con retroalimentación de estadísticas agregadas (medianas y cuartiles) y pedido de revisión; (v) consolidación por mediana y IQR; (vi) validación de plausibilidad contra benchmarks publicados.
+El procedimiento constó de: (i) definición de variables a estimar (nuevos clientes por año, ACV/precio, CAC, churn anual, tiempo de implementación); (ii) fijación de anclas empíricas a partir de fuentes primarias (reportes sectoriales) para acotar rangos; (iii) generación de 5 "perfiles de experto" (p. ej., VC SaaS LATAM, CTO de proveedor, Head of CS, economista macro AR, consultor pricing B2B) con ronda 1 de estimaciones; (iv) ronda 2 con retroalimentación de estadísticas agregadas (medianas y cuartiles) y pedido de revisión; (v) consolidación por mediana y IQR; (vi) validación de plausibilidad contra benchmarks publicados.
 
 \textbf{Limitación:} al no involucrar expertos humanos reales, el resultado no constituye consenso experto; se interpreta como escenarios informados por el LLM bajo restricciones de datos. Por ello, los resultados se usan para armar escenarios Pesimista/Base/Optimista y para análisis de sensibilidad, no como pronóstico puntual.
 
 \paragraph{Parámetros de reproducibilidad}
 
-Modelo y fecha: GPT-4 o1-2024-12-17, ejecución: 2025-01
-\\Temperatura: 0,7; top\_p: 0,9; semillas distintas por "experto"
+Modelo y fecha: 'gpt-5.1-2025-11-13', ejecución: 2025-11-23
+\\Temperatura: 0.0; top\_p: 1.0; semillas distintas por "experto" y ronda
 \\Rondas: 2 (criterio de convergencia: Δmediana < 10\% y IQR/mediana < 30\%)
 
 \paragraph{Detalle del método Delphi:}
@@ -42,20 +42,52 @@ Ante la imposibilidad de generar un encuentro físico con expertos reales, se ha
 
 Al tratarse de un producto nuevo desarrollado por una empresa emergente que ingresa en un mercado competitivo como el de los asistentes virtuales en América Latina, no es viable aplicar métodos cuantitativos tradicionales, como regresiones o promedios móviles, para la predicción de ventas. Estos enfoques requieren datos históricos confiables que no están disponibles para este caso, ya que no existen ventas previas que permitan modelar tendencias y la industria de asistentes virtuales está en rápida evolución, lo que dificulta basarse en datos históricos de otros productos como referencia. Las variables clave, como adopción tecnológica, estrategias de marketing y competitividad, introducen incertidumbre significativa en el análisis. En su lugar, es más apropiado utilizar métodos cualitativos como el método Delphi, que permite obtener proyecciones fundamentadas a través del consenso de expertos.
 
-\subsubsection{Simulación con el Método Delphi Simulado}
+\subsubsection{Simulación con el Método Delphi con LLM}
 
 \paragraph{Perfiles de expertos simulados}
 
 Se simularon cinco perfiles especializados:
 \begin{itemize}
-    \item \textbf{VC SaaS LATAM:} Inversor de riesgo especializado en SaaS B2B en América Latina
-    \item \textbf{CTO de proveedor:} Director técnico de empresa de software empresarial
-    \item \textbf{Head of Customer Success:} Especialista en adopción y retención de clientes B2B
-    \item \textbf{Economista macro AR:} Analista de mercados emergentes con foco en Argentina
-    \item \textbf{Consultor pricing B2B:} Especialista en estrategias de precios para software empresarial
+    \item \textbf{CEO Startup:} CEO y Co-fundador/a de una Startup Latinoamericana de Soluciones de Inteligencia Artificial Conversacional
+    \item \textbf{Gerente de producto:} Product Owner de una Startup Latinoamericana de Soluciones de Inteligencia Artificial Conversacional
+    \item \textbf{Analista de mercado:} Analista de mercados emergentes con foco en Argentina
+    \item \textbf{Consultor en tecnología:} Consultor en tecnología para software empresarial
+    \item \textbf{Investigador académico:} Investigador académico en inteligencia artificial conversacional
 \end{itemize}
 
 Variables estimadas: nuevos clientes por año, precio anual (ACV), costo de adquisición de clientes (CAC), tasa de churn anual, tiempo de implementación.
+
+\paragraph{Fundamentación Empírica para el Método Delphi}
+\label{sec:anclas_empiricas}
+
+La estimación de variables críticas para la proyección de adopción de un sistema de hiperpersonalización aplicado al desarrollo de asistentes virtuales requiere el uso de evidencia sólida y verificable. En el marco del método Delphi, es fundamental que los expertos participantes cuenten con un conjunto de referencias empíricas que les permitan acotar razonablemente los valores iniciales, evitando sesgos de sobreoptimismo, heurísticas individuales o extrapolaciones no fundamentadas. Para ello, se ha realizado una revisión exhaustiva de literatura técnica, estudios de mercado, reportes industriales y análisis de consultoras globales que cubren tres dimensiones centrales: (i) adopción de IA y asistentes conversacionales en empresas; (ii) madurez de la personalización y experiencia del cliente; y (iii) métricas operativas relevantes tales como potencial de mercado, inversión proyectada, tiempos de implementación, barreras de adopción y rotación de clientes (churn).
+
+Los reportes de \textcite{zendesk2024cxtrends, t} aportan datos consistentes sobre la evolución del \emph{Customer Experience} (CX) en América Latina, incluyendo niveles de automatización, uso de asistentes conversacionales, expectativas de personalización y la disposición de las organizaciones a incorporar soluciones basadas en IA. Estos informes permiten comprender el grado de madurez regional y constituyen una referencia directa para estimar cuántas organizaciones en Argentina y la región estarían en condiciones de adoptar un middleware de hiperpersonalización.
+
+En la misma línea, los documentos de Gartner \parencite{gartner2024mq_conversational_ai, gartner2024_marketguide_conversational_ai, gartner2024_hypecycle_ai} describen la estructura del mercado de plataformas conversacionales, su evolución tecnológica, y niveles de madurez en el ciclo de adopción. Si bien el acceso completo a los reportes requiere suscripción, los resúmenes públicos, las metodologías y los criterios empleados por Gartner funcionan como una guía metodológica sólida para definir escenarios de adopción y límites razonables para el crecimiento del sector.
+
+La dimensión económica del mercado está representada principalmente por el \emph{Artificial Intelligence Spending Guide} de IDC \parencite{idc2024_ai_spending_latam}, que presenta datos de inversión proyectada en IA para América Latina. Esto es particularmente relevante, ya que el volumen de gasto en tecnologías de IA y automatización establece un techo presupuestario realista para la incorporación de soluciones de alto valor agregado como el sistema propuesto.
+
+Por su parte, las encuestas globales de McKinsey \parencite{mckinsey2024stateofai}, Deloitte \parencite{deloitte2024_state_of_ai}, Accenture \parencite{accenture2024_ai_maturity} y PwC \parencite{pwc2024_global_ai_study} proporcionan estimaciones robustas sobre adopción corporativa de IA, impacto económico, fuentes de valor, barreras de implementación y métricas de retorno. Estas fuentes funcionan como referencia para inferir la velocidad de penetración esperada, los patrones de adopción organizacional, y los factores que potencian o inhiben la expansión de soluciones avanzadas.
+
+La perspectiva latinoamericana se complementa con estudios específicos como el \emph{State of Personalization} de Twilio Segment \parencite{twilio2024_personalization_latam}, que analiza comportamientos de personalización en empresas de la región; los informes de Meta sobre comercio conversacional \parencite{meta2024_conversational_commerce_latam}; el reporte regional de Salesforce \parencite{salesforce2024_state_of_service_latam}; y el análisis del ecosistema digital en América Latina elaborado por Google Cloud \parencite{google2024_future_ai_latam}. Estos trabajos aportan una visión granular del comportamiento de los usuarios, la penetración de canales conversacionales y el grado de madurez en automatización dentro de industrias verticales.
+
+Asimismo, reportes de análisis de mercado como Statista \parencite{statista2024_latam_ai}, Omdia \parencite{omdia2024_conversational_ai_forecast}, Everest Group \parencite{everest2024_enterprise_conversational_ai} y BCG \parencite{bcg2025_personalization_index} proveen estimaciones cuantitativas del tamaño del mercado, crecimiento anual compuesto (CAGR), expansión proyectada para plataformas conversacionales y el impacto económico de la personalización basada en IA. Estas cifras permiten estructurar límites superiores e inferiores para la cantidad potencial de clientes, su velocidad de incorporación y los ritmos de despliegue.
+
+Finalmente, se incorporan referencias académicas revisadas por pares, como el artículo de IEEE \parencite{ieee2024_ai_latam}, que complementa la evidencia industrial a través de análisis sistemáticos de adopción de IA en organizaciones latinoamericanas, permitiendo fundamentar las diferencias regionales respecto de mercados de mayor madurez.
+
+El conjunto de todas estas fuentes constituye una base empírica robusta, multidimensional y coherente, que permite enmarcar adecuadamente las estimaciones del método Delphi. Cada informe contribuye a acotar una variable específica—sea adopción, inversión, madurez, impacto económico o barreras—y la combinación de todos estos elementos reduce el riesgo de estimaciones arbitrarias o inconsistentes entre panelistas.
+
+\paragraph{Anexo para Expertos del Método Delphi}
+
+A continuación se presenta el inciso que acompañará las preguntas del panel Delphi:
+
+\begin{quote}
+\textbf{Nota metodológica para expertos.} Las estimaciones solicitadas en este cuestionario deben considerarse a la luz de la evidencia sectorial relevada previamente. Para garantizar coherencia y reducir sesgo individual, se proveen como referencia los principales reportes globales y regionales sobre adopción de inteligencia artificial, plataformas conversacionales y tecnologías de personalización, incluyendo estudios de Gartner (2024), IDC (2024), McKinsey (2024), Deloitte (2024), Accenture (2024), PwC (2024), Zendesk (2024), Twilio Segment (2024), Meta (2024), Google Cloud (2024), Salesforce (2024), Statista (2024), Omdia (2024), BCG (2025), Everest Group (2024) y análisis académicos (IEEE, 2024). 
+
+Se solicita que sus respuestas tomen en consideración los rangos, tendencias, niveles de madurez y limitaciones identificadas en dichas fuentes, aplicándolos al contexto argentino y latinoamericano según su experiencia profesional. Las estimaciones deben basarse en escenarios plausibles y justificables a partir de esta evidencia, evitando supuestos fuera de escala respecto de la literatura técnica y las proyecciones existentes.
+\end{quote}
+
 
 \paragraph{Primera Ronda}
 
