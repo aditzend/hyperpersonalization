@@ -57,12 +57,14 @@ Se simularon cinco perfiles especializados:
 
 Variables estimadas: nuevos clientes por año, precio anual (ACV), costo de adquisición de clientes (CAC), tasa de churn anual, tiempo de implementación.
 
+% start cut
+
 \paragraph{Fundamentación Empírica para el Método Delphi}
 \label{sec:anclas_empiricas}
 
 La estimación de variables críticas para la proyección de adopción de un sistema de hiperpersonalización aplicado al desarrollo de asistentes virtuales requiere el uso de evidencia sólida y verificable. En el marco del método Delphi, es fundamental que los expertos participantes cuenten con un conjunto de referencias empíricas que les permitan acotar razonablemente los valores iniciales, evitando sesgos de sobreoptimismo, heurísticas individuales o extrapolaciones no fundamentadas. Para ello, se ha realizado una revisión exhaustiva de literatura técnica, estudios de mercado, reportes industriales y análisis de consultoras globales que cubren tres dimensiones centrales: (i) adopción de IA y asistentes conversacionales en empresas; (ii) madurez de la personalización y experiencia del cliente; y (iii) métricas operativas relevantes tales como potencial de mercado, inversión proyectada, tiempos de implementación, barreras de adopción y rotación de clientes (churn).
 
-Los reportes de \textcite{zendesk2024cxtrends, t} aportan datos consistentes sobre la evolución del \emph{Customer Experience} (CX) en América Latina, incluyendo niveles de automatización, uso de asistentes conversacionales, expectativas de personalización y la disposición de las organizaciones a incorporar soluciones basadas en IA. Estos informes permiten comprender el grado de madurez regional y constituyen una referencia directa para estimar cuántas organizaciones en Argentina y la región estarían en condiciones de adoptar un middleware de hiperpersonalización.
+El reporte de \textcite{zendesk2024_cxtrends} aporta datos consistentes sobre la evolución del \emph{Customer Experience} (CX) en América Latina, incluyendo niveles de automatización, uso de asistentes conversacionales, expectativas de personalización y la disposición de las organizaciones a incorporar soluciones basadas en IA. Estos informes permiten comprender el grado de madurez regional y constituyen una referencia directa para estimar cuántas organizaciones en Argentina y la región estarían en condiciones de adoptar un middleware de hiperpersonalización.
 
 En la misma línea, los documentos de Gartner \parencite{gartner2024mq_conversational_ai, gartner2024_marketguide_conversational_ai, gartner2024_hypecycle_ai} describen la estructura del mercado de plataformas conversacionales, su evolución tecnológica, y niveles de madurez en el ciclo de adopción. Si bien el acceso completo a los reportes requiere suscripción, los resúmenes públicos, las metodologías y los criterios empleados por Gartner funcionan como una guía metodológica sólida para definir escenarios de adopción y límites razonables para el crecimiento del sector.
 
@@ -88,6 +90,34 @@ A continuación se presenta el inciso que acompañará las preguntas del panel D
 Se solicita que sus respuestas tomen en consideración los rangos, tendencias, niveles de madurez y limitaciones identificadas en dichas fuentes, aplicándolos al contexto argentino y latinoamericano según su experiencia profesional. Las estimaciones deben basarse en escenarios plausibles y justificables a partir de esta evidencia, evitando supuestos fuera de escala respecto de la literatura técnica y las proyecciones existentes.
 \end{quote}
 
+% del chat
+
+\paragraph{Anclas empíricas}
+
+Las anclas empíricas utilizadas en el ejercicio de pronóstico Delphi simulado se fundamentan exclusivamente en evidencia secundaria proveniente de reportes institucionales y estudios de mercado reconocidos. Su objetivo no es fijar valores puntuales, sino acotar rangos plausibles y establecer restricciones estructurales que guíen las estimaciones de los panelistas, reduciendo sesgos de optimismo o extrapolaciones no sustentadas.
+
+\paragraph{Ancla de adopción y volumen potencial de clientes}
+La estimación de la cantidad de clientes potenciales por año se apoya principalmente en el diagnóstico regional de adopción empresarial de inteligencia artificial presentado por el Índice Latinoamericano de Inteligencia Artificial (ILIA) 2025. El informe muestra que la adopción efectiva de IA en América Latina se encuentra aún en una etapa temprana y concentrada en grandes organizaciones de sectores específicos, con una proporción significativa de iniciativas que no superan la fase piloto \cite{ILIA2025}. Esta evidencia establece una restricción estructural al ritmo de incorporación de nuevos clientes, especialmente durante los primeros años de operación de soluciones complejas y de alto costo.
+
+Como fuente complementaria, el análisis periodístico de Intelligent CIO sobre el ILIA 2025 refuerza este diagnóstico al señalar que, si bien la región acelera la adopción de IA, persisten brechas significativas en capacidades, inversión y gobernanza, lo que limita la escalabilidad rápida de soluciones avanzadas \cite{IntelligentCIO2025}. En conjunto, estas fuentes anclan las proyecciones de clientes en escenarios de crecimiento gradual y selectivo.
+
+\paragraph{Ancla de valor contractual anual (ACV)}
+Las bandas de ACV se fundamentan en reportes de mercado global sobre asistentes virtuales inteligentes, IA conversacional e hiperpersonalización. Estudios de IMARC Group muestran que los segmentos enterprise de estos mercados concentran una parte sustancial del valor económico, con soluciones de mayor complejidad, integración profunda y precios significativamente superiores al SaaS genérico \cite{IMARCIVA2024,IMARCHyperpersonalization2024}. De forma consistente, Allied Market Research identifica que el crecimiento del mercado de IA conversacional está impulsado principalmente por aplicaciones empresariales críticas, donde el precio refleja el impacto estratégico y el costo de implementación \cite{AlliedMarketResearchIVA2024}. Estas fuentes permiten acotar rangos de ACV coherentes con licencias anuales de software especializado orientado a grandes organizaciones.
+
+\paragraph{Ancla de costo de adquisición de clientes (CAC)}
+El CAC se ancla en restricciones estructurales identificadas por el ILIA 2025 relativas a la dependencia de proveedores externos, la escasez de talento especializado y la complejidad organizacional de los proyectos de IA en la región \cite{ILIA2025}. Estas condiciones implican procesos comerciales largos, con alta carga de preventa técnica, pilotos y validaciones internas, lo que descarta supuestos de adquisición de bajo costo o escalamiento puramente digital. Los reportes de mercado de IMARC y Allied Market Research refuerzan indirectamente este marco al describir modelos de venta enterprise intensivos en recursos comerciales y técnicos \cite{IMARCIVA2024,AlliedMarketResearchIVA2024}.
+
+\paragraph{Ancla de churn anual}
+La estimación del churn anual se apoya en la distinción entre iniciativas piloto y sistemas en producción señalada por el ILIA 2025. El informe documenta una alta tasa de discontinuidad en proyectos experimentales, pero una vez que las soluciones de IA se integran a procesos centrales, el costo de sustitución aumenta significativamente, reduciendo la rotación \cite{ILIA2025}. Esta evidencia permite establecer bandas de churn diferenciadas por escenario, evitando la aplicación mecánica de métricas típicas de SaaS liviano a soluciones enterprise integradas. El marco general de madurez de mercado presentado por IMARC resulta consistente con esta diferenciación \cite{IMARCIVA2024}.
+
+\paragraph{Ancla de tiempo medio de implementación}
+El tiempo de implementación se fundamenta en las brechas de capacidades, integración de datos y gobernanza identificadas por el ILIA 2025, que prolongan los ciclos de despliegue de soluciones de IA en organizaciones latinoamericanas \cite{ILIA2025}. El análisis de Intelligent CIO complementa este punto al destacar que, pese al interés creciente, muchas organizaciones carecen de la urgencia y preparación necesarias para implementaciones rápidas \cite{IntelligentCIO2025}. Estas fuentes establecen una restricción operativa clara que impide asumir tiempos de implementación breves o modelos de adopción plug-and-play.
+
+\paragraph{Síntesis metodológica}
+En conjunto, las anclas empíricas aquí desarrolladas delimitan un espacio de pronóstico coherente con la evidencia disponible: un mercado en expansión, pero con adopción gradual; valores contractuales elevados en el segmento enterprise; costos de adquisición altos y persistentes; churn moderado una vez superada la fase piloto; y tiempos de implementación prolongados. Estas anclas constituyen el marco común de referencia para los panelistas del método Delphi simulado.
+
+
+% end cut
 
 \paragraph{Primera Ronda}
 

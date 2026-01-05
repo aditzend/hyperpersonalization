@@ -3111,7 +3111,19 @@
     <bcf:citekey order="36" intorder="1">everest2024_enterprise_conversational_ai</bcf:citekey>
     <bcf:citekey order="37" intorder="1">bcg2025_personalization_index</bcf:citekey>
     <bcf:citekey order="38" intorder="1">ieee2024_ai_latam</bcf:citekey>
-    <bcf:citekey order="39" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">IntelligentCIO2025</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="41" intorder="2">IMARCHyperpersonalization2024</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">AlliedMarketResearchIVA2024</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="44" intorder="2">AlliedMarketResearchIVA2024</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">IntelligentCIO2025</bcf:citekey>
+    <bcf:citekey order="49" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
