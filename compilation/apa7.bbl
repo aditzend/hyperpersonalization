@@ -33,7 +33,6 @@
       \strng{authornamehash}{1d55af1659424cf94d869e2580a11bf8}
       \strng{authorfullhash}{1d55af1659424cf94d869e2580a11bf8}
       \strng{authorfullhashraw}{1d55af1659424cf94d869e2580a11bf8}
-      \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -49,46 +48,6 @@
       \endverb
       \verb{url}
       \verb https://www.accenture.com/content/dam/accenture/final/industry/banking/document/Accenture-Banking-Consumer-Study.pdf
-      \endverb
-    \endentry
-    \entry{accenture2024_ai_maturity}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1d55af1659424cf94d869e2580a11bf8}{%
-           family={{Accenture}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Accenture Research}%
-      }
-      \strng{namehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{fullhash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{fullhashraw}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{bibnamehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authorbibnamehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authornamehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authorfullhash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authorfullhashraw}{1d55af1659424cf94d869e2580a11bf8}
-      \field{extraname}{2}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye benchmarks globales y regionales de impacto de IA en empresas.}
-      \field{title}{The Art of AI Maturity: Advancing from Practice to Performance}
-      \field{type}{Industry Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.accenture.com/us-en/insights/ai/ai-maturity
-      \endverb
-      \verb{url}
-      \verb https://www.accenture.com/us-en/insights/ai/ai-maturity
       \endverb
     \endentry
     \entry{AccentureInteractive2016}{misc}{}{}
@@ -121,6 +80,41 @@
       \endverb
       \verb{url}
       \verb https://newsroom.accenture.com/news/2016/consumers-welcome-personalized-offerings-but-businesses-are-struggling-to-deliver-finds-accenture-interactive-personalization-research
+      \endverb
+    \endentry
+    \entry{AlliedMarketResearchIVA2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=49dfd8dee2a45df194debce621f0ca5d}{%
+           family={{Allied Market Research}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{fullhash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{fullhashraw}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{bibnamehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authorbibnamehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authornamehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authorfullhash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authorfullhashraw}{49dfd8dee2a45df194debce621f0ca5d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Reporte de mercado comercial. Cifras utilizadas a nivel agregado}
+      \field{title}{Conversational AI Market Size, Share and Forecast}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.alliedmarketresearch.com/conversational-ai-market
+      \endverb
+      \verb{url}
+      \verb https://www.alliedmarketresearch.com/conversational-ai-market
       \endverb
     \endentry
     \entry{atento2024_chatbots_finance_latam}{misc}{}{}
@@ -188,46 +182,6 @@
       \endverb
       \verb{url}
       \verb https://agatadata.com/wp-content/uploads/2024/11/Latin-America-Digital-Transformation-Report-2024-Atlantico.pdf
-      \endverb
-    \endentry
-    \entry{bain2024_personalization}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=96bb349bb06307114090533f36d11021}{%
-           family={{Bain \& Company}},
-           familyi={B\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Bain \& Company}%
-      }
-      \strng{namehash}{96bb349bb06307114090533f36d11021}
-      \strng{fullhash}{96bb349bb06307114090533f36d11021}
-      \strng{fullhashraw}{96bb349bb06307114090533f36d11021}
-      \strng{bibnamehash}{96bb349bb06307114090533f36d11021}
-      \strng{authorbibnamehash}{96bb349bb06307114090533f36d11021}
-      \strng{authornamehash}{96bb349bb06307114090533f36d11021}
-      \strng{authorfullhash}{96bb349bb06307114090533f36d11021}
-      \strng{authorfullhashraw}{96bb349bb06307114090533f36d11021}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Informe técnico sobre hiperpersonalización, métricas de ROI y adopción empresarial.}
-      \field{title}{The State of Customer Experience Personalization 2024}
-      \field{type}{Industry Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.bain.com/insights/
-      \endverb
-      \verb{url}
-      \verb https://www.bain.com/insights/
       \endverb
     \endentry
     \entry{BancoProvincia2024}{misc}{}{}
@@ -335,72 +289,6 @@
       \verb https://botpress.com/es/blog/key-chatbot-statistics
       \endverb
     \endentry
-    \entry{BusinessInsider2016}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ddb20008bae37b1617b61c23a1d4b9d2}{%
-           family={{Business Insider}},
-           familyi={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{fullhash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{fullhashraw}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{bibnamehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authorbibnamehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authornamehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authorfullhash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authorfullhashraw}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{9}
-      \field{note}{Reporte de prensa; contexto cualitativo}
-      \field{title}{The messaging apps report: Messaging apps are now bigger than social networks}
-      \field{year}{2016}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
-      \endverb
-      \verb{url}
-      \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
-      \endverb
-    \endentry
-    \entry{ElPais2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ce37d15c64b42bac2336e16e83d2bea0}{%
-           family={{Cinco Días (El País)}},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{fullhash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{fullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{bibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authorbibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authornamehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authorfullhash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authorfullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{Artículo periodístico; contexto cualitativo}
-      \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
-      \endverb
-      \verb{url}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
-      \endverb
-    \endentry
     \entry{CMSWire2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=66c3e684e4d7af71179460ae757afac5}{%
@@ -432,39 +320,6 @@
       \endverb
       \verb{url}
       \verb https://www.cmswire.com/customer-experience/ai-in-ecommerce-true-one-on-one-personalization-is-coming/
-      \endverb
-    \endentry
-    \entry{CronicaTech2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4f75db7bb622ff0e353ad934d0edec4f}{%
-           family={{Crónica Tech}},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{fullhash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{fullhashraw}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{bibnamehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authorbibnamehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authornamehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authorfullhash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authorfullhashraw}{4f75db7bb622ff0e353ad934d0edec4f}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{Blog tecnológico; contexto cualitativo}
-      \field{title}{Las 10 empresas líderes en inteligencia artificial y machine learning en 2024}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://cronica.tech/tecnologia/software/las-empresas-lideres-en-inteligencia-artificial-y-machine-learning-en-2023/
-      \endverb
-      \verb{url}
-      \verb https://cronica.tech/tecnologia/software/las-empresas-lideres-en-inteligencia-artificial-y-machine-learning-en-2023/
       \endverb
     \endentry
     \entry{Damodaran2024}{misc}{}{}
@@ -501,79 +356,7 @@
       \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
     \endentry
-    \entry{deloitte2024_state_of_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=8ef53f1666ba7c842abcde8318c90a21}{%
-           family={{Deloitte Insights}},
-           familyi={D\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Deloitte}%
-      }
-      \strng{namehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{fullhash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{fullhashraw}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{bibnamehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authorbibnamehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authornamehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authorfullhash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authorfullhashraw}{8ef53f1666ba7c842abcde8318c90a21}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye datos sobre implementación, ROI, barreras y tiempos de despliegue.}
-      \field{title}{State of AI in the Enterprise, 6th Edition}
-      \field{type}{Survey Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/state-of-ai.html
-      \endverb
-      \verb{url}
-      \verb https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/state-of-ai.html
-      \endverb
-    \endentry
-    \entry{DigitalCommerce2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=dc49c8a3f37ec5fd8676f490de9fff64}{%
-           family={{Digital Commerce 360}},
-           familyi={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{fullhash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{fullhashraw}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{bibnamehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authorbibnamehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authornamehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authorfullhash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authorfullhashraw}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{Blog especializado en comercio; contexto cualitativo}
-      \field{title}{Lowe's lower web traffic doesn't hurt sales in Q1}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
-      \endverb
-      \verb{url}
-      \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
-      \endverb
-    \endentry
-    \entry{emergen_virtual_assistants_2023}{misc}{}{}
+    \entry{emergen_intelligent_virtual_assistant_market_2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e84e5ae285bab83912ec19bc0bfe10c1}{%
            family={{Emergen Research}},
@@ -596,14 +379,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Virtual assistant market size, share, trends, by type, by application, by end use, and by region forecast to 2032}
+      \field{howpublished}{\url{https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market?srsltid=AfmBOopnzgvcDq_l5fzQkkisJQjJXBYWJiZVlm3FSQEaGqWwzDhWNGcQ&utm_source=chatgpt.com}}
+      \field{note}{Consultado el \today}
+      \field{title}{Intelligent Virtual Assistant (IVA) Market Size, Share, Trends, and Forecast to 2032}
       \field{year}{2023}
-      \verb{urlraw}
-      \verb https://www.emergenresearch.com/industry-report/virtual-assistant-market
-      \endverb
-      \verb{url}
-      \verb https://www.emergenresearch.com/industry-report/virtual-assistant-market
-      \endverb
+      \true{nocite}
     \endentry
     \entry{EmergenResearch2023}{misc}{}{}
       \name{author}{1}{}{%
@@ -669,78 +449,6 @@
       \endverb
       \verb{url}
       \verb https://www.emergenresearch.com/industry-report/hyper-personalization-market
-      \endverb
-    \endentry
-    \entry{everest2024_enterprise_conversational_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=6da362d389b5a86f4b503775115952e3}{%
-           family={{Everest Group}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Everest Group}%
-      }
-      \strng{namehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{fullhash}{6da362d389b5a86f4b503775115952e3}
-      \strng{fullhashraw}{6da362d389b5a86f4b503775115952e3}
-      \strng{bibnamehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authorbibnamehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authornamehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authorfullhash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authorfullhashraw}{6da362d389b5a86f4b503775115952e3}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye benchmarks de tiempo de implementación y ROI.}
-      \field{title}{Conversational AI in the Enterprise: State of Adoption 2024}
-      \field{type}{Industry Research}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.everestgrp.com/
-      \endverb
-      \verb{url}
-      \verb https://www.everestgrp.com/
-      \endverb
-    \endentry
-    \entry{Forbes2017}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b1e9b36364c855fad4161cfb10d45735}{%
-           family={{Forbes}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{fullhash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{fullhashraw}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{bibnamehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authorbibnamehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authornamehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authorfullhash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authorfullhashraw}{b1e9b36364c855fad4161cfb10d45735}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{Artículo de prensa; contexto cualitativo}
-      \field{title}{AI by the numbers: 33 facts and forecasts about chatbots and voice assistants}
-      \field{year}{2017}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731
-      \endverb
-      \verb{url}
-      \verb https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731
       \endverb
     \endentry
     \entry{ForbesArgentina2022}{misc}{}{}
@@ -874,46 +582,6 @@
       \verb https://www.forrester.com/blogs/ai-will-fundamentally-transform-customer-service/
       \endverb
     \endentry
-    \entry{forrester2024_cxindex_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=97a576d4c651cc81bda22efbab36d463}{%
-           family={{Forrester Research}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Forrester}%
-      }
-      \strng{namehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{fullhash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{fullhashraw}{97a576d4c651cc81bda22efbab36d463}
-      \strng{bibnamehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authorbibnamehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authornamehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authorfullhash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authorfullhashraw}{97a576d4c651cc81bda22efbab36d463}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Benchmark de experiencia de cliente por país e industria en LATAM.}
-      \field{title}{The Latin America Customer Experience Index 2024}
-      \field{type}{Regional Benchmark}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.forrester.com/report/cx-index/RES000
-      \endverb
-      \verb{url}
-      \verb https://www.forrester.com/report/cx-index/RES000
-      \endverb
-    \endentry
     \entry{FundacionBankinter2020}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=43d67246a74a861951e7780c1b25b7d0}{%
@@ -946,178 +614,35 @@
       \verb https://www.fundacionbankinter.org/noticias/estas-son-las-45-empresas-lideres-en-inteligencia-artificial/?_adin=11551547647
       \endverb
     \endentry
-    \entry{Gartner2011}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=18bfab6309a4addeb7e1dae07d2a4b89}{%
-           family={{Gartner}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{fullhash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{fullhashraw}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{bibnamehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authorbibnamehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authornamehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authorfullhash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authorfullhashraw}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{title}{CRM strategies and technologies to understand, grow and manage customer experiences}
-      \field{year}{2011}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf
-      \endverb
-    \endentry
-    \entry{gartner2024_hypecycle_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a41804af92a2aa0180154f489f3d308b}{%
-           family={{Gartner, Inc.}},
-           familyi={G\bibinitperiod}}}%
+    \entry{GerosaHermansen2025EconomicWorkforceAI}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8883822cda6535df0e25d2566bb4dc27}{%
+           family={Gerosa},
+           familyi={G\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e45aa63be2a049c00a1320e451c2b31}{%
+           family={Hermansen},
+           familyi={H\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
       \list{institution}{1}{%
-        {Gartner}%
+        {The Linux Foundation}%
       }
-      \strng{namehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \strng{bibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorbibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authornamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \field{extraname}{1}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Panorama de tecnologías emergentes de IA, útil para contextualizar la madurez de asistentes virtuales y personalización.}
-      \field{title}{Hype Cycle for Artificial Intelligence, 2024}
-      \field{type}{Research Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gartner.com/en/research/methodologies/gartner-hype-cycle
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/en/research/methodologies/gartner-hype-cycle
-      \endverb
-    \endentry
-    \entry{gartner2024mq_conversational_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a41804af92a2aa0180154f489f3d308b}{%
-           family={{Gartner, Inc.}},
-           familyi={G\bibinitperiod}}}%
+      \list{location}{1}{%
+        {United States}%
       }
-      \list{institution}{1}{%
-        {Gartner}%
-      }
-      \strng{namehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \strng{bibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorbibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authornamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \field{extraname}{2}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Resumen consultado públicamente. El informe completo requiere suscripción. Gartner Document ID: G00794012}
-      \field{title}{Magic Quadrant for Enterprise Conversational AI Platforms}
-      \field{type}{Research Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gartner.com/en/documents/
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/en/documents/
-      \endverb
-    \endentry
-    \entry{gartner2024_marketguide_conversational_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a41804af92a2aa0180154f489f3d308b}{%
-           family={{Gartner, Inc.}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Gartner}%
-      }
-      \strng{namehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \strng{bibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorbibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authornamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \field{extraname}{3}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Documento clave para entender precios, tiempos de implementación y categorías del mercado conversacional.}
-      \field{title}{Market Guide for Conversational AI Platforms}
-      \field{type}{Market Guide}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gartner.com/doc/reprints?id=1-2XYL7E7
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/doc/reprints?id=1-2XYL7E7
-      \endverb
-    \endentry
-    \entry{google2024_future_ai_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2e8f63d138bef46030e063341a739497}{%
-           family={{Google Cloud Research}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Google}%
-      }
-      \strng{namehash}{2e8f63d138bef46030e063341a739497}
-      \strng{fullhash}{2e8f63d138bef46030e063341a739497}
-      \strng{fullhashraw}{2e8f63d138bef46030e063341a739497}
-      \strng{bibnamehash}{2e8f63d138bef46030e063341a739497}
-      \strng{authorbibnamehash}{2e8f63d138bef46030e063341a739497}
-      \strng{authornamehash}{2e8f63d138bef46030e063341a739497}
-      \strng{authorfullhash}{2e8f63d138bef46030e063341a739497}
-      \strng{authorfullhashraw}{2e8f63d138bef46030e063341a739497}
+      \strng{namehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{fullhash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{fullhashraw}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{bibnamehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authorbibnamehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authornamehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authorfullhash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authorfullhashraw}{b2d7dd06233c03d2a95fea213fe27ae3}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -1125,20 +650,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Incluye datos sobre inversión, talento, adopción y retos para proyectos de IA.}
-      \field{title}{The Future of AI and Data in Latin America}
-      \field{type}{Regional Forecast}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://cloud.google.com/resources
-      \endverb
-      \verb{url}
-      \verb https://cloud.google.com/resources
-      \endverb
+      \field{abstract}{This report reviews the economic and workforce impacts of artificial intelligence in Latin America, synthesizing evidence from industry reports, academic literature, and open source data to assess productivity, employment, skills transformation, and structural challenges in the region.}
+      \field{month}{12}
+      \field{title}{Economic and Workforce Impacts of AI in Latin America: A Review of Industry, Academic, and Open Source Evidence}
+      \field{type}{Technical Report}
+      \field{year}{2025}
     \endentry
     \entry{GrandViewResearch2023}{misc}{}{}
       \name{author}{1}{}{%
@@ -1204,88 +720,6 @@
       \verb https://www.grandviewresearch.com/horizon/outlook/intelligent-virtual-assistant-market/latin-america
       \endverb
     \endentry
-    \entry{ieee2024_ai_latam}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=b5c43ecb0fa0fb1369b765e597f7e01c}{%
-           family={Hernández},
-           familyi={H\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a8b80df7bc3a92b822e4036080673d3e}{%
-           family={Silva},
-           familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{fullhash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{fullhashraw}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{bibnamehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authorbibnamehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authornamehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authorfullhash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authorfullhashraw}{27d9489fbeb134925a8b28487ed4d3c8}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Latin America Transactions}
-      \field{note}{Artículo académico revisado por pares sobre adopción empresarial de IA en LATAM.}
-      \field{number}{4}
-      \field{title}{Artificial Intelligence Adoption in Latin American Enterprises: A Regional Review}
-      \field{volume}{22}
-      \field{year}{2024}
-      \field{pages}{550\bibrangedash 563}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1109/TLA.2024.123456
-      \endverb
-    \endentry
-    \entry{hubspot2024_ai_marketing}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=320f62c7e9773de4d224a26b8bec219e}{%
-           family={{HubSpot Research}},
-           familyi={H\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {HubSpot}%
-      }
-      \strng{namehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{fullhash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{fullhashraw}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{bibnamehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authorbibnamehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authornamehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authorfullhash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authorfullhashraw}{320f62c7e9773de4d224a26b8bec219e}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye métricas de personalización, uso de chatbots y automatización.}
-      \field{title}{The State of AI in Marketing 2024}
-      \field{type}{Research Study}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://research.hubspot.com/
-      \endverb
-      \verb{url}
-      \verb https://research.hubspot.com/
-      \endverb
-    \endentry
     \entry{IBM2024}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
@@ -1319,23 +753,20 @@
       \verb https://www.ibm.com/mx-es/think/topics/ai-personalization
       \endverb
     \endentry
-    \entry{ibm2024_ai_adoption_index}{report}{}{}
+    \entry{IMARCIVA2024}{misc}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=903d81e0018dfeff18ec9ca83cb22a7f}{%
-           family={{IBM Institute for Business Value}},
+        {{un=0,uniquepart=base,hash=dcda9724384df9e1b760b6a4138e2be2}{%
+           family={{IMARC Group}},
            familyi={I\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {IBM}%
-      }
-      \strng{namehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{fullhash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{fullhashraw}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{bibnamehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authorbibnamehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authornamehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authorfullhash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authorfullhashraw}{903d81e0018dfeff18ec9ca83cb22a7f}
+      \strng{namehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{fullhash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{fullhashraw}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{bibnamehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authorbibnamehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authornamehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authorfullhash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authorfullhashraw}{dcda9724384df9e1b760b6a4138e2be2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -1343,92 +774,18 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Incluye datos de LATAM y barreras de adopción de IA empresarial.}
-      \field{title}{Global AI Adoption Index 2024}
-      \field{type}{Global Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.ibm.com/reports/ai-adoption
-      \endverb
-      \verb{url}
-      \verb https://www.ibm.com/reports/ai-adoption
-      \endverb
-    \endentry
-    \entry{idc2024_ai_spending_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3a04d5d4df7ca9c996fd1b3fa72281f0}{%
-           family={{IDC Latin America}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {International Data Corporation (IDC)}%
-      }
-      \strng{namehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{fullhash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{fullhashraw}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{bibnamehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authorbibnamehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authornamehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authorfullhash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authorfullhashraw}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Guía oficial de gasto en inteligencia artificial para América Latina.}
-      \field{title}{Worldwide Artificial Intelligence Spending Guide: Latin America Highlights 2024}
-      \field{type}{Spending Guide}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
+      \field{note}{Reporte de mercado comercial. Acceso a resúmenes públicos}
+      \field{title}{Intelligent Virtual Assistant Market: Global Industry Trends, Share, Size, Growth, Opportunity and Forecast}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.idc.com/latam-es/data-analytics/spending-guides
+      \verb https://www.imarcgroup.com/intelligent-virtual-assistant-market
       \endverb
       \verb{url}
-      \verb https://www.idc.com/latam-es/data-analytics/spending-guides
-      \endverb
-    \endentry
-    \entry{ImamComunicacion2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e074b56fdc93973718154b6fcfcdd4f6}{%
-           family={{Imam Comunicación}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{fullhash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{fullhashraw}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{bibnamehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authorbibnamehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authornamehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authorfullhash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authorfullhashraw}{e074b56fdc93973718154b6fcfcdd4f6}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{note}{Blog especializado en turismo; contexto cualitativo}
-      \field{title}{La gestión de datos, los asistentes virtuales, la hiperpersonalización de la experiencia o la sostenibilidad, claves de la aplicación de la IA al turismo}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.imamcomunicacion.com/2024/11/la-gestion-de-datos-los-asistentes-virtuales-la-hiperpersonalizacion-de-la-experiencia-o-la-sostenibilidad-claves-de-la-aplicacion-de-la-ia-al-turismo/
-      \endverb
-      \verb{url}
-      \verb https://www.imamcomunicacion.com/2024/11/la-gestion-de-datos-los-asistentes-virtuales-la-hiperpersonalizacion-de-la-experiencia-o-la-sostenibilidad-claves-de-la-aplicacion-de-la-ia-al-turismo/
+      \verb https://www.imarcgroup.com/intelligent-virtual-assistant-market
       \endverb
     \endentry
     \entry{InformesExpertos2023}{misc}{}{}
@@ -1485,14 +842,10 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024-2032}
+      \field{howpublished}{\url{https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina}}
+      \field{note}{Consultado el \today}
+      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024–2032}
       \field{year}{2024}
-      \verb{urlraw}
-      \verb https://www.informesdeexpertos.com/mercado-asistentes-virtuales-inteligentes-america-latina
-      \endverb
-      \verb{url}
-      \verb https://www.informesdeexpertos.com/mercado-asistentes-virtuales-inteligentes-america-latina
-      \endverb
     \endentry
     \entry{insiderlatam2024_hiperpersonalizacion}{misc}{}{}
       \name{author}{1}{}{%
@@ -1606,6 +959,55 @@
       \field{pages}{535\bibrangedash 547}
       \range{pages}{13}
     \endentry
+    \entry{JungKatz2025ImpactoEconomicoIAALC}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d14b2d2139d46c275deeb3f9cc5382b6}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38eaec1259953aa73bdf90ae23185da4}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Raúl},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Comisión Económica para América Latina y el Caribe (CEPAL)}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \list{location}{1}{%
+        {Santiago}%
+      }
+      \list{publisher}{1}{%
+        {Naciones Unidas}%
+      }
+      \strng{namehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{fullhash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{fullhashraw}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{bibnamehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authorbibnamehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authornamehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authorfullhash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authorfullhashraw}{99bacdde0516eda71072ae573b3fd7a3}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Elaborado en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe; financiado por la Unión Europea (Global Gateway).}
+      \field{number}{LC/TS.2025/37/Rev.1}
+      \field{series}{Documentos de Proyectos}
+      \field{title}{Impacto económico de la inteligencia artificial en América Latina: transformación tecnológica y rezago en materia de inversión y capacidades laborales}
+      \field{type}{techreport}
+      \field{year}{2025}
+    \endentry
     \entry{JuniperResearch2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=64d5a28ba787e158f9e87396fc50a527}{%
@@ -1636,39 +1038,6 @@
       \endverb
       \verb{url}
       \verb https://www.juniperresearch.com/research/telecoms-connectivity/communication-services/conversational-commerce-research-report/
-      \endverb
-    \endentry
-    \entry{KingpingMarket2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=9d5781b9eb385e87e07da6c8e2c56df3}{%
-           family={{Kingping Market Research}},
-           familyi={K\bibinitperiod}}}%
-      }
-      \strng{namehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{fullhash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{fullhashraw}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{bibnamehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authorbibnamehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authornamehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authorfullhash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authorfullhashraw}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{10}
-      \field{note}{Post de LinkedIn; contexto orientativo}
-      \field{title}{AI chatbot market size research report [2023-2030]}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/
-      \endverb
-      \verb{url}
-      \verb https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/
       \endverb
     \endentry
     \entry{marketsandmarkets2024_ai_customer_service}{misc}{}{}
@@ -1808,45 +1177,6 @@
       \field{title}{Sales forecasting management: A demand management approach}
       \field{year}{2005}
     \endentry
-    \entry{meta2024_conversational_commerce_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=67469c32b7f61914d5effb170fe99d97}{%
-           family={{Meta Business Insights}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Meta}%
-      }
-      \strng{namehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{fullhash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{fullhashraw}{67469c32b7f61914d5effb170fe99d97}
-      \strng{bibnamehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authorbibnamehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authornamehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authorfullhash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authorfullhashraw}{67469c32b7f61914d5effb170fe99d97}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Estudio clave sobre uso de WhatsApp, IA conversacional y automatización comercial.}
-      \field{title}{The State of Conversational Commerce in Latin America}
-      \field{type}{Regional Industry Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.facebook.com/business/insights
-      \endverb
-      \verb{url}
-      \verb https://www.facebook.com/business/insights
-      \endverb
-    \endentry
     \entry{mobilityforesights2025_conversational_ai_latam}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4755453e628f2c8eb57ddd672be19b2b}{%
@@ -1942,45 +1272,6 @@
       \verb https://ninetailed.io/blog/personalization-statistics/
       \endverb
     \endentry
-    \entry{omdia2024_conversational_ai_forecast}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f00743e01013a4c5d55e4279aad55ccb}{%
-           family={{Omdia}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Omdia/Informa Tech}%
-      }
-      \strng{namehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{fullhash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{fullhashraw}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{bibnamehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authorbibnamehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authornamehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authorfullhash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authorfullhashraw}{f00743e01013a4c5d55e4279aad55ccb}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Proyecciones globales de plataformas de IA conversacional.}
-      \field{title}{Conversational AI Market Forecast 2024–2030}
-      \field{type}{Market Forecast}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://omdia.tech.informa.com/reports
-      \endverb
-      \verb{url}
-      \verb https://omdia.tech.informa.com/reports
-      \endverb
-    \endentry
     \entry{OpenAI2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
@@ -2074,45 +1365,6 @@
       \endverb
       \verb{url}
       \verb https://outgrow.co/blog/personalization-statistics
-      \endverb
-    \endentry
-    \entry{pwc2024_global_ai_study}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=61835b68ccef417c7b0f4743bc983d0a}{%
-           family={{PwC}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {PricewaterhouseCoopers}%
-      }
-      \strng{namehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{fullhash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{fullhashraw}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{bibnamehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authorbibnamehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authornamehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authorfullhash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authorfullhashraw}{61835b68ccef417c7b0f4743bc983d0a}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Impacto macroeconómico y regional del uso de IA.}
-      \field{title}{Global Artificial Intelligence Study: Sizing the Prize}
-      \field{type}{Economic Forecast}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.pwc.com/gx/en/issues/analytics/artificial-intelligence.html
-      \endverb
-      \verb{url}
-      \verb https://www.pwc.com/gx/en/issues/analytics/artificial-intelligence.html
       \endverb
     \endentry
     \entry{Reuters2025b}{misc}{}{}
@@ -2248,6 +1500,7 @@
       \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
+      \true{nocite}
       \verb{urlraw}
       \verb https://www.salesforce.com/resources/research-reports/state-of-service/
       \endverb
@@ -2319,6 +1572,88 @@
       \endverb
       \verb{url}
       \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+      \endverb
+    \endentry
+    \entry{ILIA2025}{report}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=5e80c703c31b1be83ee9795c5120e3b7}{%
+           family={Soto},
+           familyi={S\bibinitperiod},
+           given={Álvaro},
+           giveni={Á\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f2dd5c2d727d150967f73e9e75b1963}{%
+           family={Durán},
+           familyi={D\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eaa6d5b20e45850d6cadb4df929d8b5}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Antonia},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95df8d5f81145fce77a0bab766f4a254}{%
+           family={Adasme},
+           familyi={A\bibinitperiod},
+           given={Sebastián},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d84ee4aa20eba02a4dc0492653cc12b}{%
+           family={Rovira},
+           familyi={R\bibinitperiod},
+           given={Sebastián},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66d152af24b3ce7ee9caea68cedc737f}{%
+           family={Jordán},
+           familyi={J\bibinitperiod},
+           given={Valeria},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ae05a8c4cee696611579340b14d772f}{%
+           family={Poveda},
+           familyi={P\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {Comisión Económica para América Latina y el Caribe (CEPAL)}%
+        {Centro Nacional de Inteligencia Artificial (CENIA)}%
+      }
+      \list{location}{1}{%
+        {Santiago de Chile}%
+      }
+      \list{publisher}{1}{%
+        {Naciones Unidas}%
+      }
+      \strng{namehash}{bba10479743da09bdaad3fdfc92c72d1}
+      \strng{fullhash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{fullhashraw}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{bibnamehash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{authorbibnamehash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{authornamehash}{bba10479743da09bdaad3fdfc92c72d1}
+      \strng{authorfullhash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{authorfullhashraw}{368672c92bb71d76d6474b8ed7d957d5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Publicación coordinada en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe}
+      \field{number}{LC/TS.2025/68}
+      \field{title}{Índice Latinoamericano de Inteligencia Artificial (ILIA) 2025}
+      \field{type}{Documento de Proyecto}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://indicelatam.cl/wp-content/uploads/2025/10/Documento_ILIA_2025.pdf
+      \endverb
+      \verb{url}
+      \verb https://indicelatam.cl/wp-content/uploads/2025/10/Documento_ILIA_2025.pdf
       \endverb
     \endentry
     \entry{Spiceworks2021}{misc}{}{}
@@ -2393,20 +1728,23 @@
       \verb https://www.statista.com/outlook/tmo/artificial-intelligence/latin-america
       \endverb
     \endentry
-    \entry{Tearsheet2018}{misc}{}{}
+    \entry{IntelligentCIO2025}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=eb4e489d1843a5043fe116619b9e6b70}{%
-           family={{Tearsheet}},
-           familyi={T\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=237a972fee541c78295cbe58a1ffc576}{%
+           family={Tanner},
+           familyi={T\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{fullhash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{fullhashraw}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{bibnamehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authorbibnamehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authornamehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authorfullhash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authorfullhashraw}{eb4e489d1843a5043fe116619b9e6b70}
+      \strng{namehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{fullhash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{fullhashraw}{237a972fee541c78295cbe58a1ffc576}
+      \strng{bibnamehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authorbibnamehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authornamehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authorfullhash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authorfullhashraw}{237a972fee541c78295cbe58a1ffc576}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
@@ -2414,49 +1752,19 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{note}{Blog financiero; contexto cualitativo}
-      \field{title}{HSBC is using AI to personalize its rewards program}
-      \field{year}{2018}
-      \true{nocite}
+      \field{month}{10}
+      \field{note}{Artículo periodístico basado en el ILIA 2025}
+      \field{title}{Latin America accelerates AI adoption but faces gaps in talent, investment and governance}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/
+      \verb https://www.intelligentcio.com/latam/2025/10/23/latin-america-accelerates-ai-adoption-but-faces-gaps-in-talent-investment-and-governance/
       \endverb
       \verb{url}
-      \verb https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/
-      \endverb
-    \endentry
-    \entry{Techopedia2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2d0ed76dc2bb8ec0ba5cf4473f5c4c74}{%
-           family={{Techopedia}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{fullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{fullhashraw}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{bibnamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authorbibnamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authornamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authorfullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authorfullhashraw}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{9}
-      \field{note}{Blog tecnológico; contexto cualitativo}
-      \field{title}{Las 50 startups de IA que explotarán en 2024}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.techopedia.com/es/mejores-startups-ia
-      \endverb
-      \verb{url}
-      \verb https://www.techopedia.com/es/mejores-startups-ia
+      \verb https://www.intelligentcio.com/latam/2025/10/23/latin-america-accelerates-ai-adoption-but-faces-gaps-in-talent-investment-and-governance/
       \endverb
     \endentry
     \entry{Tidio2024}{misc}{}{}
@@ -2538,7 +1846,6 @@
       \strng{authornamehash}{0adbaaab696c83cd1ce067866be0ab2c}
       \strng{authorfullhash}{0adbaaab696c83cd1ce067866be0ab2c}
       \strng{authorfullhashraw}{0adbaaab696c83cd1ce067866be0ab2c}
-      \field{extraname}{1}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
@@ -2553,79 +1860,6 @@
       \endverb
       \verb{url}
       \verb https://segment.com/state-of-personalization-report/
-      \endverb
-    \endentry
-    \entry{twilio2024_personalization_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=0adbaaab696c83cd1ce067866be0ab2c}{%
-           family={{Twilio Segment}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Twilio}%
-      }
-      \strng{namehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{fullhash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{fullhashraw}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{bibnamehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authorbibnamehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authornamehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authorfullhash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authorfullhashraw}{0adbaaab696c83cd1ce067866be0ab2c}
-      \field{extraname}{2}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Reporte basado en encuestas a empresas y consumidores de América Latina.}
-      \field{title}{State of Personalization 2024: Latin America Insights}
-      \field{type}{Regional Data Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://segment.com/resources/reports/state-of-personalization/
-      \endverb
-      \verb{url}
-      \verb https://segment.com/resources/reports/state-of-personalization/
-      \endverb
-    \endentry
-    \entry{UniteAI2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ab4d49b7ab9659014516ecf5e93ae342}{%
-           family={{Unite AI}},
-           familyi={U\bibinitperiod}}}%
-      }
-      \strng{namehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{fullhash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{fullhashraw}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{bibnamehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authorbibnamehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authornamehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authorfullhash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authorfullhashraw}{ab4d49b7ab9659014516ecf5e93ae342}
-      \field{sortinit}{U}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{Blog especializado en IA; contexto cualitativo}
-      \field{title}{Los 10 mejores asistentes de inteligencia artificial (diciembre de 2024)}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.unite.ai/es/10-mejores-asistentes-de-inteligencia-artificial/
-      \endverb
-      \verb{url}
-      \verb https://www.unite.ai/es/10-mejores-asistentes-de-inteligencia-artificial/
       \endverb
     \endentry
     \entry{VerifiedMarketReports2024}{misc}{}{}
@@ -2722,14 +1956,11 @@
       \verb https://www.zendesk.com/blog/consumer-perceptions-ai/
       \endverb
     \endentry
-    \entry{zendesk2024cxtrends}{report}{}{}
+    \entry{zendesk2024_cxtrends}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c51a1ab524fc2612cfb845bf09cf46d8}{%
            family={{Zendesk, Inc.}},
            familyi={Z\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Zendesk}%
       }
       \strng{namehash}{c51a1ab524fc2612cfb845bf09cf46d8}
       \strng{fullhash}{c51a1ab524fc2612cfb845bf09cf46d8}
@@ -2746,19 +1977,18 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Versión regional del informe CX Trends, con datos específicos de América Latina.}
-      \field{title}{CX Trends 2024: Latin America Edition}
-      \field{type}{Industry Report}
+      \field{note}{Artículo de blog que resume los hallazgos del informe anual CX Trends 2024 de Zendesk; no se encontró PDF descargable público.}
+      \field{title}{CX Trends 2024: Libera el poder del CX inteligente (Versión LatAM)}
       \field{urlday}{22}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.zendesk.com/newsroom/articles/2024-cx-trends/
+      \verb https://www.zendesk.com.mx/blog/cx-trends-2024/
       \endverb
       \verb{url}
-      \verb https://www.zendesk.com/newsroom/articles/2024-cx-trends/
+      \verb https://www.zendesk.com.mx/blog/cx-trends-2024/
       \endverb
     \endentry
   \enddatalist
@@ -2777,7 +2007,6 @@
       \strng{authornamehash}{1d55af1659424cf94d869e2580a11bf8}
       \strng{authorfullhash}{1d55af1659424cf94d869e2580a11bf8}
       \strng{authorfullhashraw}{1d55af1659424cf94d869e2580a11bf8}
-      \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -2793,46 +2022,6 @@
       \endverb
       \verb{url}
       \verb https://www.accenture.com/content/dam/accenture/final/industry/banking/document/Accenture-Banking-Consumer-Study.pdf
-      \endverb
-    \endentry
-    \entry{accenture2024_ai_maturity}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1d55af1659424cf94d869e2580a11bf8}{%
-           family={{Accenture}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Accenture Research}%
-      }
-      \strng{namehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{fullhash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{fullhashraw}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{bibnamehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authorbibnamehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authornamehash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authorfullhash}{1d55af1659424cf94d869e2580a11bf8}
-      \strng{authorfullhashraw}{1d55af1659424cf94d869e2580a11bf8}
-      \field{extraname}{2}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye benchmarks globales y regionales de impacto de IA en empresas.}
-      \field{title}{The Art of AI Maturity: Advancing from Practice to Performance}
-      \field{type}{Industry Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.accenture.com/us-en/insights/ai/ai-maturity
-      \endverb
-      \verb{url}
-      \verb https://www.accenture.com/us-en/insights/ai/ai-maturity
       \endverb
     \endentry
     \entry{AccentureInteractive2016}{misc}{}{}
@@ -2865,6 +2054,41 @@
       \endverb
       \verb{url}
       \verb https://newsroom.accenture.com/news/2016/consumers-welcome-personalized-offerings-but-businesses-are-struggling-to-deliver-finds-accenture-interactive-personalization-research
+      \endverb
+    \endentry
+    \entry{AlliedMarketResearchIVA2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=49dfd8dee2a45df194debce621f0ca5d}{%
+           family={{Allied Market Research}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{fullhash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{fullhashraw}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{bibnamehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authorbibnamehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authornamehash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authorfullhash}{49dfd8dee2a45df194debce621f0ca5d}
+      \strng{authorfullhashraw}{49dfd8dee2a45df194debce621f0ca5d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Reporte de mercado comercial. Cifras utilizadas a nivel agregado}
+      \field{title}{Conversational AI Market Size, Share and Forecast}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.alliedmarketresearch.com/conversational-ai-market
+      \endverb
+      \verb{url}
+      \verb https://www.alliedmarketresearch.com/conversational-ai-market
       \endverb
     \endentry
     \entry{atento2024_chatbots_finance_latam}{misc}{}{}
@@ -2932,46 +2156,6 @@
       \endverb
       \verb{url}
       \verb https://agatadata.com/wp-content/uploads/2024/11/Latin-America-Digital-Transformation-Report-2024-Atlantico.pdf
-      \endverb
-    \endentry
-    \entry{bain2024_personalization}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=96bb349bb06307114090533f36d11021}{%
-           family={{Bain \& Company}},
-           familyi={B\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Bain \& Company}%
-      }
-      \strng{namehash}{96bb349bb06307114090533f36d11021}
-      \strng{fullhash}{96bb349bb06307114090533f36d11021}
-      \strng{fullhashraw}{96bb349bb06307114090533f36d11021}
-      \strng{bibnamehash}{96bb349bb06307114090533f36d11021}
-      \strng{authorbibnamehash}{96bb349bb06307114090533f36d11021}
-      \strng{authornamehash}{96bb349bb06307114090533f36d11021}
-      \strng{authorfullhash}{96bb349bb06307114090533f36d11021}
-      \strng{authorfullhashraw}{96bb349bb06307114090533f36d11021}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Informe técnico sobre hiperpersonalización, métricas de ROI y adopción empresarial.}
-      \field{title}{The State of Customer Experience Personalization 2024}
-      \field{type}{Industry Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.bain.com/insights/
-      \endverb
-      \verb{url}
-      \verb https://www.bain.com/insights/
       \endverb
     \endentry
     \entry{BancoProvincia2024}{misc}{}{}
@@ -3079,72 +2263,6 @@
       \verb https://botpress.com/es/blog/key-chatbot-statistics
       \endverb
     \endentry
-    \entry{BusinessInsider2016}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ddb20008bae37b1617b61c23a1d4b9d2}{%
-           family={{Business Insider}},
-           familyi={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{fullhash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{fullhashraw}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{bibnamehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authorbibnamehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authornamehash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authorfullhash}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \strng{authorfullhashraw}{ddb20008bae37b1617b61c23a1d4b9d2}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{9}
-      \field{note}{Reporte de prensa; contexto cualitativo}
-      \field{title}{The messaging apps report: Messaging apps are now bigger than social networks}
-      \field{year}{2016}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
-      \endverb
-      \verb{url}
-      \verb https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T
-      \endverb
-    \endentry
-    \entry{ElPais2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ce37d15c64b42bac2336e16e83d2bea0}{%
-           family={{Cinco Días (El País)}},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{fullhash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{fullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{bibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authorbibnamehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authornamehash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authorfullhash}{ce37d15c64b42bac2336e16e83d2bea0}
-      \strng{authorfullhashraw}{ce37d15c64b42bac2336e16e83d2bea0}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{Artículo periodístico; contexto cualitativo}
-      \field{title}{Nova, así es la apuesta para la IA de Amazon que crea textos, imágenes y más}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
-      \endverb
-      \verb{url}
-      \verb https://cincodias.elpais.com/smartlife/lifestyle/2024-12-04/amazon-nova-presentacion-inteligencia-artificial.html
-      \endverb
-    \endentry
     \entry{CMSWire2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=66c3e684e4d7af71179460ae757afac5}{%
@@ -3176,39 +2294,6 @@
       \endverb
       \verb{url}
       \verb https://www.cmswire.com/customer-experience/ai-in-ecommerce-true-one-on-one-personalization-is-coming/
-      \endverb
-    \endentry
-    \entry{CronicaTech2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4f75db7bb622ff0e353ad934d0edec4f}{%
-           family={{Crónica Tech}},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{fullhash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{fullhashraw}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{bibnamehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authorbibnamehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authornamehash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authorfullhash}{4f75db7bb622ff0e353ad934d0edec4f}
-      \strng{authorfullhashraw}{4f75db7bb622ff0e353ad934d0edec4f}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{Blog tecnológico; contexto cualitativo}
-      \field{title}{Las 10 empresas líderes en inteligencia artificial y machine learning en 2024}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://cronica.tech/tecnologia/software/las-empresas-lideres-en-inteligencia-artificial-y-machine-learning-en-2023/
-      \endverb
-      \verb{url}
-      \verb https://cronica.tech/tecnologia/software/las-empresas-lideres-en-inteligencia-artificial-y-machine-learning-en-2023/
       \endverb
     \endentry
     \entry{Damodaran2024}{misc}{}{}
@@ -3245,79 +2330,7 @@
       \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
     \endentry
-    \entry{deloitte2024_state_of_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=8ef53f1666ba7c842abcde8318c90a21}{%
-           family={{Deloitte Insights}},
-           familyi={D\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Deloitte}%
-      }
-      \strng{namehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{fullhash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{fullhashraw}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{bibnamehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authorbibnamehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authornamehash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authorfullhash}{8ef53f1666ba7c842abcde8318c90a21}
-      \strng{authorfullhashraw}{8ef53f1666ba7c842abcde8318c90a21}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye datos sobre implementación, ROI, barreras y tiempos de despliegue.}
-      \field{title}{State of AI in the Enterprise, 6th Edition}
-      \field{type}{Survey Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/state-of-ai.html
-      \endverb
-      \verb{url}
-      \verb https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/state-of-ai.html
-      \endverb
-    \endentry
-    \entry{DigitalCommerce2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=dc49c8a3f37ec5fd8676f490de9fff64}{%
-           family={{Digital Commerce 360}},
-           familyi={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{fullhash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{fullhashraw}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{bibnamehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authorbibnamehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authornamehash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authorfullhash}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \strng{authorfullhashraw}{dc49c8a3f37ec5fd8676f490de9fff64}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{Blog especializado en comercio; contexto cualitativo}
-      \field{title}{Lowe's lower web traffic doesn't hurt sales in Q1}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
-      \endverb
-      \verb{url}
-      \verb https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/
-      \endverb
-    \endentry
-    \entry{emergen_virtual_assistants_2023}{misc}{}{}
+    \entry{emergen_intelligent_virtual_assistant_market_2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e84e5ae285bab83912ec19bc0bfe10c1}{%
            family={{Emergen Research}},
@@ -3340,14 +2353,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Virtual assistant market size, share, trends, by type, by application, by end use, and by region forecast to 2032}
+      \field{howpublished}{\url{https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market?srsltid=AfmBOopnzgvcDq_l5fzQkkisJQjJXBYWJiZVlm3FSQEaGqWwzDhWNGcQ&utm_source=chatgpt.com}}
+      \field{note}{Consultado el \today}
+      \field{title}{Intelligent Virtual Assistant (IVA) Market Size, Share, Trends, and Forecast to 2032}
       \field{year}{2023}
-      \verb{urlraw}
-      \verb https://www.emergenresearch.com/industry-report/virtual-assistant-market
-      \endverb
-      \verb{url}
-      \verb https://www.emergenresearch.com/industry-report/virtual-assistant-market
-      \endverb
+      \true{nocite}
     \endentry
     \entry{EmergenResearch2023}{misc}{}{}
       \name{author}{1}{}{%
@@ -3413,78 +2423,6 @@
       \endverb
       \verb{url}
       \verb https://www.emergenresearch.com/industry-report/hyper-personalization-market
-      \endverb
-    \endentry
-    \entry{everest2024_enterprise_conversational_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=6da362d389b5a86f4b503775115952e3}{%
-           family={{Everest Group}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Everest Group}%
-      }
-      \strng{namehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{fullhash}{6da362d389b5a86f4b503775115952e3}
-      \strng{fullhashraw}{6da362d389b5a86f4b503775115952e3}
-      \strng{bibnamehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authorbibnamehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authornamehash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authorfullhash}{6da362d389b5a86f4b503775115952e3}
-      \strng{authorfullhashraw}{6da362d389b5a86f4b503775115952e3}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye benchmarks de tiempo de implementación y ROI.}
-      \field{title}{Conversational AI in the Enterprise: State of Adoption 2024}
-      \field{type}{Industry Research}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.everestgrp.com/
-      \endverb
-      \verb{url}
-      \verb https://www.everestgrp.com/
-      \endverb
-    \endentry
-    \entry{Forbes2017}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b1e9b36364c855fad4161cfb10d45735}{%
-           family={{Forbes}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{fullhash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{fullhashraw}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{bibnamehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authorbibnamehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authornamehash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authorfullhash}{b1e9b36364c855fad4161cfb10d45735}
-      \strng{authorfullhashraw}{b1e9b36364c855fad4161cfb10d45735}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{5}
-      \field{note}{Artículo de prensa; contexto cualitativo}
-      \field{title}{AI by the numbers: 33 facts and forecasts about chatbots and voice assistants}
-      \field{year}{2017}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731
-      \endverb
-      \verb{url}
-      \verb https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731
       \endverb
     \endentry
     \entry{ForbesArgentina2022}{misc}{}{}
@@ -3618,46 +2556,6 @@
       \verb https://www.forrester.com/blogs/ai-will-fundamentally-transform-customer-service/
       \endverb
     \endentry
-    \entry{forrester2024_cxindex_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=97a576d4c651cc81bda22efbab36d463}{%
-           family={{Forrester Research}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Forrester}%
-      }
-      \strng{namehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{fullhash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{fullhashraw}{97a576d4c651cc81bda22efbab36d463}
-      \strng{bibnamehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authorbibnamehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authornamehash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authorfullhash}{97a576d4c651cc81bda22efbab36d463}
-      \strng{authorfullhashraw}{97a576d4c651cc81bda22efbab36d463}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Benchmark de experiencia de cliente por país e industria en LATAM.}
-      \field{title}{The Latin America Customer Experience Index 2024}
-      \field{type}{Regional Benchmark}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.forrester.com/report/cx-index/RES000
-      \endverb
-      \verb{url}
-      \verb https://www.forrester.com/report/cx-index/RES000
-      \endverb
-    \endentry
     \entry{FundacionBankinter2020}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=43d67246a74a861951e7780c1b25b7d0}{%
@@ -3690,178 +2588,35 @@
       \verb https://www.fundacionbankinter.org/noticias/estas-son-las-45-empresas-lideres-en-inteligencia-artificial/?_adin=11551547647
       \endverb
     \endentry
-    \entry{Gartner2011}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=18bfab6309a4addeb7e1dae07d2a4b89}{%
-           family={{Gartner}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{fullhash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{fullhashraw}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{bibnamehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authorbibnamehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authornamehash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authorfullhash}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \strng{authorfullhashraw}{18bfab6309a4addeb7e1dae07d2a4b89}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{title}{CRM strategies and technologies to understand, grow and manage customer experiences}
-      \field{year}{2011}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf
-      \endverb
-    \endentry
-    \entry{gartner2024_hypecycle_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a41804af92a2aa0180154f489f3d308b}{%
-           family={{Gartner, Inc.}},
-           familyi={G\bibinitperiod}}}%
+    \entry{GerosaHermansen2025EconomicWorkforceAI}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8883822cda6535df0e25d2566bb4dc27}{%
+           family={Gerosa},
+           familyi={G\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e45aa63be2a049c00a1320e451c2b31}{%
+           family={Hermansen},
+           familyi={H\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
       \list{institution}{1}{%
-        {Gartner}%
+        {The Linux Foundation}%
       }
-      \strng{namehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \strng{bibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorbibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authornamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \field{extraname}{1}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Panorama de tecnologías emergentes de IA, útil para contextualizar la madurez de asistentes virtuales y personalización.}
-      \field{title}{Hype Cycle for Artificial Intelligence, 2024}
-      \field{type}{Research Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gartner.com/en/research/methodologies/gartner-hype-cycle
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/en/research/methodologies/gartner-hype-cycle
-      \endverb
-    \endentry
-    \entry{gartner2024mq_conversational_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a41804af92a2aa0180154f489f3d308b}{%
-           family={{Gartner, Inc.}},
-           familyi={G\bibinitperiod}}}%
+      \list{location}{1}{%
+        {United States}%
       }
-      \list{institution}{1}{%
-        {Gartner}%
-      }
-      \strng{namehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \strng{bibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorbibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authornamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \field{extraname}{2}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Resumen consultado públicamente. El informe completo requiere suscripción. Gartner Document ID: G00794012}
-      \field{title}{Magic Quadrant for Enterprise Conversational AI Platforms}
-      \field{type}{Research Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gartner.com/en/documents/
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/en/documents/
-      \endverb
-    \endentry
-    \entry{gartner2024_marketguide_conversational_ai}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a41804af92a2aa0180154f489f3d308b}{%
-           family={{Gartner, Inc.}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Gartner}%
-      }
-      \strng{namehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{fullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \strng{bibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorbibnamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authornamehash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhash}{a41804af92a2aa0180154f489f3d308b}
-      \strng{authorfullhashraw}{a41804af92a2aa0180154f489f3d308b}
-      \field{extraname}{3}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradate}{3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Documento clave para entender precios, tiempos de implementación y categorías del mercado conversacional.}
-      \field{title}{Market Guide for Conversational AI Platforms}
-      \field{type}{Market Guide}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.gartner.com/doc/reprints?id=1-2XYL7E7
-      \endverb
-      \verb{url}
-      \verb https://www.gartner.com/doc/reprints?id=1-2XYL7E7
-      \endverb
-    \endentry
-    \entry{google2024_future_ai_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2e8f63d138bef46030e063341a739497}{%
-           family={{Google Cloud Research}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Google}%
-      }
-      \strng{namehash}{2e8f63d138bef46030e063341a739497}
-      \strng{fullhash}{2e8f63d138bef46030e063341a739497}
-      \strng{fullhashraw}{2e8f63d138bef46030e063341a739497}
-      \strng{bibnamehash}{2e8f63d138bef46030e063341a739497}
-      \strng{authorbibnamehash}{2e8f63d138bef46030e063341a739497}
-      \strng{authornamehash}{2e8f63d138bef46030e063341a739497}
-      \strng{authorfullhash}{2e8f63d138bef46030e063341a739497}
-      \strng{authorfullhashraw}{2e8f63d138bef46030e063341a739497}
+      \strng{namehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{fullhash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{fullhashraw}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{bibnamehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authorbibnamehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authornamehash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authorfullhash}{b2d7dd06233c03d2a95fea213fe27ae3}
+      \strng{authorfullhashraw}{b2d7dd06233c03d2a95fea213fe27ae3}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -3869,20 +2624,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Incluye datos sobre inversión, talento, adopción y retos para proyectos de IA.}
-      \field{title}{The Future of AI and Data in Latin America}
-      \field{type}{Regional Forecast}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://cloud.google.com/resources
-      \endverb
-      \verb{url}
-      \verb https://cloud.google.com/resources
-      \endverb
+      \field{abstract}{This report reviews the economic and workforce impacts of artificial intelligence in Latin America, synthesizing evidence from industry reports, academic literature, and open source data to assess productivity, employment, skills transformation, and structural challenges in the region.}
+      \field{month}{12}
+      \field{title}{Economic and Workforce Impacts of AI in Latin America: A Review of Industry, Academic, and Open Source Evidence}
+      \field{type}{Technical Report}
+      \field{year}{2025}
     \endentry
     \entry{GrandViewResearch2023}{misc}{}{}
       \name{author}{1}{}{%
@@ -3948,88 +2694,6 @@
       \verb https://www.grandviewresearch.com/horizon/outlook/intelligent-virtual-assistant-market/latin-america
       \endverb
     \endentry
-    \entry{ieee2024_ai_latam}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=b5c43ecb0fa0fb1369b765e597f7e01c}{%
-           family={Hernández},
-           familyi={H\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a8b80df7bc3a92b822e4036080673d3e}{%
-           family={Silva},
-           familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{fullhash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{fullhashraw}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{bibnamehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authorbibnamehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authornamehash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authorfullhash}{27d9489fbeb134925a8b28487ed4d3c8}
-      \strng{authorfullhashraw}{27d9489fbeb134925a8b28487ed4d3c8}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Latin America Transactions}
-      \field{note}{Artículo académico revisado por pares sobre adopción empresarial de IA en LATAM.}
-      \field{number}{4}
-      \field{title}{Artificial Intelligence Adoption in Latin American Enterprises: A Regional Review}
-      \field{volume}{22}
-      \field{year}{2024}
-      \field{pages}{550\bibrangedash 563}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1109/TLA.2024.123456
-      \endverb
-    \endentry
-    \entry{hubspot2024_ai_marketing}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=320f62c7e9773de4d224a26b8bec219e}{%
-           family={{HubSpot Research}},
-           familyi={H\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {HubSpot}%
-      }
-      \strng{namehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{fullhash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{fullhashraw}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{bibnamehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authorbibnamehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authornamehash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authorfullhash}{320f62c7e9773de4d224a26b8bec219e}
-      \strng{authorfullhashraw}{320f62c7e9773de4d224a26b8bec219e}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Incluye métricas de personalización, uso de chatbots y automatización.}
-      \field{title}{The State of AI in Marketing 2024}
-      \field{type}{Research Study}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://research.hubspot.com/
-      \endverb
-      \verb{url}
-      \verb https://research.hubspot.com/
-      \endverb
-    \endentry
     \entry{IBM2024}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
@@ -4063,23 +2727,20 @@
       \verb https://www.ibm.com/mx-es/think/topics/ai-personalization
       \endverb
     \endentry
-    \entry{ibm2024_ai_adoption_index}{report}{}{}
+    \entry{IMARCIVA2024}{misc}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=903d81e0018dfeff18ec9ca83cb22a7f}{%
-           family={{IBM Institute for Business Value}},
+        {{un=0,uniquepart=base,hash=dcda9724384df9e1b760b6a4138e2be2}{%
+           family={{IMARC Group}},
            familyi={I\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {IBM}%
-      }
-      \strng{namehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{fullhash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{fullhashraw}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{bibnamehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authorbibnamehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authornamehash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authorfullhash}{903d81e0018dfeff18ec9ca83cb22a7f}
-      \strng{authorfullhashraw}{903d81e0018dfeff18ec9ca83cb22a7f}
+      \strng{namehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{fullhash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{fullhashraw}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{bibnamehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authorbibnamehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authornamehash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authorfullhash}{dcda9724384df9e1b760b6a4138e2be2}
+      \strng{authorfullhashraw}{dcda9724384df9e1b760b6a4138e2be2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -4087,92 +2748,18 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Incluye datos de LATAM y barreras de adopción de IA empresarial.}
-      \field{title}{Global AI Adoption Index 2024}
-      \field{type}{Global Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.ibm.com/reports/ai-adoption
-      \endverb
-      \verb{url}
-      \verb https://www.ibm.com/reports/ai-adoption
-      \endverb
-    \endentry
-    \entry{idc2024_ai_spending_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3a04d5d4df7ca9c996fd1b3fa72281f0}{%
-           family={{IDC Latin America}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {International Data Corporation (IDC)}%
-      }
-      \strng{namehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{fullhash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{fullhashraw}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{bibnamehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authorbibnamehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authornamehash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authorfullhash}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \strng{authorfullhashraw}{3a04d5d4df7ca9c996fd1b3fa72281f0}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Guía oficial de gasto en inteligencia artificial para América Latina.}
-      \field{title}{Worldwide Artificial Intelligence Spending Guide: Latin America Highlights 2024}
-      \field{type}{Spending Guide}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
+      \field{note}{Reporte de mercado comercial. Acceso a resúmenes públicos}
+      \field{title}{Intelligent Virtual Assistant Market: Global Industry Trends, Share, Size, Growth, Opportunity and Forecast}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
       \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.idc.com/latam-es/data-analytics/spending-guides
+      \verb https://www.imarcgroup.com/intelligent-virtual-assistant-market
       \endverb
       \verb{url}
-      \verb https://www.idc.com/latam-es/data-analytics/spending-guides
-      \endverb
-    \endentry
-    \entry{ImamComunicacion2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e074b56fdc93973718154b6fcfcdd4f6}{%
-           family={{Imam Comunicación}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{fullhash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{fullhashraw}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{bibnamehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authorbibnamehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authornamehash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authorfullhash}{e074b56fdc93973718154b6fcfcdd4f6}
-      \strng{authorfullhashraw}{e074b56fdc93973718154b6fcfcdd4f6}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{note}{Blog especializado en turismo; contexto cualitativo}
-      \field{title}{La gestión de datos, los asistentes virtuales, la hiperpersonalización de la experiencia o la sostenibilidad, claves de la aplicación de la IA al turismo}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.imamcomunicacion.com/2024/11/la-gestion-de-datos-los-asistentes-virtuales-la-hiperpersonalizacion-de-la-experiencia-o-la-sostenibilidad-claves-de-la-aplicacion-de-la-ia-al-turismo/
-      \endverb
-      \verb{url}
-      \verb https://www.imamcomunicacion.com/2024/11/la-gestion-de-datos-los-asistentes-virtuales-la-hiperpersonalizacion-de-la-experiencia-o-la-sostenibilidad-claves-de-la-aplicacion-de-la-ia-al-turismo/
+      \verb https://www.imarcgroup.com/intelligent-virtual-assistant-market
       \endverb
     \endentry
     \entry{InformesExpertos2023}{misc}{}{}
@@ -4229,14 +2816,10 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024-2032}
+      \field{howpublished}{\url{https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina}}
+      \field{note}{Consultado el \today}
+      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024–2032}
       \field{year}{2024}
-      \verb{urlraw}
-      \verb https://www.informesdeexpertos.com/mercado-asistentes-virtuales-inteligentes-america-latina
-      \endverb
-      \verb{url}
-      \verb https://www.informesdeexpertos.com/mercado-asistentes-virtuales-inteligentes-america-latina
-      \endverb
     \endentry
     \entry{insiderlatam2024_hiperpersonalizacion}{misc}{}{}
       \name{author}{1}{}{%
@@ -4350,6 +2933,55 @@
       \field{pages}{535\bibrangedash 547}
       \range{pages}{13}
     \endentry
+    \entry{JungKatz2025ImpactoEconomicoIAALC}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d14b2d2139d46c275deeb3f9cc5382b6}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38eaec1259953aa73bdf90ae23185da4}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Raúl},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Comisión Económica para América Latina y el Caribe (CEPAL)}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \list{location}{1}{%
+        {Santiago}%
+      }
+      \list{publisher}{1}{%
+        {Naciones Unidas}%
+      }
+      \strng{namehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{fullhash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{fullhashraw}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{bibnamehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authorbibnamehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authornamehash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authorfullhash}{99bacdde0516eda71072ae573b3fd7a3}
+      \strng{authorfullhashraw}{99bacdde0516eda71072ae573b3fd7a3}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Elaborado en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe; financiado por la Unión Europea (Global Gateway).}
+      \field{number}{LC/TS.2025/37/Rev.1}
+      \field{series}{Documentos de Proyectos}
+      \field{title}{Impacto económico de la inteligencia artificial en América Latina: transformación tecnológica y rezago en materia de inversión y capacidades laborales}
+      \field{type}{techreport}
+      \field{year}{2025}
+    \endentry
     \entry{JuniperResearch2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=64d5a28ba787e158f9e87396fc50a527}{%
@@ -4380,39 +3012,6 @@
       \endverb
       \verb{url}
       \verb https://www.juniperresearch.com/research/telecoms-connectivity/communication-services/conversational-commerce-research-report/
-      \endverb
-    \endentry
-    \entry{KingpingMarket2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=9d5781b9eb385e87e07da6c8e2c56df3}{%
-           family={{Kingping Market Research}},
-           familyi={K\bibinitperiod}}}%
-      }
-      \strng{namehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{fullhash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{fullhashraw}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{bibnamehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authorbibnamehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authornamehash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authorfullhash}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \strng{authorfullhashraw}{9d5781b9eb385e87e07da6c8e2c56df3}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{10}
-      \field{note}{Post de LinkedIn; contexto orientativo}
-      \field{title}{AI chatbot market size research report [2023-2030]}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/
-      \endverb
-      \verb{url}
-      \verb https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/
       \endverb
     \endentry
     \entry{marketsandmarkets2024_ai_customer_service}{misc}{}{}
@@ -4552,45 +3151,6 @@
       \field{title}{Sales forecasting management: A demand management approach}
       \field{year}{2005}
     \endentry
-    \entry{meta2024_conversational_commerce_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=67469c32b7f61914d5effb170fe99d97}{%
-           family={{Meta Business Insights}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Meta}%
-      }
-      \strng{namehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{fullhash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{fullhashraw}{67469c32b7f61914d5effb170fe99d97}
-      \strng{bibnamehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authorbibnamehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authornamehash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authorfullhash}{67469c32b7f61914d5effb170fe99d97}
-      \strng{authorfullhashraw}{67469c32b7f61914d5effb170fe99d97}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Estudio clave sobre uso de WhatsApp, IA conversacional y automatización comercial.}
-      \field{title}{The State of Conversational Commerce in Latin America}
-      \field{type}{Regional Industry Report}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.facebook.com/business/insights
-      \endverb
-      \verb{url}
-      \verb https://www.facebook.com/business/insights
-      \endverb
-    \endentry
     \entry{mobilityforesights2025_conversational_ai_latam}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4755453e628f2c8eb57ddd672be19b2b}{%
@@ -4686,45 +3246,6 @@
       \verb https://ninetailed.io/blog/personalization-statistics/
       \endverb
     \endentry
-    \entry{omdia2024_conversational_ai_forecast}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f00743e01013a4c5d55e4279aad55ccb}{%
-           family={{Omdia}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Omdia/Informa Tech}%
-      }
-      \strng{namehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{fullhash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{fullhashraw}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{bibnamehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authorbibnamehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authornamehash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authorfullhash}{f00743e01013a4c5d55e4279aad55ccb}
-      \strng{authorfullhashraw}{f00743e01013a4c5d55e4279aad55ccb}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Proyecciones globales de plataformas de IA conversacional.}
-      \field{title}{Conversational AI Market Forecast 2024–2030}
-      \field{type}{Market Forecast}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://omdia.tech.informa.com/reports
-      \endverb
-      \verb{url}
-      \verb https://omdia.tech.informa.com/reports
-      \endverb
-    \endentry
     \entry{OpenAI2023}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0523b13262b12c215d8009938f5c14f1}{%
@@ -4818,45 +3339,6 @@
       \endverb
       \verb{url}
       \verb https://outgrow.co/blog/personalization-statistics
-      \endverb
-    \endentry
-    \entry{pwc2024_global_ai_study}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=61835b68ccef417c7b0f4743bc983d0a}{%
-           family={{PwC}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {PricewaterhouseCoopers}%
-      }
-      \strng{namehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{fullhash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{fullhashraw}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{bibnamehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authorbibnamehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authornamehash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authorfullhash}{61835b68ccef417c7b0f4743bc983d0a}
-      \strng{authorfullhashraw}{61835b68ccef417c7b0f4743bc983d0a}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Impacto macroeconómico y regional del uso de IA.}
-      \field{title}{Global Artificial Intelligence Study: Sizing the Prize}
-      \field{type}{Economic Forecast}
-      \field{urlday}{23}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.pwc.com/gx/en/issues/analytics/artificial-intelligence.html
-      \endverb
-      \verb{url}
-      \verb https://www.pwc.com/gx/en/issues/analytics/artificial-intelligence.html
       \endverb
     \endentry
     \entry{Reuters2025b}{misc}{}{}
@@ -4992,6 +3474,7 @@
       \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
+      \true{nocite}
       \verb{urlraw}
       \verb https://www.salesforce.com/resources/research-reports/state-of-service/
       \endverb
@@ -5063,6 +3546,88 @@
       \endverb
       \verb{url}
       \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+      \endverb
+    \endentry
+    \entry{ILIA2025}{report}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=5e80c703c31b1be83ee9795c5120e3b7}{%
+           family={Soto},
+           familyi={S\bibinitperiod},
+           given={Álvaro},
+           giveni={Á\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f2dd5c2d727d150967f73e9e75b1963}{%
+           family={Durán},
+           familyi={D\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eaa6d5b20e45850d6cadb4df929d8b5}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Antonia},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95df8d5f81145fce77a0bab766f4a254}{%
+           family={Adasme},
+           familyi={A\bibinitperiod},
+           given={Sebastián},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d84ee4aa20eba02a4dc0492653cc12b}{%
+           family={Rovira},
+           familyi={R\bibinitperiod},
+           given={Sebastián},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66d152af24b3ce7ee9caea68cedc737f}{%
+           family={Jordán},
+           familyi={J\bibinitperiod},
+           given={Valeria},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ae05a8c4cee696611579340b14d772f}{%
+           family={Poveda},
+           familyi={P\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {Comisión Económica para América Latina y el Caribe (CEPAL)}%
+        {Centro Nacional de Inteligencia Artificial (CENIA)}%
+      }
+      \list{location}{1}{%
+        {Santiago de Chile}%
+      }
+      \list{publisher}{1}{%
+        {Naciones Unidas}%
+      }
+      \strng{namehash}{bba10479743da09bdaad3fdfc92c72d1}
+      \strng{fullhash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{fullhashraw}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{bibnamehash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{authorbibnamehash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{authornamehash}{bba10479743da09bdaad3fdfc92c72d1}
+      \strng{authorfullhash}{368672c92bb71d76d6474b8ed7d957d5}
+      \strng{authorfullhashraw}{368672c92bb71d76d6474b8ed7d957d5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Publicación coordinada en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe}
+      \field{number}{LC/TS.2025/68}
+      \field{title}{Índice Latinoamericano de Inteligencia Artificial (ILIA) 2025}
+      \field{type}{Documento de Proyecto}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://indicelatam.cl/wp-content/uploads/2025/10/Documento_ILIA_2025.pdf
+      \endverb
+      \verb{url}
+      \verb https://indicelatam.cl/wp-content/uploads/2025/10/Documento_ILIA_2025.pdf
       \endverb
     \endentry
     \entry{Spiceworks2021}{misc}{}{}
@@ -5137,20 +3702,23 @@
       \verb https://www.statista.com/outlook/tmo/artificial-intelligence/latin-america
       \endverb
     \endentry
-    \entry{Tearsheet2018}{misc}{}{}
+    \entry{IntelligentCIO2025}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=eb4e489d1843a5043fe116619b9e6b70}{%
-           family={{Tearsheet}},
-           familyi={T\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=237a972fee541c78295cbe58a1ffc576}{%
+           family={Tanner},
+           familyi={T\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{fullhash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{fullhashraw}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{bibnamehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authorbibnamehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authornamehash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authorfullhash}{eb4e489d1843a5043fe116619b9e6b70}
-      \strng{authorfullhashraw}{eb4e489d1843a5043fe116619b9e6b70}
+      \strng{namehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{fullhash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{fullhashraw}{237a972fee541c78295cbe58a1ffc576}
+      \strng{bibnamehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authorbibnamehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authornamehash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authorfullhash}{237a972fee541c78295cbe58a1ffc576}
+      \strng{authorfullhashraw}{237a972fee541c78295cbe58a1ffc576}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
@@ -5158,49 +3726,19 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{note}{Blog financiero; contexto cualitativo}
-      \field{title}{HSBC is using AI to personalize its rewards program}
-      \field{year}{2018}
-      \true{nocite}
+      \field{month}{10}
+      \field{note}{Artículo periodístico basado en el ILIA 2025}
+      \field{title}{Latin America accelerates AI adoption but faces gaps in talent, investment and governance}
+      \field{urlday}{31}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/
+      \verb https://www.intelligentcio.com/latam/2025/10/23/latin-america-accelerates-ai-adoption-but-faces-gaps-in-talent-investment-and-governance/
       \endverb
       \verb{url}
-      \verb https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/
-      \endverb
-    \endentry
-    \entry{Techopedia2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2d0ed76dc2bb8ec0ba5cf4473f5c4c74}{%
-           family={{Techopedia}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{fullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{fullhashraw}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{bibnamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authorbibnamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authornamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authorfullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \strng{authorfullhashraw}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{9}
-      \field{note}{Blog tecnológico; contexto cualitativo}
-      \field{title}{Las 50 startups de IA que explotarán en 2024}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.techopedia.com/es/mejores-startups-ia
-      \endverb
-      \verb{url}
-      \verb https://www.techopedia.com/es/mejores-startups-ia
+      \verb https://www.intelligentcio.com/latam/2025/10/23/latin-america-accelerates-ai-adoption-but-faces-gaps-in-talent-investment-and-governance/
       \endverb
     \endentry
     \entry{Tidio2024}{misc}{}{}
@@ -5282,7 +3820,6 @@
       \strng{authornamehash}{0adbaaab696c83cd1ce067866be0ab2c}
       \strng{authorfullhash}{0adbaaab696c83cd1ce067866be0ab2c}
       \strng{authorfullhashraw}{0adbaaab696c83cd1ce067866be0ab2c}
-      \field{extraname}{1}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
@@ -5297,79 +3834,6 @@
       \endverb
       \verb{url}
       \verb https://segment.com/state-of-personalization-report/
-      \endverb
-    \endentry
-    \entry{twilio2024_personalization_latam}{report}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=0adbaaab696c83cd1ce067866be0ab2c}{%
-           family={{Twilio Segment}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Twilio}%
-      }
-      \strng{namehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{fullhash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{fullhashraw}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{bibnamehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authorbibnamehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authornamehash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authorfullhash}{0adbaaab696c83cd1ce067866be0ab2c}
-      \strng{authorfullhashraw}{0adbaaab696c83cd1ce067866be0ab2c}
-      \field{extraname}{2}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Reporte basado en encuestas a empresas y consumidores de América Latina.}
-      \field{title}{State of Personalization 2024: Latin America Insights}
-      \field{type}{Regional Data Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://segment.com/resources/reports/state-of-personalization/
-      \endverb
-      \verb{url}
-      \verb https://segment.com/resources/reports/state-of-personalization/
-      \endverb
-    \endentry
-    \entry{UniteAI2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ab4d49b7ab9659014516ecf5e93ae342}{%
-           family={{Unite AI}},
-           familyi={U\bibinitperiod}}}%
-      }
-      \strng{namehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{fullhash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{fullhashraw}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{bibnamehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authorbibnamehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authornamehash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authorfullhash}{ab4d49b7ab9659014516ecf5e93ae342}
-      \strng{authorfullhashraw}{ab4d49b7ab9659014516ecf5e93ae342}
-      \field{sortinit}{U}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{Blog especializado en IA; contexto cualitativo}
-      \field{title}{Los 10 mejores asistentes de inteligencia artificial (diciembre de 2024)}
-      \field{year}{2024}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.unite.ai/es/10-mejores-asistentes-de-inteligencia-artificial/
-      \endverb
-      \verb{url}
-      \verb https://www.unite.ai/es/10-mejores-asistentes-de-inteligencia-artificial/
       \endverb
     \endentry
     \entry{VerifiedMarketReports2024}{misc}{}{}
@@ -5466,14 +3930,11 @@
       \verb https://www.zendesk.com/blog/consumer-perceptions-ai/
       \endverb
     \endentry
-    \entry{zendesk2024cxtrends}{report}{}{}
+    \entry{zendesk2024_cxtrends}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c51a1ab524fc2612cfb845bf09cf46d8}{%
            family={{Zendesk, Inc.}},
            familyi={Z\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Zendesk}%
       }
       \strng{namehash}{c51a1ab524fc2612cfb845bf09cf46d8}
       \strng{fullhash}{c51a1ab524fc2612cfb845bf09cf46d8}
@@ -5490,19 +3951,18 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Versión regional del informe CX Trends, con datos específicos de América Latina.}
-      \field{title}{CX Trends 2024: Latin America Edition}
-      \field{type}{Industry Report}
+      \field{note}{Artículo de blog que resume los hallazgos del informe anual CX Trends 2024 de Zendesk; no se encontró PDF descargable público.}
+      \field{title}{CX Trends 2024: Libera el poder del CX inteligente (Versión LatAM)}
       \field{urlday}{22}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.zendesk.com/newsroom/articles/2024-cx-trends/
+      \verb https://www.zendesk.com.mx/blog/cx-trends-2024/
       \endverb
       \verb{url}
-      \verb https://www.zendesk.com/newsroom/articles/2024-cx-trends/
+      \verb https://www.zendesk.com.mx/blog/cx-trends-2024/
       \endverb
     \endentry
   \enddatalist

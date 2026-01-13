@@ -1,0 +1,42 @@
+**1. Contexto macro de IA en Latinoamérica**
+- Tamaño del mercado regional de IA (software + servicios): 
+- Participación de LATAM sobre el mercado global: 
+- Crecimiento anual típico del mercado direccionable: 
+
+**2. Adopción real en empresas**
+- Empresas con interés conceptual en IA: 
+- Empresas con pilotos activos: 
+- Soluciones en producción estable: 
+- Pilotos que nunca llegan a producción:
+
+**3. Conversión comercial**
+- Conversión lead → piloto: 
+- Conversión piloto → contrato productivo: 
+- Tiempo medio piloto → producción: 
+
+**4. Precios y contratos (ACV)**
+- Pilotos pagos / PoC: USD 
+- Implementaciones productivas iniciales: USD 
+- Clientes grandes / expansiones: USD 
+- Upsell anual típico:  del ACV inicial.
+- Clientes que expanden contrato: 
+
+**5. CAC y eficiencia comercial**
+- Ratio CAC / ACV sostenible: 
+- Payback esperado: 
+- CAC tiende a ser x más alto fuera de los principales países (Brasil, México, Chile, Colombia, Argentina).
+
+**6. Churn y retención**
+- Churn anual típico (primeros 2 años): 
+- Renovación de contratos exitosos: 
+
+**7. Implementación**
+- Tiempo medio de implementación por cliente: 
+- Desvíos frecuentes sobre el plan inicial: 
+
+**8. Distribución geográfica del gasto en IA**
+- Brasil:
+- México:
+- Chile + Colombia: 
+- Argentina: 
+- Resto de LATAM:

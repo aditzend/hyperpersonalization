@@ -1,0 +1,160 @@
+
+# Cerrado y no tiene resumen
+@report{gartner2024_marketguide_conversational_ai,
+  author       = {{Gartner, Inc.}},
+  title        = {Market Guide for Conversational AI Platforms},
+  institution  = {Gartner},
+  year         = {2024},
+  type         = {Market Guide},
+  url          = {https://www.gartner.com/doc/reprints?id=1-2XYL7E7},
+  urldate      = {2025-01-23},
+  note         = {Documento clave para entender precios, tiempos de implementación y categorías del mercado conversacional.}
+}
+
+@report{gartner2024_hypecycle_ai,
+  author       = {{Gartner, Inc.}},
+  title        = {Hype Cycle for Artificial Intelligence, 2024},
+  institution  = {Gartner},
+  year         = {2024},
+  type         = {Research Report},
+  url          = {https://www.gartner.com/en/research/methodologies/gartner-hype-cycle},
+  urldate      = {2025-01-23},
+  note         = {Panorama de tecnologías emergentes de IA, útil para contextualizar la madurez de asistentes virtuales y personalización.}
+}
+
+# 404
+@report{twilio2024_personalization_latam,
+  author       = {{Twilio Segment}},
+  title        = {State of Personalization 2024: Latin America Insights},
+  institution  = {Twilio},
+  year         = {2024},
+  type         = {Regional Data Report},
+  url          = {https://segment.com/resources/reports/state-of-personalization/},
+  urldate      = {2025-01-22},
+  note         = {Reporte basado en encuestas a empresas y consumidores de América Latina.}
+}
+
+
+#404
+@misc{KingpingMarket2023,
+  author = {{Kingping Market Research}},
+  title = {AI chatbot market size research report [2023-2030]},
+  year = {2023},
+  month = {10},
+  day = {13},
+  url = {https://www.linkedin.com/pulse/ai-chatbot-market-size-research-report-2023-2030-zdhee/},
+  note = {Post de LinkedIn; contexto orientativo}
+}
+
+@misc{DigitalCommerce2023,
+  author = {{Digital Commerce 360}},
+  title = {Lowe's lower web traffic doesn't hurt sales in Q1},
+  year = {2023},
+  month = {5},
+  day = {25},
+  url = {https://www.digitalcommerce360.com/2023/05/25/lowes-lower-web-traffic-doesnt-hurt-sales-in-q1/},
+  note = {Blog especializado en comercio; contexto cualitativo}
+}
+
+# viejo
+
+@misc{Gartner2011,
+  author = {{Gartner}},
+  title = {CRM strategies and technologies to understand, grow and manage customer experiences},
+  year = {2011},
+  month = {3},
+  day = {30},
+  url = {https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf}
+}
+
+@misc{Forbes2017,
+  author = {{Forbes}},
+  title = {AI by the numbers: 33 facts and forecasts about chatbots and voice assistants},
+  year = {2017},
+  month = {5},
+  day = {15},
+  url = {https://www.forbes.com/sites/gilpress/2017/05/15/ai-by-the-numbers-33-facts-and-forecasts-about-chatbots-and-voice-assistants/?sh=95029d37731f#655932307731},
+  note = {Artículo de prensa; contexto cualitativo}
+}
+
+
+@misc{BusinessInsider2016,
+  author = {{Business Insider}},
+  title = {The messaging apps report: Messaging apps are now bigger than social networks},
+  year = {2016},
+  month = {9},
+  day = {20},
+  url = {https://www.businessinsider.com/the-messaging-app-report-2015-11?IR=T},
+  note = {Reporte de prensa; contexto cualitativo}
+}
+
+@misc{Tearsheet2018,
+  author = {{Tearsheet}},
+  title = {HSBC is using AI to personalize its rewards program},
+  year = {2018},
+  month = {3},
+  day = {20},
+  url = {https://tearsheet.co/artificial-intelligence/hsbc-is-using-ai-to-personalize-its-rewards-program/},
+  note = {Blog financiero; contexto cualitativo}
+}
+
+# Cerrado y no tiene resumen
+@report{gartner2024mq_conversational_ai,
+  author       = {{Gartner, Inc.}},
+  title        = {Magic Quadrant for Enterprise Conversational AI Platforms},
+  institution  = {Gartner},
+  year         = {2024},
+  type         = {Research Report},
+  note         = {Resumen consultado públicamente. El informe completo requiere suscripción. Gartner Document ID: G00794012},
+  url          = {https://www.gartner.com/en/documents/},
+  urldate      = {2025-01-22}
+}
+
+
+# No esta abierta y no tiene resumen
+@report{idc2024_ai_spending_latam,
+  author       = {{IDC Latin America}},
+  title        = {Worldwide Artificial Intelligence Spending Guide: Latin America Highlights 2024},
+  institution  = {International Data Corporation (IDC)},
+  year         = {2024},
+  type         = {Spending Guide},
+  url          = {https://www.idc.com/latam-es/data-analytics/spending-guides},
+  urldate      = {2025-01-22},
+  note         = {Guía oficial de gasto en inteligencia artificial para América Latina.}
+}
+
+
+
+@report{bain2024_personalization,
+  author       = {{Bain \& Company}},
+  title        = {The State of Customer Experience Personalization 2024},
+  institution  = {Bain \& Company},
+  year         = {2024},
+  type         = {Industry Report},
+  url          = {https://www.bain.com/insights/},
+  urldate      = {2025-01-22},
+  note         = {Informe técnico sobre hiperpersonalización, métricas de ROI y adopción empresarial.}
+}
+
+
+@report{ibm2024_ai_adoption_index,
+  author       = {{IBM Institute for Business Value}},
+  title        = {Global AI Adoption Index 2024},
+  institution  = {IBM},
+  year         = {2024},
+  type         = {Global Report},
+  url          = {https://www.ibm.com/reports/ai-adoption},
+  urldate      = {2025-01-23},
+  note         = {Incluye datos de LATAM y barreras de adopción de IA empresarial.}
+}
+
+
+@report{accenture2024_ai_maturity,
+  author       = {{Accenture}},
+  title        = {The Art of AI Maturity: Advancing from Practice to Performance},
+  institution  = {Accenture Research},
+  year         = {2024},
+  type         = {Industry Report},
+  url          = {https://www.accenture.com/us-en/insights/ai/ai-maturity},
+  urldate      = {2025-01-23},
+  note         = {Incluye benchmarks globales y regionales de impacto de IA en empresas.}

@@ -1,17 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'apa7.blg'
-[36] biber-darwin:340> INFO - === Sun Nov 23, 2025, 11:30:47
-[45] Biber.pm:420> INFO - Reading 'apa7.bcf'
-[93] Biber.pm:991> INFO - Using all citekeys in bib section 0
-[104] Biber.pm:4463> INFO - Processing section 0
-[109] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[111] bibtex.pm:1713> INFO - LaTeX decoding ...
-[138] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[315] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[315] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[315] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[377] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[377] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[377] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[411] bbl.pm:676> INFO - Writing 'apa7.bbl' with encoding 'UTF-8'
-[444] bbl.pm:779> INFO - Output to apa7.bbl
+[31] biber-darwin:340> INFO - === Fri Jan  9, 2026, 07:48:27
+[39] Biber.pm:420> INFO - Reading 'apa7.bcf'
+[87] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[97] Biber.pm:4463> INFO - Processing section 0
+[101] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[103] bibtex.pm:1713> INFO - LaTeX decoding ...
+[120] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[258] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[258] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[258] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[305] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[305] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[305] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[330] bbl.pm:676> INFO - Writing 'apa7.bbl' with encoding 'UTF-8'
+[351] bbl.pm:779> INFO - Output to apa7.bbl
+[351] Biber.pm:131> WARN - legacy month field 'December' in entry 'GerosaHermansen2025EconomicWorkforceAI' is not an integer - this will probably not sort properly.
+[351] Biber.pm:133> INFO - WARNINGS: 1

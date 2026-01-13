@@ -3083,47 +3083,54 @@
     <bcf:citekey order="11" intorder="1">Outgrow2023</bcf:citekey>
     <bcf:citekey order="12" intorder="1">Ninetailed2024</bcf:citekey>
     <bcf:citekey order="13" intorder="1">Zendesk2024</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">emergen_virtual_assistants_2023</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">emergen_virtual_assistants_2023</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">IMARCIVA2024</bcf:citekey>
     <bcf:citekey order="16" intorder="1">emergen_hyperpersonalization_2024</bcf:citekey>
     <bcf:citekey order="17" intorder="1">emergen_hyperpersonalization_2024</bcf:citekey>
     <bcf:citekey order="18" intorder="1">informes_expertos_latam_2024</bcf:citekey>
     <bcf:citekey order="19" intorder="1">informes_expertos_latam_2024</bcf:citekey>
     <bcf:citekey order="20" intorder="1">mentzer2005sales</bcf:citekey>
     <bcf:citekey order="21" intorder="1">mentzer2005sales</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">zendesk2024cxtrends</bcf:citekey>
-    <bcf:citekey order="22" intorder="2">zendesk2024_cxmaturity_latam</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">zendesk2024cxtrends</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">gartner2024mq_conversational_ai</bcf:citekey>
-    <bcf:citekey order="24" intorder="2">gartner2024_marketguide_conversational_ai</bcf:citekey>
-    <bcf:citekey order="24" intorder="3">gartner2024_hypecycle_ai</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">idc2024_ai_spending_latam</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">mckinsey2024stateofai</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">deloitte2024_state_of_ai</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">accenture2024_ai_maturity</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">pwc2024_global_ai_study</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">twilio2024_personalization_latam</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">meta2024_conversational_commerce_latam</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">salesforce2024_state_of_service_latam</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">google2024_future_ai_latam</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">statista2024_latam_ai</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">omdia2024_conversational_ai_forecast</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">everest2024_enterprise_conversational_ai</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">bcg2025_personalization_index</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">ieee2024_ai_latam</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">ILIA2025</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">IntelligentCIO2025</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">IMARCIVA2024</bcf:citekey>
-    <bcf:citekey order="41" intorder="2">IMARCHyperpersonalization2024</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">AlliedMarketResearchIVA2024</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">ILIA2025</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">IMARCIVA2024</bcf:citekey>
-    <bcf:citekey order="44" intorder="2">AlliedMarketResearchIVA2024</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">ILIA2025</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">IMARCIVA2024</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">ILIA2025</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">IntelligentCIO2025</bcf:citekey>
-    <bcf:citekey order="49" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">atlantico2024_digital_transformation</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">atlantico2024_digital_transformation</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">zendesk2024_cxtrends</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">zendesk2024_cxtrends</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">mckinsey2025stateofai</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">statista2024_latam_ai</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">JungKatz2025ImpactoEconomicoIAALC</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">GerosaHermansen2025EconomicWorkforceAI</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">IntelligentCIO2025</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">AlliedMarketResearchIVA2024</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="54" intorder="2">AlliedMarketResearchIVA2024</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">IMARCIVA2024</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">ILIA2025</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">IntelligentCIO2025</bcf:citekey>
+    <bcf:citekey order="59" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
