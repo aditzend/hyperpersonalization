@@ -222,83 +222,114 @@
 \contentsline {subsubsection}{Adopción de asistentes virtuales en américa latina}{174}{section*.223}%
 \contentsline {subsubsection}{Proyección de Ventas}{175}{section*.224}%
 \contentsline {paragraph}{Metodología de estimación ("Delphi simulado con LLM")}{175}{section*.225}%
-\contentsline {paragraph}{Parámetros de reproducibilidad}{175}{section*.226}%
-\contentsline {paragraph}{Detalle del método Delphi:}{176}{section*.227}%
-\contentsline {paragraph}{Justificación de métodos para predicción de ventas}{177}{section*.228}%
-\contentsline {subsubsection}{Simulación con el Método Delphi con LLM}{177}{section*.229}%
-\contentsline {paragraph}{Perfiles de expertos simulados}{177}{section*.230}%
-\contentsline {paragraph}{Fundamentación Empírica para el Método Delphi}{177}{section*.231}%
-\contentsline {paragraph}{Anexo para Expertos del Método Delphi}{179}{section*.232}%
-\contentsline {subsection}{Anclas empíricas de mercado para estimaciones Delphi}{180}{section*.233}%
-\contentsline {subsubsection}{Contexto macro de IA en Latinoamérica}{180}{section*.234}%
-\contentsline {subsubsection}{Adopción real en empresas}{181}{section*.235}%
-\contentsline {subsubsection}{Conversión comercial, precios y contratos, CAC, churn, e implementación}{181}{section*.236}%
-\contentsline {subsubsection}{Distribución geográfica del gasto en IA}{182}{section*.237}%
-\contentsline {subsubsection}{Implicancias operativas para el Delphi}{183}{section*.238}%
-\contentsline {paragraph}{Anclas empíricas}{183}{section*.239}%
-\contentsline {paragraph}{Ancla de adopción y volumen potencial de clientes}{183}{section*.240}%
-\contentsline {paragraph}{Ancla de valor contractual anual (ACV)}{184}{section*.241}%
-\contentsline {paragraph}{Ancla de costo de adquisición de clientes (CAC)}{184}{section*.242}%
-\contentsline {paragraph}{Ancla de churn anual}{184}{section*.243}%
-\contentsline {paragraph}{Ancla de tiempo medio de implementación}{185}{section*.244}%
-\contentsline {paragraph}{Síntesis metodológica}{185}{section*.245}%
-\contentsline {paragraph}{Primera Ronda}{185}{section*.246}%
-\contentsline {paragraph}{Análisis y Retroalimentación}{186}{section*.247}%
-\contentsline {paragraph}{Consolidación de resultados y escenarios}{186}{section*.248}%
-\contentsline {paragraph}{Análisis de sensibilidad}{187}{section*.249}%
-\contentsline {paragraph}{Validación contra benchmarks}{187}{section*.250}%
-\contentsline {subsubsection}{Proyección Monetaria por Escenarios}{187}{section*.251}%
-\contentsline {paragraph}{Proyección de ingresos por escenarios}{187}{section*.252}%
-\contentsline {paragraph}{Análisis de punto de equilibrio}{188}{section*.253}%
-\contentsline {subsection}{Proyección de costos}{189}{section*.254}%
-\contentsline {subsubsection}{Desarrollo del sistema}{189}{section*.255}%
-\contentsline {paragraph}{Endpoint de generación de contexto hiperpersonalizado}{189}{section*.256}%
-\contentsline {paragraph}{Módulo agencial de consulta de información personal}{189}{section*.257}%
-\contentsline {paragraph}{Conectores a bases de datos más difundidas}{189}{section*.258}%
-\contentsline {paragraph}{Conectores a CRMs y ERPs más conocidos}{190}{section*.259}%
-\contentsline {paragraph}{Módulo de configuración con interfaz gráfica}{190}{section*.260}%
-\contentsline {paragraph}{Contador de uso}{190}{section*.261}%
-\contentsline {paragraph}{Resumen}{190}{section*.262}%
-\contentsline {subsubsection}{Implementación}{192}{section*.263}%
-\contentsline {paragraph}{Desglose de tareas por perfil}{192}{section*.264}%
-\contentsline {paragraph}{Costo total por implementación}{193}{section*.265}%
-\contentsline {subsubsection}{Soporte y monitoreo}{193}{section*.266}%
-\contentsline {paragraph}{Roles y costos asociados}{193}{section*.267}%
-\contentsline {paragraph}{Costo mensual}{194}{section*.268}%
-\contentsline {subsubsection}{Costos fijos}{194}{section*.269}%
-\contentsline {paragraph}{Recursos humanos}{194}{section*.270}%
-\contentsline {subparagraph}{\relax }{194}{section*.271}%
-\contentsline {subparagraph}{\relax }{194}{section*.272}%
-\contentsline {subparagraph}{\relax }{194}{section*.273}%
-\contentsline {subparagraph}{\relax }{194}{section*.274}%
-\contentsline {subparagraph}{\relax }{194}{section*.275}%
-\contentsline {subparagraph}{\relax }{194}{section*.276}%
-\contentsline {subparagraph}{\relax }{194}{section*.277}%
-\contentsline {subsubsection}{Infraestructura y operación}{196}{section*.278}%
-\contentsline {paragraph}{Hosting y Servidores en la Nube}{196}{section*.279}%
-\contentsline {paragraph}{Herramientas de Monitoreo y Gestión}{196}{section*.280}%
-\contentsline {subparagraph}{\relax }{196}{section*.281}%
-\contentsline {subsubsection}{Resumen}{196}{section*.282}%
-\contentsline {subsubsection}{Otros costos variables}{196}{section*.283}%
-\contentsline {paragraph}{Publicidad, prensa y marketing}{196}{section*.284}%
-\contentsline {paragraph}{Gastos generales}{196}{section*.285}%
-\contentsline {subsection}{Evaluación Financiera}{197}{section*.286}%
-\contentsline {subsubsection}{Márgenes de contribución}{197}{section*.287}%
-\contentsline {paragraph}{Margen de contribución por Implementación}{197}{section*.288}%
-\contentsline {paragraph}{Margen de contribución por licencia}{197}{section*.289}%
-\contentsline {subsubsection}{Tasas para la valuación del proyecto}{197}{section*.290}%
-\contentsline {paragraph}{Cálculo de la tasa de descuento con el método CAPM}{198}{section*.291}%
-\contentsline {paragraph}{Prima de riesgo para Argentina}{199}{section*.292}%
-\contentsline {paragraph}{Riesgo País}{199}{section*.293}%
-\contentsline {paragraph}{Cálculo del costo del capital}{199}{section*.294}%
-\contentsline {subsubsection}{Evaluación monetaria del proyecto}{199}{section*.295}%
-\contentsline {subparagraph}{\relax }{199}{section*.296}%
-\contentsline {paragraph}{Estados de resultados proforma}{200}{section*.297}%
-\contentsline {paragraph}{Balances proforma}{201}{section*.298}%
-\contentsline {paragraph}{Flujo de fondos}{202}{section*.299}%
-\contentsline {paragraph}{Valuación y viabilidad del proyecto}{202}{section*.300}%
-\contentsline {paragraph}{Flujos de fondos proyectados}{202}{section*.301}%
-\contentsline {paragraph}{Cálculo del VAN}{202}{section*.302}%
-\contentsline {paragraph}{Cálculo del TIR}{202}{section*.303}%
-\contentsline {paragraph}{VAN}{203}{section*.304}%
-\contentsline {section}{Bibliografía}{204}{section*.305}%
+\contentsline {paragraph}{Detalle del método Delphi:}{175}{section*.226}%
+\contentsline {paragraph}{Justificación de métodos para predicción de ventas}{176}{section*.227}%
+\contentsline {subsubsection}{Simulación con el Método Delphi con LLM}{177}{section*.228}%
+\contentsline {paragraph}{Perfiles de expertos simulados}{177}{section*.229}%
+\contentsline {paragraph}{Fundamentación Empírica para el Método Delphi}{177}{section*.230}%
+\contentsline {paragraph}{Anexo para Expertos del Método Delphi}{179}{section*.231}%
+\contentsline {subsection}{Anclas empíricas de mercado para estimaciones Delphi}{180}{section*.232}%
+\contentsline {subsubsection}{Contexto macro de IA en Latinoamérica}{180}{section*.233}%
+\contentsline {subsubsection}{Adopción real en empresas}{181}{section*.234}%
+\contentsline {subsubsection}{Conversión comercial, precios y contratos, CAC, churn, e implementación}{181}{section*.235}%
+\contentsline {subsubsection}{Distribución geográfica del gasto en IA}{182}{section*.236}%
+\contentsline {subsubsection}{Implicancias operativas para el Delphi}{182}{section*.237}%
+\contentsline {paragraph}{Anclas empíricas}{183}{section*.238}%
+\contentsline {paragraph}{Ancla de adopción y volumen potencial de clientes}{183}{section*.239}%
+\contentsline {paragraph}{Ancla de valor contractual anual (ACV)}{184}{section*.240}%
+\contentsline {paragraph}{Ancla de costo de adquisición de clientes (CAC)}{184}{section*.241}%
+\contentsline {paragraph}{Ancla de churn anual}{184}{section*.242}%
+\contentsline {paragraph}{Ancla de tiempo medio de implementación}{185}{section*.243}%
+\contentsline {paragraph}{Síntesis metodológica}{185}{section*.244}%
+\contentsline {paragraph}{Delphi simulado con LLM}{185}{section*.245}%
+\contentsline {subparagraph}{\relax }{185}{section*.246}%
+\contentsline {subparagraph}{\relax }{185}{section*.247}%
+\contentsline {subparagraph}{\relax }{186}{section*.248}%
+\contentsline {subparagraph}{\relax }{195}{section*.249}%
+\contentsline {subparagraph}{\relax }{203}{section*.250}%
+\contentsline {subparagraph}{\relax }{204}{section*.251}%
+\contentsline {subparagraph}{\relax }{205}{section*.252}%
+\contentsline {subparagraph}{\relax }{206}{section*.253}%
+\contentsline {subparagraph}{\relax }{206}{section*.254}%
+\contentsline {subparagraph}{\relax }{207}{section*.255}%
+\contentsline {subparagraph}{\relax }{207}{section*.256}%
+\contentsline {subparagraph}{\relax }{208}{section*.257}%
+\contentsline {paragraph}{Segunda ronda}{209}{section*.258}%
+\contentsline {subparagraph}{\relax }{209}{section*.259}%
+\contentsline {subparagraph}{\relax }{211}{section*.260}%
+\contentsline {paragraph}{Registro adicional (Ronda 2 Perfil 1 )}{211}{section*.261}%
+\contentsline {subparagraph}{\relax }{212}{section*.262}%
+\contentsline {paragraph}{Registro adicional (Ronda 2 Perfil 2 )}{213}{section*.263}%
+\contentsline {subparagraph}{\relax }{213}{section*.264}%
+\contentsline {paragraph}{Registro adicional (Ronda 2 Perfil 3 )}{214}{section*.265}%
+\contentsline {subparagraph}{\relax }{215}{section*.266}%
+\contentsline {paragraph}{Registro adicional (Ronda 2 Perfil 4 )}{216}{section*.267}%
+\contentsline {subparagraph}{\relax }{216}{section*.268}%
+\contentsline {paragraph}{Registro adicional (Ronda 2 Perfil 5 )}{217}{section*.269}%
+\contentsline {paragraph}{Implementación del método Delphi simulado}{218}{section*.270}%
+\contentsline {subparagraph}{\relax }{218}{section*.271}%
+\contentsline {subparagraph}{\relax }{218}{section*.272}%
+\contentsline {subparagraph}{\relax }{222}{section*.273}%
+\contentsline {subparagraph}{\relax }{223}{section*.274}%
+\contentsline {subparagraph}{\relax }{224}{section*.275}%
+\contentsline {paragraph}{Resultados de la Ronda 1}{224}{section*.276}%
+\contentsline {subparagraph}{\relax }{224}{section*.277}%
+\contentsline {paragraph}{Resultados de la Ronda 2}{226}{section*.278}%
+\contentsline {subparagraph}{\relax }{226}{section*.279}%
+\contentsline {subparagraph}{\relax }{227}{section*.280}%
+\contentsline {subparagraph}{\relax }{227}{section*.281}%
+\contentsline {subparagraph}{\relax }{228}{section*.282}%
+\contentsline {subparagraph}{\relax }{228}{section*.283}%
+\contentsline {paragraph}{Consolidación de resultados}{229}{section*.284}%
+\contentsline {subsection}{Proyección de costos}{230}{section*.285}%
+\contentsline {subsubsection}{Desarrollo del sistema}{230}{section*.286}%
+\contentsline {paragraph}{Endpoint de generación de contexto hiperpersonalizado}{230}{section*.287}%
+\contentsline {paragraph}{Módulo agencial de consulta de información personal}{230}{section*.288}%
+\contentsline {paragraph}{Conectores a bases de datos más difundidas}{230}{section*.289}%
+\contentsline {paragraph}{Conectores a CRMs y ERPs más conocidos}{231}{section*.290}%
+\contentsline {paragraph}{Módulo de configuración con interfaz gráfica}{231}{section*.291}%
+\contentsline {paragraph}{Contador de uso}{231}{section*.292}%
+\contentsline {paragraph}{Resumen}{231}{section*.293}%
+\contentsline {subsubsection}{Implementación}{233}{section*.294}%
+\contentsline {paragraph}{Desglose de tareas por perfil}{233}{section*.295}%
+\contentsline {paragraph}{Costo total por implementación}{234}{section*.296}%
+\contentsline {subsubsection}{Soporte y monitoreo}{234}{section*.297}%
+\contentsline {paragraph}{Roles y costos asociados}{234}{section*.298}%
+\contentsline {paragraph}{Costo mensual}{235}{section*.299}%
+\contentsline {subsubsection}{Costos fijos}{235}{section*.300}%
+\contentsline {paragraph}{Recursos humanos}{235}{section*.301}%
+\contentsline {subparagraph}{\relax }{235}{section*.302}%
+\contentsline {subparagraph}{\relax }{235}{section*.303}%
+\contentsline {subparagraph}{\relax }{235}{section*.304}%
+\contentsline {subparagraph}{\relax }{235}{section*.305}%
+\contentsline {subparagraph}{\relax }{235}{section*.306}%
+\contentsline {subparagraph}{\relax }{235}{section*.307}%
+\contentsline {subparagraph}{\relax }{235}{section*.308}%
+\contentsline {subsubsection}{Infraestructura y operación}{237}{section*.309}%
+\contentsline {paragraph}{Hosting y Servidores en la Nube}{237}{section*.310}%
+\contentsline {paragraph}{Herramientas de Monitoreo y Gestión}{237}{section*.311}%
+\contentsline {subparagraph}{\relax }{237}{section*.312}%
+\contentsline {subsubsection}{Resumen}{237}{section*.313}%
+\contentsline {subsubsection}{Otros costos variables}{237}{section*.314}%
+\contentsline {paragraph}{Publicidad, prensa y marketing}{237}{section*.315}%
+\contentsline {paragraph}{Gastos generales}{237}{section*.316}%
+\contentsline {subsection}{Evaluación Financiera}{238}{section*.317}%
+\contentsline {subsubsection}{Márgenes de contribución}{238}{section*.318}%
+\contentsline {paragraph}{Margen de contribución por Implementación}{238}{section*.319}%
+\contentsline {paragraph}{Margen de contribución por licencia}{238}{section*.320}%
+\contentsline {subsubsection}{Tasas para la valuación del proyecto}{238}{section*.321}%
+\contentsline {paragraph}{Cálculo de la tasa de descuento con el método CAPM}{239}{section*.322}%
+\contentsline {paragraph}{Prima de riesgo para Argentina}{240}{section*.323}%
+\contentsline {paragraph}{Riesgo País}{240}{section*.324}%
+\contentsline {paragraph}{Cálculo del costo del capital}{240}{section*.325}%
+\contentsline {subsubsection}{Evaluación monetaria del proyecto}{240}{section*.326}%
+\contentsline {subparagraph}{\relax }{240}{section*.327}%
+\contentsline {paragraph}{Estados de resultados proforma}{241}{section*.328}%
+\contentsline {paragraph}{Balances proforma}{242}{section*.329}%
+\contentsline {paragraph}{Flujo de fondos}{243}{section*.330}%
+\contentsline {paragraph}{Valuación y viabilidad del proyecto}{243}{section*.331}%
+\contentsline {paragraph}{Flujos de fondos proyectados}{243}{section*.332}%
+\contentsline {paragraph}{Cálculo del VAN}{243}{section*.333}%
+\contentsline {paragraph}{Cálculo del TIR}{243}{section*.334}%
+\contentsline {paragraph}{VAN}{244}{section*.335}%
+\contentsline {section}{Bibliografía}{245}{section*.336}%

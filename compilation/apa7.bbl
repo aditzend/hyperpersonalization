@@ -176,7 +176,6 @@
       \field{note}{Broad LATAM digital adoption and maturity, useful for implementation timelines.}
       \field{title}{Latin America Digital Transformation Report 2024}
       \field{year}{2024}
-      \true{nocite}
       \verb{urlraw}
       \verb https://agatadata.com/wp-content/uploads/2024/11/Latin-America-Digital-Transformation-Report-2024-Atlantico.pdf
       \endverb
@@ -845,7 +844,7 @@
       \field{howpublished}{\url{https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina}}
       \field{note}{Consultado el \today}
       \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024–2032}
-      \field{year}{2024}
+      \field{year}{2026}
     \endentry
     \entry{insiderlatam2024_hiperpersonalizacion}{misc}{}{}
       \name{author}{1}{}{%
@@ -1134,6 +1133,45 @@
       \endverb
       \verb{url}
       \verb https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying
+      \endverb
+    \endentry
+    \entry{mckinsey2025stateofai}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=96eaa81a81a29c441708d1ec4be5a27b}{%
+           family={{McKinsey \& Company}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {McKinsey \& Company}%
+      }
+      \strng{namehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{bibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorbibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authornamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The state of {AI} in 2025: {G}enerative {AI's} breakout year}
+      \field{type}{Report}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+      \endverb
+      \verb{url}
+      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
       \endverb
     \endentry
     \entry{mentzer2005sales}{book}{}{}
@@ -1506,72 +1544,6 @@
       \endverb
       \verb{url}
       \verb https://www.salesforce.com/resources/research-reports/state-of-service/
-      \endverb
-    \endentry
-    \entry{mckinsey2024stateofai}{report}{}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=5eaa9c6f34e2588bf3d86341fba9a9ce}{%
-           family={Singla},
-           familyi={S\bibinitperiod},
-           given={Aman},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11c36085c1894de2b6d0990ad44e0031}{%
-           family={Sukharevsky},
-           familyi={S\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=db7e53e59fd4182ff732839300149d61}{%
-           family={Yee},
-           familyi={Y\bibinitperiod},
-           given={Lareina},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=37868205eba2e1ca3059b22d6c96256f}{%
-           family={Chui},
-           familyi={C\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cea414098c11a6f78ebbe08cf61233e4}{%
-           family={Hall},
-           familyi={H\bibinitperiod},
-           given={Bryce},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {McKinsey \& Company}%
-      }
-      \strng{namehash}{9bc5e21ca9889f015c7ec710b62f9e85}
-      \strng{fullhash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{fullhashraw}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{bibnamehash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{authorbibnamehash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{authornamehash}{9bc5e21ca9889f015c7ec710b62f9e85}
-      \strng{authorfullhash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{authorfullhashraw}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Encuesta global anual sobre adopción de IA, incluyendo métricas de adopción empresarial.}
-      \field{title}{The State of AI in 2024: Generative AI’s Breakout Year}
-      \field{type}{Global Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
-      \endverb
-      \verb{url}
-      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
       \endverb
     \endentry
     \entry{ILIA2025}{report}{}{}
@@ -2150,7 +2122,6 @@
       \field{note}{Broad LATAM digital adoption and maturity, useful for implementation timelines.}
       \field{title}{Latin America Digital Transformation Report 2024}
       \field{year}{2024}
-      \true{nocite}
       \verb{urlraw}
       \verb https://agatadata.com/wp-content/uploads/2024/11/Latin-America-Digital-Transformation-Report-2024-Atlantico.pdf
       \endverb
@@ -2819,7 +2790,7 @@
       \field{howpublished}{\url{https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina}}
       \field{note}{Consultado el \today}
       \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024–2032}
-      \field{year}{2024}
+      \field{year}{2026}
     \endentry
     \entry{insiderlatam2024_hiperpersonalizacion}{misc}{}{}
       \name{author}{1}{}{%
@@ -3108,6 +3079,45 @@
       \endverb
       \verb{url}
       \verb https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying
+      \endverb
+    \endentry
+    \entry{mckinsey2025stateofai}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=96eaa81a81a29c441708d1ec4be5a27b}{%
+           family={{McKinsey \& Company}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {McKinsey \& Company}%
+      }
+      \strng{namehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{bibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorbibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authornamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The state of {AI} in 2025: {G}enerative {AI's} breakout year}
+      \field{type}{Report}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+      \endverb
+      \verb{url}
+      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
       \endverb
     \endentry
     \entry{mentzer2005sales}{book}{}{}
@@ -3480,72 +3490,6 @@
       \endverb
       \verb{url}
       \verb https://www.salesforce.com/resources/research-reports/state-of-service/
-      \endverb
-    \endentry
-    \entry{mckinsey2024stateofai}{report}{}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=5eaa9c6f34e2588bf3d86341fba9a9ce}{%
-           family={Singla},
-           familyi={S\bibinitperiod},
-           given={Aman},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11c36085c1894de2b6d0990ad44e0031}{%
-           family={Sukharevsky},
-           familyi={S\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=db7e53e59fd4182ff732839300149d61}{%
-           family={Yee},
-           familyi={Y\bibinitperiod},
-           given={Lareina},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=37868205eba2e1ca3059b22d6c96256f}{%
-           family={Chui},
-           familyi={C\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cea414098c11a6f78ebbe08cf61233e4}{%
-           family={Hall},
-           familyi={H\bibinitperiod},
-           given={Bryce},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {McKinsey \& Company}%
-      }
-      \strng{namehash}{9bc5e21ca9889f015c7ec710b62f9e85}
-      \strng{fullhash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{fullhashraw}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{bibnamehash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{authorbibnamehash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{authornamehash}{9bc5e21ca9889f015c7ec710b62f9e85}
-      \strng{authorfullhash}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \strng{authorfullhashraw}{67b7a93956a54df6ae5f7c9411f8bc82}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Encuesta global anual sobre adopción de IA, incluyendo métricas de adopción empresarial.}
-      \field{title}{The State of AI in 2024: Generative AI’s Breakout Year}
-      \field{type}{Global Report}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
-      \endverb
-      \verb{url}
-      \verb https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
       \endverb
     \endentry
     \entry{ILIA2025}{report}{}{}
