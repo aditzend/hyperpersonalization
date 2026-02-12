@@ -1,0 +1,1671 @@
+\subsubsection{Desarrollo de la simulación}
+En esta sección se listan \emph{todos} los outputs generados en el notebook \texttt{39-delphi-presentation.ipynb}, preservando su contenido en formato de código o tabla.
+
+\paragraph{Carga de secretos}
+
+\subparagraph{Output (celda 16, exec 10)}
+\begin{APACode}
+✅ Variables de entorno recargadas correctamente.
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 1 Perfil 1}
+
+\subparagraph{Output (celda 24, exec 15)}
+\begin{APACode}
+{
+  "role": "CEO y Co-fundador/a de una Startup Latinoamericana de Soluciones de Inteligencia Artificial Conversacional",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 18000,
+        "U": 35000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 8
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 16000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 28000
+      },
+      "annual_churn_pct": {
+        "L": 6,
+        "U": 12
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 12000,
+        "U": 22000
+      },
+      "annual_churn_pct": {
+        "L": 3,
+        "U": 8
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 1 Perfil 2}
+
+\subparagraph{Output (celda 27, exec 17)}
+\begin{APACode}
+{
+  "role": "Gerente de Producto (Product Owner) de una Startup Latinoamericana de Soluciones de Inteligencia Artificial Conversacional",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 9000,
+        "U": 16000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 8000,
+        "U": 14000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 5
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 13000,
+        "U": 20000
+      },
+      "cac_usd": {
+        "L": 6000,
+        "U": 11000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 1 Perfil 3}
+
+\subparagraph{Output (celda 30, exec 19)}
+\begin{APACode}
+{
+  "role": "Analista de Mercados Emergentes (foco Argentina)",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 12000,
+        "U": 22000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 14000,
+        "U": 26000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 13000,
+        "U": 20000
+      },
+      "cac_usd": {
+        "L": 16000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 1 Perfil 4}
+
+\subparagraph{Output (celda 33, exec 21)}
+\begin{APACode}
+{
+  "role": "Consultor en Tecnología para Software Empresarial (Integración y Adopción B2B)",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 12000,
+        "U": 22000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 20
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 8,
+        "U": 15
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 18000,
+        "U": 38000
+      },
+      "annual_churn_pct": {
+        "L": 5,
+        "U": 10
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 1 Perfil 5}
+
+\subparagraph{Output (celda 36, exec 23)}
+\begin{APACode}
+{
+  "role": "Investigador académico senior en IA conversacional y NLP (RAG, LLMs, hiperpersonalización)",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 25000,
+        "U": 45000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 5,
+        "U": 9
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 20
+      },
+      "acv_usd": {
+        "L": 12000,
+        "U": 18000
+      },
+      "cac_usd": {
+        "L": 20000,
+        "U": 40000
+      },
+      "annual_churn_pct": {
+        "L": 6,
+        "U": 12
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 16000,
+        "U": 28000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 3,
+        "U": 8
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Dataframe Ronda 1}
+
+\subparagraph{Output (celda 38, exec 24)}
+\begin{APACode}
+     round_id                                               role     scenario  \
+0           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+1           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+2           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+3           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+4           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+..        ...                                                ...          ...   
+100         1  Investigador académico senior en IA conversaci...   optimistic   
+101         1  Investigador académico senior en IA conversaci...   optimistic   
+102         1  Investigador académico senior en IA conversaci...   optimistic   
+103         1  Investigador académico senior en IA conversaci...   optimistic   
+104         1  Investigador académico senior en IA conversaci...   optimistic   
+
+                           variable        L        U  
+0                  customers_year_1      1.0      3.0  
+1                  customers_year_2      2.0      5.0  
+2                  customers_year_3      3.0      7.0  
+3                           acv_usd   9000.0  12000.0  
+4                           cac_usd  18000.0  35000.0  
+..                              ...      ...      ...  
+100                customers_year_3     20.0     35.0  
+101                         acv_usd  16000.0  28000.0  
+102                         cac_usd  15000.0  30000.0  
+103                annual_churn_pct      3.0      8.0  
+104  avg_implementation_time_months      2.0      4.0  
+
+[105 rows x 6 columns]
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Cálculo de IQR y Mediana}
+
+\subparagraph{Output (celda 40, exec 25)}
+\begin{APACode}
+    round_id     scenario                        variable  median_L  median_U  \
+0          1      neutral                         acv_usd   11000.0   15000.0   
+1          1      neutral                annual_churn_pct       7.0      14.0   
+2          1      neutral  avg_implementation_time_months       3.0       6.0   
+3          1      neutral                         cac_usd   15000.0   28000.0   
+4          1      neutral                customers_year_1       3.0       6.0   
+5          1      neutral                customers_year_2       6.0      12.0   
+6          1      neutral                customers_year_3      10.0      18.0   
+7          1   optimistic                         acv_usd   14000.0   22000.0   
+8          1   optimistic                annual_churn_pct       4.0       9.0   
+9          1   optimistic  avg_implementation_time_months       2.0       4.0   
+10         1   optimistic                         cac_usd   15000.0   30000.0   
+11         1   optimistic                customers_year_1       6.0      10.0   
+12         1   optimistic                customers_year_2      12.0      22.0   
+13         1   optimistic                customers_year_3      20.0      35.0   
+14         1  pessimistic                         acv_usd    9000.0   12000.0   
+15         1  pessimistic                annual_churn_pct      12.0      22.0   
+16         1  pessimistic  avg_implementation_time_months       4.0       7.0   
+17         1  pessimistic                         cac_usd   12000.0   22000.0   
+18         1  pessimistic                customers_year_1       1.0       3.0   
+19         1  pessimistic                customers_year_2       2.0       5.0   
+20         1  pessimistic                customers_year_3       3.0       7.0   
+
+     iqr_L    iqr_U  n  iqr_over_median_L  iqr_over_median_U  
+0      0.0   1000.0  5           0.000000           0.066667  
+1      1.0      2.0  5           0.142857           0.142857  
+2      0.0      0.0  5           0.000000           0.000000  
+3   1000.0   4000.0  5           0.066667           0.142857  
+4      0.0      0.0  5           0.000000           0.000000  
+5      0.0      0.0  5           0.000000           0.000000  
+6      0.0      2.0  5           0.000000           0.111111  
+7   1000.0   2000.0  5           0.071429           0.090909  
+8      1.0      1.0  5           0.250000           0.111111  
+9      0.0      0.0  5           0.000000           0.000000  
+10  4000.0   8000.0  5           0.266667           0.266667  
+11     0.0      0.0  5           0.000000           0.000000  
+12     0.0      0.0  5           0.000000           0.000000  
+13     0.0      0.0  5           0.000000           0.000000  
+14     0.0      0.0  5           0.000000           0.000000  
+15     0.0      0.0  5           0.000000           0.000000  
+16     0.0      1.0  5           0.000000           0.142857  
+17  6000.0  13000.0  5           0.500000           0.590909  
+18     0.0      0.0  5           0.000000           0.000000  
+19     0.0      0.0  5           0.000000           0.000000  
+20     0.0      0.0  5           0.000000           0.000000  
+\end{APACode}
+
+\subparagraph{Output (celda 43, exec 27)}
+\begin{APACode}
+[
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "acv_usd",
+    "median_L": 11000.0,
+    "median_U": 15000.0,
+    "iqr_L": 0.0,
+    "iqr_U": 1000.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0666666667
+  },
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "annual_churn_pct",
+    "median_L": 7.0,
+    "median_U": 14.0,
+    "iqr_L": 1.0,
+    "iqr_U": 2.0,
+    "n": 5,
+    "iqr_over_median_L": 0.1428571429,
+    "iqr_over_median_U": 0.1428571429
+  },
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "avg_implementation_time_months",
+    "median_L": 3.0,
+    "median_U": 6.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "cac_usd",
+    "median_L": 15000.0,
+    "median_U": 28000.0,
+    "iqr_L": 1000.0,
+    "iqr_U": 4000.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0666666667,
+    "iqr_over_median_U": 0.1428571429
+  },
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "customers_year_1",
+    "median_L": 3.0,
+    "median_U": 6.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "customers_year_2",
+    "median_L": 6.0,
+    "median_U": 12.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "neutral",
+    "variable": "customers_year_3",
+    "median_L": 10.0,
+    "median_U": 18.0,
+    "iqr_L": 0.0,
+    "iqr_U": 2.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.1111111111
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "acv_usd",
+    "median_L": 14000.0,
+    "median_U": 22000.0,
+    "iqr_L": 1000.0,
+    "iqr_U": 2000.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0714285714,
+    "iqr_over_median_U": 0.0909090909
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "annual_churn_pct",
+    "median_L": 4.0,
+    "median_U": 9.0,
+    "iqr_L": 1.0,
+    "iqr_U": 1.0,
+    "n": 5,
+    "iqr_over_median_L": 0.25,
+    "iqr_over_median_U": 0.1111111111
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "avg_implementation_time_months",
+    "median_L": 2.0,
+    "median_U": 4.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "cac_usd",
+    "median_L": 15000.0,
+    "median_U": 30000.0,
+    "iqr_L": 4000.0,
+    "iqr_U": 8000.0,
+    "n": 5,
+    "iqr_over_median_L": 0.2666666667,
+    "iqr_over_median_U": 0.2666666667
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "customers_year_1",
+    "median_L": 6.0,
+    "median_U": 10.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "customers_year_2",
+    "median_L": 12.0,
+    "median_U": 22.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "optimistic",
+    "variable": "customers_year_3",
+    "median_L": 20.0,
+    "median_U": 35.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "acv_usd",
+    "median_L": 9000.0,
+    "median_U": 12000.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "annual_churn_pct",
+    "median_L": 12.0,
+    "median_U": 22.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "avg_implementation_time_months",
+    "median_L": 4.0,
+    "median_U": 7.0,
+    "iqr_L": 0.0,
+    "iqr_U": 1.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.1428571429
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "cac_usd",
+    "median_L": 12000.0,
+    "median_U": 22000.0,
+    "iqr_L": 6000.0,
+    "iqr_U": 13000.0,
+    "n": 5,
+    "iqr_over_median_L": 0.5,
+    "iqr_over_median_U": 0.5909090909
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "customers_year_1",
+    "median_L": 1.0,
+    "median_U": 3.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "customers_year_2",
+    "median_L": 2.0,
+    "median_U": 5.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  },
+  {
+    "round_id": 1,
+    "scenario": "pessimistic",
+    "variable": "customers_year_3",
+    "median_L": 3.0,
+    "median_U": 7.0,
+    "iqr_L": 0.0,
+    "iqr_U": 0.0,
+    "n": 5,
+    "iqr_over_median_L": 0.0,
+    "iqr_over_median_U": 0.0
+  }
+]
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 2 Perfil 1}
+
+\subparagraph{Output (celda 52, exec 31)}
+\begin{APACode}
+{
+  "role": "CEO y Co-fundador/a de una Startup Latinoamericana de Soluciones de Inteligencia Artificial Conversacional",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 14000,
+        "U": 24000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 28000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 2 Perfil 2}
+
+\subparagraph{Output (celda 55, exec 33)}
+\begin{APACode}
+{
+  "role": "Gerente de Producto (Product Owner) de una Startup Latinoamericana de Soluciones de Inteligencia Artificial Conversacional",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 12000,
+        "U": 22000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 28000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 2 Perfil 3}
+
+\subparagraph{Output (celda 58, exec 35)}
+\begin{APACode}
+{
+  "role": "Analista de Mercados Emergentes (foco Argentina)",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 12000,
+        "U": 22000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 28000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 2 Perfil 4}
+
+\subparagraph{Output (celda 61, exec 37)}
+\begin{APACode}
+{
+  "role": "Consultor en Tecnología para Software Empresarial (Integración y Adopción B2B)",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 12000,
+        "U": 22000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 28000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Ronda 2 Perfil 5}
+
+\subparagraph{Output (celda 64, exec 39)}
+\begin{APACode}
+{
+  "role": "Investigador académico senior en IA conversacional y NLP (RAG, LLMs, hiperpersonalización)",
+  "unit_conventions": {
+    "currency": "USD",
+    "percent_scale": "0-100",
+    "time_unit": "months"
+  },
+  "scenarios": {
+    "pessimistic": {
+      "customers_year_1": {
+        "L": 1,
+        "U": 3
+      },
+      "customers_year_2": {
+        "L": 2,
+        "U": 5
+      },
+      "customers_year_3": {
+        "L": 3,
+        "U": 7
+      },
+      "acv_usd": {
+        "L": 9000,
+        "U": 12000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 26000
+      },
+      "annual_churn_pct": {
+        "L": 12,
+        "U": 22
+      },
+      "avg_implementation_time_months": {
+        "L": 4,
+        "U": 7
+      }
+    },
+    "neutral": {
+      "customers_year_1": {
+        "L": 3,
+        "U": 6
+      },
+      "customers_year_2": {
+        "L": 6,
+        "U": 12
+      },
+      "customers_year_3": {
+        "L": 10,
+        "U": 18
+      },
+      "acv_usd": {
+        "L": 11000,
+        "U": 15000
+      },
+      "cac_usd": {
+        "L": 16000,
+        "U": 28000
+      },
+      "annual_churn_pct": {
+        "L": 7,
+        "U": 14
+      },
+      "avg_implementation_time_months": {
+        "L": 3,
+        "U": 6
+      }
+    },
+    "optimistic": {
+      "customers_year_1": {
+        "L": 6,
+        "U": 10
+      },
+      "customers_year_2": {
+        "L": 12,
+        "U": 22
+      },
+      "customers_year_3": {
+        "L": 20,
+        "U": 35
+      },
+      "acv_usd": {
+        "L": 14000,
+        "U": 22000
+      },
+      "cac_usd": {
+        "L": 15000,
+        "U": 30000
+      },
+      "annual_churn_pct": {
+        "L": 4,
+        "U": 9
+      },
+      "avg_implementation_time_months": {
+        "L": 2,
+        "U": 4
+      }
+    }
+  }
+}
+\end{APACode}
+
+\subparagraph{Output (celda 65, exec 40)}
+\begin{APACode}
+     round_id                                               role     scenario  \
+0           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+1           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+2           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+3           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+4           1  CEO y Co-fundador/a de una Startup Latinoameri...  pessimistic   
+..        ...                                                ...          ...   
+205         2  Investigador académico senior en IA conversaci...   optimistic   
+206         2  Investigador académico senior en IA conversaci...   optimistic   
+207         2  Investigador académico senior en IA conversaci...   optimistic   
+208         2  Investigador académico senior en IA conversaci...   optimistic   
+209         2  Investigador académico senior en IA conversaci...   optimistic   
+
+                           variable        L        U  
+0                  customers_year_1      1.0      3.0  
+1                  customers_year_2      2.0      5.0  
+2                  customers_year_3      3.0      7.0  
+3                           acv_usd   9000.0  12000.0  
+4                           cac_usd  18000.0  35000.0  
+..                              ...      ...      ...  
+205                customers_year_3     20.0     35.0  
+206                         acv_usd  14000.0  22000.0  
+207                         cac_usd  15000.0  30000.0  
+208                annual_churn_pct      4.0      9.0  
+209  avg_implementation_time_months      2.0      4.0  
+
+[210 rows x 6 columns]
+\end{APACode}
+
+
+% \clearpage
+
+\paragraph{Estadísticas de la ronda 2}
+
+\subparagraph{Output (celda 67, exec 41)}
+\begin{APACode}
+    round_id     scenario                        variable  median_L  median_U  \
+0          1      neutral                         acv_usd   11000.0   15000.0   
+1          1      neutral                annual_churn_pct       7.0      14.0   
+2          1      neutral  avg_implementation_time_months       3.0       6.0   
+3          1      neutral                         cac_usd   15000.0   28000.0   
+4          1      neutral                customers_year_1       3.0       6.0   
+5          1      neutral                customers_year_2       6.0      12.0   
+6          1      neutral                customers_year_3      10.0      18.0   
+7          1   optimistic                         acv_usd   14000.0   22000.0   
+8          1   optimistic                annual_churn_pct       4.0       9.0   
+9          1   optimistic  avg_implementation_time_months       2.0       4.0   
+10         1   optimistic                         cac_usd   15000.0   30000.0   
+11         1   optimistic                customers_year_1       6.0      10.0   
+12         1   optimistic                customers_year_2      12.0      22.0   
+13         1   optimistic                customers_year_3      20.0      35.0   
+14         1  pessimistic                         acv_usd    9000.0   12000.0   
+15         1  pessimistic                annual_churn_pct      12.0      22.0   
+16         1  pessimistic  avg_implementation_time_months       4.0       7.0   
+17         1  pessimistic                         cac_usd   12000.0   22000.0   
+18         1  pessimistic                customers_year_1       1.0       3.0   
+19         1  pessimistic                customers_year_2       2.0       5.0   
+20         1  pessimistic                customers_year_3       3.0       7.0   
+21         2      neutral                         acv_usd   11000.0   15000.0   
+22         2      neutral                annual_churn_pct       7.0      14.0   
+23         2      neutral  avg_implementation_time_months       3.0       6.0   
+24         2      neutral                         cac_usd   15000.0   28000.0   
+25         2      neutral                customers_year_1       3.0       6.0   
+26         2      neutral                customers_year_2       6.0      12.0   
+27         2      neutral                customers_year_3      10.0      18.0   
+28         2   optimistic                         acv_usd   14000.0   22000.0   
+29         2   optimistic                annual_churn_pct       4.0       9.0   
+30         2   optimistic  avg_implementation_time_months       2.0       4.0   
+31         2   optimistic                         cac_usd   15000.0   30000.0   
+32         2   optimistic                customers_year_1       6.0      10.0   
+33         2   optimistic                customers_year_2      12.0      22.0   
+34         2   optimistic                customers_year_3      20.0      35.0   
+35         2  pessimistic                         acv_usd    9000.0   12000.0   
+36         2  pessimistic                annual_churn_pct      12.0      22.0   
+37         2  pessimistic  avg_implementation_time_months       4.0       7.0   
+38         2  pessimistic                         cac_usd   12000.0   22000.0   
+39         2  pessimistic                customers_year_1       1.0       3.0   
+40         2  pessimistic                customers_year_2       2.0       5.0   
+41         2  pessimistic                customers_year_3       3.0       7.0   
+
+     iqr_L    iqr_U  n  iqr_over_median_L  iqr_over_median_U  
+0      0.0   1000.0  5           0.000000           0.066667  
+1      1.0      2.0  5           0.142857           0.142857  
+2      0.0      0.0  5           0.000000           0.000000  
+3   1000.0   4000.0  5           0.066667           0.142857  
+4      0.0      0.0  5           0.000000           0.000000  
+5      0.0      0.0  5           0.000000           0.000000  
+6      0.0      2.0  5           0.000000           0.111111  
+7   1000.0   2000.0  5           0.071429           0.090909  
+8      1.0      1.0  5           0.250000           0.111111  
+9      0.0      0.0  5           0.000000           0.000000  
+10  4000.0   8000.0  5           0.266667           0.266667  
+11     0.0      0.0  5           0.000000           0.000000  
+12     0.0      0.0  5           0.000000           0.000000  
+13     0.0      0.0  5           0.000000           0.000000  
+14     0.0      0.0  5           0.000000           0.000000  
+15     0.0      0.0  5           0.000000           0.000000  
+16     0.0      1.0  5           0.000000           0.142857  
+17  6000.0  13000.0  5           0.500000           0.590909  
+18     0.0      0.0  5           0.000000           0.000000  
+19     0.0      0.0  5           0.000000           0.000000  
+20     0.0      0.0  5           0.000000           0.000000  
+21     0.0      0.0  5           0.000000           0.000000  
+22     0.0      0.0  5           0.000000           0.000000  
+23     0.0      0.0  5           0.000000           0.000000  
+24     0.0      0.0  5           0.000000           0.000000  
+25     0.0      0.0  5           0.000000           0.000000  
+26     0.0      0.0  5           0.000000           0.000000  
+27     0.0      0.0  5           0.000000           0.000000  
+28     0.0      0.0  5           0.000000           0.000000  
+29     0.0      0.0  5           0.000000           0.000000  
+30     0.0      0.0  5           0.000000           0.000000  
+31     0.0      0.0  5           0.000000           0.000000  
+32     0.0      0.0  5           0.000000           0.000000  
+33     0.0      0.0  5           0.000000           0.000000  
+34     0.0      0.0  5           0.000000           0.000000  
+35     0.0      0.0  5           0.000000           0.000000  
+36     0.0      0.0  5           0.000000           0.000000  
+37     0.0      0.0  5           0.000000           0.000000  
+38  2000.0   2000.0  5           0.166667           0.090909  
+39     0.0      0.0  5           0.000000           0.000000  
+40     0.0      0.0  5           0.000000           0.000000  
+41     0.0      0.0  5           0.000000           0.000000  
+\end{APACode}
+\begin{APACode}
+       scenario                        variable  median_L_1  median_L_2  \
+0       neutral                         acv_usd     11000.0     11000.0   
+1       neutral                annual_churn_pct         7.0         7.0   
+2       neutral  avg_implementation_time_months         3.0         3.0   
+3       neutral                         cac_usd     15000.0     15000.0   
+4       neutral                customers_year_1         3.0         3.0   
+5       neutral                customers_year_2         6.0         6.0   
+6       neutral                customers_year_3        10.0        10.0   
+7    optimistic                         acv_usd     14000.0     14000.0   
+8    optimistic                annual_churn_pct         4.0         4.0   
+9    optimistic  avg_implementation_time_months         2.0         2.0   
+10   optimistic                         cac_usd     15000.0     15000.0   
+11   optimistic                customers_year_1         6.0         6.0   
+12   optimistic                customers_year_2        12.0        12.0   
+13   optimistic                customers_year_3        20.0        20.0   
+14  pessimistic                         acv_usd      9000.0      9000.0   
+15  pessimistic                annual_churn_pct        12.0        12.0   
+16  pessimistic  avg_implementation_time_months         4.0         4.0   
+17  pessimistic                         cac_usd     12000.0     12000.0   
+18  pessimistic                customers_year_1         1.0         1.0   
+19  pessimistic                customers_year_2         2.0         2.0   
+20  pessimistic                customers_year_3         3.0         3.0   
+
+    diff_median_L  median_U_1  median_U_2  diff_median_U  
+0             0.0     15000.0     15000.0            0.0  
+1             0.0        14.0        14.0            0.0  
+2             0.0         6.0         6.0            0.0  
+3             0.0     28000.0     28000.0            0.0  
+4             0.0         6.0         6.0            0.0  
+5             0.0        12.0        12.0            0.0  
+6             0.0        18.0        18.0            0.0  
+7             0.0     22000.0     22000.0            0.0  
+8             0.0         9.0         9.0            0.0  
+9             0.0         4.0         4.0            0.0  
+10            0.0     30000.0     30000.0            0.0  
+11            0.0        10.0        10.0            0.0  
+12            0.0        22.0        22.0            0.0  
+13            0.0        35.0        35.0            0.0  
+14            0.0     12000.0     12000.0            0.0  
+15            0.0        22.0        22.0            0.0  
+16            0.0         7.0         7.0            0.0  
+17            0.0     22000.0     22000.0            0.0  
+18            0.0         3.0         3.0            0.0  
+19            0.0         5.0         5.0            0.0  
+20            0.0         7.0         7.0            0.0  
+\end{APACode}
+
+\subparagraph{Output (celda 68, exec 42)}
+\begin{APACode}
+    round_id     scenario                        variable  median_L  median_U  \
+21         2      neutral                         acv_usd   11000.0   15000.0   
+22         2      neutral                annual_churn_pct       7.0      14.0   
+23         2      neutral  avg_implementation_time_months       3.0       6.0   
+24         2      neutral                         cac_usd   15000.0   28000.0   
+25         2      neutral                customers_year_1       3.0       6.0   
+26         2      neutral                customers_year_2       6.0      12.0   
+27         2      neutral                customers_year_3      10.0      18.0   
+28         2   optimistic                         acv_usd   14000.0   22000.0   
+29         2   optimistic                annual_churn_pct       4.0       9.0   
+30         2   optimistic  avg_implementation_time_months       2.0       4.0   
+31         2   optimistic                         cac_usd   15000.0   30000.0   
+32         2   optimistic                customers_year_1       6.0      10.0   
+33         2   optimistic                customers_year_2      12.0      22.0   
+34         2   optimistic                customers_year_3      20.0      35.0   
+35         2  pessimistic                         acv_usd    9000.0   12000.0   
+36         2  pessimistic                annual_churn_pct      12.0      22.0   
+37         2  pessimistic  avg_implementation_time_months       4.0       7.0   
+38         2  pessimistic                         cac_usd   12000.0   22000.0   
+39         2  pessimistic                customers_year_1       1.0       3.0   
+40         2  pessimistic                customers_year_2       2.0       5.0   
+41         2  pessimistic                customers_year_3       3.0       7.0   
+
+     iqr_L   iqr_U  n  iqr_over_median_L  iqr_over_median_U  
+21     0.0     0.0  5           0.000000           0.000000  
+22     0.0     0.0  5           0.000000           0.000000  
+23     0.0     0.0  5           0.000000           0.000000  
+24     0.0     0.0  5           0.000000           0.000000  
+25     0.0     0.0  5           0.000000           0.000000  
+26     0.0     0.0  5           0.000000           0.000000  
+27     0.0     0.0  5           0.000000           0.000000  
+28     0.0     0.0  5           0.000000           0.000000  
+29     0.0     0.0  5           0.000000           0.000000  
+30     0.0     0.0  5           0.000000           0.000000  
+31     0.0     0.0  5           0.000000           0.000000  
+32     0.0     0.0  5           0.000000           0.000000  
+33     0.0     0.0  5           0.000000           0.000000  
+34     0.0     0.0  5           0.000000           0.000000  
+35     0.0     0.0  5           0.000000           0.000000  
+36     0.0     0.0  5           0.000000           0.000000  
+37     0.0     0.0  5           0.000000           0.000000  
+38  2000.0  2000.0  5           0.166667           0.090909  
+39     0.0     0.0  5           0.000000           0.000000  
+40     0.0     0.0  5           0.000000           0.000000  
+41     0.0     0.0  5           0.000000           0.000000  
+\end{APACode}
+
