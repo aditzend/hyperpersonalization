@@ -272,55 +272,56 @@
 \contentsline {paragraph}{Estadísticas de la ronda 2}{225}{section*.273}%
 \contentsline {subparagraph}{\relax }{226}{section*.274}%
 \contentsline {subparagraph}{\relax }{229}{section*.275}%
-\contentsline {subsection}{Proyección de costos}{232}{section*.276}%
-\contentsline {subsubsection}{Desarrollo del sistema}{232}{section*.277}%
-\contentsline {paragraph}{Endpoint de generación de contexto hiperpersonalizado}{232}{section*.278}%
-\contentsline {paragraph}{Módulo agencial de consulta de información personal}{232}{section*.279}%
-\contentsline {paragraph}{Conectores a bases de datos más difundidas}{232}{section*.280}%
-\contentsline {paragraph}{Conectores a CRMs y ERPs más conocidos}{233}{section*.281}%
-\contentsline {paragraph}{Módulo de configuración con interfaz gráfica}{233}{section*.282}%
-\contentsline {paragraph}{Contador de uso}{233}{section*.283}%
-\contentsline {paragraph}{Resumen}{233}{section*.284}%
-\contentsline {subsubsection}{Implementación}{235}{section*.285}%
-\contentsline {paragraph}{Desglose de tareas por perfil}{235}{section*.286}%
-\contentsline {paragraph}{Costo total por implementación}{236}{section*.287}%
-\contentsline {subsubsection}{Soporte y monitoreo}{236}{section*.288}%
-\contentsline {paragraph}{Roles y costos asociados}{236}{section*.289}%
-\contentsline {paragraph}{Costo mensual}{237}{section*.290}%
-\contentsline {subsubsection}{Costos fijos}{237}{section*.291}%
-\contentsline {paragraph}{Recursos humanos}{237}{section*.292}%
-\contentsline {subparagraph}{\relax }{237}{section*.293}%
-\contentsline {subparagraph}{\relax }{237}{section*.294}%
-\contentsline {subparagraph}{\relax }{237}{section*.295}%
-\contentsline {subparagraph}{\relax }{237}{section*.296}%
-\contentsline {subparagraph}{\relax }{237}{section*.297}%
-\contentsline {subparagraph}{\relax }{237}{section*.298}%
-\contentsline {subparagraph}{\relax }{237}{section*.299}%
-\contentsline {subsubsection}{Infraestructura y operación}{239}{section*.300}%
-\contentsline {paragraph}{Hosting y Servidores en la Nube}{239}{section*.301}%
-\contentsline {paragraph}{Herramientas de Monitoreo y Gestión}{239}{section*.302}%
-\contentsline {subparagraph}{\relax }{239}{section*.303}%
-\contentsline {subsubsection}{Resumen}{239}{section*.304}%
-\contentsline {subsubsection}{Otros costos variables}{239}{section*.305}%
-\contentsline {paragraph}{Publicidad, prensa y marketing}{239}{section*.306}%
-\contentsline {paragraph}{Gastos generales}{239}{section*.307}%
-\contentsline {subsection}{Evaluación Financiera}{240}{section*.308}%
-\contentsline {subsubsection}{Márgenes de contribución}{240}{section*.309}%
-\contentsline {paragraph}{Margen de contribución por Implementación}{240}{section*.310}%
-\contentsline {paragraph}{Margen de contribución por licencia}{240}{section*.311}%
-\contentsline {subsubsection}{Tasas para la valuación del proyecto}{240}{section*.312}%
-\contentsline {paragraph}{Cálculo de la tasa de descuento con el método CAPM}{241}{section*.313}%
-\contentsline {paragraph}{Prima de riesgo para Argentina}{242}{section*.314}%
-\contentsline {paragraph}{Riesgo País}{242}{section*.315}%
-\contentsline {paragraph}{Cálculo del costo del capital}{242}{section*.316}%
-\contentsline {subsubsection}{Evaluación monetaria del proyecto}{242}{section*.317}%
-\contentsline {subparagraph}{\relax }{242}{section*.318}%
-\contentsline {paragraph}{Estados de resultados proforma}{243}{section*.319}%
-\contentsline {paragraph}{Balances proforma}{244}{section*.320}%
-\contentsline {paragraph}{Flujo de fondos}{245}{section*.321}%
-\contentsline {paragraph}{Valuación y viabilidad del proyecto}{245}{section*.322}%
-\contentsline {paragraph}{Flujos de fondos proyectados}{245}{section*.323}%
-\contentsline {paragraph}{Cálculo del VAN}{245}{section*.324}%
-\contentsline {paragraph}{Cálculo del TIR}{245}{section*.325}%
-\contentsline {paragraph}{VAN}{246}{section*.326}%
-\contentsline {section}{Bibliografía}{247}{section*.327}%
+\contentsline {paragraph}{Conclusiones}{231}{section*.276}%
+\contentsline {subsection}{Proyección de costos}{233}{section*.277}%
+\contentsline {subsubsection}{Desarrollo del sistema}{233}{section*.278}%
+\contentsline {paragraph}{Endpoint de generación de contexto hiperpersonalizado}{233}{section*.279}%
+\contentsline {paragraph}{Módulo agencial de consulta de información personal}{233}{section*.280}%
+\contentsline {paragraph}{Conectores a bases de datos más difundidas}{233}{section*.281}%
+\contentsline {paragraph}{Conectores a CRMs y ERPs más conocidos}{234}{section*.282}%
+\contentsline {paragraph}{Módulo de configuración con interfaz gráfica}{234}{section*.283}%
+\contentsline {paragraph}{Contador de uso}{234}{section*.284}%
+\contentsline {paragraph}{Resumen}{234}{section*.285}%
+\contentsline {subsubsection}{Implementación}{236}{section*.286}%
+\contentsline {paragraph}{Desglose de tareas por perfil}{236}{section*.287}%
+\contentsline {paragraph}{Costo total por implementación}{237}{section*.288}%
+\contentsline {subsubsection}{Soporte y monitoreo}{237}{section*.289}%
+\contentsline {paragraph}{Roles y costos asociados}{237}{section*.290}%
+\contentsline {paragraph}{Costo mensual}{238}{section*.291}%
+\contentsline {subsubsection}{Costos fijos}{238}{section*.292}%
+\contentsline {paragraph}{Recursos humanos}{238}{section*.293}%
+\contentsline {subparagraph}{\relax }{238}{section*.294}%
+\contentsline {subparagraph}{\relax }{238}{section*.295}%
+\contentsline {subparagraph}{\relax }{238}{section*.296}%
+\contentsline {subparagraph}{\relax }{238}{section*.297}%
+\contentsline {subparagraph}{\relax }{238}{section*.298}%
+\contentsline {subparagraph}{\relax }{238}{section*.299}%
+\contentsline {subparagraph}{\relax }{238}{section*.300}%
+\contentsline {subsubsection}{Infraestructura y operación}{240}{section*.301}%
+\contentsline {paragraph}{Hosting y Servidores en la Nube}{240}{section*.302}%
+\contentsline {paragraph}{Herramientas de Monitoreo y Gestión}{240}{section*.303}%
+\contentsline {subparagraph}{\relax }{240}{section*.304}%
+\contentsline {subsubsection}{Resumen}{240}{section*.305}%
+\contentsline {subsubsection}{Otros costos variables}{240}{section*.306}%
+\contentsline {paragraph}{Publicidad, prensa y marketing}{240}{section*.307}%
+\contentsline {paragraph}{Gastos generales}{240}{section*.308}%
+\contentsline {subsection}{Evaluación Financiera}{241}{section*.309}%
+\contentsline {subsubsection}{Márgenes de contribución}{241}{section*.310}%
+\contentsline {paragraph}{Margen de contribución por Implementación}{241}{section*.311}%
+\contentsline {paragraph}{Margen de contribución por licencia}{241}{section*.312}%
+\contentsline {subsubsection}{Tasas para la valuación del proyecto}{241}{section*.313}%
+\contentsline {paragraph}{Cálculo de la tasa de descuento con el método CAPM}{242}{section*.314}%
+\contentsline {paragraph}{Prima de riesgo para Argentina}{243}{section*.315}%
+\contentsline {paragraph}{Riesgo País}{243}{section*.316}%
+\contentsline {paragraph}{Cálculo del costo del capital}{243}{section*.317}%
+\contentsline {subsubsection}{Evaluación monetaria del proyecto}{243}{section*.318}%
+\contentsline {subparagraph}{\relax }{243}{section*.319}%
+\contentsline {paragraph}{Estados de resultados proforma}{244}{section*.320}%
+\contentsline {paragraph}{Balances proforma}{245}{section*.321}%
+\contentsline {paragraph}{Flujo de fondos}{246}{section*.322}%
+\contentsline {paragraph}{Valuación y viabilidad del proyecto}{246}{section*.323}%
+\contentsline {paragraph}{Flujos de fondos proyectados}{246}{section*.324}%
+\contentsline {paragraph}{Cálculo del VAN}{246}{section*.325}%
+\contentsline {paragraph}{Cálculo del TIR}{246}{section*.326}%
+\contentsline {paragraph}{VAN}{247}{section*.327}%
+\contentsline {section}{Bibliografía}{248}{section*.328}%
