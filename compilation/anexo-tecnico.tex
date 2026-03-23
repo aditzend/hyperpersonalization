@@ -1,0 +1,49 @@
+\section{Anexo técnico}
+\label{anexo:tecnico}
+
+\subsection{Primera iteración: Redis, FAISS y LangChain}
+\label{anexo:primera-iteracion-redis-faiss}
+
+\begin{APACode}
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+import os
+import redis
+
+from dotenv import load_dotenv
+load_dotenv()
+redis_host = os.getenv("REDIS_HOST") or "localhost"
+redis_port = os.getenv("REDIS_PORT") or 6379
+
+def connect_to_redis():
+    return redis.Redis(host=redis_host, port=redis_port, db=0)
+
+def check_index_existance(index="main") -> bool:
+    redis_conn = connect_to_redis()
+    index_key = f"indexes:{index}"
+    if redis_conn.get(index_key) is None:
+        return False
+    else:
+        return True
+
+messages = ["Hello, my name is John. I am a software engineer."]
+index = "main"
+
+# FAISS
+# langchain.vectorstores.faiss.FAISS
+# Creamos un index general y accedemos a la data del usuario por metadata.
+# {person_id:str}
+
+embeddings = OpenAIEmbeddings()
+metadatas = [{"person_id": "john", "person_name": "John"}]
+conversations = FAISS.from_texts(texts=["hi"], embedding=embeddings, 
+                                metadatas=metadatas)
+
+metadatas = [{"person_id": "mary", "person_name": "Mary"}]
+conversations.add_texts(texts=["hi whats up?"], metadatas=metadatas)
+# ['027065ea-f01a-448d-aae2-93c05ca62768']
+
+conversations.similarity_search(query="hi", k=2, filter={"person_id": "mary"})
+# [Document(page_content='hi whats up?', 
+#           metadata={'person_id': 'mary', 'person_name': 'Mary'})]
+\end{APACode}
