@@ -305,23 +305,17 @@
 \contentsline {subsubsection}{Otros costos variables}{240}{section*.306}%
 \contentsline {paragraph}{Publicidad, prensa y marketing}{240}{section*.307}%
 \contentsline {paragraph}{Gastos generales}{240}{section*.308}%
-\contentsline {subsection}{Evaluación Financiera}{241}{section*.309}%
-\contentsline {subsubsection}{Márgenes de contribución}{241}{section*.310}%
-\contentsline {paragraph}{Margen de contribución por Implementación}{241}{section*.311}%
-\contentsline {paragraph}{Margen de contribución por licencia}{241}{section*.312}%
-\contentsline {subsubsection}{Tasas para la valuación del proyecto}{241}{section*.313}%
-\contentsline {paragraph}{Cálculo de la tasa de descuento con el método CAPM}{242}{section*.314}%
-\contentsline {paragraph}{Prima de riesgo para Argentina}{243}{section*.315}%
-\contentsline {paragraph}{Riesgo País}{243}{section*.316}%
-\contentsline {paragraph}{Cálculo del costo del capital}{243}{section*.317}%
-\contentsline {subsubsection}{Evaluación monetaria del proyecto}{243}{section*.318}%
-\contentsline {subparagraph}{\relax }{243}{section*.319}%
-\contentsline {paragraph}{Estados de resultados proforma}{244}{section*.320}%
-\contentsline {paragraph}{Balances proforma}{245}{section*.321}%
-\contentsline {paragraph}{Flujo de fondos}{246}{section*.322}%
-\contentsline {paragraph}{Valuación y viabilidad del proyecto}{246}{section*.323}%
-\contentsline {paragraph}{Flujos de fondos proyectados}{246}{section*.324}%
-\contentsline {paragraph}{Cálculo del VAN}{246}{section*.325}%
-\contentsline {paragraph}{Cálculo del TIR}{246}{section*.326}%
-\contentsline {paragraph}{VAN}{247}{section*.327}%
-\contentsline {section}{Bibliografía}{248}{section*.328}%
+\contentsline {subsection}{Evaluación financiera con churn, renovaciones e impago}{241}{section*.309}%
+\contentsline {subsubsection}{Supuestos de churn, retención y mora (renovaciones anuales)}{241}{section*.310}%
+\contentsline {paragraph}{Origen del churn}{241}{section*.311}%
+\contentsline {paragraph}{Mora / impago}{241}{section*.312}%
+\contentsline {paragraph}{Tabla de supuestos clave}{241}{section*.313}%
+\contentsline {subsubsection}{Modelo de renovaciones: dinámica de clientes activos}{241}{section*.314}%
+\contentsline {subsubsection}{Cálculos reproducibles (script)}{241}{section*.315}%
+\contentsline {subsubsection}{Estado de resultados proforma (escenario neutral con churn)}{244}{section*.316}%
+\contentsline {subsubsection}{FCFF re-calculado con churn, retención e impago}{244}{section*.317}%
+\contentsline {paragraph}{Definición}{244}{section*.318}%
+\contentsline {subsubsection}{VAN y TIR con churn incorporado}{244}{section*.319}%
+\contentsline {paragraph}{Resultados (escenario neutral)}{244}{section*.320}%
+\contentsline {paragraph}{Interpretación}{244}{section*.321}%
+\contentsline {section}{Bibliografía}{245}{section*.322}%
