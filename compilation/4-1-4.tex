@@ -6,33 +6,13 @@ En la notebook 4 se realiza un experimento utilizando Redis para almacenar y rec
 
 Se importan las librerías necesarias, como Redis para gestionar la base de datos en memoria, y FAISS para realizar búsquedas semánticas sobre los datos almacenados. También se configuran las variables de entorno necesarias, como el host y puerto de Redis.
 
-\begin{APACode}
-import os 
-import sys 
-import redis
-from dotenv import load_dotenv 
-load_dotenv()
-redis_host = os.getenv("REDIS_HOST") or "localhost" 
-redis_port = os.getenv("REDIS_PORT") or 6379
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-1}).
 
 \paragraph{Almacenamiento de Información en Redis}
 
 Se definen varios objetos de tipo JSON que representan a un usuario (en este caso llamado Jane) y sus respectivas sesiones de interacción con el sistema. Cada sesión contiene una serie de mensajes que fueron intercambiados entre el usuario y el sistema.
 
-\begin{APACode}
-from redis.commands.json.path import Path
-client = redis.Redis(host=redis_host, port=redis_port, db=0) 
-jane = {
-    'name': "Jane", 
-    'Age': 33,
-    'Location': "Chawton"
-}
-
-client.json().set('person:1', '$', jane)
-result = client.json().get('person:1') 
-print(result)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-2}).
 
 Ejemplo de estructura almacenada: \texttt{'session\_id': '10', 'person\_id': '10', 'name': 'Jane', 'messages': [\{'role': 'user', 'content': 'Hello'\}, \{'role': 'system', 'content': 'Hello 2'\}]}.
 
@@ -40,150 +20,37 @@ Ejemplo de estructura almacenada: \texttt{'session\_id': '10', 'person\_id': '10
 
 Se realizan consultas en Redis para recuperar una sesión particular del usuario, utilizando el \texttt{session\_id}. Esto permite obtener solo los datos de esa sesión sin necesidad de cargar toda la información del usuario.
 
-\begin{APACode}
-session_header = { 
-    'session_id': "10",
-    'person_id': "10",
-    'name': "Jane",
-    'messages': []
-}
-
-message1 = {
-    'role': "user", 
-    'content': "Hello"
-}
-message2 = {
-    'role': "system", 
-    'content': "Hello 2"
-}
-
-client.json().set('session:10', '$', session_header) 
-client.json().arrappend('session:10', '.messages', message1) 
-client.json().arrappend('session:10', '.messages', message2)
-
-result = client.json().get('session:10') 
-print(result)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-3}).
 
 \paragraph{Agregación de Mensajes a la Sesión}
 
 Se almacenan múltiples sesiones asociadas al mismo usuario, y se van añadiendo mensajes a cada sesión. La estructura de los mensajes incluye información sobre el rol (usuario o sistema) y el contenido del mensaje.
 
-\begin{APACode}
-session_header = { 
-    'session_id': "20",
-    'person_id': "10",
-    'name': "Jane",
-    'messages': []
-}
-
-message1 = {
-    'role': "user", 
-    'content': "holis"
-}
-message2 = {
-    'role': "system", 
-    'content': "re holis 2"
-}
-
-client.json().set('session:20', '$', session_header) 
-client.json().arrappend('session:20', '.messages', message1) 
-client.json().arrappend('session:20', '.messages', message2)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-4}).
 
 \paragraph{Almacenamiento en FAISS}
 
 Después de recuperar la información de las sesiones desde Redis, se convierte el contenido de los mensajes en texto plano, y se calculan los embeddings utilizando OpenAIEmbeddings. Los mensajes se almacenan en FAISS con metadatos que incluyen el \texttt{person\_id} y el \texttt{session\_id} del usuario, lo que permite filtrar las búsquedas por estos campos.
 
-\begin{APACode}
-from langchain.embeddings.openai import OpenAIEmbeddings 
-from langchain.vectorstores import FAISS
-
-index_name = "conversations"
-index_path = "../indexes/conversations" 
-embeddings = OpenAIEmbeddings()
-
-db = FAISS.load_local(folder_path=index_path, index_name=index_name, 
-                      embeddings=embeddings)
-
-session10 = client.json().get('session:10')
-
-metadatas = [{ 
-    'session_id': "10",
-    'person_id': "10",
-}]
-# turn json to plain text 
-content = session10['messages'] 
-str(content)
-
-db.add_texts(texts=[str(content)], embedding=embeddings, 
-             metadatas=metadatas)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-5}).
 
 \paragraph{Búsquedas Semánticas en FAISS}
 
 Se realizan varias consultas para buscar sesiones o mensajes específicos en función de una consulta de texto. FAISS busca por similitud semántica entre la consulta y los mensajes almacenados, devolviendo el mensaje más cercano. Por ejemplo, una consulta como \enquote{¿cuál es la primera sesión?} devuelve la sesión más relacionada según la similitud semántica de los mensajes.
 
-\begin{APACode}
-query = "cual es la segunda sesion?" 
-filter = {"person_id": "10"}
-db.similarity_search_with_score(query=query, embeddings=embeddings, 
-                                filter=filter, k=1)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-6}).
 
 \paragraph{Uso de Marcas Temporales para Mejorar la Búsqueda}
 
 Se añade un campo de marca temporal (timestamp) a los mensajes en formato semántico para poder identificar mejor el orden de los mensajes o sesiones, ya que solo con la similitud semántica no siempre se logra obtener resultados precisos en cuanto al orden cronológico.
 
-\begin{APACode}
-import datetime 
-import locale
-
-# Set the locale to Spanish 
-locale.setlocale(locale.LC_TIME, 'es_ES')
-
-timestamp = datetime.datetime.now()
-formatted_timestamp = timestamp.strftime('%A, %d de %B de %Y, %H:%M:%S') 
-print(formatted_timestamp)
-
-session_header = { 
-    'session_id': "1000",
-    'person_id': "1000",
-    'name': "Jane",
-    'messages': []
-}
-
-formatted_timestamp = "lunes, 17 de julio de 2023, 14:30:00" 
-message1 = {
-    'timestamp': formatted_timestamp, 
-    'role': "user",
-    'content': "Hello"
-}
-
-formatted_timestamp = "lunes, 17 de julio de 2023, 14:31:00"
-message2 = {
-    'timestamp': formatted_timestamp, 
-    'role': "system",
-    'content': "Hello 2"
-}
-
-client.json().set('session:1000', '$', session_header)
-client.json().arrappend('session:1000', '.messages', message1) 
-client.json().arrappend('session:1000', '.messages', message2)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-7}).
 
 \paragraph{Conclusiones de la cuarta iteración}
 
 El sistema devuelve los mensajes más similares a las consultas realizadas, basándose en la búsqueda semántica. Aunque la búsqueda semántica funciona bien, se observa que es necesario añadir marcas temporales o más contexto para mejorar los resultados en casos donde el orden de los mensajes es relevante.
 
-\begin{APACode}
-query = "lunes, 17 de julio de 2023, 14:31:00', 'role': 'system', 
-         'content': 'Hello 2'"
-
-filter = {"person_id": "1000"}
-db.similarity_search_with_score(query=query, embeddings=embeddings, 
-                                filter=filter, k=3)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-4-8}).
 
 
 La notebook 4 implementa un sistema que almacena sesiones de usuario en Redis, realiza búsquedas semánticas en FAISS basándose en los mensajes de esas sesiones, y mejora el proceso añadiendo marcas temporales para organizar los resultados cronológicamente. 

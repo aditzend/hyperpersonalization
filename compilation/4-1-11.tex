@@ -6,54 +6,7 @@ En la notebook 11 se implementa un experimento para extraer y organizar datos de
 
 Se utiliza FAISS para realizar la búsqueda semántica y OpenAI Embeddings para convertir los textos de las conversaciones en vectores. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI.
 
-\begin{APACode}
-import os
-import requests
-import json
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
-index_name = "conversations"
-index_path = "../indexes/conversations"
-embeddings = OpenAIEmbeddings()
-
-def gpt_system_user(
-    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
-):
-    """Para usar en notebooks"""
-    try:
-        response = requests.post(
-            url="https://api.openai.com/v1/chat/completions",
-            params={
-                "temperature": "0",
-            },
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
-            },
-            data=json.dumps(
-                {
-                    "model": model,
-                    "messages": [
-                        {"content": system_message, "role": "system"},
-                        {"content": user_message, "role": "user"},
-                    ]
-                }
-            ),
-            timeout=10,
-        )
-        choices = response.json()["choices"]
-        answer = {
-            "status_code": response.status_code,
-            "text": choices[0]["message"],
-        }
-        return answer
-    except requests.exceptions.RequestException:
-        print("HTTP Request failed")
-        return None
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-1}).
 
 \paragraph{Simulación de Conversaciones Familiares}
 
@@ -66,83 +19,13 @@ Ejemplos de mensajes:
     \item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años''.
 \end{itemize}
 
-\begin{APACode}
-condensed_contexts = [
-    {
-        "messages": [
-            {
-                "role": "user",
-                "content": "Voy a sacar un pasaje para la familia de buenos aires a cordoba"
-            },
-            {
-                "role": "system",
-                "content": "quienes son los pasajeros?"
-            },
-            {
-                "role": "user",
-                "content": "Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María"
-            },
-            {
-                "role": "system",
-                "content": "en que fecha quiere viajar?"
-            },
-            {
-                "role": "user",
-                "content": "del 20 de agosto al 30 de agosto"
-            },
-            {
-                "role": "system",
-                "content": "perfecto, salen el 20 de agosto a las 10:00 y vuelven el 30 de agosto a las 18:00. El precio total es $500"
-            },
-            {
-                "role": "user",
-                "content": "si"
-            },
-            {
-                "role": "system",
-                "content": "Gracias por su compra"
-            }
-        ],
-        "metadata": {
-            "session_id": "1",
-            "person_id": "20",
-            "context_id": "1",
-            "created_at": "20200825T12:00:00.000Z",
-        },
-    }
-]
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-2}).
 
 \paragraph{Extracción de Datos}
 
 Se utiliza un prompt diseñado para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, incluyendo nombres, edades y fechas de eventos. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior.
 
-\begin{APACode}
-db = FAISS.from_texts(texts=['notebook-11'], embedding=embeddings)
-for context in condensed_contexts:
-    messages = ''.join([str(message) for message in context['messages']])
-    extraction = gpt_system_user(
-        system_message="""
-Extract every meaningful information about the user from the provided conversation.
-Ask yourself, what happened in the conversation?
-What data about the user did you learn?
-At what date and time was this data gathered? Use this response format:
-{
-    DATA: `the meaningful information that you have learned about the user`,
-    CREATED_AT: `the date and time when this data was gathered`,
-    RELATIONSHIP: `the relationship between the user and the data that you have learned`,
-}
-
-Take a deep breath and work on this problem step-by-step.
-        """,
-        user_message=f"METADATA: ```{context['metadata']}``` CONVERSATION: ```{messages}```",
-        model="gpt-3.5-turbo",
-    )
-    db.add_texts(
-        texts=[extraction['text']['content']],
-        metadatas=[context['metadata']],
-    )
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-3}).
 
 Ejemplo de extracción:
 ``Voy a sacar un pasaje para la familia de Buenos Aires a Córdoba, Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años.''
@@ -151,26 +34,7 @@ Ejemplo de extracción:
 
 Se realiza una consulta al sistema preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde correctamente que Ana tiene 20 años. Sin embargo, no razona correctamente sobre el año actual, que es 2023, lo que significa que Ana debería tener 23 años. Este error revela una falta de ajuste cronológico en el razonamiento del modelo.
 
-\begin{APACode}
-user_input_3 = "que edad tiene mi hija mayor?"
-filter = {"person_id": "20"}
-db_results_3 = db.similarity_search_with_score(
-    query=user_input_3, embeddings=embeddings, filter=filter, k=1
-)
-context_3 = "{ message: " + db_results_3[0][0].page_content + ", metadata: " + str(db_results_3[0][0].metadata) + " }"
-
-system_prompt_3 = f"""
-You are a personal assistant. You will find past conversations between you and the user between backticks.
-Use them to answer the user's question.
-To reason about dates, have in mind that today is September 13th, 2023.
-You are now located in Buenos Aires, Argentina.
-Take a deep breath and work on this problem step-by-step.
-```{context_3}```
-"""
-
-answer_3 = gpt_system_user(system_message=system_prompt_3, user_message=user_input_3)
-print(answer_3["text"]["content"])
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-4}).
 
 \paragraph{Conclusiones de la undécima iteración}
 

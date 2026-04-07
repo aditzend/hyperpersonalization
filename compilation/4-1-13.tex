@@ -6,131 +6,19 @@ En la notebook 13\footnote{Disponible en: \url{https://github.com/aditzend/hyper
 
 Se utilizan FAISS para realizar las búsquedas semánticas y OpenAI Embeddings para convertir los mensajes en vectores. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
 
-\begin{APACode}
-import os
-import requests
-import json
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
-index_name = "conversations"
-index_path = "../indexes/conversations"
-embeddings = OpenAIEmbeddings()
-
-def gpt_system_user(
-    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
-):
-    """Para usar en notebooks"""
-    try:
-        response = requests.post(
-            url="https://api.openai.com/v1/chat/completions",
-            params={"temperature": "0"},
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
-            },
-            data=json.dumps({
-                "model": model,
-                "messages": [
-                    {"content": system_message, "role": "system"},
-                    {"content": user_message, "role": "user"},
-                ]
-            }),
-            timeout=10,
-        )
-        choices = response.json()["choices"]
-        answer = {
-            "status_code": response.status_code,
-            "text": choices[0]["message"],
-        }
-        return answer
-    except requests.exceptions.RequestException:
-        print("HTTP Request failed")
-        return None
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-1}).
 
 \paragraph{Simulación de Conversaciones}
 
 Se crean varios contextos de conversación en los que el usuario interactúa con el asistente. En una de ellas, el usuario menciona que va a comprar pasajes para su familia de Buenos Aires a Córdoba, proporcionando detalles sobre los miembros de la familia (Ana, 20 años; Juan, 10 años) y las fechas de salida y regreso. Otra conversación incluye información sobre el programa de viajero frecuente, donde el usuario busca subir de categoría comprando millas.
 
-\begin{APACode}
-condensed_contexts = [
-    {
-        "messages": [
-            {
-                "role": "user",
-                "content": "Voy a sacar un pasaje para la familia de buenos aires a cordoba"
-            },
-            {
-                "role": "system",
-                "content": "quienes son los pasajeros?"
-            },
-            {
-                "role": "user",
-                "content": "Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María"
-            },
-            {
-                "role": "system",
-                "content": "en que fecha quiere viajar?"
-            },
-            {
-                "role": "user",
-                "content": "del 20 de agosto al 30 de agosto"
-            },
-            {
-                "role": "system",
-                "content": "perfecto, salen el 20 de agosto a las 10:00 y vuelven el 30 de agosto a las 18:00. El precio total es $1000"
-            },
-            {
-                "role": "user",
-                "content": "si"
-            },
-            {
-                "role": "system",
-                "content": "Gracias por su compra"
-            }
-        ],
-        "metadata": {
-            "session_id": "1",
-            "person_id": "20",
-            "context_id": "1",
-            "created_at": "20200825T12:00:00.000Z",
-        },
-    }
-]
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-2}).
 
 \paragraph{Extracción de Datos}
 
 Se utiliza un modelo GPT-3.5 para extraer datos relevantes de las conversaciones, como los nombres, edades, y fechas de viaje, así como detalles sobre las millas acumuladas en el programa de viajero frecuente. Esta información se almacena en FAISS para ser recuperada cuando el usuario realice consultas futuras.
 
-\begin{APACode}
-for context in condensed_contexts:
-    messages = ''.join([str(message) for message in context['messages']])
-    extraction = gpt_system_user(
-        system_message="""
-        Extract every meaningful information about the user from the provided conversation. 
-        Ask yourself, what happened in the conversation?
-        What data about the user did you learn?
-        At what date and time was this data gathered?
-        
-        Create a summary of everything you learned about the user. """,
-        user_message=f"METADATA: ```{context['metadata']} CONVERSATION: ```{messages}```",
-        model="gpt-3.5-turbo",
-    )
-    
-    if extraction['status_code'] != 200:
-        print(f"Error: {extraction['text']}")
-        continue
-    else:
-        print(f"{extraction['text']['content']}")
-        db.add_texts(
-            texts=[extraction['text']['content']],
-            metadatas=[context['metadata']],
-        )
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-3}).
 
 Un ejemplo de extracción generada por el sistema:
 
@@ -144,32 +32,7 @@ Se realizan varias consultas al sistema para evaluar su capacidad de recuperaci�
 
 \textbf{Consulta sobre cantidad de hijos}
 
-\begin{APACode}
-user_input_3 = "cuantos hijos mios conoces?"
-filter = {"person_id": "20"}
-db_results_3 = db.similarity_search_with_score(
-    query=user_input_3, 
-    embeddings=embeddings, 
-    filter=filter, 
-    k=1
-)
-context_3 = "{ message: " + db_results_3[0][0].page_content + ", metadata: " + str(db_results_3[0][0].metadata) + " }"
-
-system_prompt_3 = f"""
-You are a personal assistant. You will find past conversations between you and the user between backticks. 
-Use them to answer the user's question.
-To reason about dates, have in mind that today is September 13th, 2023. 
-Wait before answering, check when the data was gathered first.
-Take a deep breath and work on this problem step-by-step.
-```{context_3}```
-"""
-
-answer_3 = gpt_system_user(
-    system_message=system_prompt_3, 
-    user_message=user_input_3, 
-    model="gpt-4"
-)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-4}).
 
 \textbf{Razonamiento Cronológico y Contextual}
 
@@ -191,25 +54,7 @@ GPT-4 demuestra un razonamiento cronológico superior, ajustando correctamente l
 
 El sistema también fue evaluado con consultas que requieren combinar información de diferentes conversaciones:
 
-\begin{APACode}
-user_input = "cuantas millas tenia yo antes de la ultima compra?"
-filter = {"person_id": "20"}
-db_results = db.similarity_search_with_score(
-    query=user_input, 
-    embeddings=embeddings, 
-    filter=filter, 
-    k=2
-)
-
-context_k2 = [f'\n {db_results[i][0].page_content} {db_results[i][0].metadata}\n---------------\n\n' 
-              for i in range(len(db_results))]
-
-answer = gpt_system_user(
-    system_message=system_prompt, 
-    user_message=user_input, 
-    model="gpt-4"
-)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-5}).
 
 \textbf{Respuesta del sistema:}
 \begin{quote}

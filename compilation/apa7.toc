@@ -1,320 +1,497 @@
 \xpg@aux {}{spanish}
-\contentsline {section}{Resumen Ejecutivo}{6}{section*.3}%
-\contentsline {subsection}{Introducción}{6}{section*.4}%
-\contentsline {subsubsection}{Planteo del Problema}{6}{section*.5}%
-\contentsline {paragraph}{Sin personalización}{6}{section*.6}%
-\contentsline {paragraph}{Hiperpersonalización}{7}{section*.7}%
-\contentsline {subsubsection}{Justificación e Impacto}{7}{section*.8}%
-\contentsline {subsection}{Metodología}{8}{section*.9}%
-\contentsline {subsubsection}{Etapas de trabajo}{8}{section*.10}%
-\contentsline {subsubsection}{Enfoque Experimental}{8}{section*.11}%
-\contentsline {subsubsection}{Patrón de Desarrollo}{9}{section*.12}%
-\contentsline {subsection}{Resultados}{9}{section*.13}%
-\contentsline {subsubsection}{Arquitectura del Sistema}{9}{section*.14}%
-\contentsline {subsubsection}{Componentes del Sistema}{10}{section*.15}%
-\contentsline {subsubsection}{Validación Experimental}{10}{section*.16}%
-\contentsline {subsection}{Conclusiones}{11}{section*.17}%
-\contentsline {subsubsection}{Viabilidad Técnica}{11}{section*.18}%
-\contentsline {subsubsection}{Limitaciones Identificadas}{11}{section*.19}%
-\contentsline {subsubsection}{Proyecciones Futuras}{11}{section*.20}%
-\contentsline {subsubsection}{Impacto y Contribuciones}{12}{section*.21}%
-\contentsline {section}{Introducción / Planteo del Problema}{14}{section*.22}%
-\contentsline {subsection}{Motivaciones}{14}{section*.23}%
-\contentsline {subsubsection}{Antecedentes}{15}{section*.24}%
-\contentsline {subsubsection}{Planteo del Problema}{18}{section*.25}%
-\contentsline {paragraph}{Sin personalización}{18}{section*.26}%
-\contentsline {paragraph}{Personalización}{18}{section*.27}%
-\contentsline {paragraph}{Hiperpersonalización}{19}{section*.28}%
-\contentsline {section}{Objetivos e Hipótesis}{20}{section*.29}%
-\contentsline {subsection}{Hipótesis}{20}{section*.30}%
-\contentsline {subsection}{Objetivos}{20}{section*.31}%
-\contentsline {section}{Metodología}{21}{section*.32}%
-\contentsline {subsection}{Etapas de trabajo}{21}{section*.33}%
-\contentsline {section}{Desarrollo}{22}{section*.34}%
-\contentsline {subsection}{Experimentos de \textit {Prompting} sobre problemas de alcance muy focalizado}{22}{section*.35}%
-\contentsline {subsubsection}{Primera Iteración}{24}{section*.36}%
-\contentsline {paragraph}{Herramientas a utilizar}{24}{section*.37}%
-\contentsline {subparagraph}{\relax }{24}{section*.38}%
-\contentsline {subparagraph}{\relax }{25}{section*.39}%
-\contentsline {subparagraph}{\relax }{26}{section*.40}%
-\contentsline {paragraph}{Búsqueda por similitud utilizando la distancia coseno}{27}{section*.41}%
-\contentsline {paragraph}{Desarrollo de la primera iteración}{28}{section*.42}%
-\contentsline {subsubsection}{Creación de una Base de Mensajes del Usuario y Activación de Filtros}{30}{section*.43}%
-\contentsline {paragraph}{Importación de Librerías y Configuración}{30}{section*.44}%
-\contentsline {paragraph}{Procesamiento y Almacenamiento}{30}{section*.45}%
-\contentsline {paragraph}{Búsqueda por Similitud Semántica}{31}{section*.46}%
-\contentsline {paragraph}{Conclusiones de la segunda iteración}{32}{section*.47}%
-\contentsline {subsubsection}{Similitud entre consultas y extractos de conversaciones}{33}{section*.48}%
-\contentsline {paragraph}{Carga de librerías y configuración}{33}{section*.49}%
-\contentsline {paragraph}{Carga de un índice previamente almacenado}{34}{section*.50}%
-\contentsline {paragraph}{Adición de mensajes a la base vectorial}{34}{section*.51}%
-\contentsline {subparagraph}{\relax }{34}{section*.52}%
-\contentsline {paragraph}{Realización de consultas semánticas}{35}{section*.53}%
-\contentsline {paragraph}{Conclusiones de la tercera iteración}{37}{section*.54}%
-\contentsline {subsubsection}{Implementación de Búsquedas Semánticas con Redis y FAISS para la Gestión de Sesiones de Usuario}{38}{section*.55}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{38}{section*.56}%
-\contentsline {paragraph}{Almacenamiento de Información en Redis}{38}{section*.57}%
-\contentsline {paragraph}{Recuperación de una Sesión Específica}{39}{section*.58}%
-\contentsline {paragraph}{Agregación de Mensajes a la Sesión}{39}{section*.59}%
-\contentsline {paragraph}{Almacenamiento en FAISS}{40}{section*.60}%
-\contentsline {paragraph}{Búsquedas Semánticas en FAISS}{41}{section*.61}%
-\contentsline {paragraph}{Uso de Marcas Temporales para Mejorar la Búsqueda}{41}{section*.62}%
-\contentsline {paragraph}{Conclusiones de la cuarta iteración}{43}{section*.63}%
+\contentsline {section}{Resumen Ejecutivo}{12}{section*.3}%
+\contentsline {subsection}{Introducción}{12}{section*.4}%
+\contentsline {subsubsection}{Planteo del Problema}{12}{section*.5}%
+\contentsline {paragraph}{Sin personalización}{12}{section*.6}%
+\contentsline {paragraph}{Hiperpersonalización}{13}{section*.7}%
+\contentsline {subsubsection}{Justificación e Impacto}{13}{section*.8}%
+\contentsline {subsection}{Metodología}{14}{section*.9}%
+\contentsline {subsubsection}{Etapas de trabajo}{14}{section*.10}%
+\contentsline {subsubsection}{Enfoque Experimental}{14}{section*.11}%
+\contentsline {subsubsection}{Patrón de Desarrollo}{15}{section*.12}%
+\contentsline {subsection}{Resultados}{15}{section*.13}%
+\contentsline {subsubsection}{Arquitectura del Sistema}{15}{section*.14}%
+\contentsline {subsubsection}{Componentes del Sistema}{16}{section*.15}%
+\contentsline {subsubsection}{Validación Experimental}{16}{section*.16}%
+\contentsline {subsection}{Conclusiones}{17}{section*.17}%
+\contentsline {subsubsection}{Viabilidad Técnica}{17}{section*.18}%
+\contentsline {subsubsection}{Limitaciones Identificadas}{17}{section*.19}%
+\contentsline {subsubsection}{Proyecciones Futuras}{17}{section*.20}%
+\contentsline {subsubsection}{Impacto y Contribuciones}{18}{section*.21}%
+\contentsline {section}{Introducción / Planteo del Problema}{20}{section*.22}%
+\contentsline {subsection}{Motivaciones}{20}{section*.23}%
+\contentsline {subsubsection}{Antecedentes}{21}{section*.24}%
+\contentsline {subsubsection}{Planteo del Problema}{24}{section*.25}%
+\contentsline {paragraph}{Sin personalización}{24}{section*.26}%
+\contentsline {paragraph}{Personalización}{24}{section*.27}%
+\contentsline {paragraph}{Hiperpersonalización}{25}{section*.28}%
+\contentsline {section}{Objetivos e Hipótesis}{26}{section*.29}%
+\contentsline {subsection}{Hipótesis}{26}{section*.30}%
+\contentsline {subsection}{Objetivos}{26}{section*.31}%
+\contentsline {section}{Metodología}{27}{section*.32}%
+\contentsline {subsection}{Etapas de trabajo}{27}{section*.33}%
+\contentsline {section}{Desarrollo}{28}{section*.34}%
+\contentsline {subsection}{Experimentos de \textit {Prompting} sobre problemas de alcance muy focalizado}{28}{section*.35}%
+\contentsline {subsubsection}{Primera Iteración}{30}{section*.36}%
+\contentsline {paragraph}{Herramientas a utilizar}{30}{section*.37}%
+\contentsline {subparagraph}{\relax }{30}{section*.38}%
+\contentsline {subparagraph}{\relax }{31}{section*.39}%
+\contentsline {subparagraph}{\relax }{32}{section*.40}%
+\contentsline {paragraph}{Búsqueda por similitud utilizando la distancia coseno}{33}{section*.41}%
+\contentsline {paragraph}{Desarrollo de la primera iteración}{34}{section*.42}%
+\contentsline {subsubsection}{Creación de una Base de Mensajes del Usuario y Activación de Filtros}{36}{section*.43}%
+\contentsline {paragraph}{Importación de Librerías y Configuración}{36}{section*.44}%
+\contentsline {paragraph}{Procesamiento y Almacenamiento}{36}{section*.45}%
+\contentsline {paragraph}{Búsqueda por Similitud Semántica}{37}{section*.46}%
+\contentsline {paragraph}{Conclusiones de la segunda iteración}{37}{section*.47}%
+\contentsline {subsubsection}{Similitud entre consultas y extractos de conversaciones}{38}{section*.48}%
+\contentsline {paragraph}{Carga de librerías y configuración}{38}{section*.49}%
+\contentsline {paragraph}{Carga de un índice previamente almacenado}{38}{section*.50}%
+\contentsline {paragraph}{Adición de mensajes a la base vectorial}{38}{section*.51}%
+\contentsline {subparagraph}{\relax }{38}{section*.52}%
+\contentsline {paragraph}{Realización de consultas semánticas}{39}{section*.53}%
+\contentsline {paragraph}{Conclusiones de la tercera iteración}{39}{section*.54}%
+\contentsline {subsubsection}{Implementación de Búsquedas Semánticas con Redis y FAISS para la Gestión de Sesiones de Usuario}{41}{section*.55}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{41}{section*.56}%
+\contentsline {paragraph}{Almacenamiento de Información en Redis}{41}{section*.57}%
+\contentsline {paragraph}{Recuperación de una Sesión Específica}{41}{section*.58}%
+\contentsline {paragraph}{Agregación de Mensajes a la Sesión}{41}{section*.59}%
+\contentsline {paragraph}{Almacenamiento en FAISS}{42}{section*.60}%
+\contentsline {paragraph}{Búsquedas Semánticas en FAISS}{42}{section*.61}%
+\contentsline {paragraph}{Uso de Marcas Temporales para Mejorar la Búsqueda}{42}{section*.62}%
+\contentsline {paragraph}{Conclusiones de la cuarta iteración}{42}{section*.63}%
 \contentsline {subsubsection}{Análisis del Proceso de Vectorización de Conversaciones y Búsqueda Semántica}{44}{section*.64}%
 \contentsline {paragraph}{Carga de Librerías y Configuración Inicial}{44}{section*.65}%
 \contentsline {paragraph}{Simulación de una Base de Datos de Conversaciones}{44}{section*.66}%
-\contentsline {paragraph}{Vectorización de los Mensajes}{45}{section*.67}%
-\contentsline {paragraph}{Búsqueda Semántica y Razonamiento Contextual}{46}{section*.68}%
-\contentsline {paragraph}{Uso del Modelo de Lenguaje para Respuestas Informadas}{46}{section*.69}%
-\contentsline {paragraph}{Mejora con la Inclusión de Marcas Temporales}{48}{section*.70}%
-\contentsline {paragraph}{Conclusiones de la quinta iteración}{48}{section*.71}%
-\contentsline {subsubsection}{Análisis del enfoque en la recuperación de información sobre un pariente del usuario}{49}{section*.72}%
-\contentsline {paragraph}{Carga de librerías y configuración}{49}{section*.73}%
-\contentsline {paragraph}{Simulación de una conversación}{50}{section*.74}%
-\contentsline {paragraph}{Vectorización y almacenamiento}{53}{section*.75}%
-\contentsline {paragraph}{Consulta sobre el pariente del usuario}{53}{section*.76}%
-\contentsline {paragraph}{Problema en la recuperación de información}{54}{section*.77}%
-\contentsline {paragraph}{Conclusiones de la sexta iteración}{55}{section*.78}%
-\contentsline {subsubsection}{Análisis de la Mejora en la Estructura del Contexto para la Recuperación de Información}{56}{section*.79}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{56}{section*.80}%
-\contentsline {paragraph}{Estructura de Contextos}{56}{section*.81}%
-\contentsline {subparagraph}{\relax }{56}{section*.82}%
-\contentsline {paragraph}{Vectorización y Almacenamiento}{60}{section*.83}%
-\contentsline {paragraph}{Consulta sobre el Pariente del Usuario}{61}{section*.84}%
-\contentsline {paragraph}{Pregunta Específica sobre un Tema}{62}{section*.85}%
-\contentsline {paragraph}{Mejora en la Recuperación de Información}{63}{section*.86}%
-\contentsline {paragraph}{Conclusiones de la séptima iteración}{64}{section*.87}%
-\contentsline {subsubsection}{Análisis de la Interpretación de Fechas y Razonamiento Cronológico}{65}{section*.88}%
-\contentsline {paragraph}{Configuración del Entorno}{65}{section*.89}%
-\contentsline {paragraph}{Creación de Contextos Conversacionales}{66}{section*.90}%
-\contentsline {paragraph}{Vectorización y Almacenamiento}{67}{section*.91}%
-\contentsline {paragraph}{Consulta Simple sobre la Edad}{68}{section*.92}%
-\contentsline {paragraph}{Razonamiento Cronológico con GPT-3.5}{68}{section*.93}%
-\contentsline {paragraph}{Prueba con GPT-4}{69}{section*.94}%
-\contentsline {paragraph}{Conclusiones de la octava iteración}{70}{section*.95}%
-\contentsline {subsubsection}{Influencia de la estructura del contexto en el razonamiento cronológico}{71}{section*.96}%
-\contentsline {paragraph}{Configuración del entorno experimental}{71}{section*.97}%
-\contentsline {paragraph}{Contextos condensados y simulación de conversaciones}{72}{section*.98}%
-\contentsline {paragraph}{Ejemplos de mensajes de la conversación principal:}{72}{section*.99}%
-\contentsline {paragraph}{Extracción de datos con GPT-3.5}{73}{section*.100}%
-\contentsline {paragraph}{Ejemplo de extracción obtenida:}{74}{section*.101}%
-\contentsline {paragraph}{Consultas simples y razonamiento cronológico}{74}{section*.102}%
-\contentsline {paragraph}{Consultas adicionales sobre fechas}{75}{section*.103}%
-\contentsline {paragraph}{Consulta sobre reconocimiento de datos personales}{75}{section*.104}%
-\contentsline {paragraph}{Conclusiones de la novena iteración}{76}{section*.105}%
-\contentsline {subsubsection}{Agregado de un Paso de Extracción y Limpieza a un Conjunto de Datos con 4 Miembros de un Grupo Familiar}{77}{section*.106}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{77}{section*.107}%
-\contentsline {paragraph}{Creación de un Conjunto de Datos Familiar}{78}{section*.108}%
-\contentsline {paragraph}{Ejemplos de mensajes:}{78}{section*.109}%
-\contentsline {paragraph}{Extracción de Datos}{80}{section*.110}%
-\contentsline {paragraph}{Ejemplo de extracción:}{81}{section*.111}%
-\contentsline {paragraph}{Consultas sobre Edades}{81}{section*.112}%
-\contentsline {paragraph}{Razonamiento Cronológico}{81}{section*.113}%
-\contentsline {paragraph}{Errores en el Cálculo de la Fecha de Nacimiento}{82}{section*.114}%
-\contentsline {paragraph}{Conclusiones de la décima iteración}{83}{section*.115}%
-\contentsline {subsubsection}{Razonamiento Cronológico y Extracción de Datos en Conversaciones Familiares}{84}{section*.116}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{84}{section*.117}%
-\contentsline {paragraph}{Simulación de Conversaciones Familiares}{85}{section*.118}%
-\contentsline {paragraph}{Extracción de Datos}{87}{section*.119}%
-\contentsline {paragraph}{Consultas sobre la Edad}{88}{section*.120}%
-\contentsline {paragraph}{Conclusiones de la undécima iteración}{89}{section*.121}%
-\contentsline {subsubsection}{Mejora del Razonamiento Cronológico en Conversaciones Familiares Utilizando GPT-3.5 y GPT-4}{90}{section*.122}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{90}{section*.123}%
-\contentsline {paragraph}{Simulación de Conversaciones Familiares}{91}{section*.124}%
-\contentsline {paragraph}{Extracción de Datos}{93}{section*.125}%
-\contentsline {paragraph}{Consultas sobre la Edad}{94}{section*.126}%
-\contentsline {paragraph}{Conclusiones de la doceava iteración}{95}{section*.127}%
-\contentsline {paragraph}{Prueba con GPT-4}{95}{section*.128}%
-\contentsline {subsubsection}{Optimización del Razonamiento Cronológico y Manejo de Contexto en Búsquedas Semánticas con GPT-4}{96}{section*.129}%
-\contentsline {paragraph}{Configuración del Sistema}{96}{section*.130}%
-\contentsline {paragraph}{Simulación de Conversaciones}{97}{section*.131}%
-\contentsline {paragraph}{Extracción de Datos}{99}{section*.132}%
-\contentsline {paragraph}{Consultas sobre la Información Almacenada}{100}{section*.133}%
-\contentsline {paragraph}{Consultas Complejas con Múltiples Contextos}{101}{section*.134}%
-\contentsline {paragraph}{Problemas de Contexto Identificados}{102}{section*.135}%
-\contentsline {paragraph}{Conclusiones de la treceava iteración}{102}{section*.136}%
-\contentsline {subsubsection}{Experimentos Combinados sobre Fechas y Manejo de Cantidades}{103}{section*.137}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{103}{section*.138}%
-\contentsline {paragraph}{Simulación de Conversaciones}{104}{section*.139}%
-\contentsline {paragraph}{Extracción de Datos}{106}{section*.140}%
-\contentsline {paragraph}{Consultas sobre Millas y Viajes}{107}{section*.141}%
-\contentsline {paragraph}{Conclusiones de la catorceava iteración}{108}{section*.142}%
-\contentsline {paragraph}{Posibles Mejoras}{108}{section*.143}%
-\contentsline {subsubsection}{Manejo de Datos Personales y Resolución de Citas Médicas con GPT-3.5: Conjunto de Datos Referente a Turnos de un Tercero}{109}{section*.144}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{109}{section*.145}%
-\contentsline {paragraph}{Simulación de Conversaciones sobre Citas Médicas}{110}{section*.146}%
-\contentsline {paragraph}{Extracción de Datos}{112}{section*.147}%
-\contentsline {paragraph}{Consultas sobre la Información Almacenada}{113}{section*.148}%
-\contentsline {paragraph}{Conclusiones de la quinceava iteración}{114}{section*.149}%
-\contentsline {subsubsection}{Manejo de Datos Personales y Errores de Contexto en la Gestión de Citas Médicas con GPT-3.5}{116}{section*.150}%
-\contentsline {paragraph}{Carga de Librerías y Configuración}{116}{section*.151}%
-\contentsline {paragraph}{Simulación de Conversaciones}{116}{section*.152}%
-\contentsline {paragraph}{Extracción de Datos}{118}{section*.153}%
-\contentsline {paragraph}{Consulta sobre Turnos}{121}{section*.154}%
-\contentsline {paragraph}{Conclusiones de la dieciseisava iteración}{122}{section*.155}%
-\contentsline {subsection}{Ampliación de Conjuntos de Datos de Contexto por Ingestión de Documentos}{123}{section*.156}%
-\contentsline {subsection}{Creación de conjuntos de datos sintéticos}{124}{section*.157}%
-\contentsline {subsubsection}{Creación de datos familiares}{125}{section*.158}%
-\contentsline {subsubsection}{Creación de conjunto de datos médicos de alcance intermedio (1 año)}{127}{section*.159}%
-\contentsline {paragraph}{Enero 2024 (01-2024.json)}{127}{section*.160}%
-\contentsline {paragraph}{Febrero 2024 (02-2024.json)}{128}{section*.161}%
-\contentsline {paragraph}{Marzo 2024 (03-2024.json)}{130}{section*.162}%
-\contentsline {paragraph}{Abril 2023 (04-2024.json)}{132}{section*.163}%
-\contentsline {paragraph}{Registros médicos adicionales}{133}{section*.164}%
-\contentsline {subsubsection}{Creación de conjunto de datos de consumo de mediano plazo (1 año)}{134}{section*.165}%
-\contentsline {paragraph}{01-2024.json}{134}{section*.166}%
-\contentsline {paragraph}{02-2024.json}{136}{section*.167}%
-\contentsline {paragraph}{03-2024.json}{138}{section*.168}%
-\contentsline {subsection}{Ingestión a base de datos de los datos sintéticos}{141}{section*.169}%
-\contentsline {subsubsection}{Ingestión a base de grafos}{141}{section*.170}%
-\contentsline {paragraph}{Inserción de los datos de Norman en la base de datos de ArangoDB}{141}{section*.171}%
-\contentsline {paragraph}{Pruebas de consultas en lenguaje natural}{149}{section*.172}%
-\contentsline {paragraph}{Prueba de escritura en la base de datos}{150}{section*.173}%
-\contentsline {subsubsection}{Inserción en base de documentos con soporte vectorial y consultas}{152}{section*.174}%
-\contentsline {paragraph}{Configuración inicial y conexión a MongoDB Atlas}{155}{section*.175}%
-\contentsline {paragraph}{Clase cliente para Atlas}{155}{section*.176}%
-\contentsline {paragraph}{Procesamiento y carga de registros médicos}{156}{section*.177}%
-\contentsline {paragraph}{Inserción en la colección Records}{157}{section*.178}%
-\contentsline {paragraph}{Amplificación de consultas y búsqueda vectorial}{158}{section*.179}%
-\contentsline {paragraph}{Generación de respuesta final}{159}{section*.180}%
-\contentsline {section}{Conclusiones}{160}{section*.181}%
-\contentsline {subsection}{Viabilidad}{160}{section*.182}%
-\contentsline {subsubsection}{Recursos Necesarios para la Implementación}{160}{section*.183}%
-\contentsline {subsubsection}{Limitaciones de la solución actual}{160}{section*.184}%
-\contentsline {subsubsection}{Funcionalidades a desarrollar en fases sucesivas}{161}{section*.185}%
-\contentsline {subsection}{Introducción}{163}{section*.186}%
-\contentsline {subsubsection}{Considerandos}{163}{section*.187}%
-\contentsline {subsubsection}{Actores del mercado}{163}{section*.188}%
-\contentsline {subsubsection}{Definición del producto}{164}{section*.189}%
-\contentsline {subsection}{Análisis estratégico}{165}{section*.190}%
-\contentsline {subsubsection}{Análisis FODA}{165}{section*.191}%
-\contentsline {paragraph}{Fortalezas (Internas)}{165}{section*.192}%
-\contentsline {paragraph}{Debilidades (Internas)}{165}{section*.193}%
-\contentsline {paragraph}{Oportunidades (Externas)}{165}{section*.194}%
-\contentsline {paragraph}{Amenazas (Externas)}{166}{section*.195}%
-\contentsline {subsubsection}{Propuesta de valor}{166}{section*.196}%
-\contentsline {paragraph}{Problema a resolver}{166}{section*.197}%
-\contentsline {subparagraph}{\relax }{166}{section*.198}%
-\contentsline {subparagraph}{\relax }{166}{section*.199}%
-\contentsline {subparagraph}{\relax }{166}{section*.200}%
-\contentsline {paragraph}{Especificación de la propuesta de valor}{167}{section*.201}%
-\contentsline {subparagraph}{\relax }{167}{section*.202}%
-\contentsline {subparagraph}{\relax }{167}{section*.203}%
-\contentsline {subsubsection}{Ejemplos de impacto por industria}{167}{section*.204}%
-\contentsline {paragraph}{Comercio electrónico: Pasajes}{167}{section*.205}%
-\contentsline {subparagraph}{\relax }{167}{section*.206}%
-\contentsline {subparagraph}{\relax }{167}{section*.207}%
-\contentsline {subparagraph}{\relax }{167}{section*.208}%
-\contentsline {subparagraph}{\relax }{168}{section*.209}%
-\contentsline {subparagraph}{\relax }{168}{section*.210}%
-\contentsline {paragraph}{Industria bancaria}{169}{section*.211}%
-\contentsline {subparagraph}{\relax }{169}{section*.212}%
-\contentsline {paragraph}{Servicios de salud}{170}{section*.213}%
-\contentsline {subparagraph}{\relax }{170}{section*.214}%
-\contentsline {subsection}{Plan comercial con estimación de ventas}{172}{section*.215}%
-\contentsline {subsubsection}{Definición del producto}{172}{section*.216}%
-\contentsline {subsubsection}{Segmentación del mercado objetivo}{172}{section*.217}%
-\contentsline {subsubsection}{Estrategia de penetración en el mercado}{172}{section*.218}%
-\contentsline {subsubsection}{Modelo de ingresos}{172}{section*.219}%
-\contentsline {subsubsection}{Tamaño y crecimiento del mercado de asistentes virtuales}{173}{section*.220}%
-\contentsline {subsubsection}{Mercado de hiperpersonalización}{173}{section*.221}%
-\contentsline {subsubsection}{Adopción de asistentes virtuales en américa latina}{173}{section*.222}%
-\contentsline {subsubsection}{Proyección de Ventas}{174}{section*.223}%
-\contentsline {paragraph}{Metodología de estimación ("Delphi simulado con LLM")}{174}{section*.224}%
-\contentsline {paragraph}{Detalle del método Delphi:}{174}{section*.225}%
-\contentsline {paragraph}{Justificación de métodos para predicción de ventas}{175}{section*.226}%
-\contentsline {subsubsection}{Simulación con el Método Delphi con LLM}{176}{section*.227}%
-\contentsline {paragraph}{Perfiles de expertos simulados}{176}{section*.228}%
-\contentsline {paragraph}{Fundamentación Empírica para el Método Delphi}{176}{section*.229}%
-\contentsline {paragraph}{Anexo para Expertos del Método Delphi}{178}{section*.230}%
-\contentsline {subsubsection}{Anclas empíricas de mercado para estimaciones Delphi}{179}{section*.231}%
-\contentsline {paragraph}{Contexto macro de IA en Latinoamérica}{179}{section*.232}%
-\contentsline {paragraph}{Adopción real en empresas}{180}{section*.233}%
-\contentsline {paragraph}{Conversión comercial, precios y contratos, CAC, churn, e implementación}{180}{section*.234}%
-\contentsline {subparagraph}{\relax }{181}{section*.235}%
-\contentsline {paragraph}{Implicancias operativas para el Delphi}{181}{section*.236}%
-\contentsline {subparagraph}{\relax }{182}{section*.237}%
-\contentsline {subparagraph}{\relax }{182}{section*.238}%
-\contentsline {subparagraph}{\relax }{182}{section*.239}%
-\contentsline {subparagraph}{\relax }{183}{section*.240}%
-\contentsline {subparagraph}{\relax }{183}{section*.241}%
-\contentsline {subparagraph}{\relax }{183}{section*.242}%
-\contentsline {subsubsection}{Desarrollo de la simulación}{185}{section*.243}%
-\contentsline {paragraph}{Carga de secretos}{185}{section*.244}%
-\contentsline {subparagraph}{\relax }{185}{section*.245}%
-\contentsline {paragraph}{Ronda 1 Perfil 1}{185}{section*.246}%
-\contentsline {subparagraph}{\relax }{185}{section*.247}%
-\contentsline {paragraph}{Ronda 1 Perfil 2}{188}{section*.248}%
-\contentsline {subparagraph}{\relax }{188}{section*.249}%
-\contentsline {paragraph}{Ronda 1 Perfil 3}{191}{section*.250}%
-\contentsline {subparagraph}{\relax }{191}{section*.251}%
-\contentsline {paragraph}{Ronda 1 Perfil 4}{193}{section*.252}%
-\contentsline {subparagraph}{\relax }{194}{section*.253}%
-\contentsline {paragraph}{Ronda 1 Perfil 5}{196}{section*.254}%
-\contentsline {subparagraph}{\relax }{197}{section*.255}%
-\contentsline {paragraph}{Dataframe Ronda 1}{199}{section*.256}%
-\contentsline {subparagraph}{\relax }{200}{section*.257}%
-\contentsline {paragraph}{Cálculo de IQR y Mediana}{200}{section*.258}%
-\contentsline {subparagraph}{\relax }{201}{section*.259}%
-\contentsline {subparagraph}{\relax }{202}{section*.260}%
-\contentsline {paragraph}{Ronda 2 Perfil 1}{209}{section*.261}%
-\contentsline {subparagraph}{\relax }{209}{section*.262}%
-\contentsline {paragraph}{Ronda 2 Perfil 2}{212}{section*.263}%
-\contentsline {subparagraph}{\relax }{212}{section*.264}%
-\contentsline {paragraph}{Ronda 2 Perfil 3}{215}{section*.265}%
-\contentsline {subparagraph}{\relax }{215}{section*.266}%
-\contentsline {paragraph}{Ronda 2 Perfil 4}{218}{section*.267}%
-\contentsline {subparagraph}{\relax }{218}{section*.268}%
-\contentsline {paragraph}{Ronda 2 Perfil 5}{221}{section*.269}%
-\contentsline {subparagraph}{\relax }{221}{section*.270}%
-\contentsline {subparagraph}{\relax }{224}{section*.271}%
-\contentsline {paragraph}{Estadísticas de la ronda 2}{224}{section*.272}%
-\contentsline {subparagraph}{\relax }{225}{section*.273}%
-\contentsline {subparagraph}{\relax }{228}{section*.274}%
-\contentsline {paragraph}{Conclusiones}{230}{section*.275}%
-\contentsline {subsection}{Proyección de costos}{232}{section*.276}%
-\contentsline {subsubsection}{Desarrollo del sistema}{232}{section*.277}%
-\contentsline {paragraph}{Endpoint de generación de contexto hiperpersonalizado}{232}{section*.278}%
-\contentsline {paragraph}{Módulo agencial de consulta de información personal}{232}{section*.279}%
-\contentsline {paragraph}{Conectores a bases de datos más difundidas}{232}{section*.280}%
-\contentsline {paragraph}{Conectores a CRMs y ERPs más conocidos}{233}{section*.281}%
-\contentsline {paragraph}{Módulo de configuración con interfaz gráfica}{233}{section*.282}%
-\contentsline {paragraph}{Contador de uso}{233}{section*.283}%
-\contentsline {paragraph}{Resumen}{233}{section*.284}%
-\contentsline {subsubsection}{Implementación}{235}{section*.285}%
-\contentsline {paragraph}{Desglose de tareas por perfil}{235}{section*.286}%
-\contentsline {paragraph}{Costo total por implementación}{236}{section*.287}%
-\contentsline {subsubsection}{Soporte y monitoreo}{236}{section*.288}%
-\contentsline {paragraph}{Roles y costos asociados}{236}{section*.289}%
-\contentsline {paragraph}{Costo mensual}{237}{section*.290}%
-\contentsline {subsubsection}{Costos fijos}{237}{section*.291}%
-\contentsline {paragraph}{Recursos humanos}{237}{section*.292}%
-\contentsline {subparagraph}{\relax }{237}{section*.293}%
-\contentsline {subparagraph}{\relax }{237}{section*.294}%
-\contentsline {subparagraph}{\relax }{237}{section*.295}%
-\contentsline {subparagraph}{\relax }{237}{section*.296}%
-\contentsline {subparagraph}{\relax }{237}{section*.297}%
-\contentsline {subparagraph}{\relax }{237}{section*.298}%
-\contentsline {subparagraph}{\relax }{237}{section*.299}%
-\contentsline {subsubsection}{Infraestructura y operación}{239}{section*.300}%
-\contentsline {paragraph}{Hosting y Servidores en la Nube}{239}{section*.301}%
-\contentsline {paragraph}{Herramientas de Monitoreo y Gestión}{239}{section*.302}%
-\contentsline {subparagraph}{\relax }{239}{section*.303}%
-\contentsline {subsubsection}{Resumen}{239}{section*.304}%
-\contentsline {subsubsection}{Otros costos variables}{239}{section*.305}%
-\contentsline {paragraph}{Publicidad, prensa y marketing}{239}{section*.306}%
-\contentsline {paragraph}{Gastos generales}{239}{section*.307}%
-\contentsline {subsection}{Evaluación financiera con churn, renovaciones e impago}{240}{section*.308}%
-\contentsline {subsubsection}{Supuestos de churn, retención y mora (renovaciones anuales)}{240}{section*.309}%
-\contentsline {paragraph}{Origen del churn}{240}{section*.310}%
-\contentsline {paragraph}{Mora / impago}{240}{section*.311}%
-\contentsline {paragraph}{Tabla de supuestos clave}{240}{table.caption.313}%
-\contentsline {subsubsection}{Modelo de renovaciones: dinámica de clientes activos}{241}{section*.314}%
-\contentsline {subsubsection}{Cálculos}{241}{section*.315}%
-\contentsline {subsubsection}{Estado de resultados proforma (escenario neutral con churn)}{243}{section*.316}%
-\contentsline {subsubsection}{FCFF}{244}{section*.318}%
-\contentsline {paragraph}{Definición}{244}{section*.319}%
-\contentsline {subsubsection}{VAN y TIR con churn incorporado}{244}{section*.321}%
-\contentsline {paragraph}{Resultados (escenario neutral)}{244}{section*.322}%
-\contentsline {paragraph}{Interpretación}{244}{section*.323}%
-\contentsline {subsection}{Primera iteración: Redis, FAISS y LangChain}{246}{section*.324}%
+\contentsline {paragraph}{Vectorización de los Mensajes}{44}{section*.67}%
+\contentsline {paragraph}{Búsqueda Semántica y Razonamiento Contextual}{44}{section*.68}%
+\contentsline {paragraph}{Uso del Modelo de Lenguaje para Respuestas Informadas}{45}{section*.69}%
+\contentsline {paragraph}{Mejora con la Inclusión de Marcas Temporales}{45}{section*.70}%
+\contentsline {paragraph}{Conclusiones de la quinta iteración}{45}{section*.71}%
+\contentsline {subsubsection}{Análisis del enfoque en la recuperación de información sobre un pariente del usuario}{46}{section*.72}%
+\contentsline {paragraph}{Carga de librerías y configuración}{46}{section*.73}%
+\contentsline {paragraph}{Simulación de una conversación}{46}{section*.74}%
+\contentsline {paragraph}{Vectorización y almacenamiento}{47}{section*.75}%
+\contentsline {paragraph}{Consulta sobre el pariente del usuario}{47}{section*.76}%
+\contentsline {paragraph}{Problema en la recuperación de información}{47}{section*.77}%
+\contentsline {paragraph}{Conclusiones de la sexta iteración}{48}{section*.78}%
+\contentsline {subsubsection}{Análisis de la Mejora en la Estructura del Contexto para la Recuperación de Información}{49}{section*.79}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{49}{section*.80}%
+\contentsline {paragraph}{Estructura de Contextos}{49}{section*.81}%
+\contentsline {subparagraph}{\relax }{49}{section*.82}%
+\contentsline {paragraph}{Vectorización y Almacenamiento}{50}{section*.83}%
+\contentsline {paragraph}{Consulta sobre el Pariente del Usuario}{50}{section*.84}%
+\contentsline {paragraph}{Pregunta Específica sobre un Tema}{50}{section*.85}%
+\contentsline {paragraph}{Mejora en la Recuperación de Información}{51}{section*.86}%
+\contentsline {paragraph}{Conclusiones de la séptima iteración}{51}{section*.87}%
+\contentsline {subsubsection}{Análisis de la Interpretación de Fechas y Razonamiento Cronológico}{52}{section*.88}%
+\contentsline {paragraph}{Configuración del Entorno}{52}{section*.89}%
+\contentsline {paragraph}{Creación de Contextos Conversacionales}{52}{section*.90}%
+\contentsline {paragraph}{Vectorización y Almacenamiento}{52}{section*.91}%
+\contentsline {paragraph}{Consulta Simple sobre la Edad}{52}{section*.92}%
+\contentsline {paragraph}{Razonamiento Cronológico con GPT-3.5}{53}{section*.93}%
+\contentsline {paragraph}{Prueba con GPT-4}{53}{section*.94}%
+\contentsline {paragraph}{Conclusiones de la octava iteración}{53}{section*.95}%
+\contentsline {subsubsection}{Influencia de la estructura del contexto en el razonamiento cronológico}{55}{section*.96}%
+\contentsline {paragraph}{Configuración del entorno experimental}{55}{section*.97}%
+\contentsline {paragraph}{Contextos condensados y simulación de conversaciones}{55}{section*.98}%
+\contentsline {paragraph}{Ejemplos de mensajes de la conversación principal:}{55}{section*.99}%
+\contentsline {paragraph}{Extracción de datos con GPT-3.5}{55}{section*.100}%
+\contentsline {paragraph}{Ejemplo de extracción obtenida:}{56}{section*.101}%
+\contentsline {paragraph}{Consultas simples y razonamiento cronológico}{56}{section*.102}%
+\contentsline {paragraph}{Consultas adicionales sobre fechas}{56}{section*.103}%
+\contentsline {paragraph}{Consulta sobre reconocimiento de datos personales}{56}{section*.104}%
+\contentsline {paragraph}{Conclusiones de la novena iteración}{57}{section*.105}%
+\contentsline {subsubsection}{Agregado de un Paso de Extracción y Limpieza a un Conjunto de Datos con 4 Miembros de un Grupo Familiar}{58}{section*.106}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{58}{section*.107}%
+\contentsline {paragraph}{Creación de un Conjunto de Datos Familiar}{58}{section*.108}%
+\contentsline {paragraph}{Ejemplos de mensajes:}{58}{section*.109}%
+\contentsline {paragraph}{Extracción de Datos}{58}{section*.110}%
+\contentsline {paragraph}{Ejemplo de extracción:}{59}{section*.111}%
+\contentsline {paragraph}{Consultas sobre Edades}{59}{section*.112}%
+\contentsline {paragraph}{Razonamiento Cronológico}{59}{section*.113}%
+\contentsline {paragraph}{Errores en el Cálculo de la Fecha de Nacimiento}{59}{section*.114}%
+\contentsline {paragraph}{Conclusiones de la décima iteración}{60}{section*.115}%
+\contentsline {subsubsection}{Razonamiento Cronológico y Extracción de Datos en Conversaciones Familiares}{61}{section*.116}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{61}{section*.117}%
+\contentsline {paragraph}{Simulación de Conversaciones Familiares}{61}{section*.118}%
+\contentsline {paragraph}{Extracción de Datos}{61}{section*.119}%
+\contentsline {paragraph}{Consultas sobre la Edad}{62}{section*.120}%
+\contentsline {paragraph}{Conclusiones de la undécima iteración}{62}{section*.121}%
+\contentsline {subsubsection}{Mejora del Razonamiento Cronológico en Conversaciones Familiares Utilizando GPT-3.5 y GPT-4}{63}{section*.122}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{63}{section*.123}%
+\contentsline {paragraph}{Simulación de Conversaciones Familiares}{63}{section*.124}%
+\contentsline {paragraph}{Extracción de Datos}{63}{section*.125}%
+\contentsline {paragraph}{Consultas sobre la Edad}{64}{section*.126}%
+\contentsline {paragraph}{Conclusiones de la doceava iteración}{64}{section*.127}%
+\contentsline {paragraph}{Prueba con GPT-4}{64}{section*.128}%
+\contentsline {subsubsection}{Optimización del Razonamiento Cronológico y Manejo de Contexto en Búsquedas Semánticas con GPT-4}{65}{section*.129}%
+\contentsline {paragraph}{Configuración del Sistema}{65}{section*.130}%
+\contentsline {paragraph}{Simulación de Conversaciones}{65}{section*.131}%
+\contentsline {paragraph}{Extracción de Datos}{65}{section*.132}%
+\contentsline {paragraph}{Consultas sobre la Información Almacenada}{66}{section*.133}%
+\contentsline {paragraph}{Consultas Complejas con Múltiples Contextos}{66}{section*.134}%
+\contentsline {paragraph}{Problemas de Contexto Identificados}{67}{section*.135}%
+\contentsline {paragraph}{Conclusiones de la treceava iteración}{67}{section*.136}%
+\contentsline {subsubsection}{Experimentos Combinados sobre Fechas y Manejo de Cantidades}{68}{section*.137}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{68}{section*.138}%
+\contentsline {paragraph}{Simulación de Conversaciones}{68}{section*.139}%
+\contentsline {paragraph}{Extracción de Datos}{69}{section*.140}%
+\contentsline {paragraph}{Consultas sobre Millas y Viajes}{69}{section*.141}%
+\contentsline {paragraph}{Conclusiones de la catorceava iteración}{69}{section*.142}%
+\contentsline {paragraph}{Posibles Mejoras}{69}{section*.143}%
+\contentsline {subsubsection}{Manejo de Datos Personales y Resolución de Citas Médicas con GPT-3.5: Conjunto de Datos Referente a Turnos de un Tercero}{71}{section*.144}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{71}{section*.145}%
+\contentsline {paragraph}{Simulación de Conversaciones sobre Citas Médicas}{71}{section*.146}%
+\contentsline {paragraph}{Extracción de Datos}{72}{section*.147}%
+\contentsline {paragraph}{Consultas sobre la Información Almacenada}{72}{section*.148}%
+\contentsline {paragraph}{Conclusiones de la quinceava iteración}{72}{section*.149}%
+\contentsline {subsubsection}{Manejo de Datos Personales y Errores de Contexto en la Gestión de Citas Médicas con GPT-3.5}{74}{section*.150}%
+\contentsline {paragraph}{Carga de Librerías y Configuración}{74}{section*.151}%
+\contentsline {paragraph}{Simulación de Conversaciones}{74}{section*.152}%
+\contentsline {paragraph}{Extracción de Datos}{75}{section*.153}%
+\contentsline {paragraph}{Consulta sobre Turnos}{75}{section*.154}%
+\contentsline {paragraph}{Conclusiones de la dieciseisava iteración}{75}{section*.155}%
+\contentsline {subsection}{Ampliación de Conjuntos de Datos de Contexto por Ingestión de Documentos}{77}{section*.156}%
+\contentsline {subsection}{Creación de conjuntos de datos sintéticos}{78}{section*.157}%
+\contentsline {subsubsection}{Creación de datos familiares}{79}{section*.158}%
+\contentsline {subsubsection}{Creación de conjunto de datos médicos de alcance intermedio (1 año)}{80}{section*.159}%
+\contentsline {paragraph}{Enero 2024 (01-2024.json)}{80}{section*.160}%
+\contentsline {paragraph}{Febrero 2024 (02-2024.json)}{80}{section*.161}%
+\contentsline {paragraph}{Marzo 2024 (03-2024.json)}{80}{section*.162}%
+\contentsline {paragraph}{Abril 2023 (04-2024.json)}{80}{section*.163}%
+\contentsline {paragraph}{Registros médicos adicionales}{80}{section*.164}%
+\contentsline {subsubsection}{Creación de conjunto de datos de consumo de mediano plazo (1 año)}{82}{section*.165}%
+\contentsline {paragraph}{01-2024.json}{82}{section*.166}%
+\contentsline {paragraph}{02-2024.json}{82}{section*.167}%
+\contentsline {paragraph}{03-2024.json}{82}{section*.168}%
+\contentsline {subsection}{Ingestión a base de datos de los datos sintéticos}{83}{section*.169}%
+\contentsline {subsubsection}{Ingestión a base de grafos}{83}{section*.170}%
+\contentsline {paragraph}{Inserción de los datos de Norman en la base de datos de ArangoDB}{83}{section*.171}%
+\contentsline {paragraph}{Pruebas de consultas en lenguaje natural}{84}{section*.172}%
+\contentsline {paragraph}{Prueba de escritura en la base de datos}{84}{section*.173}%
+\contentsline {subsubsection}{Inserción en base de documentos con soporte vectorial y consultas}{86}{section*.174}%
+\contentsline {paragraph}{Configuración inicial y conexión a MongoDB Atlas}{88}{section*.175}%
+\contentsline {paragraph}{Clase cliente para Atlas}{88}{section*.176}%
+\contentsline {paragraph}{Procesamiento y carga de registros médicos}{88}{section*.177}%
+\contentsline {paragraph}{Inserción en la colección Records}{89}{section*.178}%
+\contentsline {paragraph}{Amplificación de consultas y búsqueda vectorial}{89}{section*.179}%
+\contentsline {paragraph}{Generación de respuesta final}{89}{section*.180}%
+\contentsline {section}{Conclusiones}{90}{section*.181}%
+\contentsline {subsection}{Viabilidad}{90}{section*.182}%
+\contentsline {subsubsection}{Recursos Necesarios para la Implementación}{90}{section*.183}%
+\contentsline {subsubsection}{Limitaciones de la solución actual}{90}{section*.184}%
+\contentsline {subsubsection}{Funcionalidades a desarrollar en fases sucesivas}{91}{section*.185}%
+\contentsline {subsection}{Introducción}{93}{section*.186}%
+\contentsline {subsubsection}{Considerandos}{93}{section*.187}%
+\contentsline {subsubsection}{Actores del mercado}{93}{section*.188}%
+\contentsline {subsubsection}{Definición del producto}{94}{section*.189}%
+\contentsline {subsection}{Análisis estratégico}{95}{section*.190}%
+\contentsline {subsubsection}{Análisis FODA}{95}{section*.191}%
+\contentsline {paragraph}{Fortalezas (Internas)}{95}{section*.192}%
+\contentsline {paragraph}{Debilidades (Internas)}{95}{section*.193}%
+\contentsline {paragraph}{Oportunidades (Externas)}{95}{section*.194}%
+\contentsline {paragraph}{Amenazas (Externas)}{96}{section*.195}%
+\contentsline {subsubsection}{Propuesta de valor}{96}{section*.196}%
+\contentsline {paragraph}{Problema a resolver}{96}{section*.197}%
+\contentsline {subparagraph}{\relax }{96}{section*.198}%
+\contentsline {subparagraph}{\relax }{96}{section*.199}%
+\contentsline {subparagraph}{\relax }{96}{section*.200}%
+\contentsline {paragraph}{Especificación de la propuesta de valor}{97}{section*.201}%
+\contentsline {subparagraph}{\relax }{97}{section*.202}%
+\contentsline {subparagraph}{\relax }{97}{section*.203}%
+\contentsline {subsubsection}{Ejemplos de impacto por industria}{97}{section*.204}%
+\contentsline {paragraph}{Comercio electrónico: Pasajes}{97}{section*.205}%
+\contentsline {subparagraph}{\relax }{97}{section*.206}%
+\contentsline {subparagraph}{\relax }{97}{section*.207}%
+\contentsline {subparagraph}{\relax }{97}{section*.208}%
+\contentsline {subparagraph}{\relax }{98}{section*.209}%
+\contentsline {subparagraph}{\relax }{98}{section*.210}%
+\contentsline {paragraph}{Industria bancaria}{99}{section*.211}%
+\contentsline {subparagraph}{\relax }{99}{section*.212}%
+\contentsline {paragraph}{Servicios de salud}{100}{section*.213}%
+\contentsline {subparagraph}{\relax }{100}{section*.214}%
+\contentsline {subsection}{Plan comercial con estimación de ventas}{102}{section*.215}%
+\contentsline {subsubsection}{Definición del producto}{102}{section*.216}%
+\contentsline {subsubsection}{Segmentación del mercado objetivo}{102}{section*.217}%
+\contentsline {subsubsection}{Estrategia de penetración en el mercado}{102}{section*.218}%
+\contentsline {subsubsection}{Modelo de ingresos}{102}{section*.219}%
+\contentsline {subsubsection}{Tamaño y crecimiento del mercado de asistentes virtuales}{103}{section*.220}%
+\contentsline {subsubsection}{Mercado de hiperpersonalización}{103}{section*.221}%
+\contentsline {subsubsection}{Adopción de asistentes virtuales en américa latina}{103}{section*.222}%
+\contentsline {subsubsection}{Proyección de Ventas}{104}{section*.223}%
+\contentsline {paragraph}{Metodología de estimación ("Delphi simulado con LLM")}{104}{section*.224}%
+\contentsline {paragraph}{Detalle del método Delphi:}{104}{section*.225}%
+\contentsline {paragraph}{Justificación de métodos para predicción de ventas}{105}{section*.226}%
+\contentsline {subsubsection}{Simulación con el Método Delphi con LLM}{106}{section*.227}%
+\contentsline {paragraph}{Perfiles de expertos simulados}{106}{section*.228}%
+\contentsline {paragraph}{Fundamentación Empírica para el Método Delphi}{106}{section*.229}%
+\contentsline {paragraph}{Anexo para Expertos del Método Delphi}{108}{section*.230}%
+\contentsline {subsubsection}{Anclas empíricas de mercado para estimaciones Delphi}{109}{section*.231}%
+\contentsline {paragraph}{Contexto macro de IA en Latinoamérica}{109}{section*.232}%
+\contentsline {paragraph}{Adopción real en empresas}{110}{section*.233}%
+\contentsline {paragraph}{Conversión comercial, precios y contratos, CAC, churn, e implementación}{110}{section*.234}%
+\contentsline {subparagraph}{\relax }{111}{section*.235}%
+\contentsline {paragraph}{Implicancias operativas para el Delphi}{111}{section*.236}%
+\contentsline {subparagraph}{\relax }{112}{section*.237}%
+\contentsline {subparagraph}{\relax }{112}{section*.238}%
+\contentsline {subparagraph}{\relax }{112}{section*.239}%
+\contentsline {subparagraph}{\relax }{113}{section*.240}%
+\contentsline {subparagraph}{\relax }{113}{section*.241}%
+\contentsline {subparagraph}{\relax }{113}{section*.242}%
+\contentsline {subsubsection}{Desarrollo de la simulación}{115}{section*.243}%
+\contentsline {paragraph}{Carga de secretos}{115}{section*.244}%
+\contentsline {subparagraph}{\relax }{115}{section*.245}%
+\contentsline {paragraph}{Ronda 1 Perfil 1}{115}{section*.246}%
+\contentsline {subparagraph}{\relax }{115}{section*.247}%
+\contentsline {paragraph}{Ronda 1 Perfil 2}{115}{section*.248}%
+\contentsline {subparagraph}{\relax }{115}{section*.249}%
+\contentsline {paragraph}{Ronda 1 Perfil 3}{115}{section*.250}%
+\contentsline {subparagraph}{\relax }{115}{section*.251}%
+\contentsline {paragraph}{Ronda 1 Perfil 4}{115}{section*.252}%
+\contentsline {subparagraph}{\relax }{115}{section*.253}%
+\contentsline {paragraph}{Ronda 1 Perfil 5}{115}{section*.254}%
+\contentsline {subparagraph}{\relax }{115}{section*.255}%
+\contentsline {paragraph}{Dataframe Ronda 1}{115}{section*.256}%
+\contentsline {subparagraph}{\relax }{115}{section*.257}%
+\contentsline {paragraph}{Cálculo de IQR y Mediana}{115}{section*.258}%
+\contentsline {subparagraph}{\relax }{115}{section*.259}%
+\contentsline {subparagraph}{\relax }{115}{section*.260}%
+\contentsline {paragraph}{Ronda 2 Perfil 1}{116}{section*.261}%
+\contentsline {subparagraph}{\relax }{116}{section*.262}%
+\contentsline {paragraph}{Ronda 2 Perfil 2}{116}{section*.263}%
+\contentsline {subparagraph}{\relax }{116}{section*.264}%
+\contentsline {paragraph}{Ronda 2 Perfil 3}{116}{section*.265}%
+\contentsline {subparagraph}{\relax }{116}{section*.266}%
+\contentsline {paragraph}{Ronda 2 Perfil 4}{116}{section*.267}%
+\contentsline {subparagraph}{\relax }{116}{section*.268}%
+\contentsline {paragraph}{Ronda 2 Perfil 5}{116}{section*.269}%
+\contentsline {subparagraph}{\relax }{116}{section*.270}%
+\contentsline {subparagraph}{\relax }{116}{section*.271}%
+\contentsline {paragraph}{Estadísticas de la ronda 2}{116}{section*.272}%
+\contentsline {subparagraph}{\relax }{116}{section*.273}%
+\contentsline {subparagraph}{\relax }{116}{section*.274}%
+\contentsline {paragraph}{Conclusiones}{116}{section*.275}%
+\contentsline {subsection}{Proyección de costos}{118}{section*.276}%
+\contentsline {subsubsection}{Desarrollo del sistema}{118}{section*.277}%
+\contentsline {paragraph}{Endpoint de generación de contexto hiperpersonalizado}{118}{section*.278}%
+\contentsline {paragraph}{Módulo agencial de consulta de información personal}{118}{section*.279}%
+\contentsline {paragraph}{Conectores a bases de datos más difundidas}{118}{section*.280}%
+\contentsline {paragraph}{Conectores a CRMs y ERPs más conocidos}{119}{section*.281}%
+\contentsline {paragraph}{Módulo de configuración con interfaz gráfica}{119}{section*.282}%
+\contentsline {paragraph}{Contador de uso}{119}{section*.283}%
+\contentsline {paragraph}{Resumen}{119}{section*.284}%
+\contentsline {subsubsection}{Implementación}{121}{section*.285}%
+\contentsline {paragraph}{Desglose de tareas por perfil}{121}{section*.286}%
+\contentsline {paragraph}{Costo total por implementación}{122}{section*.287}%
+\contentsline {subsubsection}{Soporte y monitoreo}{122}{section*.288}%
+\contentsline {paragraph}{Roles y costos asociados}{122}{section*.289}%
+\contentsline {paragraph}{Costo mensual}{123}{section*.290}%
+\contentsline {subsubsection}{Costos fijos}{123}{section*.291}%
+\contentsline {paragraph}{Recursos humanos}{123}{section*.292}%
+\contentsline {subparagraph}{\relax }{123}{section*.293}%
+\contentsline {subparagraph}{\relax }{123}{section*.294}%
+\contentsline {subparagraph}{\relax }{123}{section*.295}%
+\contentsline {subparagraph}{\relax }{123}{section*.296}%
+\contentsline {subparagraph}{\relax }{123}{section*.297}%
+\contentsline {subparagraph}{\relax }{123}{section*.298}%
+\contentsline {subparagraph}{\relax }{123}{section*.299}%
+\contentsline {subsubsection}{Infraestructura y operación}{125}{section*.300}%
+\contentsline {paragraph}{Hosting y Servidores en la Nube}{125}{section*.301}%
+\contentsline {paragraph}{Herramientas de Monitoreo y Gestión}{125}{section*.302}%
+\contentsline {subparagraph}{\relax }{125}{section*.303}%
+\contentsline {subsubsection}{Resumen}{125}{section*.304}%
+\contentsline {subsubsection}{Otros costos variables}{125}{section*.305}%
+\contentsline {paragraph}{Publicidad, prensa y marketing}{125}{section*.306}%
+\contentsline {paragraph}{Gastos generales}{125}{section*.307}%
+\contentsline {subsection}{Evaluación financiera con churn, renovaciones e impago}{126}{section*.308}%
+\contentsline {subsubsection}{Supuestos de churn, retención y mora (renovaciones anuales)}{126}{section*.309}%
+\contentsline {paragraph}{Origen del churn}{126}{section*.310}%
+\contentsline {paragraph}{Mora / impago}{126}{section*.311}%
+\contentsline {paragraph}{Tabla de supuestos clave}{126}{table.caption.313}%
+\contentsline {subsubsection}{Modelo de renovaciones: dinámica de clientes activos}{127}{section*.314}%
+\contentsline {subsubsection}{Cálculos}{127}{section*.315}%
+\contentsline {subsubsection}{Estado de resultados proforma (escenario neutral con churn)}{127}{section*.316}%
+\contentsline {subsubsection}{FCFF}{127}{section*.318}%
+\contentsline {paragraph}{Definición}{127}{section*.319}%
+\contentsline {subsubsection}{VAN y TIR con churn incorporado}{128}{section*.321}%
+\contentsline {paragraph}{Resultados (escenario neutral)}{128}{section*.322}%
+\contentsline {paragraph}{Interpretación}{128}{section*.323}%
+\contentsline {subsection}{Primera iteración: Redis, FAISS y LangChain}{129}{section*.324}%
+\contentsline {subsection}{Creación de una Base de Mensajes del Usuario y Activación de Filtros}{130}{section*.325}%
+\contentsline {subsubsection}{Listado 1}{130}{section*.326}%
+\contentsline {subsubsection}{Listado 2}{131}{section*.327}%
+\contentsline {subsection}{Similitud entre consultas y extractos de conversaciones}{131}{section*.328}%
+\contentsline {subsubsection}{Listado 1}{131}{section*.329}%
+\contentsline {subsubsection}{Listado 2}{132}{section*.330}%
+\contentsline {subsubsection}{Listado 3}{132}{section*.331}%
+\contentsline {subsubsection}{Listado 4}{132}{section*.332}%
+\contentsline {subsubsection}{Listado 5}{133}{section*.333}%
+\contentsline {subsubsection}{Listado 6}{133}{section*.334}%
+\contentsline {subsubsection}{Listado 7}{133}{section*.335}%
+\contentsline {subsubsection}{Listado 8}{134}{section*.336}%
+\contentsline {subsection}{Implementación de Búsquedas Semánticas con Redis y FAISS para la Gestión de Sesiones de Usuario}{135}{section*.337}%
+\contentsline {subsubsection}{Listado 1}{135}{section*.338}%
+\contentsline {subsubsection}{Listado 2}{135}{section*.339}%
+\contentsline {subsubsection}{Listado 3}{136}{section*.340}%
+\contentsline {subsubsection}{Listado 4}{136}{section*.341}%
+\contentsline {subsubsection}{Listado 5}{137}{section*.342}%
+\contentsline {subsubsection}{Listado 6}{138}{section*.343}%
+\contentsline {subsubsection}{Listado 7}{138}{section*.344}%
+\contentsline {subsubsection}{Listado 8}{139}{section*.345}%
+\contentsline {subsection}{Análisis del Proceso de Vectorización de Conversaciones y Búsqueda Semántica}{139}{section*.346}%
+\contentsline {subsubsection}{Listado 1}{139}{section*.347}%
+\contentsline {subsubsection}{Listado 2}{139}{section*.348}%
+\contentsline {subsubsection}{Listado 3}{140}{section*.349}%
+\contentsline {subsubsection}{Listado 4}{141}{section*.350}%
+\contentsline {subsubsection}{Listado 5}{141}{section*.351}%
+\contentsline {subsubsection}{Listado 6}{142}{section*.352}%
+\contentsline {subsection}{Análisis del enfoque en la recuperación de información sobre un pariente del usuario}{142}{section*.353}%
+\contentsline {subsubsection}{Listado 1}{142}{section*.354}%
+\contentsline {subsubsection}{Listado 2}{143}{section*.355}%
+\contentsline {subsubsection}{Listado 3}{144}{section*.356}%
+\contentsline {subsubsection}{Listado 4}{146}{section*.357}%
+\contentsline {subsubsection}{Listado 5}{146}{section*.358}%
+\contentsline {subsubsection}{Listado 6}{147}{section*.359}%
+\contentsline {subsection}{Análisis de la Mejora en la Estructura del Contexto para la Recuperación de Información}{147}{section*.360}%
+\contentsline {subsubsection}{Listado 1}{147}{section*.361}%
+\contentsline {subsubsection}{Listado 2}{147}{section*.362}%
+\contentsline {subsubsection}{Listado 3}{150}{section*.363}%
+\contentsline {subsubsection}{Listado 4}{152}{section*.364}%
+\contentsline {subsubsection}{Listado 5}{153}{section*.365}%
+\contentsline {subsubsection}{Listado 6}{153}{section*.366}%
+\contentsline {subsection}{Análisis de la Interpretación de Fechas y Razonamiento Cronológico}{154}{section*.367}%
+\contentsline {subsubsection}{Listado 1}{154}{section*.368}%
+\contentsline {subsubsection}{Listado 2}{155}{section*.369}%
+\contentsline {subsubsection}{Listado 3}{156}{section*.370}%
+\contentsline {subsubsection}{Listado 4}{156}{section*.371}%
+\contentsline {subsubsection}{Listado 5}{157}{section*.372}%
+\contentsline {subsubsection}{Listado 6}{157}{section*.373}%
+\contentsline {subsection}{Influencia de la estructura del contexto en el razonamiento cronológico}{158}{section*.374}%
+\contentsline {subsubsection}{Listado 1}{158}{section*.375}%
+\contentsline {subsubsection}{Listado 2}{159}{section*.376}%
+\contentsline {subsubsection}{Listado 3}{160}{section*.377}%
+\contentsline {subsubsection}{Listado 4}{160}{section*.378}%
+\contentsline {subsubsection}{Listado 5}{161}{section*.379}%
+\contentsline {subsubsection}{Listado 6}{161}{section*.380}%
+\contentsline {subsection}{Agregado de un Paso de Extracción y Limpieza a un Conjunto de Datos con 4 Miembros de un Grupo Familiar}{161}{section*.381}%
+\contentsline {subsubsection}{Listado 1}{161}{section*.382}%
+\contentsline {subsubsection}{Listado 2}{163}{section*.383}%
+\contentsline {subsubsection}{Listado 3}{164}{section*.384}%
+\contentsline {subsubsection}{Listado 4}{165}{section*.385}%
+\contentsline {subsubsection}{Listado 5}{165}{section*.386}%
+\contentsline {subsubsection}{Listado 6}{165}{section*.387}%
+\contentsline {subsection}{Razonamiento Cronológico y Extracción de Datos en Conversaciones Familiares}{166}{section*.388}%
+\contentsline {subsubsection}{Listado 1}{166}{section*.389}%
+\contentsline {subsubsection}{Listado 2}{167}{section*.390}%
+\contentsline {subsubsection}{Listado 3}{169}{section*.391}%
+\contentsline {subsubsection}{Listado 4}{169}{section*.392}%
+\contentsline {subsection}{Mejora del Razonamiento Cronológico en Conversaciones Familiares Utilizando GPT-3.5 y GPT-4}{170}{section*.393}%
+\contentsline {subsubsection}{Listado 1}{170}{section*.394}%
+\contentsline {subsubsection}{Listado 2}{172}{section*.395}%
+\contentsline {subsubsection}{Listado 3}{173}{section*.396}%
+\contentsline {subsubsection}{Listado 4}{174}{section*.397}%
+\contentsline {subsubsection}{Listado 5}{174}{section*.398}%
+\contentsline {subsection}{Optimización del Razonamiento Cronológico y Manejo de Contexto en Búsquedas Semánticas con GPT-4}{175}{section*.399}%
+\contentsline {subsubsection}{Listado 1}{175}{section*.400}%
+\contentsline {subsubsection}{Listado 2}{176}{section*.401}%
+\contentsline {subsubsection}{Listado 3}{177}{section*.402}%
+\contentsline {subsubsection}{Listado 4}{178}{section*.403}%
+\contentsline {subsubsection}{Listado 5}{179}{section*.404}%
+\contentsline {subsection}{Experimentos Combinados sobre Fechas y Manejo de Cantidades}{180}{section*.405}%
+\contentsline {subsubsection}{Listado 1}{180}{section*.406}%
+\contentsline {subsubsection}{Listado 2}{181}{section*.407}%
+\contentsline {subsubsection}{Listado 3}{182}{section*.408}%
+\contentsline {subsubsection}{Listado 4}{183}{section*.409}%
+\contentsline {subsection}{Manejo de Datos Personales y Resolución de Citas Médicas con GPT-3.5: Conjunto de Datos Referente a Turnos de un Tercero}{184}{section*.410}%
+\contentsline {subsubsection}{Listado 1}{184}{section*.411}%
+\contentsline {subsubsection}{Listado 2}{185}{section*.412}%
+\contentsline {subsubsection}{Listado 3}{186}{section*.413}%
+\contentsline {subsubsection}{Listado 4}{187}{section*.414}%
+\contentsline {subsection}{Manejo de Datos Personales y Errores de Contexto en la Gestión de Citas Médicas con GPT-3.5}{188}{section*.415}%
+\contentsline {subsubsection}{Listado 1}{188}{section*.416}%
+\contentsline {subsubsection}{Listado 2}{189}{section*.417}%
+\contentsline {subsubsection}{Listado 3}{190}{section*.418}%
+\contentsline {subsubsection}{Listado 4}{192}{section*.419}%
+\contentsline {subsubsection}{Listado 5}{193}{section*.420}%
+\contentsline {subsubsection}{Listado 6}{193}{section*.421}%
+\contentsline {subsection}{Creación de datos familiares}{194}{section*.422}%
+\contentsline {subsubsection}{Listado 1}{194}{section*.423}%
+\contentsline {subsection}{Creación de conjunto de datos médicos de alcance intermedio (1 año)}{195}{section*.424}%
+\contentsline {subsubsection}{Listado 1}{195}{section*.425}%
+\contentsline {subsubsection}{Listado 2}{197}{section*.426}%
+\contentsline {subsubsection}{Listado 3}{198}{section*.427}%
+\contentsline {subsubsection}{Listado 4}{200}{section*.428}%
+\contentsline {subsection}{Creación de conjunto de datos de consumo de mediano plazo (1 año)}{201}{section*.429}%
+\contentsline {subsubsection}{Listado 1}{201}{section*.430}%
+\contentsline {subsubsection}{Listado 2}{203}{section*.431}%
+\contentsline {subsubsection}{Listado 3}{205}{section*.432}%
+\contentsline {subsection}{Ingestión a base de datos de los datos sintéticos}{207}{section*.433}%
+\contentsline {subsubsection}{Listado 1}{207}{section*.434}%
+\contentsline {subsubsection}{Listado 2}{207}{section*.435}%
+\contentsline {subsubsection}{Listado 3}{208}{section*.436}%
+\contentsline {subsubsection}{Listado 4}{208}{section*.437}%
+\contentsline {subsubsection}{Listado 5}{212}{section*.438}%
+\contentsline {subsubsection}{Listado 6}{212}{section*.439}%
+\contentsline {subsubsection}{Listado 7}{212}{section*.440}%
+\contentsline {subsubsection}{Listado 8}{214}{section*.441}%
+\contentsline {subsubsection}{Listado 9}{215}{section*.442}%
+\contentsline {subsubsection}{Listado 10}{215}{section*.443}%
+\contentsline {subsubsection}{Listado 11}{215}{section*.444}%
+\contentsline {subsubsection}{Listado 12}{215}{section*.445}%
+\contentsline {subsubsection}{Listado 13}{216}{section*.446}%
+\contentsline {subsubsection}{Listado 14}{216}{section*.447}%
+\contentsline {subsubsection}{Listado 15}{216}{section*.448}%
+\contentsline {subsubsection}{Listado 16}{217}{section*.449}%
+\contentsline {subsection}{Inserción en base de documentos con soporte vectorial y consultas}{217}{section*.450}%
+\contentsline {subsubsection}{Listado 1}{217}{section*.451}%
+\contentsline {subsubsection}{Listado 2}{217}{section*.452}%
+\contentsline {subsubsection}{Listado 3}{218}{section*.453}%
+\contentsline {subsubsection}{Listado 4}{219}{section*.454}%
+\contentsline {subsubsection}{Listado 5}{220}{section*.455}%
+\contentsline {subsubsection}{Listado 6}{220}{section*.456}%
+\contentsline {subsubsection}{Listado 7}{222}{section*.457}%
+\contentsline {subsection}{Simulación con el Método Delphi con LLM}{222}{section*.458}%
+\contentsline {subsubsection}{Listado 1}{222}{section*.459}%
+\contentsline {subsubsection}{Listado 2}{222}{section*.460}%
+\contentsline {subsubsection}{Listado 3}{232}{section*.461}%
+\contentsline {subsubsection}{Listado 4}{240}{section*.462}%
+\contentsline {subsubsection}{Listado 5}{241}{section*.463}%
+\contentsline {subsubsection}{Listado 6}{242}{section*.464}%
+\contentsline {subsubsection}{Listado 7}{242}{section*.465}%
+\contentsline {subsubsection}{Listado 8}{243}{section*.466}%
+\contentsline {subsubsection}{Listado 9}{243}{section*.467}%
+\contentsline {subsubsection}{Listado 10}{243}{section*.468}%
+\contentsline {subsubsection}{Listado 11}{244}{section*.469}%
+\contentsline {subsubsection}{Listado 12}{244}{section*.470}%
+\contentsline {subsubsection}{Listado 13}{246}{section*.471}%
+\contentsline {subsubsection}{Listado 14}{246}{section*.472}%
+\contentsline {subsubsection}{Listado 15}{247}{section*.473}%
+\contentsline {subsubsection}{Listado 16}{247}{section*.474}%
+\contentsline {subsubsection}{Listado 17}{247}{section*.475}%
+\contentsline {subsubsection}{Listado 18}{247}{section*.476}%
+\contentsline {subsubsection}{Listado 19}{248}{section*.477}%
+\contentsline {subsubsection}{Listado 20}{251}{section*.478}%
+\contentsline {subsubsection}{Listado 21}{251}{section*.479}%
+\contentsline {subsubsection}{Listado 22}{253}{section*.480}%
+\contentsline {subsection}{Desarrollo de la simulación}{254}{section*.481}%
+\contentsline {subsubsection}{Listado 1}{254}{section*.482}%
+\contentsline {subsubsection}{Listado 2}{255}{section*.483}%
+\contentsline {subsubsection}{Listado 3}{257}{section*.484}%
+\contentsline {subsubsection}{Listado 4}{260}{section*.485}%
+\contentsline {subsubsection}{Listado 5}{263}{section*.486}%
+\contentsline {subsubsection}{Listado 6}{266}{section*.487}%
+\contentsline {subsubsection}{Listado 7}{269}{section*.488}%
+\contentsline {subsubsection}{Listado 8}{270}{section*.489}%
+\contentsline {subsubsection}{Listado 9}{271}{section*.490}%
+\contentsline {subsubsection}{Listado 10}{278}{section*.491}%
+\contentsline {subsubsection}{Listado 11}{281}{section*.492}%
+\contentsline {subsubsection}{Listado 12}{284}{section*.493}%
+\contentsline {subsubsection}{Listado 13}{287}{section*.494}%
+\contentsline {subsubsection}{Listado 14}{290}{section*.495}%
+\contentsline {subsubsection}{Listado 15}{293}{section*.496}%
+\contentsline {subsubsection}{Listado 16}{293}{section*.497}%
+\contentsline {subsubsection}{Listado 17}{296}{section*.498}%
+\contentsline {subsubsection}{Listado 18}{297}{section*.499}%
+\contentsline {subsection}{Evaluación financiera con churn, renovaciones e impago}{299}{section*.500}%
+\contentsline {subsubsection}{Listado 1}{299}{section*.501}%

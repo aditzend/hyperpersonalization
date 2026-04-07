@@ -6,50 +6,7 @@ En la notebook 9 se experimenta con la forma en que la estructura del contexto a
 
 Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. Se configura también una función que interactúa con los modelos de lenguaje a través de la API de OpenAI.
 
-\begin{APACode}
-import os
-import requests
-import json
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
-index_name = "conversations"
-index_path = "../indexes/conversations"
-embeddings = OpenAIEmbeddings()
-
-def gpt_system_user(
-    system_message: str, user_message: str, model: str = "gpt-3.5-turbo"
-):
-    """Para usar en notebooks"""
-    try:
-        response = requests.post(
-            url="https://api.openai.com/v1/chat/completions",
-            params={"temperature": "0"},
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
-            },
-            data=json.dumps({
-                "model": model,
-                "messages": [
-                    {"content": system_message, "role": "system"},
-                    {"content": user_message, "role": "user"},
-                ]
-            }),
-            timeout=10,
-        )
-        choices = response.json()["choices"]
-        answer = {
-            "status_code": response.status_code,
-            "text": choices[0]["message"],
-        }
-        return answer
-    except requests.exceptions.RequestException:
-        print("HTTP Request failed")
-        return None
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-9-1}).
 
 \paragraph{Contextos condensados y simulación de conversaciones}
 
@@ -65,64 +22,13 @@ Se simulan varias conversaciones entre el usuario y el sistema. En una de ellas,
     \item Asistente: ``El turno es para el 30 de agosto a las 15:00''.
 \end{itemize}
 
-\begin{APACode}
-condensed_contexts = [
-    {
-        "messages": [
-            {"role": "user", "content": "Quiero un turno para mi madre"},
-            {"role": "system", "content": "cual es el nombre de tu madre?"},
-            {"role": "user", "content": "Alba"},
-            {"role": "system", "content": "y que edad tiene?"},
-            {"role": "user", "content": "66"},
-            {"role": "system", 
-             "content": "perfecto, tiene turno para el 30 de agosto a las 15:00"}
-        ],
-        "metadata": {
-            "session_id": "1",
-            "person_id": "20",
-            "context_id": "1",
-            "created_at": "20230825T12:00:00.000Z",
-        },
-    },
-    {
-        "messages": [
-            {"role": "user", "content": "Cual es la capital de Colombia?"},
-            {"role": "system", "content": "Bogota"}
-        ],
-        "metadata": {
-            "session_id": "1",
-            "person_id": "20",
-            "context_id": "2",
-            "created_at": "20230825T18:00:00.000Z",
-        }
-    }
-]
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-9-2}).
 
 \paragraph{Extracción de datos con GPT-3.5}
 
 En lugar de simplemente almacenar las conversaciones, se utiliza el modelo GPT-3.5 para extraer la información clave de cada conversación. Esto incluye detalles como el nombre y la edad de la madre del usuario, así como la fecha y hora en que la información fue recopilada. Esta extracción se almacena en FAISS junto con los metadatos de la conversación.
 
-\begin{APACode}
-db = FAISS.from_texts(texts=['notebook-9'], embedding=embeddings)
-for context in condensed_contexts:
-    messages = ''.join([str(message) for message in context['messages']])
-    extraction = gpt_system_user(
-        system_message="""
-        Extract every meaningful information about the user from the provided 
-        conversation. Ask yourself, what happened in the conversation?
-        What data about the user did you learn?
-        At what date and time was this data gathered?
-        """,
-        user_message=f"METADATA: ```{context['metadata']}``` 
-                      CONVERSATION: ```{messages}```",
-        model="gpt-3.5-turbo",
-    )
-    db.add_texts(
-        texts=[extraction['text']['content']],
-        metadatas=[context['metadata']],
-    )
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-9-3}).
 
 \paragraph{Ejemplo de extracción obtenida:}
 ``El usuario mencionó que quiere un turno para su madre. La madre del usuario se llama Alba y tiene 66 años.''
@@ -131,22 +37,7 @@ for context in condensed_contexts:
 
 Se comienza con una consulta simple: ``¿Qué edad tiene Alba?''. El sistema encuentra el contexto relevante y responde correctamente: ``Alba tiene 66 años''.
 
-\begin{APACode}
-user_input_3 = "que edad tiene alba?"
-filter = {"person_id": "20"}
-db_results_3 = db.similarity_search_with_score(
-    query=user_input_3, embeddings=embeddings, filter=filter, k=1
-)
-context_3 = "{ message: " + db_results_3[0][0].page_content + 
-            ", metadata: " + str(db_results_3[0][0].metadata) + " }"
-
-system_prompt_3 = f"""
-You are a personal assistant. You will find past conversations between you and 
-the user between backticks. Use them to answer the user's question.
-```{context_3}```
-"""
-answer_3 = gpt_system_user(system_message=system_prompt_3, user_message=user_input_3)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-9-4}).
 
 Luego, se plantea una consulta más compleja: ``¿Qué edad tenía Alba en 2020?''. En este caso, GPT-3.5 logra razonar correctamente y responde que Alba tenía 63 años en 2020, basándose en la edad actual de 66 años.
 
@@ -154,10 +45,7 @@ Luego, se plantea una consulta más compleja: ``¿Qué edad tenía Alba en 2020?
 
 Se continúa con una pregunta más difícil: ``¿Qué edad tenía Alba en 1970?''. El sistema nuevamente razona correctamente y responde que Alba tenía 13 años en 1970, lo que demuestra que, con la forma correcta de estructurar y almacenar el contexto, GPT-3.5 es capaz de realizar razonamientos cronológicos precisos.
 
-\begin{APACode}
-user_input_3 = "que edad tenía alba en 1970?"
-# [Código similar al anterior con diferentes consultas temporales]
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-9-5}).
 
 \textbf{Resultados obtenidos:}
 \begin{itemize}
@@ -170,12 +58,7 @@ user_input_3 = "que edad tenía alba en 1970?"
 
 Finalmente, se realiza una consulta general: ``¿Conoces a mi madre?''. El sistema responde de manera acertada, reconociendo a Alba y proporcionando los detalles previamente almacenados: ``Sí, conozco a tu madre. Su nombre es Alba y tiene 66 años''.
 
-\begin{APACode}
-user_input_3 = "conoces a mi madre?"
-# [Implementación similar]
-# Respuesta: 'Sí, conozco a tu madre. Su nombre es Alba y tiene 66 años. 
-#            ¿En qué puedo ayudarte hoy?'
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-9-6}).
 
 \paragraph{Conclusiones de la novena iteración}
 

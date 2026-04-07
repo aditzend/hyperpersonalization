@@ -24,50 +24,13 @@ El código de la notebook\footnote{Disponible en: \url{https://github.com/aditze
 
 Se realiza una búsqueda usando \texttt{conversations.similarity\_search\_with\_score()}. La pregunta es ``¿A dónde quería ir el cliente?'' y se filtra por \texttt{person\_id} ``alexander.ditzend''. Se busca el mensaje más similar semánticamente a la pregunta.
 
-\begin{APACode}
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-import os
-import sys
-import redis
-from datetime import datetime
-from dotenv import load_dotenv
-
-sys.path.append('/Users/alexander/Projects/hyperpersonalization/app/tools')
-from vectordb import connect_to_redis, check_index_existance, add_message_to_db
-
-load_dotenv()
-
-redis_host = os.getenv("REDIS_HOST") or "localhost"
-redis_port = os.getenv("REDIS_PORT") or 6379
-
-embeddings = OpenAIEmbeddings()
-metadatas = [{"person_id": "alexander.ditzend", "person_name": "Alexander"}]
-timestamp = datetime.now().isoformat()
-message = {"timestamp": timestamp, "content": "hola, quiero ir a Río"}
-text = str(message)
-conversations = FAISS.from_texts(texts=[text], embedding=embeddings, 
-                                metadatas=metadatas)
-conversations.save_local(folder_path="../indexes/conversations", 
-                        index_name="conversations")
-
-conversations.similarity_search_with_score(
-    query="¿A dónde quería ir el cliente?", 
-    filter={"person_id": "alexander.ditzend"}
-)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-2-1}).
 
 \paragraph{Conclusiones de la segunda iteración}
 
 El resultado devuelto es el mensaje ``hola, quiero ir a Río'' con un puntaje de similitud de 0.50811493. Este puntaje resulta de la comparación mediante la distancia coseno entre la pregunta y el contenido del mensaje:
 
-\begin{APACode}
-[(Document(page_content="{'timestamp': '2023-07-12T12:00:22.538965', 
-                        'content': 'hola, quiero ir a Río'}", 
-          metadata={'person_id': 'alexander.ditzend', 
-                   'person_name': 'Alexander'}), 
-  0.50811493)]
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-2-2}).
 
 
 Se menciona que la distancia coseno no es útil en un conjunto con un solo vector, ya que no hay otros vectores con los cuales comparar. Sin embargo, el ejemplo demuestra la factibilidad de la aproximación en búsquedas por similitud semántica.

@@ -6,19 +6,7 @@ En una primera etapa se decidió crear colecciones separadas para cada tipo de r
 
 La arquitectura seleccionada consiste en tomar una pieza de información, como la del siguiente ejemplo y calcularle los embeddings antes de guardarla en la base.
 
-\begin{APACode}
-{
-    "datetime": "2023-12-01T10:00:00Z",
-    "description": "Monthly subscription to streaming service", 
-    "type": "subscription",
-    "amount": 1, 
-    "unit_of_measure": "service", 
-    "unit_price": 15.0,
-    "total_cost": 15.0, 
-    "payment_method": "direct debit", 
-    "area_of_life": "entertainment"
-}
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-1}).
 
 Todo el objeto se convierte a texto plano antes de la conversión y al obtener el vector se guarda en el campo `vector' y se inserta en la colección única llamada `Records'.
 
@@ -50,172 +38,27 @@ A continuación el código de los procesos detallados\footnote{Código completo 
 
 \paragraph{Configuración inicial y conexión a MongoDB Atlas}
 
-\begin{APACode}
-import os
-from pymongo import MongoClient
-
-# Connect to local MongoDB Atlas 
-mongo_uri = os.getenv("MONGODB_URI") 
-if not mongo_uri:
-    raise ValueError("MONGODB_URI environment variable is not set")
-
-client = MongoClient(mongo_uri) 
-db = client.get_database("hyper")
-
-print(f"Connected to database: {db.name}")
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-2}).
 
 \paragraph{Clase cliente para Atlas}
 
-\begin{APACode}
-class AtlasClient():
-    def __init__(self, atlas_uri, dbname): 
-        self.mongodb_client = MongoClient(atlas_uri) 
-        self.database = self.mongodb_client[dbname]
-
-    def ping(self):
-        self.mongodb_client.admin.command('ping')
-
-    def get_collection(self, collection_name): 
-        collection = self.database[collection_name] 
-        return collection
-
-    def find(self, collection_name, filter={}, limit=10): 
-        collection = self.database[collection_name]
-        items = list(collection.find(filter=filter, limit=limit)) 
-        return items
-
-    def vector_search(self, collection_name, index_name, attr_name, 
-                     embedding_vector, limit=5): 
-        collection = self.database[collection_name]
-        results = collection.aggregate([
-            {
-                '$vectorSearch': { 
-                    "index": index_name, 
-                    "path": attr_name,
-                    "queryVector": embedding_vector, 
-                    "numCandidates": 50,
-                    "limit": limit,
-                }
-            },
-            {
-                "$project": {
-                    '_id': 1,
-                    'title': 1,
-                    'plot': 1,
-                    'year': 1,
-                    "search_score": {"$meta": "vectorSearchScore"}
-                }
-            }
-        ])
-        return list(results)
-
-    def close_connection(self): 
-        self.mongodb_client.close()
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-3}).
 
 \paragraph{Procesamiento y carga de registros médicos}
 
-\begin{APACode}
-from openai import OpenAI
-import json
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-def get_embedding(text):
-    response = client.embeddings.create( 
-        input=text,
-        model="text-embedding-3-large"
-    )
-    return response.data[0].embedding
-
-# Load the medical_records.json file
-with open('../../data/norman/medical_records/medical_records.json', 'r') as file: 
-    medical_records_data = json.load(file)
-
-# Process each medical record and add embeddings 
-for record in medical_records_data:
-    if record['datetime'] != "-":
-        record["record_owner"] = "Norman" 
-        record["record_type"] = "medical_record" 
-        record_text = json.dumps(record)
-        embedding = get_embedding(record_text) 
-        record['vector'] = embedding
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-4}).
 
 \paragraph{Inserción en la colección Records}
 
-\begin{APACode}
-Records = atlas_client.get_collection('Records')
-
-# Insert each record into the Records collection 
-for record in medical_records_with_embeddings:
-    if len(record.get('datetime', '')) > 10:
-        if isinstance(record['vector'], str):
-            record['vector'] = json.loads(record['vector'])
-        
-        result = Records.insert_one(record)
-        print(f"Inserted record with ID: {result.inserted_id}")
-    else:
-        print(f"Skipping record with invalid datetime: {record.get('datetime', 'N/A')}")
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-5}).
 
 \paragraph{Amplificación de consultas y búsqueda vectorial}
 
-\begin{APACode}
-from pydantic import BaseModel, Field
-from typing import Literal
-
-class AmplifiedQuery(BaseModel): 
-    expanded_query: str
-    record_type: Literal['medical_record', 'person_record', 'bank_record'] = Field(
-        ...,
-        description="Type of record to search for"
-    )
-
-# Query amplification using OpenAI completions 
-user_input = "cuántos años tienen mis hijas?"
-
-amplification = client.beta.chat.completions.parse(
-    model="gpt-4o-2024-08-06",
-    messages=[
-        {"role": "system", "content": f"You are a helpful assistant that expands user queries of the record owner Norman to improve search results using cosine distance in a vector database using text embeddings"},
-        {"role": "user", "content": f"Expand this query for better search results, concatenate all query variations into a single string under the key 'expanded_query'. Then choose the most appropriate record_type to pick the answer from. The user input is: `{user_input}`"}
-    ],
-    max_tokens=1000, 
-    response_format=AmplifiedQuery
-).choices[0].message.parsed
-
-query_embedding = get_embedding(amplification.expanded_query)
-
-# Perform vector search using Atlas client 
-results = atlas_client.vector_search(
-    collection_name="Records", 
-    index_name="RecordsSearchIndex", 
-    attr_name='vector', 
-    embedding_vector=query_embedding, 
-    limit=3
-)
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-6}).
 
 \paragraph{Generación de respuesta final}
 
-\begin{APACode}
-context = []
-for result in results:
-    full_doc = Records.find_one({"_id": result["_id"]})
-    context.append(str(full_doc))
-
-context_str = "\n".join(context)
-final_answer = client.chat.completions.create( 
-    model="gpt-4o-2024-08-06",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant that answers questions based on the given context."},
-        {"role": "user", "content": f"Context:\n{context_str}\n\nQuestion: {user_input}\n\nAnswer the question based on the context."}
-    ],
-    max_tokens=150
-).choices[0].message.content
-\end{APACode}
+La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-7}).
 
 El sistema demostró capacidad para responder correctamente preguntas específicas como ``cuántos años tienen mis hijas?'' obteniendo la respuesta ``Tus hijas tienen 8 años. Los datos proporcionados mencionan a Mia y Eva, quienes son etiquetadas con la relación `daughter' (hija) y ambas tienen la edad de 8 años.''
 
