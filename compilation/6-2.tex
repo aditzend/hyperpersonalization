@@ -6,7 +6,7 @@
 
 \begin{itemize}
     \item \textbf{Diferenciación}: Combina múltiples fuentes de datos y optimiza la hiperpersonalización en tiempo real. No existen competidores aún.
-    \item \textbf{Privacidad y seguridad}: La instalación local o en un entorno controlado por el cliente reduce las preocupaciones sobre la transferencia de datos.
+    \item \textbf{Privacidad y seguridad}: La instalación local o en un entorno controlado por el cliente reduce las preocupaciones sobre la transferencia de datos. El modelo de despliegue on-premise facilita el cumplimiento de la Ley~25.326 de Protección de Datos Personales y de las disposiciones de la Agencia de Acceso a la Información Pública (AAIP), dado que la información personal no sale del perímetro del cliente. Esto habilita la firma de acuerdos de tratamiento de datos (DPA) con roles claros de responsable y encargado, un requisito cada vez más frecuente en los procesos de compra de sectores regulados.
     \item \textbf{Compatibilidad}: Diseñado para integrarse con diferentes sistemas y bases de datos (e.g., CRM, ERP).
     \item \textbf{Escalabilidad}: Puede adaptarse a diversas industrias y volúmenes de datos, desde pequeñas empresas hasta grandes corporaciones.
     \item \textbf{Valor estratégico}: Ayuda a las empresas a maximizar la eficiencia de sus asistentes virtuales, mejorando la experiencia del cliente y optimizando recursos.
@@ -35,6 +35,7 @@
     \item \textbf{Barreras de adopción}: Resistencia inicial de las empresas a instalar software intermedio sin ver resultados claros.
     \item \textbf{Dependencia tecnológica}: Cambios en los sistemas base de los clientes podrían requerir actualizaciones constantes.
     \item \textbf{Cambio en prioridades del mercado}: La aparición de nuevas tecnologías podría desviar el interés hacia otras soluciones.
+    \item \textbf{Endurecimiento regulatorio}: La evolución de la normativa argentina de protección de datos personales —y la eventual convergencia con estándares internacionales como GDPR— podría elevar los requisitos de auditoría, consentimiento y tratamiento de datos de menores, incrementando los costos de compliance tanto para la empresa como para sus clientes. Este riesgo se mitiga parcialmente por la propia arquitectura on-premise de la solución, pero exige un seguimiento regulatorio activo.
 \end{itemize}
 
 \subsubsection{Propuesta de valor}
@@ -48,14 +49,14 @@ Las empresas tienen múltiples fuentes de datos (CRM, ERP, bases de datos intern
 La falta de hiperpersonalización reduce la calidad de la interacción y la satisfacción del cliente. Esto puede llevar a pérdida de ventas, frustración del usuario y mayor carga para los canales tradicionales (como atención telefónica).
 
 \subparagraph{Privacidad y cumplimiento normativo}
-Muchas empresas no pueden alojar o transmitir sus datos fuera de sus centros de datos propios por preocupaciones legales y de seguridad.
+Muchas empresas no pueden alojar o transmitir sus datos fuera de sus centros de datos propios por preocupaciones legales y de seguridad. En Argentina, la Ley~25.326 establece obligaciones de consentimiento informado, finalidad específica y medidas de seguridad para todo tratamiento de datos personales. En verticales como educación, donde los usuarios finales pueden ser menores de edad, se requiere además el consentimiento explícito de padres o tutores y políticas de no-persistencia de información personal identificable (PII) en los registros del sistema. La arquitectura on-premise del middleware resuelve estas restricciones al mantener los datos dentro del perímetro del cliente, y la operación se complementa con acuerdos de tratamiento de datos (DPA) que definen roles, subencargados, plazos de retención y mecanismos de borrado.
 
 \paragraph{Especificación de la propuesta de valor}
 
 \subparagraph{Para las empresas}
 \begin{itemize}
     \item \textbf{Optimización de interacciones}: Permite que los bots ofrezcan respuestas personalizadas en tiempo real utilizando múltiples fuentes de datos.
-    \item \textbf{Cumplimiento normativo}: Los datos permanecen en el entorno seguro de la empresa.
+    \item \textbf{Cumplimiento normativo}: Los datos permanecen en el entorno seguro de la empresa, facilitando el cumplimiento de la Ley~25.326 y de regulaciones sectoriales (banca, salud, educación). Se proveen DPAs estándar y controles de prevención de fuga de datos (DLP) integrados al flujo de operación.
     \item \textbf{Mejor integración}: Facilita la conexión entre sistemas existentes y el motor del bot, sin necesidad de rediseñar infraestructuras completas.
     \item \textbf{Reducción de costos}: Disminuye la necesidad de intervención humana en las interacciones repetitivas.
 \end{itemize}
@@ -156,4 +157,4 @@ El middleware actúa como un intermediario entre los sistemas internos de la emp
     \end{itemize}
 \end{enumerate}
 
-Los pacientes reciben respuestas rápidas y personalizadas, reduciendo su frustración y mejorando su experiencia. Además se disminuye la carga operativa de los agentes humanos, liberando recursos para tareas más complejas sin contar la optimización en la asignación de citas, considerando la disponibilidad y preferencias de los pacientes. 
+Los pacientes reciben respuestas rápidas y personalizadas, reduciendo su frustración y mejorando su experiencia. Además se disminuye la carga operativa de los agentes humanos, liberando recursos para tareas más complejas sin contar la optimización en la asignación de citas, considerando la disponibilidad y preferencias de los pacientes.

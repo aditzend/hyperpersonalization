@@ -6035,83 +6035,132 @@ perspectivas te hicieron ajustar (o no ajustar) tus números.
 \subsubsection{Listado 1}
 \label{anexo:code-6-5-1-1-1}
 
-\begin{APACode}
-# Supuestos base (escenario neutral)
-price_license = 12000
-price_impl    = 10000
-var_cost_license = 720
-cost_impl        = 3900
+% ============================================================
+% INSTRUCCIONES PARA anexo-tecnico.tex
+% ============================================================
+%
+% Buscar la subsección:
+%   \subsection{Evaluación financiera con churn, renovaciones e impago}
+%   \subsubsection{Listado 1}
+%   \label{anexo:code-6-5-1-1-1}
+%
+% REEMPLAZAR TODO el contenido entre \begin{APACode}...\end{APACode}
+% (desde "# Supuestos base" hasta el último comentario sobre TIR)
+% por el siguiente bloque:
+% ============================================================
 
-churn = 0.09           # 9% churn anual
-retention = 1 - churn  # 91% retención
-bad_debt = 0.02        # 2% impago sobre licencias
-
-tax_rate = 0.35
-discount = 0.2088
-nwc_pct  = 0.08        # NWC = 8% de ventas netas
-
-# Nuevos clientes por año (trayectoria neutral; puede parametrizarse por Delphi)
-new_customers = {1: 5, 2: 9, 3: 14, 4: 18, 5: 22, 6: 26, 7: 30}
-
-# OPEX: fijo + CAC por nuevo cliente (CAC neutral ~ 17k)
-CAC = 17000
-fixed_admin_y1 = 120000
-admin_growth = 0.05
-
-# Depreciación y CAPEX (mantenidos del esquema original)
-depr  = {0:0, 1:6000, 2:8000, 3:9000, 4:5000, 5:3000, 6:2000, 7:1000}
-other = {0:0, 1:0, 2:3000, 3:1000, 4:500, 5:1000, 6:500, 7:0}
-capex = {0:39800, 1:18000, 2:6000, 3:18000, 4:6000, 5:0, 6:0, 7:3000}
-
-years = range(0, 8)
-
-# Stock de clientes activos (renovaciones)
-active = {0: 0.0}
-for t in range(1, 8):
-    active[t] = active[t-1] * retention + new_customers[t]
-
-# Ventas netas (licencias netas de impago + implementaciones)
-net_rev = {0: 0.0}
-cogs    = {0: 0.0}
-gross   = {0: 0.0}
-opex    = {0: 0.0}
-
-for t in range(1, 8):
-    license_bill = active[t] * price_license
-    impl_bill    = new_customers[t] * price_impl
-    net_rev[t]   = license_bill * (1 - bad_debt) + impl_bill
-
-    cogs[t]  = active[t] * var_cost_license + new_customers[t] * cost_impl
-    gross[t] = net_rev[t] - cogs[t]
-
-    fixed = fixed_admin_y1 * ((1 + admin_growth) ** (t - 1))
-    opex[t] = fixed + new_customers[t] * CAC
-
-# Capital de trabajo
-nwc = {0: 0.0}
-for t in range(1, 8):
-    nwc[t] = nwc_pct * net_rev[t]
-delta_nwc = {0: 0.0}
-for t in range(1, 8):
-    delta_nwc[t] = nwc[t] - nwc[t-1]
-
-# FCFF estándar: NOPAT + D&A - CAPEX - ΔNWC (+ otros netos)
-fcff = {}
-fcff[0] = -(capex[0] + 2000)  # inversión inicial + gastos iniciales
-
-for t in range(1, 8):
-    EBIT = gross[t] - opex[t] - depr[t]
-    tax  = max(0, EBIT) * tax_rate
-    NOPAT = EBIT - tax
-    other_after = other[t] * (1 - tax_rate) if other[t] > 0 else other[t]
-
-    fcff[t] = NOPAT + depr[t] + other_after - capex[t] - delta_nwc[t]
-
-# VAN
-npv = sum(fcff[t] / ((1 + discount) ** t) for t in years)
-
-# TIR (si se usa numpy_financial)
-# import numpy_financial as nf
-# irr = nf.irr([fcff[t] for t in years])
-\end{APACode}
-
+\begin{APACode}[breaklines=true]
+  # =============================================================
+  # Modelo financiero con compliance, churn y tres escenarios
+  # =============================================================
+  
+  # --- Precios y costos unitarios ---
+  price_license    = 12000   # licencia anual (USD)
+  price_impl       = 10000   # implementación one-off (USD)
+  var_cost_license = 720     # costo variable por licencia anual
+  cost_impl        = 3900    # costo por implementación
+  
+  # --- Churn, mora e impuestos ---
+  churn_neutral = 0.105      # 10.5 % churn anual (escenario neutral)
+  churn_pessim  = 0.12       # 12 % (pesimista)
+  churn_optim   = 0.07       # 7 %  (optimista)
+  bad_debt      = 0.02       # 2 % impago sobre licencias
+  tax_rate      = 0.35
+  discount      = 0.2088     # WACC / tasa de descuento
+  nwc_pct       = 0.10       # capital de trabajo = 10 % de ventas netas
+  
+  # --- Trayectorias de clientes nuevos por año (Delphi) ---
+  nc_pessim  = {1:4,  2:7,  3:11, 4:15, 5:19, 6:23, 7:27}
+  nc_neutral = {1:5,  2:9,  3:14, 4:18, 5:22, 6:26, 7:30}
+  nc_optim   = {1:7,  2:14, 3:22, 4:28, 5:34, 6:40, 7:46}
+  
+  # --- OPEX fijo ---
+  # CAC revisado: ratio CAC/ACV = 1.13 (benchmark 0.8-1.5)
+  CAC = 13500
+  
+  # OPEX fijo base Y1 = RRHH + infra (105k) + compliance (27k) = 132k
+  fixed_admin_y1 = 105000    # equipo nuclear, roles parciales
+  compliance     = 27000     # DLP + DPO + DR + pentest anual
+  total_fixed_y1 = fixed_admin_y1 + compliance   # 132,000
+  admin_growth   = 0.04      # 4 % crecimiento anual (conservador)
+  
+  # --- Depreciación y CAPEX ---
+  depr  = {0:0, 1:6000, 2:8000, 3:9000, 4:5000, 5:3000, 6:2000, 7:1000}
+  capex = {0:39800, 1:18000, 2:6000, 3:18000, 4:6000, 5:0, 6:0, 7:3000}
+  
+  years = range(0, 8)
+  
+  def run_scenario(new_customers, churn):
+      """Calcula IS, FCFF, VAN y TIR para un escenario dado."""
+      retention = 1 - churn
+  
+      # Stock de clientes activos
+      active = {0: 0.0}
+      for t in range(1, 8):
+          active[t] = active[t-1] * retention + new_customers[t]
+  
+      # Ventas netas, COGS, margen bruto, OPEX
+      net_rev = {0: 0.0}; cogs = {0: 0.0}
+      gross   = {0: 0.0}; opex = {0: 0.0}
+  
+      for t in range(1, 8):
+          license_bill = active[t] * price_license
+          impl_bill    = new_customers[t] * price_impl
+          net_rev[t]   = license_bill * (1 - bad_debt) + impl_bill
+          cogs[t]      = active[t] * var_cost_license \
+                        + new_customers[t] * cost_impl
+          gross[t]     = net_rev[t] - cogs[t]
+          fixed        = total_fixed_y1 * ((1 + admin_growth) ** (t - 1))
+          opex[t]      = fixed + new_customers[t] * CAC
+  
+      # Capital de trabajo
+      nwc = {0: 0.0}
+      for t in range(1, 8):
+          nwc[t] = nwc_pct * net_rev[t]
+      delta_nwc = {0: 0.0}
+      for t in range(1, 8):
+          delta_nwc[t] = nwc[t] - nwc[t-1]
+  
+      # FCFF
+      fcff = {0: -(capex[0] + 2000)}
+      for t in range(1, 8):
+          EBIT  = gross[t] - opex[t] - depr[t]
+          tax   = max(0, EBIT) * tax_rate
+          NOPAT = EBIT - tax
+          fcff[t] = NOPAT + depr[t] - capex[t] - delta_nwc[t]
+  
+      # VAN
+      npv = sum(fcff[t] / ((1 + discount) ** t) for t in years)
+  
+      # TIR (bisección)
+      lo, hi = -0.99, 10.0
+      for _ in range(300):
+          mid = (lo + hi) / 2
+          try:
+              v = sum(fcff[t] / ((1 + mid) ** t) for t in years)
+          except:
+              v = -1e9
+          if v > 0:
+              lo = mid
+          else:
+              hi = mid
+      irr = (lo + hi) / 2
+  
+      return {
+          "active": active, "net_rev": net_rev, "cogs": cogs,
+          "gross": gross, "opex": opex, "fcff": fcff,
+          "npv": npv, "irr": irr
+      }
+  
+  # --- Ejecutar los tres escenarios ---
+  res_pes = run_scenario(nc_pessim,  churn_pessim)
+  res_neu = run_scenario(nc_neutral, churn_neutral)
+  res_opt = run_scenario(nc_optim,   churn_optim)
+  
+  # --- Resultados ---
+  for label, res in [("Pesimista", res_pes),
+                     ("Neutral",   res_neu),
+                     ("Optimista", res_opt)]:
+      print(f"{label}: VAN = USD {res['npv']:,.0f}  "
+            f"TIR = {res['irr']*100:.2f}%")
+  \end{APACode}

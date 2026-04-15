@@ -11,23 +11,54 @@ Costo estimado: USD 300/mes.
 
 \subparagraph{Subtotal Infraestructura y Operación: USD 1,100/mes.}
 
+\subsubsection{Cumplimiento normativo y seguridad}
+
+La operación de un middleware que procesa datos personales en sectores regulados (banca, salud, educación) exige controles de seguridad y compliance que generan costos operativos recurrentes. Estos costos se incorporan como OPEX fijo mensual y se detallan a continuación.
+
+\paragraph{Prevención de fuga de datos y seguridad perimetral}
+Incluye herramientas de DLP (Data Loss Prevention) para evitar el envío de PII a modelos de lenguaje, WAF (Web Application Firewall) con rate-limiting, y monitoreo de seguridad con alertas. Se contemplan soluciones como AWS WAF, reglas de redacción de PII en logs y rotación trimestral de claves.
+Costo estimado: USD 350/mes.
+
+\paragraph{Consultoría legal y DPO}
+Asesoramiento legal especializado en protección de datos personales (Ley~25.326, AAIP) y cumplimiento sectorial. Incluye la función de Delegado de Protección de Datos (DPO) en modalidad parcial, revisión de DPAs con clientes, gestión de consentimientos (incluyendo menores en el vertical educativo) y actualización de Términos de Servicio y Políticas de Privacidad.
+Costo estimado: USD 1,000/mes.
+
+\paragraph{Backups y recuperación ante desastres}
+Copias de seguridad siguiendo la regla 3--2--1 (tres copias, dos medios, una fuera del sitio): respaldos diarios incrementales y mensuales completos almacenados en almacenamiento de largo plazo (e.g., AWS Glacier). Plan de recuperación con objetivos de RTO~$\leq$~4h y RPO~$\leq$~1h.
+Costo estimado: USD 200/mes.
+
+\paragraph{Pentest anual}
+Prueba de penetración anual realizada por un proveedor externo, siguiendo el checklist OWASP ASVS como criterio de aceptación de cada release. Costo anual de USD 8,400, prorrateado mensualmente.
+Costo estimado: USD 700/mes.
+
+\subparagraph{Subtotal Cumplimiento y Seguridad: USD 2,250/mes.}
+
 \subsubsection{Resumen}
 
 
 \begin{center}
-\captionof{table}{Costos de Infraestructura y Operación}
+\captionof{table}{Costos de Infraestructura, Operación, Cumplimiento y Seguridad}
 \footnotesize
 \begin{adjustbox}{max width=\textwidth,center}
 \begin{tabular}{|l|r|}
 \hline
-\textbf{Concepto} & \textbf{Costo} \\
+\textbf{Concepto} & \textbf{Costo (USD/mes)} \\
 \hline
 Hosting y Servidores en la Nube & \$ 800 \\
 Herramientas de Monitoreo y Gestión & \$ 300 \\
 \hline
-Total mensual & \$ 1,100 \\
+\textit{Subtotal Infraestructura y Operación} & \textit{\$ 1,100} \\
 \hline
-\textbf{Total anual} & \textbf{\$ 13,200} \\
+DLP / WAF / Monitoreo de seguridad & \$ 350 \\
+Consultoría legal / DPO parcial & \$ 1,000 \\
+Backups y DR (Glacier + rotación) & \$ 200 \\
+Pentest anual (prorrateado) & \$ 700 \\
+\hline
+\textit{Subtotal Cumplimiento y Seguridad} & \textit{\$ 2,250} \\
+\hline
+\textbf{Total mensual} & \textbf{\$ 3,350} \\
+\hline
+\textbf{Total anual} & \textbf{\$ 40,200} \\
 \hline
 \end{tabular}
 \end{adjustbox}
@@ -42,4 +73,4 @@ Total mensual & \$ 1,100 \\
 Se calcula un 5\% sobre las ventas para cada año para ir incrementando acorde al crecimiento de la empresa. Los primeros clientes vendrán primordialmente de las redes de contacto de los involucrados y a medida que evolucione el proyecto será necesario acceder a nuevos clientes mediante tácticas de prensa y publicidad. La dirección deberá reservar siempre este porcentaje para salvaguardar la salud de ventas del año siguiente.
 
 \paragraph{Gastos generales}
-Por cualquier gasto oculto que pueda surgir de operar con un equipo de personas de manera totalmente remota se toma un 1\% del costo total de recursos humanos. Esto no incluye la compra de computadoras ya que se evalúan como bien de uso de la empresa y se pueden amortizar. 
+Por cualquier gasto oculto que pueda surgir de operar con un equipo de personas de manera totalmente remota se toma un 1\% del costo total de recursos humanos. Esto no incluye la compra de computadoras ya que se evalúan como bien de uso de la empresa y se pueden amortizar.

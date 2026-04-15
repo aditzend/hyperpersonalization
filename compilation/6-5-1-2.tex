@@ -1,0 +1,111 @@
+\subsection{Riesgos, mitigaciones y gobernanza operativa}
+\label{sec:riesgos-mitigaciones}
+
+La operación comercial de un middleware de hiperpersonalización que procesa datos personales en sectores regulados requiere un marco explícito de gestión de riesgos. Esta sección presenta las mitigaciones operativas, contractuales y de compliance que complementan el análisis financiero desarrollado en las secciones anteriores. Los costos asociados a estos controles se encuentran detallados en la sección de Infraestructura y Operación (véase la tabla de Costos de Cumplimiento y Seguridad).
+
+\subsubsection{Resumen ejecutivo de mitigaciones}
+
+Se implementan controles de protección de datos alineados con la Ley~25.326 de Protección de Datos Personales: consentimiento informado (en el vertical educativo, por parte de padres o tutores), acuerdos de tratamiento de datos (DPA) con cada cliente, minimización y enmascarado de información personal identificable (PII), retención de logs limitada a 90~días y reglas de DLP para evitar el envío de PII a modelos de lenguaje. La seguridad operativa incluye cifrado en tránsito y en reposo, gestión de identidades con mínimo privilegio (IAM), WAF con rate-limiting, monitoreo con alertas, backups bajo la regla 3--2--1 y un plan de recuperación ante desastres con objetivos de RTO~$\leq$~4h y RPO~$\leq$~1h. La gobernanza de IA se basa en RAG con contextos autorizados, filtros de contenido y revisión humana (\textit{human-in-the-loop}) en casos sensibles (recursos humanos y menores), con evaluaciones mensuales de alucinación, toxicidad y sesgos. Contractualmente se establece un SLA de 99,5\% de disponibilidad trimestral, portabilidad de datos en formatos estándar (JSON/CSV) y cláusulas de transferencia internacional cuando corresponda. En el plano financiero se fijan supuestos explícitos de churn y CAC con análisis de sensibilidad, como se documenta en la sección~\ref{sec:evaluacion-financiera-churn}.
+
+\subsubsection{Matriz de riesgos y mitigaciones}
+
+La Tabla~\ref{tab:matriz-riesgos} sintetiza los principales riesgos identificados, su probabilidad e impacto estimados, las mitigaciones asociadas, el responsable operativo, el costo aproximado y el indicador clave de seguimiento.
+
+\begin{table}[H]
+\centering
+\caption{Matriz de riesgos, mitigaciones y KPIs operativos}
+\label{tab:matriz-riesgos}
+\footnotesize
+\begin{adjustbox}{width=\textwidth,center}
+\begin{tabular}{|p{2.8cm}|c|c|p{4.2cm}|c|r|p{2.8cm}|}
+\hline
+\textbf{Riesgo} & \textbf{Prob.} & \textbf{Imp.} & \textbf{Mitigación} & \textbf{Owner} & \textbf{Costo aprox.} & \textbf{KPI} \\
+\hline
+Fuga de PII vía prompts/logs & M & A & DLP + redactor de PII + retención $\leq$90d + capacitación de usuarios & CISO & USD 200/mes (DLP) & \% prompts con PII $<$1\% \\
+\hline
+Tratamiento de datos de menores & M & A & Consentimiento explícito de tutores; políticas específicas; no-persistencia de PII & Legal & USD 800 setup & 100\% consentimientos archivados \\
+\hline
+Caída del servicio & M & A & WAF, autoscaling, backups 3--2--1, DR con RTO$\leq$4h / RPO$\leq$1h & SRE & USD 300/mes & Uptime $\geq$99,5\% \\
+\hline
+Alucinación del LLM & M & M & RAG con contextos autorizados, filtros, HITL en RRHH/menores; evals mensuales & Producto & 40~h/mes & Tasa de corrección $<$2\% \\
+\hline
+Lock-in de proveedor & B & M & Infra codificada (Terraform), vector DB alterna (Qdrant/pgvector), export estándar & CTO & 60~h setup & Tiempo de migración $<$2~sem \\
+\hline
+Incumpl.\ fiscal / precios & M & M & Nota metodológica de impuestos; revisión trimestral de pricing & Finanzas & 10~h/trim & Desvío $<$5\% \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\noindent \textit{Nota:} A = Alta, M = Media, B = Baja.
+
+\subsubsection{Datos personales y menores}
+
+El cumplimiento de la Ley~25.326 y de las disposiciones de la AAIP constituye un requisito ineludible para operar en Argentina. Las mitigaciones concretas incluyen:
+
+\begin{itemize}
+    \item \textbf{Base legal y consentimiento}: Cada cliente firma un DPA que define roles (responsable vs. encargado del tratamiento), subencargados (proveedor cloud, proveedor de LLM), finalidades, plazos de retención y mecanismos de borrado. Cuando el cliente opera en el sector educativo y los usuarios finales son menores de edad, se requiere consentimiento explícito de padres o tutores, junto con Términos de Servicio y Política de Privacidad específicos para ese segmento.
+    \item \textbf{Clasificación de datos y minimización}: No se persisten prompts crudos que contengan PII. Los campos sensibles (DNI, correo electrónico, datos médicos) se enmascaran o hashean antes de su almacenamiento en logs. Se implementa un mecanismo de opt-out por usuario final para limitar el alcance de la personalización.
+    \item \textbf{DLP}: Las reglas de prevención de fuga de datos interceptan el flujo hacia el modelo de lenguaje y redactan automáticamente campos identificados como PII. La retención de logs operativos se limita a 90~días, transcurridos los cuales se eliminan de forma permanente.
+\end{itemize}
+
+\subsubsection{Seguridad operativa}
+
+Los controles de seguridad se diseñan para proteger la disponibilidad, integridad y confidencialidad del servicio:
+
+\begin{itemize}
+    \item \textbf{Cifrado}: TLS~1.2+ para tránsito; cifrado en reposo mediante KMS del proveedor cloud. Rotación de claves trimestral.
+    \item \textbf{Gestión de identidades}: IAM con principio de mínimo privilegio; autenticación multifactor obligatoria para accesos administrativos.
+    \item \textbf{Protección perimetral}: WAF con rate-limiting; monitoreo continuo con métricas y alertas configuradas sobre umbrales de latencia, errores y accesos anómalos.
+    \item \textbf{Continuidad}: Copias de seguridad bajo la regla 3--2--1 (diarias incrementales, mensuales completas en almacenamiento de largo plazo). Plan de recuperación ante desastres con RTO~$\leq$~4h y RPO~$\leq$~1h.
+    \item \textbf{Auditoría de código}: Checklist OWASP ASVS como criterio de aceptación en cada release; prueba de penetración anual realizada por un proveedor externo.
+\end{itemize}
+
+\subsubsection{Gobernanza de modelos de IA}
+
+La utilización de modelos de lenguaje en contextos donde se procesan datos personales y se generan respuestas que pueden influir en decisiones del usuario final requiere controles específicos:
+
+\begin{itemize}
+    \item \textbf{RAG con políticas}: El mecanismo de Retrieval Augmented Generation opera exclusivamente sobre contextos autorizados por el cliente. No se inyecta información externa no validada.
+    \item \textbf{Filtros de contenido y HITL}: Las respuestas generadas en contextos de alto riesgo —particularmente aquellas dirigidas a menores o relacionadas con recursos humanos— pasan por un filtro de contenido y, cuando corresponde, por revisión humana (\textit{human-in-the-loop}) antes de ser entregadas al usuario final.
+    \item \textbf{Evaluaciones periódicas}: Se ejecutan evaluaciones mensuales de alucinación, toxicidad y sesgos sobre una muestra representativa de interacciones. Los resultados alimentan un ciclo de mejora continua de los prompts y plantillas del sistema.
+    \item \textbf{Versionado y rollback}: Todos los prompts, plantillas y configuraciones de RAG se versionan en un repositorio controlado. Cualquier cambio se documenta y puede revertirse de forma inmediata.
+\end{itemize}
+
+\subsubsection{Marco legal-contractual}
+
+El modelo comercial incorpora cláusulas contractuales que protegen tanto al cliente como a la empresa:
+
+\begin{itemize}
+    \item \textbf{SLA}: Disponibilidad mínima de 99,5\% medida trimestralmente. Soporte estándar 8$\times$5 con opción de extensión a 24$\times$7 bajo contrato específico.
+    \item \textbf{Propiedad y portabilidad}: Los datos procesados son propiedad exclusiva del cliente. Se garantiza la exportación en formatos estándar (JSON, CSV) y la eliminación completa de los datos al finalizar la relación contractual.
+    \item \textbf{Transferencias internacionales}: Cuando los subproveedores (cloud, LLM) operan desde jurisdicciones fuera de Argentina, el contrato incluye cláusulas de transferencia internacional y mecanismos de auditoría de subproveedores, en línea con las recomendaciones de la AAIP.
+    \item \textbf{Límites de responsabilidad}: Se establecen topes de responsabilidad y exclusiones estándar para un servicio de middleware, distinguiendo entre incidentes atribuibles a la plataforma y aquellos originados en la configuración o datos del cliente.
+\end{itemize}
+
+\subsubsection{Costos asociados a las mitigaciones}
+
+Los costos recurrentes derivados de las mitigaciones descritas se encuentran incorporados en la sección de Infraestructura y Operación. La Tabla~\ref{tab:costos-compliance} resume los conceptos y montos mensuales.
+
+\begin{table}[H]
+\centering
+\caption{Costos mensuales de cumplimiento y seguridad}
+\label{tab:costos-compliance}
+\footnotesize
+\begin{tabular}{|l|r|}
+\hline
+\textbf{Concepto} & \textbf{USD/mes} \\
+\hline
+DLP / WAF / Monitoreo de seguridad & 350 \\
+Consultoría legal / DPO parcial & 1,000 \\
+Backups y DR (Glacier + rotación) & 200 \\
+Pentest anual (prorrateado) & 700 \\
+\hline
+\textbf{Total mensual} & \textbf{2,250} \\
+\hline
+\textbf{Total anual} & \textbf{27,000} \\
+\hline
+\end{tabular}
+\end{table}
+
+Estos costos representan una inversión necesaria para operar en sectores regulados y constituyen un diferenciador competitivo frente a soluciones que no ofrecen garantías formales de cumplimiento normativo. Su impacto en el flujo de caja se refleja en los gastos operativos del estado de resultados proforma presentado en la sección~\ref{sec:evaluacion-financiera-churn}.

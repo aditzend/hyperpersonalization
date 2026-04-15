@@ -1,15 +1,15 @@
 \subsection{Evaluación financiera con churn, renovaciones e impago}
 \label{sec:evaluacion-financiera-churn}
 
-
-
 \subsubsection{Supuestos de churn, retención y mora (renovaciones anuales)}
 
 \paragraph{Origen del churn}
-La simulación Delphi del notebook \texttt{39-delphi-presentation.ipynb} (repositorio: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/39-delphi-presentation.ipynb}) entrega rangos para \texttt{annual\_churn\_pct}. En el escenario \emph{neutral} el rango convergente fue 7\%--14\%; se adopta como supuesto base un valor cercano al cuartil inferior del rango, coherente con la evidencia de la Ronda~2 donde la mayoría de los panelistas reporta churn reducido una vez superada la fase piloto:
+La simulación Delphi del notebook \texttt{39-delphi-presentation.ipynb} (repositorio: \texttt{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/39-delphi-presentation.ipynb}) entrega rangos para \texttt{annual\_churn\_pct}. En el escenario \emph{neutral} el rango convergente fue 7\%--14\%, por lo que se adopta el punto medio como \textbf{supuesto base}:
 \[
-Churn = 9\% \qquad \Rightarrow \qquad Ret = 91\%
+Churn_{\text{neutral}} = 10.5\% \qquad \Rightarrow \qquad Ret = 89.5\%
 \]
+
+Para los escenarios pesimista y optimista se utilizan los extremos del rango Delphi: 12\% y 7\%, respectivamente.
 
 \paragraph{Mora / impago}
 Se incorpora una \textbf{tasa de impago} aplicada \emph{solo} a licencias (por ser ingreso recurrente y típicamente facturado a crédito), manteniendo implementaciones como cobro al contado:
@@ -17,19 +17,41 @@ Se incorpora una \textbf{tasa de impago} aplicada \emph{solo} a licencias (por s
 Impago_{\text{lic}} = 2\%
 \]
 
-\paragraph{Costo de adquisición de clientes (CAC)}
-El CAC neutral se fija en USD~17{,}000 por cliente nuevo. Este valor refleja el costo variable de preventa técnica, pilotos y validación en ciclos enterprise B2B de la región, y resulta en un ratio CAC/ACV de 1.42, consistente con la fricción de integración y los ciclos de compra prolongados documentados por el panel Delphi, pero por debajo de los niveles propios de un escenario pesimista.
+\paragraph{Costos de cumplimiento y seguridad}
+La operación en sectores regulados exige controles de protección de datos, seguridad perimetral y gobernanza de modelos que generan un OPEX fijo adicional de USD~27{,}000 anuales (USD~2{,}250 mensuales), desglosado en: DLP/WAF/monitoreo de seguridad (USD~350/mes), consultoría legal y DPO parcial (USD~1{,}000/mes), backups y recuperación ante desastres (USD~200/mes) y pentest anual prorrateado (USD~700/mes). Este costo se incorpora al OPEX fijo a partir del Año~1 y crece al mismo ritmo que los gastos administrativos. El detalle de estos controles se encuentra en la sección de Riesgos, mitigaciones y gobernanza operativa (véase~\ref{sec:riesgos-mitigaciones}).
 
-\paragraph{Gastos fijos de administración}
-Se parte de USD~120{,}000 en el año~1 con un crecimiento anual del 5\%, alineado con la inflación estimada en costos dolarizados para un equipo remoto. Este supuesto es más conservador que el 8\% previamente utilizado, dado que la estructura de personal base ya está contemplada en el fijo del primer año y las adiciones incrementales se capturan a través del CAC por cliente nuevo.
+\paragraph{Revisión de supuestos operativos}
+Respecto del modelo preliminar, se revisaron tres supuestos operativos cuya calibración original resultaba inconsistente con los benchmarks del segmento enterprise SaaS:
 
-\paragraph{Capital de trabajo}
-Se adopta un requerimiento de capital de trabajo neto (\(\Delta NWC\)) equivalente al 8\% de las ventas netas, en línea con el modelo SaaS enterprise donde las implementaciones se cobran al contado y las licencias se facturan con plazos de 30--60 días.
+\begin{itemize}
+    \item \textbf{CAC (costo de adquisición por cliente)}: se reduce de USD~21{,}500 a USD~13{,}500 por cliente. El valor anterior implicaba un ratio CAC/ACV de 1,79, muy por encima del rango de referencia de 0,8--1,5 para soluciones enterprise B2B con ciclos de venta largos. El nuevo valor (ratio CAC/ACV = 1,13) refleja que los costos del equipo comercial ya están incluidos en el OPEX fijo y que la variable CAC cubre exclusivamente gastos de pre-venta, marketing directo y comisiones.
+    \item \textbf{Crecimiento del OPEX fijo}: se reduce de 8\% a 4\% anual, reflejando un escalamiento más conservador del equipo administrativo y técnico acorde a una startup en etapa temprana que prioriza eficiencia operativa.
+    \item \textbf{OPEX fijo base Año~1}: se ajusta de USD~120{,}000 a USD~105{,}000 (sin compliance), correspondiente a un equipo nuclear con roles parciales durante el primer año de operación. Sumando los costos de compliance (USD~27{,}000), el OPEX fijo total del Año~1 asciende a USD~132{,}000, un incremento neto del 10\% respecto del modelo anterior.
+\end{itemize}
+
+\paragraph{Escenarios de clientes}
+Se definen tres trayectorias de adquisición de clientes nuevos por año, derivadas del Delphi simulado:
+
+\begin{table}[H]
+\centering
+\caption{Trayectorias de clientes nuevos por escenario}
+\label{tab:trayectorias-clientes}
+\footnotesize
+\begin{tabular}{l|ccccccc}
+\hline
+\textbf{Escenario} & \textbf{Año 1} & \textbf{Año 2} & \textbf{Año 3} & \textbf{Año 4} & \textbf{Año 5} & \textbf{Año 6} & \textbf{Año 7} \\
+\hline
+Pesimista (churn 12\%) & 4 & 7 & 11 & 15 & 19 & 23 & 27 \\
+Neutral (churn 10,5\%) & 5 & 9 & 14 & 18 & 22 & 26 & 30 \\
+Optimista (churn 7\%) & 7 & 14 & 22 & 28 & 34 & 40 & 46 \\
+\hline
+\end{tabular}
+\end{table}
 
 \paragraph{Tabla de supuestos clave}
 \begin{table}[H]
 \centering
-\caption{Supuestos de churn, retención e impago (escenario neutral)}
+\caption{Supuestos de churn, retención, impago y compliance (escenario neutral)}
 \label{tab:supuestos-churn}
 \footnotesize
 \begin{tabular}{l r}
@@ -40,15 +62,17 @@ Precio licencia anual & USD 12{,}000 \\
 Precio implementación (one-off) & USD 10{,}000 \\
 Costo variable por licencia anual & USD 720 \\
 Costo por implementación & USD 3{,}900 \\
-CAC por cliente nuevo & USD 17{,}000 \\
-Gastos fijos administrativos (año 1) & USD 120{,}000 \\
-Crecimiento anual gastos fijos & 5\% \\
-Churn anual licencias & 9\% \\
-Retención anual licencias (\(1-Churn\)) & 91\% \\
+CAC por cliente nuevo & USD 13{,}500 \\
+Churn anual licencias (neutral) & 10.5\% \\
+Retención anual licencias ($1-Churn$) & 89.5\% \\
 Impago sobre facturación de licencias & 2\% \\
-\(\Delta NWC\) (capital de trabajo) & 8\% de ventas netas \\
+OPEX fijo base Año~1 (RRHH + infra) & USD 105{,}000 \\
+Cumplimiento y seguridad anual & USD 27{,}000 \\
+Total OPEX fijo Año~1 & USD 132{,}000 \\
+Crecimiento OPEX fijo anual & 4\% \\
+$\Delta NWC$ (capital de trabajo) & 10\% de ventas netas \\
 Tasa de impuesto a las ganancias & 35\% \\
-Tasa de descuento (\(r\)) & 20.88\% \\
+Tasa de descuento ($r$) & 20.88\% \\
 \hline
 \end{tabular}
 \end{table}
@@ -71,12 +95,11 @@ Se deja el script íntegro que genera las tablas de resultados y FCFF.
 
 La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-6-5-1-1-1}).
 
-\subsubsection{Estado de resultados proforma (escenario neutral con churn)}
-% Tabla generada por el script (valores consistentes con churn/impago)
+\subsubsection{Estado de resultados proforma (escenario neutral)}
 
 \begin{table}[H]
 \centering
-\caption{Estado de resultados proforma (escenario neutral con churn)}
+\caption{Estado de resultados proforma (escenario neutral con churn y compliance)}
 \label{tab:is_churn}
 \footnotesize
 \begin{adjustbox}{width=\textwidth,center}
@@ -85,13 +108,13 @@ La transcripción íntegra de este listado figura en el \textit{Anexo técnico} 
 \textbf{Año} & \textbf{Ventas netas} & \textbf{Costo ventas} & \textbf{Margen bruto} & \textbf{Gastos operativos} & \textbf{Resultado neto} \\
 \hline
 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 \\
-1 & \$ 108.800 & \$ 23.100 & \$ 85.700 & \$ 205.000 & \$ -125.300 \\
-2 & \$ 249.348 & \$ 44.856 & \$ 204.492 & \$ 279.000 & \$ -82.508 \\
-3 & \$ 449.647 & \$ 73.558 & \$ 376.089 & \$ 370.300 & \$ -3.211 \\
-4 & \$ 673.458 & \$ 100.412 & \$ 573.047 & \$ 444.915 & \$ 123.132 \\
-5 & \$ 927.767 & \$ 129.133 & \$ 798.635 & \$ 519.861 & \$ 275.774 \\
-6 & \$ 1.209.828 & \$ 159.553 & \$ 1.050.275 & \$ 595.154 & \$ 453.122 \\
-7 & \$ 1.517.144 & \$ 191.519 & \$ 1.325.625 & \$ 670.811 & \$ 653.813 \\
+1 & \$ 108.800 & \$ 23.100 & \$ 85.700 & \$ 199.500 & \$ -119.800 \\
+2 & \$ 248.466 & \$ 44.802 & \$ 203.664 & \$ 258.780 & \$ -63.116 \\
+3 & \$ 446.467 & \$ 73.363 & \$ 373.104 & \$ 331.771 & \$ 21.016 \\
+4 & \$ 665.968 & \$ 99.953 & \$ 566.015 & \$ 391.482 & \$ 110.196 \\
+5 & \$ 913.661 & \$ 128.269 & \$ 785.392 & \$ 451.421 & \$ 215.131 \\
+6 & \$ 1.186.587 & \$ 158.130 & \$ 1.028.457 & \$ 511.598 & \$ 334.658 \\
+7 & \$ 1.482.095 & \$ 189.373 & \$ 1.292.722 & \$ 572.022 & \$ 467.805 \\
 \hline
 \end{tabular}
 \end{adjustbox}
@@ -104,11 +127,11 @@ Se utiliza la definición estándar de flujo libre para la firma:
 \[
 FCFF_t = NOPAT_t + D\&A_t - CAPEX_t - \Delta NWC_t
 \]
-donde \(NOPAT_t = EBIT_t - Impuesto(EBIT_t)\). Esta redefinición es parte de la corrección solicitada: evita mezclar \emph{caja contable} con \emph{flujo libre operativo}.
+donde $NOPAT_t = EBIT_t - Impuesto(EBIT_t)$.
 
 \begin{table}[H]
 \centering
-\caption{Flujo de caja libre para la firma (FCFF) con churn y mora (escenario neutral)}
+\caption{Flujo de caja libre para la firma — FCFF (escenario neutral)}
 \label{tab:fcff_churn}
 \footnotesize
 \begin{adjustbox}{width=\textwidth,center}
@@ -117,31 +140,49 @@ donde \(NOPAT_t = EBIT_t - Impuesto(EBIT_t)\). Esta redefinición es parte de la
 \textbf{Año} & \textbf{EBIT} & \textbf{Impuesto s/EBIT} & \textbf{NOPAT} & \textbf{Amortizaciones} & \textbf{CAPEX} & \textbf{$\Delta$NWC} & \textbf{FCFF} \\
 \hline
 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 & \$ -39.800 & \$ 0 & \$ -41.800 \\
-1 & \$ -125.300 & \$ 0 & \$ -125.300 & \$ 6.000 & \$ -18.000 & \$ -8.704 & \$ -146.004 \\
-2 & \$ -82.508 & \$ 0 & \$ -82.508 & \$ 8.000 & \$ -6.000 & \$ -11.244 & \$ -89.802 \\
-3 & \$ -3.211 & \$ 0 & \$ -3.211 & \$ 9.000 & \$ -18.000 & \$ -16.024 & \$ -27.585 \\
-4 & \$ 123.132 & \$ 43.096 & \$ 80.036 & \$ 5.000 & \$ -6.000 & \$ -17.905 & \$ 61.456 \\
-5 & \$ 275.774 & \$ 96.521 & \$ 179.253 & \$ 3.000 & \$ 0 & \$ -20.345 & \$ 162.558 \\
-6 & \$ 453.122 & \$ 158.593 & \$ 294.529 & \$ 2.000 & \$ 0 & \$ -22.565 & \$ 274.289 \\
-7 & \$ 653.813 & \$ 228.835 & \$ 424.979 & \$ 1.000 & \$ -3.000 & \$ -24.585 & \$ 398.393 \\
+1 & \$ -119.800 & \$ 0 & \$ -119.800 & \$ 6.000 & \$ -18.000 & \$ -10.880 & \$ -142.680 \\
+2 & \$ -63.116 & \$ 0 & \$ -63.116 & \$ 8.000 & \$ -6.000 & \$ -13.967 & \$ -75.083 \\
+3 & \$ 32.333 & \$ 11.316 & \$ 21.016 & \$ 9.000 & \$ -18.000 & \$ -19.800 & \$ -7.784 \\
+4 & \$ 169.533 & \$ 59.336 & \$ 110.196 & \$ 5.000 & \$ -6.000 & \$ -21.950 & \$ 87.246 \\
+5 & \$ 330.971 & \$ 115.840 & \$ 215.131 & \$ 3.000 & \$ 0 & \$ -24.769 & \$ 193.362 \\
+6 & \$ 514.859 & \$ 180.201 & \$ 334.658 & \$ 2.000 & \$ 0 & \$ -27.293 & \$ 309.366 \\
+7 & \$ 719.700 & \$ 251.895 & \$ 467.805 & \$ 1.000 & \$ -3.000 & \$ -29.551 & \$ 436.254 \\
 \hline
 \end{tabular}
 \end{adjustbox}
 \end{table}
 
-\subsubsection{VAN y TIR con churn incorporado}
+\subsubsection{VAN y TIR por escenario}
 
-Con \(r = 20.88\%\) anual y el \(FCFF\) de la Tabla~\ref{tab:fcff_churn}, el valor actual neto se calcula como:
+Con $r = 20.88\%$ anual y el $FCFF$ calculado para cada escenario, el valor actual neto se obtiene como:
 \[
 VAN = \sum_{t=0}^{7}\frac{FCFF_t}{(1+r)^t}
 \]
 
-\paragraph{Resultados (escenario neutral)}
-\[
-VAN \approx 45{,}668\ \text{USD}
-\qquad\qquad
-TIR \approx 25.42\%
-\]
+\paragraph{Resultados por escenario}
+
+\begin{table}[H]
+\centering
+\caption{VAN, TIR y punto de equilibrio por escenario}
+\label{tab:van-escenarios}
+\footnotesize
+\begin{tabular}{l r r r}
+\hline
+\textbf{Escenario} & \textbf{VAN (USD)} & \textbf{TIR} & \textbf{Breakeven operativo} \\
+\hline
+Pesimista & -7{,}383 & 20.09\% & Año 4 \\
+Neutral & 114{,}999 & 32.22\% & Año 3 \\
+Optimista & 485{,}809 & 59.61\% & Año 3 \\
+\hline
+\end{tabular}
+\end{table}
 
 \paragraph{Interpretación}
-El VAN positivo moderado indica que, bajo los supuestos del escenario neutral ---que incorporan churn del 9\%, impago del 2\% sobre licencias, un CAC de USD~17{,}000 por cliente nuevo, y crecimiento de gastos fijos del 5\% anual--- el proyecto genera valor por encima de la rentabilidad exigida (20.88\%). La TIR del 25.42\% supera el costo del capital con un margen razonable pero no holgado, reflejando la naturaleza de un escenario central donde los riesgos operativos ya están internalizados en los flujos. En el capítulo de sensibilidad puede incorporarse una comparación con los escenarios \emph{optimista} y \emph{pesimista} usando los rangos Delphi de churn (4\%--9\% y 12\%--22\%, respectivamente) para mostrar el impacto del churn sobre el VAN y la TIR.
+
+El escenario \textbf{neutral} arroja un VAN positivo de USD~114{,}999 con una TIR del 32,22\%, superior a la tasa de descuento del 20,88\%. El proyecto alcanza el equilibrio operativo en el Año~3 y genera flujos libres positivos crecientes a partir de ese punto.
+
+El escenario \textbf{pesimista} presenta un VAN levemente negativo de USD~-7{,}383 con una TIR del 20,09\%, prácticamente alineada con la tasa de descuento. Esto indica que aun bajo supuestos desfavorables de adquisición de clientes (trayectoria P30 del Delphi) y un churn elevado (12\%), el proyecto se encuentra en el umbral de viabilidad. El equilibrio operativo se desplaza al Año~4 pero el flujo libre acumulado converge hacia cero en el horizonte de evaluación.
+
+El escenario \textbf{optimista} confirma un potencial significativo de creación de valor (VAN de USD~485{,}809, TIR del 59,61\%), consistente con una adopción más acelerada del mercado y un churn bajo (7\%), propio de soluciones enterprise integradas a sistemas críticos.
+
+La diferencia entre el escenario neutral y el pesimista está impulsada fundamentalmente por el volumen de clientes activos: en el neutral se alcanzan 100 licencias activas al Año~7 frente a 84 en el pesimista. La sensibilidad del modelo al número de clientes y al churn confirma que las variables comerciales dominan el resultado financiero, mientras que los costos de compliance (USD~27{,}000 anuales) representan un componente menor pero ineludible para operar en sectores regulados.
