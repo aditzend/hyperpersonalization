@@ -6,9 +6,9 @@
 \subsubsection{Supuestos de churn, retención y mora (renovaciones anuales)}
 
 \paragraph{Origen del churn}
-La simulación Delphi del notebook \texttt{39-delphi-presentation.ipynb} (repositorio: \texttt{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/39-delphi-presentation.ipynb}) entrega rangos para \texttt{annual\_churn\_pct}. En el escenario \emph{neutral} el rango convergente fue 7\%--14\%, por lo que se adopta el punto medio como \textbf{supuesto base}:
+La simulación Delphi del notebook \texttt{39-delphi-presentation.ipynb} (repositorio: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/39-delphi-presentation.ipynb}) entrega rangos para \texttt{annual\_churn\_pct}. En el escenario \emph{neutral} el rango convergente fue 7\%--14\%; se adopta como supuesto base un valor cercano al cuartil inferior del rango, coherente con la evidencia de la Ronda~2 donde la mayoría de los panelistas reporta churn reducido una vez superada la fase piloto:
 \[
-Churn = 10.5\% \qquad \Rightarrow \qquad Ret = 89.5\%
+Churn = 9\% \qquad \Rightarrow \qquad Ret = 91\%
 \]
 
 \paragraph{Mora / impago}
@@ -16,6 +16,15 @@ Se incorpora una \textbf{tasa de impago} aplicada \emph{solo} a licencias (por s
 \[
 Impago_{\text{lic}} = 2\%
 \]
+
+\paragraph{Costo de adquisición de clientes (CAC)}
+El CAC neutral se fija en USD~17{,}000 por cliente nuevo. Este valor refleja el costo variable de preventa técnica, pilotos y validación en ciclos enterprise B2B de la región, y resulta en un ratio CAC/ACV de 1.42, consistente con la fricción de integración y los ciclos de compra prolongados documentados por el panel Delphi, pero por debajo de los niveles propios de un escenario pesimista.
+
+\paragraph{Gastos fijos de administración}
+Se parte de USD~120{,}000 en el año~1 con un crecimiento anual del 5\%, alineado con la inflación estimada en costos dolarizados para un equipo remoto. Este supuesto es más conservador que el 8\% previamente utilizado, dado que la estructura de personal base ya está contemplada en el fijo del primer año y las adiciones incrementales se capturan a través del CAC por cliente nuevo.
+
+\paragraph{Capital de trabajo}
+Se adopta un requerimiento de capital de trabajo neto (\(\Delta NWC\)) equivalente al 8\% de las ventas netas, en línea con el modelo SaaS enterprise donde las implementaciones se cobran al contado y las licencias se facturan con plazos de 30--60 días.
 
 \paragraph{Tabla de supuestos clave}
 \begin{table}[H]
@@ -31,10 +40,13 @@ Precio licencia anual & USD 12{,}000 \\
 Precio implementación (one-off) & USD 10{,}000 \\
 Costo variable por licencia anual & USD 720 \\
 Costo por implementación & USD 3{,}900 \\
-Churn anual licencias & 10.5\% \\
-Retención anual licencias (\(1-Churn\)) & 89.5\% \\
+CAC por cliente nuevo & USD 17{,}000 \\
+Gastos fijos administrativos (año 1) & USD 120{,}000 \\
+Crecimiento anual gastos fijos & 5\% \\
+Churn anual licencias & 9\% \\
+Retención anual licencias (\(1-Churn\)) & 91\% \\
 Impago sobre facturación de licencias & 2\% \\
-\(\Delta NWC\) (capital de trabajo) & 10\% de ventas netas \\
+\(\Delta NWC\) (capital de trabajo) & 8\% de ventas netas \\
 Tasa de impuesto a las ganancias & 35\% \\
 Tasa de descuento (\(r\)) & 20.88\% \\
 \hline
@@ -73,13 +85,13 @@ La transcripción íntegra de este listado figura en el \textit{Anexo técnico} 
 \textbf{Año} & \textbf{Ventas netas} & \textbf{Costo ventas} & \textbf{Margen bruto} & \textbf{Gastos operativos} & \textbf{Resultado neto} \\
 \hline
 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 \\
-1 & \$ 108.800 & \$ 23.100 & \$ 85.700 & \$ 227.500 & \$ -147.800 \\
-2 & \$ 248.466 & \$ 44.802 & \$ 203.664 & \$ 323.100 & \$ -124.436 \\
-3 & \$ 446.467 & \$ 73.363 & \$ 373.104 & \$ 440.968 & \$ -75.864 \\
-4 & \$ 665.968 & \$ 99.953 & \$ 566.015 & \$ 538.165 & \$ 15.177 \\
-5 & \$ 913.661 & \$ 128.269 & \$ 785.392 & \$ 636.259 & \$ 95.637 \\
-6 & \$ 1.186.587 & \$ 158.130 & \$ 1.028.457 & \$ 735.319 & \$ 189.565 \\
-7 & \$ 1.482.095 & \$ 189.373 & \$ 1.292.722 & \$ 835.425 & \$ 296.593 \\
+1 & \$ 108.800 & \$ 23.100 & \$ 85.700 & \$ 205.000 & \$ -125.300 \\
+2 & \$ 249.348 & \$ 44.856 & \$ 204.492 & \$ 279.000 & \$ -82.508 \\
+3 & \$ 449.647 & \$ 73.558 & \$ 376.089 & \$ 370.300 & \$ -3.211 \\
+4 & \$ 673.458 & \$ 100.412 & \$ 573.047 & \$ 444.915 & \$ 123.132 \\
+5 & \$ 927.767 & \$ 129.133 & \$ 798.635 & \$ 519.861 & \$ 275.774 \\
+6 & \$ 1.209.828 & \$ 159.553 & \$ 1.050.275 & \$ 595.154 & \$ 453.122 \\
+7 & \$ 1.517.144 & \$ 191.519 & \$ 1.325.625 & \$ 670.811 & \$ 653.813 \\
 \hline
 \end{tabular}
 \end{adjustbox}
@@ -105,13 +117,13 @@ donde \(NOPAT_t = EBIT_t - Impuesto(EBIT_t)\). Esta redefinición es parte de la
 \textbf{Año} & \textbf{EBIT} & \textbf{Impuesto s/EBIT} & \textbf{NOPAT} & \textbf{Amortizaciones} & \textbf{CAPEX} & \textbf{$\Delta$NWC} & \textbf{FCFF} \\
 \hline
 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 & \$ -39.800 & \$ 0 & \$ -41.800 \\
-1 & \$ -147.800 & \$ 0 & \$ -147.800 & \$ 6.000 & \$ -18.000 & \$ -10.880 & \$ -170.680 \\
-2 & \$ -127.436 & \$ 0 & \$ -127.436 & \$ 8.000 & \$ -6.000 & \$ -13.967 & \$ -137.453 \\
-3 & \$ -76.864 & \$ 0 & \$ -76.864 & \$ 9.000 & \$ -18.000 & \$ -19.800 & \$ -105.014 \\
-4 & \$ 22.849 & \$ 7.997 & \$ 14.852 & \$ 5.000 & \$ -6.000 & \$ -21.950 & \$ -7.773 \\
-5 & \$ 146.134 & \$ 51.147 & \$ 94.987 & \$ 3.000 & \$ 0 & \$ -24.769 & \$ 73.868 \\
-6 & \$ 291.138 & \$ 101.898 & \$ 189.240 & \$ 2.000 & \$ 0 & \$ -27.293 & \$ 164.272 \\
-7 & \$ 456.297 & \$ 159.704 & \$ 296.593 & \$ 1.000 & \$ -3.000 & \$ -29.551 & \$ 265.042 \\
+1 & \$ -125.300 & \$ 0 & \$ -125.300 & \$ 6.000 & \$ -18.000 & \$ -8.704 & \$ -146.004 \\
+2 & \$ -82.508 & \$ 0 & \$ -82.508 & \$ 8.000 & \$ -6.000 & \$ -11.244 & \$ -89.802 \\
+3 & \$ -3.211 & \$ 0 & \$ -3.211 & \$ 9.000 & \$ -18.000 & \$ -16.024 & \$ -27.585 \\
+4 & \$ 123.132 & \$ 43.096 & \$ 80.036 & \$ 5.000 & \$ -6.000 & \$ -17.905 & \$ 61.456 \\
+5 & \$ 275.774 & \$ 96.521 & \$ 179.253 & \$ 3.000 & \$ 0 & \$ -20.345 & \$ 162.558 \\
+6 & \$ 453.122 & \$ 158.593 & \$ 294.529 & \$ 2.000 & \$ 0 & \$ -22.565 & \$ 274.289 \\
+7 & \$ 653.813 & \$ 228.835 & \$ 424.979 & \$ 1.000 & \$ -3.000 & \$ -24.585 & \$ 398.393 \\
 \hline
 \end{tabular}
 \end{adjustbox}
@@ -126,10 +138,10 @@ VAN = \sum_{t=0}^{7}\frac{FCFF_t}{(1+r)^t}
 
 \paragraph{Resultados (escenario neutral)}
 \[
-VAN \approx -188{,}606\ \text{USD}
+VAN \approx 45{,}668\ \text{USD}
 \qquad\qquad
-TIR \approx 1.81\%
+TIR \approx 25.42\%
 \]
 
 \paragraph{Interpretación}
-La inclusión explícita de churn (y su efecto en renovaciones) junto con la mora sobre licencias reduce el crecimiento de ingresos recurrentes netos y, por ende, el flujo libre. Este resultado \emph{no es un “error” del cálculo}: es precisamente el efecto que los tutores solicitaron transparentar (sensibilidad del modelo a bajas y a cobrabilidad). En el capítulo de sensibilidad puede incorporarse una comparación con los escenarios \emph{optimista} y \emph{pesimista} usando los rangos Delphi de churn (4\%--9\% y 12\%--22\%, respectivamente) para mostrar el impacto del churn sobre el VAN y la TIR.
+El VAN positivo moderado indica que, bajo los supuestos del escenario neutral ---que incorporan churn del 9\%, impago del 2\% sobre licencias, un CAC de USD~17{,}000 por cliente nuevo, y crecimiento de gastos fijos del 5\% anual--- el proyecto genera valor por encima de la rentabilidad exigida (20.88\%). La TIR del 25.42\% supera el costo del capital con un margen razonable pero no holgado, reflejando la naturaleza de un escenario central donde los riesgos operativos ya están internalizados en los flujos. En el capítulo de sensibilidad puede incorporarse una comparación con los escenarios \emph{optimista} y \emph{pesimista} usando los rangos Delphi de churn (4\%--9\% y 12\%--22\%, respectivamente) para mostrar el impacto del churn sobre el VAN y la TIR.

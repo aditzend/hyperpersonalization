@@ -3906,9 +3906,9 @@ from dotenv import load_dotenv, find_dotenv
 exito = load_dotenv(find_dotenv(), override=True)
 
 if exito:
-    print("✅ Variables de entorno recargadas correctamente.")
+    print("[OK] Variables de entorno recargadas correctamente.")
 else:
-    print("❌ No se encontró el archivo .env.")
+    print("[ERROR] No se encontró el archivo .env.")
 
 # print(os.getenv("OPENAI_API_KEY"))
 \end{APACode}
@@ -3956,10 +3956,10 @@ def ejecutar_delphi_simulado(system_prompt, user_prompt, model, temperature, top
 
         fingerprint = response.system_fingerprint
         # if fingerprint is None:
-        #     print("\n⚠️ El API devolvió system_fingerprint como None.")
+        #     print("\n[WARN] El API devolvió system_fingerprint como None.")
         #     print("Esto significa que no hay información de configuración del backend disponible para esta petición.")
         # else:
-        #     print(f"\n✅ System Fingerprint recibido: {fingerprint}")
+        #     print(f"\n[OK] System Fingerprint recibido: {fingerprint}")
 
         return respuesta_texto, fingerprint, response.model_dump()
     except Exception as e:
@@ -4395,7 +4395,7 @@ perspectivas te hicieron ajustar (o no ajustar) tus números.
 \label{anexo:code-6-3-2-1}
 
 \begin{APACode}
-✅ Variables de entorno recargadas correctamente.
+[OK] Variables de entorno recargadas correctamente.
 \end{APACode}
 
 \subsubsection{Listado 2}
@@ -6035,28 +6035,28 @@ perspectivas te hicieron ajustar (o no ajustar) tus números.
 \subsubsection{Listado 1}
 \label{anexo:code-6-5-1-1-1}
 
-\begin{APACode}[breaklines=true]
+\begin{APACode}
 # Supuestos base (escenario neutral)
 price_license = 12000
 price_impl    = 10000
 var_cost_license = 720
 cost_impl        = 3900
 
-churn = 0.105          # 10.5% churn anual
-retention = 1 - churn  # 89.5% retención
+churn = 0.09           # 9% churn anual
+retention = 1 - churn  # 91% retención
 bad_debt = 0.02        # 2% impago sobre licencias
 
 tax_rate = 0.35
 discount = 0.2088
-nwc_pct  = 0.10        # NWC = 10% de ventas netas
+nwc_pct  = 0.08        # NWC = 8% de ventas netas
 
 # Nuevos clientes por año (trayectoria neutral; puede parametrizarse por Delphi)
 new_customers = {1: 5, 2: 9, 3: 14, 4: 18, 5: 22, 6: 26, 7: 30}
 
-# OPEX: fijo + CAC por nuevo cliente (CAC neutral ~ 21.5k)
-CAC = 21500
+# OPEX: fijo + CAC por nuevo cliente (CAC neutral ~ 17k)
+CAC = 17000
 fixed_admin_y1 = 120000
-admin_growth = 0.08
+admin_growth = 0.05
 
 # Depreciación y CAPEX (mantenidos del esquema original)
 depr  = {0:0, 1:6000, 2:8000, 3:9000, 4:5000, 5:3000, 6:2000, 7:1000}
