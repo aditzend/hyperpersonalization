@@ -11,13 +11,12 @@ Se implementan controles de protección de datos alineados con la Ley~25.326 de 
 
 La Tabla~\ref{tab:matriz-riesgos} sintetiza los principales riesgos identificados, su probabilidad e impacto estimados, las mitigaciones asociadas, el responsable operativo, el costo aproximado y el indicador clave de seguimiento.
 
-\begin{table}[H]
-\centering
-\caption{Matriz de riesgos, mitigaciones y KPIs operativos}
+\begin{center}
+\captionof{table}{Matriz de riesgos, mitigaciones y KPIs operativos}
 \label{tab:matriz-riesgos}
 \footnotesize
 \begin{adjustbox}{width=\textwidth,center}
-\begin{tabular}{|p{2.8cm}|c|c|p{4.2cm}|c|r|p{2.8cm}|}
+\begin{tabular}{p{2.8cm}ccp{4.2cm}crp{2.8cm}}
 \hline
 \textbf{Riesgo} & \textbf{Prob.} & \textbf{Imp.} & \textbf{Mitigación} & \textbf{Owner} & \textbf{Costo aprox.} & \textbf{KPI} \\
 \hline
@@ -35,7 +34,7 @@ Incumpl.\ fiscal / precios & M & M & Nota metodológica de impuestos; revisión 
 \hline
 \end{tabular}
 \end{adjustbox}
-\end{table}
+\end{center}
 
 \noindent \textit{Nota:} A = Alta, M = Media, B = Baja.
 
@@ -87,25 +86,24 @@ El modelo comercial incorpora cláusulas contractuales que protegen tanto al cli
 
 Los costos recurrentes derivados de las mitigaciones descritas se encuentran incorporados en la sección de Infraestructura y Operación. La Tabla~\ref{tab:costos-compliance} resume los conceptos y montos mensuales.
 
-\begin{table}[H]
-\centering
-\caption{Costos mensuales de cumplimiento y seguridad}
+\begin{center}
+\captionof{table}{Costos mensuales de cumplimiento y seguridad}
 \label{tab:costos-compliance}
 \footnotesize
-\begin{tabular}{|l|r|}
+\begin{tabular}{lr}
 \hline
 \textbf{Concepto} & \textbf{USD/mes} \\
 \hline
 DLP / WAF / Monitoreo de seguridad & 350 \\
-Consultoría legal / DPO parcial & 1,000 \\
+Consultoría legal / DPO parcial & 1.000 \\
 Backups y DR (Glacier + rotación) & 200 \\
 Pentest anual (prorrateado) & 700 \\
 \hline
-\textbf{Total mensual} & \textbf{2,250} \\
+\textbf{Total mensual} & \textbf{2.250} \\
 \hline
-\textbf{Total anual} & \textbf{27,000} \\
+\textbf{Total anual} & \textbf{27.000} \\
 \hline
 \end{tabular}
-\end{table}
+\end{center}
 
 Estos costos representan una inversión necesaria para operar en sectores regulados y constituyen un diferenciador competitivo frente a soluciones que no ofrecen garantías formales de cumplimiento normativo. Su impacto en el flujo de caja se refleja en los gastos operativos del estado de resultados proforma presentado en la sección~\ref{sec:evaluacion-financiera-churn}.

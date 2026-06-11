@@ -1,14 +1,14 @@
-\subsubsection{Agregado de un Paso de Extracción y Limpieza a un Conjunto de Datos con 4 Miembros de un Grupo Familiar}
+\subsubsection{Agregado de un paso de extracción y limpieza a un conjunto de datos con cuatro miembros de un grupo familiar}
 
 En la notebook 10\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/10.ipynb}} se trabaja con un conjunto de datos que incluye a cuatro miembros de un grupo familiar, y se implementa un proceso de extracción y limpieza de datos, además de experimentos para verificar si el modelo de lenguaje puede razonar cronológicamente sobre la información proporcionada. A continuación, se detallan los pasos principales del experimento:
 
-\paragraph{Carga de Librerías y Configuración}
+\paragraph{Carga de librerías y configuración}
 
 Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-10-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-1}).
 
-\paragraph{Creación de un Conjunto de Datos Familiar}
+\paragraph{Creación de un conjunto de datos familiar}
 
 Se simulan varias conversaciones en las que un usuario proporciona información sobre su familia. Por ejemplo, el usuario menciona que tiene una hija mayor llamada Ana de 20 años, un hijo menor llamado Juan de 10 años, y su esposa se llama María. Las fechas y detalles sobre un viaje familiar a Córdoba también son registrados, incluyendo las fechas de salida y regreso.
 
@@ -19,38 +19,38 @@ Se simulan varias conversaciones en las que un usuario proporciona información 
     \item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años. Mi esposa se llama María''.
 \end{itemize}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-10-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 El modelo GPT-3.5 se utiliza para extraer la información significativa de cada conversación. Estos datos incluyen detalles sobre los miembros de la familia, las edades, las fechas de viaje y otros aspectos relevantes. La información extraída se almacena en FAISS junto con los metadatos, lo que facilita su recuperación posterior.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-10-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-3}).
 
 \paragraph{Ejemplo de extracción:}
 ``Pedro tiene una hija mayor llamada Ana, que tiene 20 años, y un hijo menor llamado Juan, que tiene 10 años. Su esposa se llama María''.
 
-\paragraph{Consultas sobre Edades}
+\paragraph{Consultas sobre edades}
 
 Se plantea una consulta simple: ``¿Qué edad tiene mi hija mayor?''. El sistema encuentra el contexto relevante y responde que Ana tiene 20 años, sin tener en cuenta que estamos en 2023, lo que indica una falta de razonamiento cronológico adecuado.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-10-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-4}).
 
 Respuesta: ``Tu hija mayor, Ana, tiene 20 años.''
 
-\paragraph{Razonamiento Cronológico}
+\paragraph{Razonamiento cronológico}
 
 Luego se realiza una pregunta más compleja: ``¿Qué edad tenía mi hija mayor cuando hicimos el viaje a Córdoba?''. En este caso, el modelo responde correctamente que Ana tenía 20 años durante el viaje, que ocurrió en 2020. Este resultado muestra que el modelo puede realizar un razonamiento correcto cuando se proporciona contexto cronológico.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-10-5}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-5}).
 
 Respuesta: ``Tu hija mayor, Ana, tenía 20 años cuando hicieron el viaje a Córdoba.''
 
-\paragraph{Errores en el Cálculo de la Fecha de Nacimiento}
+\paragraph{Errores en el cálculo de la fecha de nacimiento}
 
 Se le pregunta al modelo: ``¿En qué año nació mi hija mayor?''. Inicialmente, el modelo hace bien los cálculos y responde que Ana nació en el año 2000, pero no toma en cuenta que el año actual es 2023 de acuerdo a la fecha de realización del experimento, lo que debería ajustar la edad de Ana a 23 años. Tras ajustar el prompt y proporcionar la fecha actual explícitamente, el modelo aún comete errores, sugiriendo que Ana nació en 2003, lo que es incorrecto.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-10-6}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-6}).
 
 Primera respuesta: ``Según la información que tengo, su hija mayor, Ana, tiene 20 años. Si restamos 20 años a la fecha actual, podemos determinar que Ana nació en el año 2000.''
 

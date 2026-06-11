@@ -6,7 +6,7 @@ En una primera etapa se decidió crear colecciones separadas para cada tipo de r
 
 La arquitectura seleccionada consiste en tomar una pieza de información, como la del siguiente ejemplo y calcularle los embeddings antes de guardarla en la base.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-1}).
 
 Todo el objeto se convierte a texto plano antes de la conversión y al obtener el vector se guarda en el campo `vector' y se inserta en la colección única llamada `Records'.
 
@@ -14,7 +14,7 @@ Para que se pueda efectuar la búsqueda vectorial es necesario crear un índice 
 
 Se ha probado correr una instancia local del mismo servicio con éxito pero para guardar de manera más confiable los datos de este trabajo y asegurar su posterior uso se decidió usar la capa gratuita de MongoDB Atlas en la nube.
 
-Para crear un índice de búsqueda se debe especificar el campo dentro de cada documento en el que se encuentran los embeddings, en este caso el campo se llama ``vector''. Luego se especifican las dimensiones del vector, en este caso, al usar text-embeddings-3-large el largo del vector es 3072. Por último se define qué tipo de algoritmo usar para calcular la distancia vectorial. Por el tipo de aplicación la distancia más apropiada es la coseno explicada en la introducción al capítulo.
+Para crear un índice de búsqueda se debe especificar el campo dentro de cada documento en el que se encuentran los embeddings, en este caso el campo se llama ``vector''. Luego se especifican las dimensiones del vector, en este caso, al usar text-embedding-3-large el largo del vector es 3072. Por último se define qué tipo de algoritmo usar para calcular la distancia vectorial. Por el tipo de aplicación la distancia más apropiada es la coseno explicada en la introducción al capítulo.
 
 El valor está entre 0 y 2, donde 0 indica que los vectores son idénticos en dirección y 2 que son opuestos. Generalmente como puntaje de similitud se usa 1 - distancia coseno para hacer más fácilmente interpretable el resultado. Entonces los valores más cercanos a 1 son los más similares.
 
@@ -38,27 +38,27 @@ A continuación el código de los procesos detallados\footnote{Código completo 
 
 \paragraph{Configuración inicial y conexión a MongoDB Atlas}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-2}).
 
 \paragraph{Clase cliente para Atlas}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-3}).
 
 \paragraph{Procesamiento y carga de registros médicos}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-4}).
 
 \paragraph{Inserción en la colección Records}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-5}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-5}).
 
 \paragraph{Amplificación de consultas y búsqueda vectorial}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-6}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-6}).
 
 \paragraph{Generación de respuesta final}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-4-2-7}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-7}).
 
 El sistema demostró capacidad para responder correctamente preguntas específicas como ``cuántos años tienen mis hijas?'' obteniendo la respuesta ``Tus hijas tienen 8 años. Los datos proporcionados mencionan a Mia y Eva, quienes son etiquetadas con la relación `daughter' (hija) y ambas tienen la edad de 8 años.''
 

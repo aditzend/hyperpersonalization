@@ -52,9 +52,9 @@ El sistema combina datos de comportamiento en tiempo real (como la navegación) 
 
 \subsubsection{Justificación e impacto}
 
-La implementación de estrategias de hiperpersonalización genera, en promedio, un incremento del 15\% anual en ventas, con picos del 25\% dependiendo de la industria \parencite{McKinsey2020}. Paralelamente se estima un crecimiento del 37.3\% en el mercado de inteligencia artificial, lo que sugiere una aceleración en la demanda de asistentes virtuales \parencite{GrandViewResearch2023}. Las empresas que lideran en personalización generan, en promedio, un 40\% más de ingresos que aquellas que no la implementan, y se estima que, en las industrias de Estados Unidos, ubicarse en el cuartil superior en personalización podría generar más de un billón de dólares en valor agregado \parencite{McKinsey2021}.
+La implementación de estrategias de hiperpersonalización genera, en promedio, un incremento del 15\% anual en ventas, con picos del 25\% dependiendo de la industria \parencite{McKinsey2020}. Paralelamente se estima un crecimiento del 37,3\% en el mercado de inteligencia artificial, lo que sugiere una aceleración en la demanda de asistentes virtuales \parencite{GrandViewResearch2023}. Las empresas que lideran en personalización generan, en promedio, un 40\% más de ingresos que aquellas que no la implementan, y se estima que, en las industrias de Estados Unidos, ubicarse en el cuartil superior en personalización podría generar más de un billón de dólares en valor agregado \parencite{McKinsey2021}.
 
-Del lado de la demanda, el 72\% de los consumidores espera que las empresas con las que interactúan los reconozcan como individuos y conozcan sus intereses \parencite{McKinsey2021}; el 90\% declara preferir, recomendar o pagar más por marcas que ofrecen una experiencia personalizada \parencite{Outgrow2023}; y el 91\% tiene más probabilidades de comprar en marcas que reconocen sus preferencias y proporcionan ofertas relevantes \parencite{Ninetailed2024}. El 62\% de los líderes empresariales cita la mejora en la retención de clientes como uno de los beneficios clave de la personalización \parencite{TwilioSegment2023}. Los consumidores están incluso dispuestos a compartir más datos a cambio de una mejor experiencia: un informe de Zendesk revela que dos tercios de los compradores aceptan ese intercambio cuando está impulsado por inteligencia artificial \parencite{Zendesk2024}. Estas cifras muestran que la hiperpersonalización no solo mejora la satisfacción y fidelización, sino que tiene un impacto directo en los ingresos y en la eficiencia de las estrategias comerciales.
+Del lado de la demanda, el 72\% de los consumidores espera que las empresas con las que interactúan los reconozcan como individuos y conozcan sus intereses \parencite{McKinsey2021}; diversos relevamientos del sector reportan, además, que cerca del 90\% declara preferir, recomendar o pagar más por marcas que ofrecen una experiencia personalizada \parencite{Outgrow2023} y que alrededor del 91\% tiene más probabilidades de comprar en marcas que reconocen sus preferencias \parencite{Ninetailed2024}. El 62\% de los líderes empresariales cita la mejora en la retención de clientes como uno de los beneficios clave de la personalización \parencite{TwilioSegment2023}. Los consumidores están incluso dispuestos a compartir más datos a cambio de una mejor experiencia: un informe de Zendesk revela que dos tercios de los compradores aceptan ese intercambio cuando está impulsado por inteligencia artificial \parencite{Zendesk2024}. Estas cifras muestran que la hiperpersonalización no solo mejora la satisfacción y fidelización, sino que tiene un impacto directo en los ingresos y en la eficiencia de las estrategias comerciales.
 
 \subsubsection{Hipótesis y objetivos}
 
@@ -97,13 +97,7 @@ A lo largo de la experimentación se emplearon distintas herramientas de infraes
 
 \subsubsection{Búsqueda por similitud y distancia coseno}
 
-La distancia coseno es la métrica utilizada para medir la similitud entre dos vectores en un espacio multidimensional. A diferencia de la distancia euclidiana, que se enfoca en la magnitud, la distancia coseno evalúa el ángulo entre los vectores, es decir, cuán alineados están sin importar su tamaño. Se define como
-
-\begin{equation}
-\text{distancia coseno} = 1 - \frac{A \cdot B}{\lVert A \rVert \times \lVert B \rVert}
-\end{equation}
-
-donde $A$ y $B$ son los vectores, $A \cdot B$ su producto punto y $\lVert A \rVert$, $\lVert B \rVert$ sus normas. Un valor cercano a 0 indica vectores prácticamente idénticos en dirección y, por lo tanto, alta similitud semántica. Esta métrica resulta especialmente útil con datos de alta dimensionalidad, ya que permite encontrar elementos similares por su orientación relativa, sin verse afectada por la magnitud de los vectores.
+La métrica utilizada para medir la similitud entre vectores es la distancia coseno, que evalúa el ángulo entre ellos —cuán alineados están, sin importar su magnitud— en lugar de su distancia euclidiana. Un valor cercano a 0 indica vectores prácticamente idénticos en dirección y, por lo tanto, alta similitud semántica. Su deducción y formulación detallada se desarrollan en el capítulo de Desarrollo.
 
 \subsubsection{Patrón de desarrollo}
 
@@ -122,7 +116,7 @@ El desarrollo atravesó cuatro etapas experimentales. Las primeras funcionaron c
 
 \subsubsection{Etapa 1 --- Experimentos de prompting focalizados (Redis + FAISS)}
 
-La primera iteración se construyó como un banco de pruebas compuesto por un caché de mensajes en una instancia local de Redis y una base de vectores en una instancia local de FAISS, identificando cada dato con un campo \texttt{person\_id}. El hallazgo clave de esta etapa, que orientó el resto del trabajo, es que \textbf{no se necesita un filtrado estricto por \texttt{person\_id}}: en condiciones de laboratorio se puede acceder a la información propia de un usuario mediante la distancia coseno, algoritmo por defecto del motor de búsqueda. No es necesario armar índices por persona ni ser estricto con el esquema; se puede recuperar el vector deseado por similitud semántica. Redis y FAISS cumplieron aquí el rol de plataforma exploratoria, no el de arquitectura definitiva.
+La primera iteración se construyó como un banco de pruebas compuesto por un caché de mensajes en una instancia local de Redis y una base de vectores en una instancia local de FAISS, identificando cada dato con un campo \texttt{person\_id}. El hallazgo clave de esta etapa, que orientó el resto del trabajo, es que \textbf{no es necesario segmentar la información en colecciones por tema}: en condiciones de laboratorio se puede acceder al dato correcto mediante la distancia coseno —algoritmo por defecto del motor de búsqueda— dentro de un mismo espacio vectorial, sin armar índices por tema ni imponer un esquema estricto. El filtrado por \texttt{person\_id} cumple una función distinta —aislar a cada usuario de los demás— y se mantiene como requisito en un entorno productivo. Redis y FAISS cumplieron aquí el rol de plataforma exploratoria, no el de arquitectura definitiva.
 
 \subsubsection{Etapa 2 --- Ingestión de documentos reales}
 
@@ -138,7 +132,7 @@ Con los datos sintéticos disponibles se experimentó con ArangoDB, una base de 
 
 \subsubsection{Etapa 4b --- Base documental con soporte vectorial (MongoDB Atlas): arquitectura final}
 
-Descartadas las bases de grafos, se adoptó MongoDB, una base NoSQL que almacena documentos sin estructura predefinida, ideal para administrar en una misma colección registros de diferentes áreas de la vida de un usuario —personas, gastos y visitas médicas—. Inicialmente se evaluó crear colecciones separadas por tipo de registro, pero la opción se descartó rápidamente: ante una consulta como ``¿cuántos años tiene mi sobrina más chica?'', el sistema tendría que recorrer todas las colecciones del usuario y seleccionar dónde buscar, lo que agrega probabilidad de error, tiempo e ineficiencia. La decisión de \textbf{colección única} confirma, a nivel de arquitectura, el hallazgo de la Etapa 1 de que no es necesario segmentar la información por identificador.
+Descartadas las bases de grafos, se adoptó MongoDB, una base NoSQL que almacena documentos sin estructura predefinida, ideal para administrar en una misma colección registros de diferentes áreas de la vida de un usuario —personas, gastos y visitas médicas—. Inicialmente se evaluó crear colecciones separadas por tipo de registro, pero la opción se descartó rápidamente: ante una consulta como ``¿cuántos años tiene mi sobrina más chica?'', el sistema tendría que recorrer todas las colecciones del usuario y seleccionar dónde buscar, lo que agrega probabilidad de error, tiempo e ineficiencia. La decisión de \textbf{colección única} confirma, a nivel de arquitectura, el hallazgo de la Etapa 1 de que no es necesario segmentar la información por tipo de registro, ya que la similitud semántica basta para recuperar el dato pertinente dentro de una misma colección.
 
 La arquitectura seleccionada toma cada pieza de información, la convierte a texto plano, le calcula los \textit{embeddings} con \textit{text-embedding-3-large} (3072 dimensiones) y la inserta en una colección única llamada \texttt{Records}, junto con un campo de tipo de registro y de propietario para habilitar eventuales búsquedas filtradas en el futuro. Para realizar la búsqueda vectorial se crea un índice de búsqueda en MongoDB Atlas especificando el campo de los \textit{embeddings}, su dimensión y la distancia coseno como métrica. Si bien se probó con éxito una instancia local del servicio, para mayor confiabilidad se utilizó la capa gratuita de MongoDB Atlas en la nube. La base de conocimientos sobre Norman alcanzó los 187 documentos.
 
@@ -151,16 +145,16 @@ La validación fue satisfactoria. El sistema respondió correctamente preguntas 
 \label{tab:etapas-resumen}
 \footnotesize
 \begin{adjustbox}{width=\textwidth,center}
-\begin{tabular}{l|l|l|l}
-\hline
+\begin{tabular}{llll}
+\toprule
 \textbf{Etapa} & \textbf{Enfoque} & \textbf{Tecnología} & \textbf{Resultado} \\
-\hline
-1 & \textit{Prompting} focalizado & Redis + FAISS (local) & Intermedia: el filtrado por identificador no es necesario \\
+\midrule
+1 & \textit{Prompting} focalizado & Redis + FAISS (local) & Intermedia: no hace falta segmentar por tipo de registro \\
 2 & Ingestión de documentos reales & PDF $\rightarrow$ texto $\rightarrow$ RAG & Descartada: extracción de PDF demasiado costosa \\
 3 & Generación de datos sintéticos & GPT-4, JSON (ISO 8601) & 187 documentos sobre la vida de ``Norman'' \\
 4a & Base de grafos & ArangoDB + LangChain & Descartada: errores en la conversión consulta$\rightarrow$AQL \\
 4b & Base documental vectorial & MongoDB Atlas (3072 dim) & \textbf{Arquitectura final validada} \\
-\hline
+\bottomrule
 \end{tabular}
 \end{adjustbox}
 \end{center}
@@ -183,11 +177,11 @@ Además de la base de datos se necesita acceso a un servicio que reciba texto y 
 
 \subsubsection{Viabilidad técnica}
 
-Los experimentos efectuados demuestran que el mecanismo diseñado cumple la premisa, dotando de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y \textit{embeddings} resulta suficiente para procesar y recuperar la información necesaria, siempre que el motor de búsqueda vectorial gestione eficientemente el volumen de datos almacenado. Se concluye que la estrategia es técnicamente factible y escalable, con recursos accesibles tanto en infraestructura local como en la nube.
+Los experimentos efectuados demuestran que el mecanismo diseñado cumple la premisa, dotando de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y \textit{embeddings} resulta suficiente para procesar y recuperar la información necesaria, siempre que el motor de búsqueda vectorial gestione eficientemente el volumen de datos almacenado. Se concluye que la estrategia es técnicamente factible a la escala probada, con recursos accesibles tanto en infraestructura local como en la nube; su escalabilidad a volúmenes mayores y a múltiples usuarios queda planteada como trabajo futuro, ya que no fue objeto de validación en este trabajo.
 
 \subsubsection{Limitaciones identificadas}
 
-Persisten retos por resolver antes de una adopción productiva. En primer lugar, los experimentos de razonamiento cronológico con modelos ya deprecados al cierre de este trabajo, como GPT-3.5, requerían retrabajo de las fuentes de información; con el avance de los modelos estas reconfiguraciones pueden volverse innecesarias, pero las técnicas vistas siguen siendo valiosas para aplicar hiperpersonalización en modelos menos potentes —de entre mil y siete mil millones de parámetros— capaces de correr en dispositivos personales, con los beneficios de privacidad que ello conlleva. En segundo lugar, el sistema no cuenta con manejo de memoria conversacional: cada mensaje se responde sin interconexión, lo que exige un servicio de observación que corra en paralelo extrayendo y estructurando la información de la conversación. Por último, el sistema no resuelve preguntas sobre múltiples temáticas en una misma iteración, característica de producto que debe validarse en el mercado antes de su desarrollo.
+Persisten retos por resolver antes de una adopción productiva. En primer lugar, los experimentos de razonamiento cronológico con modelos ya deprecados al cierre de este trabajo, como GPT-3.5, requerían retrabajo de las fuentes de información; con el avance de los modelos estas reconfiguraciones pueden volverse innecesarias, pero las técnicas vistas siguen siendo valiosas para aplicar hiperpersonalización en modelos menos potentes —de entre mil y siete mil millones de parámetros— capaces de correr en dispositivos personales, con los beneficios de privacidad que ello conlleva. En segundo lugar, el sistema no cuenta con manejo de memoria conversacional: cada mensaje se responde sin interconexión, lo que exige un servicio de observación que corra en paralelo extrayendo y estructurando la información de la conversación. Por último, el sistema no resuelve preguntas sobre múltiples temáticas en una misma iteración, característica de producto que debe validarse en el mercado antes de su desarrollo. Cabe señalar, además, que la validación de esta tesis es de carácter cualitativo —por inspección de respuestas sobre casos concretos—; una evaluación cuantitativa, con métricas de recuperación y exactitud sobre un conjunto fijo de preguntas, queda planteada como trabajo futuro.
 
 \subsubsection{Dimensión comercial}
 

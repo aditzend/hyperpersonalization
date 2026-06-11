@@ -1,17 +1,17 @@
 \section{Desarrollo}
 \subsection{Experimentos de \textit{Prompting} sobre problemas de alcance muy focalizado}
 
-Un asistente virtual con capacidades de hiperpersonalizar es un sistema de mensajes por turnos en el que existe un vasto repositorio de información sobre el usuario en curso y esa información es aprovechada por el asistente para resolver el problema del usuario en la menor cantidad de interacciones.
+Un asistente virtual con capacidades de hiperpersonalización es un sistema de mensajes por turnos en el que existe un vasto repositorio de información sobre el usuario en curso y esa información es aprovechada por el asistente para resolver el problema del usuario en la menor cantidad de interacciones.
 
 Mediante diferentes experimentos se intenta encontrar una arquitectura que identifique información sobre un usuario, la guarde ordenadamente y la pueda usar como contexto en cualquier conversación.
 
-De ahora en adelante, los términos \textit{usuario} y \textit{persona} se usan de manera indistinta para referirse a un ser humano que está interactuando con un asistente virtual para resolver un problema.
+De ahora en adelante, los términos \textit{usuario} y \textit{persona} se usan de manera indistinta para referirse a un ser humano que está interactuando con un asistente virtual para resolver un problema. Los nombres propios de los allegados que aparecen en los distintos experimentos (familiares y conocidos del usuario) son ficticios y se eligieron de manera independiente en cada prueba, por lo que no guardan correspondencia entre una sección y otra.
 
 Durante los experimentos se hace referencia a bases vectoriales que contienen motores de búsqueda especiales para encontrar eficientemente los $k$ vectores más cercanos a un vector de consulta, siendo $k$ el parámetro de búsqueda que controla cuántos resultados se desea recibir en la respuesta. Estos espacios vectoriales tienen entre 300 y 4000 dimensiones dependiendo del modelo de \textit{embeddings} que se utilice para hacer la codificación del texto.
 
-Los \textit{embeddings} son representaciones matemáticas que permiten transformar datos, como palabras o elementos de un conjunto, en vectores de números de una dimensión fija, de forma tal que las relaciones semánticas o estructurales entre los elementos se preserven en el espacio vectorial resultante. En otras palabras, los \textit{embeddings} convierten datos complejos, como texto, en una forma numérica que los algoritmos de machine learning pueden procesar eficientemente.
+Los \textit{embeddings} son representaciones matemáticas que permiten transformar datos, como palabras o elementos de un conjunto, en vectores de números de una dimensión fija, de forma tal que las relaciones semánticas o estructurales entre los elementos se preserven en el espacio vectorial resultante. En otras palabras, los \textit{embeddings} convierten datos complejos, como texto, en una forma numérica que los algoritmos de \textit{machine learning} pueden procesar eficientemente.
 
-En el contexto de procesamiento de lenguaje natural (NLP), los word embeddings son una de las aplicaciones más comunes, donde cada palabra de un vocabulario es mapeada a un vector numérico. Estos vectores están construidos de manera tal que palabras con significados o contextos similares estarán más cercanas en este espacio vectorial. Esto permite a los modelos de machine learning capturar y utilizar relaciones semánticas y sintácticas entre palabras.
+En el contexto de procesamiento de lenguaje natural (NLP), los word embeddings son una de las aplicaciones más comunes, donde cada palabra de un vocabulario es mapeada a un vector numérico. Estos vectores están construidos de manera tal que palabras con significados o contextos similares estarán más cercanas en este espacio vectorial. Esto permite a los modelos de \textit{machine learning} capturar y utilizar relaciones semánticas y sintácticas entre palabras.
 
 Técnicas populares para generar embeddings incluyen Word2Vec, GloVe y BERT, cada una con diferentes enfoques para capturar estas relaciones. Estos vectores no solo simplifican la representación de datos complejos, sino que también mejoran el rendimiento de los modelos de aprendizaje automático, permitiendo que estos procesen grandes cantidades de información de manera más eficiente y precisa.
 
@@ -23,13 +23,4 @@ En el contexto del presente trabajo se utiliza el modelo text-embedding-3-small 
 
 Esta etapa representa el núcleo del presente trabajo.
 
-El primer paso fue desestructurar el problema macro en problemáticas unitarias y crear un repositorio ordenado de las mismas.
-
-Se siguió el siguiente patrón:
-
-\begin{enumerate}
-    \item Se seleccionó una problemática enunciada como un caso de uso que hoy es imposible de resolver sin hiperpersonalización.
-    \item Se describió una estrategia de ataque a esa problemática y se desarrolló un prototipo.
-    \item Se registraron los resultados para alimentar un repositorio de prompts exitosos.
-    \item Se repitió el proceso hasta encontrar una solución satisfactoria.
-\end{enumerate}
+El primer paso fue desestructurar el problema macro en problemáticas unitarias y crear un repositorio ordenado de las mismas, abordando cada una con el patrón iterativo descrito en la sección de Metodología.

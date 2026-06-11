@@ -103,7 +103,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Reporte de mercado comercial. Cifras utilizadas a nivel agregado}
       \field{title}{Conversational AI Market Size, Share and Forecast}
       \field{urlday}{31}
       \field{urlmonth}{12}
@@ -138,7 +137,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Includes adoption rates of chatbots/virtual assistants in Latin American finance sector.}
       \field{title}{La hiperpersonalización del mundo a través del CX MX}
       \field{year}{2024}
       \true{nocite}
@@ -173,7 +171,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Broad LATAM digital adoption and maturity, useful for implementation timelines.}
       \field{title}{Latin America Digital Transformation Report 2024}
       \field{year}{2024}
       \verb{urlraw}
@@ -277,10 +274,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Blog de proveedor; contexto cualitativo}
       \field{title}{Estadísticas clave de chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
       \field{year}{2024}
-      \true{nocite}
       \verb{urlraw}
       \verb https://botpress.com/es/blog/key-chatbot-statistics
       \endverb
@@ -310,7 +305,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{Blog especializado; contexto cualitativo}
       \field{title}{AI in ecommerce: True one-on-one personalization is coming}
       \field{year}{2023}
       \true{nocite}
@@ -347,7 +341,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Country risk premiums and betas by sector}
       \field{year}{2024}
-      \true{nocite}
       \verb{urlraw}
       \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
@@ -378,11 +371,19 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market?srsltid=AfmBOopnzgvcDq_l5fzQkkisJQjJXBYWJiZVlm3FSQEaGqWwzDhWNGcQ&utm_source=chatgpt.com}}
-      \field{note}{Consultado el \today}
       \field{title}{Intelligent Virtual Assistant (IVA) Market Size, Share, Trends, and Forecast to 2032}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \true{nocite}
+      \verb{urlraw}
+      \verb https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market
+      \endverb
+      \verb{url}
+      \verb https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market
+      \endverb
     \endentry
     \entry{EmergenResearch2023}{misc}{}{}
       \name{author}{1}{}{%
@@ -408,7 +409,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{note}{Blog de empresa de reportes; contexto orientativo}
       \field{title}{Las 10 mejores empresas en el mercado de asistentes virtuales inteligentes (IVA) en 2023}
       \field{year}{2023}
       \true{nocite}
@@ -471,7 +471,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Son argentinos, crean chatbots para miles de empresas y facturan decenas de millones de dólares}
       \field{year}{2022}
       \true{nocite}
@@ -504,7 +503,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Forbes AI 50 2022 | Las empresas norteamericanas de inteligencia artificial que dan forma al futuro}
       \field{year}{2022}
       \true{nocite}
@@ -537,7 +535,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Lista Forbes IA 50: Estas son las principales empresas emergentes de inteligencia artificial}
       \field{year}{2024}
       \true{nocite}
@@ -570,7 +567,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{note}{Blog de empresa consultora; contexto cualitativo}
       \field{title}{AI will fundamentally transform customer service}
       \field{year}{2017}
       \true{nocite}
@@ -652,7 +648,7 @@
       \field{abstract}{This report reviews the economic and workforce impacts of artificial intelligence in Latin America, synthesizing evidence from industry reports, academic literature, and open source data to assess productivity, employment, skills transformation, and structural challenges in the region.}
       \field{month}{12}
       \field{title}{Economic and Workforce Impacts of AI in Latin America: A Review of Industry, Academic, and Open Source Evidence}
-      \field{type}{Technical Report}
+      \field{type}{Informe técnico}
       \field{year}{2025}
     \endentry
     \entry{GrandViewResearch2023}{misc}{}{}
@@ -708,7 +704,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Market report consulted for sector sizing and CAGR projections for LATAM.}
       \field{title}{Latin America Intelligent Virtual Assistant Market Size, Share \& Trends Analysis Report}
       \field{year}{2024}
       \true{nocite}
@@ -741,7 +736,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Personalización de IA}
       \field{year}{2024}
       \true{nocite}
@@ -773,7 +767,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Reporte de mercado comercial. Acceso a resúmenes públicos}
       \field{title}{Intelligent Virtual Assistant Market: Global Industry Trends, Share, Size, Growth, Opportunity and Forecast}
       \field{urlday}{31}
       \field{urlmonth}{12}
@@ -841,10 +834,18 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina}}
-      \field{note}{Consultado el \today}
       \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024–2032}
-      \field{year}{2026}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
+      \endverb
+      \verb{url}
+      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
+      \endverb
     \endentry
     \entry{insiderlatam2024_hiperpersonalizacion}{misc}{}{}
       \name{author}{1}{}{%
@@ -867,7 +868,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Qualitative analysis of personalization use cases in LATAM companies.}
       \field{title}{La hiperpersonalización y la IA ofrecen diversas posibilidades para mejorar la experiencia digital}
       \field{year}{2024}
       \true{nocite}
@@ -899,7 +899,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Provides metrics on personalization impact on revenue and loyalty.}
       \field{title}{La era de la hiperpersonalización: conversaciones inteligentes y clientes más leales}
       \field{year}{2024}
       \true{nocite}
@@ -957,6 +956,9 @@
       \true{nocite}
       \field{pages}{535\bibrangedash 547}
       \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TBDATA.2019.2921572
+      \endverb
     \endentry
     \entry{JungKatz2025ImpactoEconomicoIAALC}{report}{}{}
       \name{author}{2}{}{%
@@ -1000,7 +1002,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Elaborado en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe; financiado por la Unión Europea (Global Gateway).}
       \field{number}{LC/TS.2025/37/Rev.1}
       \field{series}{Documentos de Proyectos}
       \field{title}{Impacto económico de la inteligencia artificial en América Latina: transformación tecnológica y rezago en materia de inversión y capacidades laborales}
@@ -1060,7 +1061,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Global report including LATAM segmentation for AI-driven customer service.}
       \field{title}{AI for Customer Service Market by Component, Technology, Deployment Mode, Application, Vertical, Region – Global Forecast to 2030}
       \field{year}{2024}
       \true{nocite}
@@ -1160,8 +1160,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The state of {AI} in 2025: {G}enerative {AI's} breakout year}
-      \field{type}{Report}
+      \field{title}{The state of {AI} in early 2024}
+      \field{type}{Informe}
       \field{urlday}{22}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
@@ -1236,7 +1236,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Provides market size, forecasts and CAGR for LATAM AI conversational segment.}
       \field{title}{Latin America Conversational AI Market Size and Forecast}
       \field{year}{2025}
       \true{nocite}
@@ -1300,7 +1299,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{note}{Entrada de blog; citada como contexto cualitativo}
       \field{title}{58 personalization statistics \& facts for 2024 you shouldn't ignore}
       \field{year}{2024}
       \verb{urlraw}
@@ -1395,7 +1393,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Entrada de blog; contexto, no evidencia cuantitativa}
       \field{title}{Personalization statistics}
       \field{year}{2023}
       \verb{urlraw}
@@ -1495,7 +1492,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{note}{Blog de industria musical; contexto cualitativo}
       \field{title}{Spotify expanding personalisation after Discover Weekly's 5 billion streams}
       \field{year}{2016}
       \true{nocite}
@@ -1530,9 +1526,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Datos sobre automatización, bots, tiempos de implementación y satisfacción en LATAM.}
       \field{title}{State of Service 2024: Latin America Insights}
-      \field{type}{Regional CX Report}
+      \field{type}{Informe regional de experiencia del cliente}
       \field{urlday}{23}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
@@ -1616,7 +1611,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Publicación coordinada en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe}
       \field{number}{LC/TS.2025/68}
       \field{title}{Índice Latinoamericano de Inteligencia Artificial (ILIA) 2025}
       \field{type}{Documento de Proyecto}
@@ -1650,7 +1644,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
-      \field{note}{Blog comercial; contexto cualitativo}
       \field{title}{Recommendation engines: How Amazon and Netflix are winning the personalization battle}
       \field{year}{2021}
       \true{nocite}
@@ -1685,9 +1678,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Proyecciones de tamaño de mercado, adopción y gasto en IA para LATAM.}
       \field{title}{Artificial Intelligence Market in Latin America: Outlook 2024–2030}
-      \field{type}{Market Forecast}
+      \field{type}{Pronóstico de mercado}
       \field{urlday}{23}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
@@ -1725,7 +1717,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{note}{Artículo periodístico basado en el ILIA 2025}
       \field{title}{Latin America accelerates AI adoption but faces gaps in talent, investment and governance}
       \field{urlday}{31}
       \field{urlmonth}{12}
@@ -1761,7 +1752,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
-      \field{note}{Blog comercial; contexto cualitativo}
       \field{title}{The future of chatbots: 80+ chatbot statistics for 2024}
       \field{year}{2024}
       \true{nocite}
@@ -1796,7 +1786,6 @@
       \field{month}{1}
       \field{title}{Estados Unidos - bono soberano a 10 años}
       \field{year}{2025}
-      \true{nocite}
       \verb{urlraw}
       \verb https://es.tradingeconomics.com/united-states/government-bond-yield
       \endverb
@@ -1855,7 +1844,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Blog de empresa de reportes; contexto orientativo}
       \field{title}{Revolución de la atención médica virtual: las 10 principales empresas de asistentes virtuales de atención médica}
       \field{year}{2024}
       \true{nocite}
@@ -1918,7 +1906,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Consumers expect AI to radically transform service}
       \field{year}{2024}
       \verb{urlraw}
@@ -1949,7 +1936,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Artículo de blog que resume los hallazgos del informe anual CX Trends 2024 de Zendesk; no se encontró PDF descargable público.}
       \field{title}{CX Trends 2024: Libera el poder del CX inteligente (Versión LatAM)}
       \field{urlday}{22}
       \field{urlmonth}{1}
@@ -2049,7 +2035,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Reporte de mercado comercial. Cifras utilizadas a nivel agregado}
       \field{title}{Conversational AI Market Size, Share and Forecast}
       \field{urlday}{31}
       \field{urlmonth}{12}
@@ -2084,7 +2069,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Includes adoption rates of chatbots/virtual assistants in Latin American finance sector.}
       \field{title}{La hiperpersonalización del mundo a través del CX MX}
       \field{year}{2024}
       \true{nocite}
@@ -2119,7 +2103,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Broad LATAM digital adoption and maturity, useful for implementation timelines.}
       \field{title}{Latin America Digital Transformation Report 2024}
       \field{year}{2024}
       \verb{urlraw}
@@ -2223,10 +2206,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Blog de proveedor; contexto cualitativo}
       \field{title}{Estadísticas clave de chatbot para 2024: Percepciones, crecimiento del mercado y tendencias}
       \field{year}{2024}
-      \true{nocite}
       \verb{urlraw}
       \verb https://botpress.com/es/blog/key-chatbot-statistics
       \endverb
@@ -2256,7 +2237,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{Blog especializado; contexto cualitativo}
       \field{title}{AI in ecommerce: True one-on-one personalization is coming}
       \field{year}{2023}
       \true{nocite}
@@ -2293,7 +2273,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Country risk premiums and betas by sector}
       \field{year}{2024}
-      \true{nocite}
       \verb{urlraw}
       \verb https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
       \endverb
@@ -2324,11 +2303,19 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market?srsltid=AfmBOopnzgvcDq_l5fzQkkisJQjJXBYWJiZVlm3FSQEaGqWwzDhWNGcQ&utm_source=chatgpt.com}}
-      \field{note}{Consultado el \today}
       \field{title}{Intelligent Virtual Assistant (IVA) Market Size, Share, Trends, and Forecast to 2032}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \true{nocite}
+      \verb{urlraw}
+      \verb https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market
+      \endverb
+      \verb{url}
+      \verb https://www.emergenresearch.com/industry-report/intelligent-virtual-assistant-market
+      \endverb
     \endentry
     \entry{EmergenResearch2023}{misc}{}{}
       \name{author}{1}{}{%
@@ -2354,7 +2341,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{note}{Blog de empresa de reportes; contexto orientativo}
       \field{title}{Las 10 mejores empresas en el mercado de asistentes virtuales inteligentes (IVA) en 2023}
       \field{year}{2023}
       \true{nocite}
@@ -2417,7 +2403,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Son argentinos, crean chatbots para miles de empresas y facturan decenas de millones de dólares}
       \field{year}{2022}
       \true{nocite}
@@ -2450,7 +2435,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Forbes AI 50 2022 | Las empresas norteamericanas de inteligencia artificial que dan forma al futuro}
       \field{year}{2022}
       \true{nocite}
@@ -2483,7 +2467,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
-      \field{note}{Artículo de prensa; contexto cualitativo}
       \field{title}{Lista Forbes IA 50: Estas son las principales empresas emergentes de inteligencia artificial}
       \field{year}{2024}
       \true{nocite}
@@ -2516,7 +2499,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
-      \field{note}{Blog de empresa consultora; contexto cualitativo}
       \field{title}{AI will fundamentally transform customer service}
       \field{year}{2017}
       \true{nocite}
@@ -2598,7 +2580,7 @@
       \field{abstract}{This report reviews the economic and workforce impacts of artificial intelligence in Latin America, synthesizing evidence from industry reports, academic literature, and open source data to assess productivity, employment, skills transformation, and structural challenges in the region.}
       \field{month}{12}
       \field{title}{Economic and Workforce Impacts of AI in Latin America: A Review of Industry, Academic, and Open Source Evidence}
-      \field{type}{Technical Report}
+      \field{type}{Informe técnico}
       \field{year}{2025}
     \endentry
     \entry{GrandViewResearch2023}{misc}{}{}
@@ -2654,7 +2636,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Market report consulted for sector sizing and CAGR projections for LATAM.}
       \field{title}{Latin America Intelligent Virtual Assistant Market Size, Share \& Trends Analysis Report}
       \field{year}{2024}
       \true{nocite}
@@ -2687,7 +2668,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Personalización de IA}
       \field{year}{2024}
       \true{nocite}
@@ -2719,7 +2699,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Reporte de mercado comercial. Acceso a resúmenes públicos}
       \field{title}{Intelligent Virtual Assistant Market: Global Industry Trends, Share, Size, Growth, Opportunity and Forecast}
       \field{urlday}{31}
       \field{urlmonth}{12}
@@ -2787,10 +2766,18 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina}}
-      \field{note}{Consultado el \today}
       \field{title}{Mercado de asistentes virtuales inteligentes en América Latina 2024–2032}
-      \field{year}{2026}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
+      \endverb
+      \verb{url}
+      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
+      \endverb
     \endentry
     \entry{insiderlatam2024_hiperpersonalizacion}{misc}{}{}
       \name{author}{1}{}{%
@@ -2813,7 +2800,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Qualitative analysis of personalization use cases in LATAM companies.}
       \field{title}{La hiperpersonalización y la IA ofrecen diversas posibilidades para mejorar la experiencia digital}
       \field{year}{2024}
       \true{nocite}
@@ -2845,7 +2831,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Provides metrics on personalization impact on revenue and loyalty.}
       \field{title}{La era de la hiperpersonalización: conversaciones inteligentes y clientes más leales}
       \field{year}{2024}
       \true{nocite}
@@ -2903,6 +2888,9 @@
       \true{nocite}
       \field{pages}{535\bibrangedash 547}
       \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TBDATA.2019.2921572
+      \endverb
     \endentry
     \entry{JungKatz2025ImpactoEconomicoIAALC}{report}{}{}
       \name{author}{2}{}{%
@@ -2946,7 +2934,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Elaborado en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe; financiado por la Unión Europea (Global Gateway).}
       \field{number}{LC/TS.2025/37/Rev.1}
       \field{series}{Documentos de Proyectos}
       \field{title}{Impacto económico de la inteligencia artificial en América Latina: transformación tecnológica y rezago en materia de inversión y capacidades laborales}
@@ -3006,7 +2993,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Global report including LATAM segmentation for AI-driven customer service.}
       \field{title}{AI for Customer Service Market by Component, Technology, Deployment Mode, Application, Vertical, Region – Global Forecast to 2030}
       \field{year}{2024}
       \true{nocite}
@@ -3106,8 +3092,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The state of {AI} in 2025: {G}enerative {AI's} breakout year}
-      \field{type}{Report}
+      \field{title}{The state of {AI} in early 2024}
+      \field{type}{Informe}
       \field{urlday}{22}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
@@ -3182,7 +3168,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Provides market size, forecasts and CAGR for LATAM AI conversational segment.}
       \field{title}{Latin America Conversational AI Market Size and Forecast}
       \field{year}{2025}
       \true{nocite}
@@ -3246,7 +3231,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{note}{Entrada de blog; citada como contexto cualitativo}
       \field{title}{58 personalization statistics \& facts for 2024 you shouldn't ignore}
       \field{year}{2024}
       \verb{urlraw}
@@ -3341,7 +3325,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Entrada de blog; contexto, no evidencia cuantitativa}
       \field{title}{Personalization statistics}
       \field{year}{2023}
       \verb{urlraw}
@@ -3441,7 +3424,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{5}
-      \field{note}{Blog de industria musical; contexto cualitativo}
       \field{title}{Spotify expanding personalisation after Discover Weekly's 5 billion streams}
       \field{year}{2016}
       \true{nocite}
@@ -3476,9 +3458,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Datos sobre automatización, bots, tiempos de implementación y satisfacción en LATAM.}
       \field{title}{State of Service 2024: Latin America Insights}
-      \field{type}{Regional CX Report}
+      \field{type}{Informe regional de experiencia del cliente}
       \field{urlday}{23}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
@@ -3562,7 +3543,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Publicación coordinada en el marco de la Alianza Digital Unión Europea--América Latina y el Caribe}
       \field{number}{LC/TS.2025/68}
       \field{title}{Índice Latinoamericano de Inteligencia Artificial (ILIA) 2025}
       \field{type}{Documento de Proyecto}
@@ -3596,7 +3576,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
-      \field{note}{Blog comercial; contexto cualitativo}
       \field{title}{Recommendation engines: How Amazon and Netflix are winning the personalization battle}
       \field{year}{2021}
       \true{nocite}
@@ -3631,9 +3610,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Proyecciones de tamaño de mercado, adopción y gasto en IA para LATAM.}
       \field{title}{Artificial Intelligence Market in Latin America: Outlook 2024–2030}
-      \field{type}{Market Forecast}
+      \field{type}{Pronóstico de mercado}
       \field{urlday}{23}
       \field{urlmonth}{1}
       \field{urlyear}{2025}
@@ -3671,7 +3649,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{note}{Artículo periodístico basado en el ILIA 2025}
       \field{title}{Latin America accelerates AI adoption but faces gaps in talent, investment and governance}
       \field{urlday}{31}
       \field{urlmonth}{12}
@@ -3707,7 +3684,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
-      \field{note}{Blog comercial; contexto cualitativo}
       \field{title}{The future of chatbots: 80+ chatbot statistics for 2024}
       \field{year}{2024}
       \true{nocite}
@@ -3742,7 +3718,6 @@
       \field{month}{1}
       \field{title}{Estados Unidos - bono soberano a 10 años}
       \field{year}{2025}
-      \true{nocite}
       \verb{urlraw}
       \verb https://es.tradingeconomics.com/united-states/government-bond-yield
       \endverb
@@ -3801,7 +3776,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Blog de empresa de reportes; contexto orientativo}
       \field{title}{Revolución de la atención médica virtual: las 10 principales empresas de asistentes virtuales de atención médica}
       \field{year}{2024}
       \true{nocite}
@@ -3864,7 +3838,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Blog de proveedor; útil para percepciones, no para mercado}
       \field{title}{Consumers expect AI to radically transform service}
       \field{year}{2024}
       \verb{urlraw}
@@ -3895,7 +3868,6 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Artículo de blog que resume los hallazgos del informe anual CX Trends 2024 de Zendesk; no se encontró PDF descargable público.}
       \field{title}{CX Trends 2024: Libera el poder del CX inteligente (Versión LatAM)}
       \field{urlday}{22}
       \field{urlmonth}{1}

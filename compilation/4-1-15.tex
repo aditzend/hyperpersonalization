@@ -1,14 +1,14 @@
-\subsubsection{Manejo de Datos Personales y Resolución de Citas Médicas con GPT-3.5: Conjunto de Datos Referente a Turnos de un Tercero}
+\subsubsection{Manejo de datos personales y resolución de citas médicas con GPT-3.5: conjunto de datos referente a turnos de un tercero}
 
 En la notebook 15\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/15.ipynb}} se realiza un experimento para extraer información de conversaciones y evaluar la capacidad del modelo GPT-3.5 para gestionar datos relacionados con citas médicas y preguntas del usuario sobre su información personal. A continuación, se detallan los pasos principales del experimento:
 
-\paragraph{Carga de Librerías y Configuración}
+\paragraph{Carga de librerías y configuración}
 
 Se utilizan FAISS para las búsquedas semánticas y OpenAI Embeddings para vectorizar las conversaciones. También se configura una función que interactúa con el modelo GPT-3.5 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-15-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-1}).
 
-\paragraph{Simulación de Conversaciones sobre Citas Médicas}
+\paragraph{Simulación de conversaciones sobre citas médicas}
 
 El usuario proporciona datos sobre su madre, Sylvia, como su correo electrónico, número de teléfono y DNI. El asistente organiza un turno médico para Sylvia en la especialidad de ginecología. Se incluyen detalles como la fecha y hora de la cita con el médico.
 
@@ -21,37 +21,30 @@ Ejemplos de mensajes:
     \item Asistente: ``Turno confirmado para Sylvia el 27 de agosto a las 10:00 AM con el Dr. Facundo Farias''.
 \end{itemize}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-15-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 El modelo GPT-3.5 extrae los datos proporcionados en la conversación, como el nombre de la madre del usuario, su DNI, el correo electrónico y la especialidad médica solicitada. Esta información se almacena en FAISS junto con los metadatos para facilitar su búsqueda posterior.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-15-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-3}).
 
 Ejemplo de extracción:
 
 ``El usuario proporcionó los siguientes datos: el nombre de la madre es Sylvia, su email es sylvia@gmail.com, su DNI es 12668992 y la especialidad médica es ginecología''.
 
-\paragraph{Consultas sobre la Información Almacenada}
+\paragraph{Consultas sobre la información almacenada}
 
 El usuario pregunta al asistente ``¿Tengo algún turno asignado?'', y el sistema recupera la información sobre el turno de Sylvia. Aunque la respuesta del asistente es correcta en cuanto a los detalles del turno, se observa que el modelo mezcla ligeramente la información del usuario con la de su madre, lo que sugiere problemas en la distinción entre las dos personas.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-15-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-4}).
 
-\paragraph{Conclusiones de la quinceava iteración}
+\paragraph{Conclusiones de la decimoquinta iteración}
 
 Se observan errores en el manejo de fechas y en la distinción entre los datos del usuario y los de su madre. Por ejemplo, en lugar de aclarar que el turno es para Sylvia, el asistente genera una respuesta que mezcla la información entre Alexander y Sylvia.
 
 La respuesta del sistema fue: ``Hasta donde sé, el último turno que asignamos fue para Sylvia, tu madre, el 27 de agosto a las 10:00 AM con el Dr. Facundo Farias. Sin embargo, esta información fue proporcionada el 25 de agosto. Permíteme verificar si ha habido alguna actualización desde entonces''.
 
-Aquí hay un error de razonamiento, pero es comprensible considerando la brevedad del prompt. Los posibles pasos siguientes incluyen:
-
-\begin{itemize}
-    \item Navegar el grafo de relaciones del usuario y cambiar el punto focal actual: ``este turno es para mi madre''
-    \item Usar el mismo método para guardar información como ``La madre del usuario tiene un turno para el dentista el 1 de enero de 2021''
-    \item Sumar muchos más datos personales y evaluar si hay confusiones
-    \item Simular llamados a APIs desde diferentes relaciones del usuario y verificar si hay confusiones
-\end{itemize}
+Aquí hay un error de razonamiento, pero es comprensible considerando la brevedad del \textit{prompt}. Los posibles pasos siguientes coinciden con los señalados en la iteración anterior: navegar el grafo de relaciones del usuario para cambiar el foco de la conversación, almacenar información de terceros (por ejemplo, los turnos de la madre del usuario), sumar más datos personales y simular llamados a APIs desde distintas relaciones para evaluar posibles confusiones.
 
 La notebook 15 muestra que, si bien el modelo GPT-3.5 es capaz de extraer y manejar datos personales proporcionados en conversaciones, presenta errores cuando se trata de diferenciar claramente entre la información del usuario y la de terceros relacionados. Además, se detectan algunos problemas en el razonamiento temporal y en la consistencia de las respuestas. Se sugiere mejorar el manejo del contexto y las relaciones entre diferentes personas para evitar confusiones en futuras interacciones. 

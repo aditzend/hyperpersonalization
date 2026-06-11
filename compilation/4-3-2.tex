@@ -2,38 +2,38 @@
 
 Un proceso similar al de la creación del árbol familiar fue aplicado a construir una historia clínica de Norman con especial enfoque en la correcta estructuración de las fechas (formato ISO 8601), el tipo de dolencia, la medicación prescrita, hospital visitado y cualquier detalle de relevancia para asemejar un registro real.
 
-Se continúa con la normalización al idioma inglés ya que produce ahorros en la compresión de información y mejor rendimiento en el procesamiento en general.
+Se continúa con la normalización al idioma inglés como decisión de diseño, orientada a aprovechar que los modelos empleados fueron entrenados mayoritariamente sobre texto en inglés; en la práctica, esto tiende a reducir el consumo de tokens y a favorecer el rendimiento del procesamiento.
 
-El resultado de los doce meses generados se presenta a continuación.
+El resultado, que abarca el período de abril de 2023 a marzo de 2024, se presenta a continuación.
 
 \paragraph{Enero 2024 (01-2024.json)}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-3-2-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-1}).
 
 \textit{Nota:} Código disponible en \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/28-medical-graph.ipynb}
 
 \paragraph{Febrero 2024 (02-2024.json)}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-3-2-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-2}).
 
 \paragraph{Marzo 2024 (03-2024.json)}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-3-2-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-3}).
 
-\paragraph{Abril 2023 (04-2024.json)}
+\paragraph{Abril 2023 (04-2023.json)}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-3-2-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-4}).
 
 \paragraph{Registros médicos adicionales}
 
-Los meses restantes (mayo a diciembre de 2023) siguen un patrón similar de estructuración de datos, incluyendo:
+Los meses restantes (mayo a diciembre de 2023, con excepción de septiembre, que no registró eventos médicos) siguen un patrón similar de estructuración de datos, incluyendo:
 
 \begin{itemize}
 \item Mayo 2023: Consulta endocrinológica para función tiroidea y terapia física rutinaria
 \item Junio 2023: Seguimiento para manejo de colesterol y mamografía de detección
 \item Julio 2023: Evaluación neurológica por episodios de mareo y colonoscopía rutinaria
 \item Agosto 2023: Vacunación anual contra la gripe y consulta ortopédica por dolor de rodilla
-\item Septiembre 2023: Consulta por dolores de cabeza persistentes y análisis de laboratorio rutinarios
+\item Octubre 2023: Consulta por dolores de cabeza persistentes y análisis de laboratorio rutinarios
 \item Noviembre 2023: Examen ocular rutinario y sesión de terapia física
 \item Diciembre 2023: Consulta por alergias estacionales y vacuna anual contra la gripe
 \end{itemize}

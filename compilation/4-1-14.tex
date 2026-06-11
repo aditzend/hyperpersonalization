@@ -1,14 +1,14 @@
-\subsubsection{Experimentos Combinados sobre Fechas y Manejo de Cantidades}
+\subsubsection{Experimentos combinados sobre fechas y manejo de cantidades}
 
 En la \textit{notebook} 14\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/14.ipynb}} se realiza un experimento que combina la extracción de información de conversaciones con el razonamiento cronológico y el manejo de datos personales utilizando GPT-3.5 y GPT-4. A continuación se detallan los pasos principales del experimento:
 
-\paragraph{Carga de Librerías y Configuración}
+\paragraph{Carga de librerías y configuración}
 
 Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-14-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-1}).
 
-\paragraph{Simulación de Conversaciones}
+\paragraph{Simulación de conversaciones}
 
 Se crean contextos de conversación donde el usuario interactúa con el asistente virtual para realizar acciones como comprar pasajes para su familia de Buenos Aires a Córdoba o mejorar su categoría en un programa de viajero frecuente. Los datos proporcionados por el usuario, como nombres, edades y millas disponibles, se extraen y se almacenan en FAISS para su posterior consulta.
 
@@ -20,29 +20,29 @@ Ejemplos de mensajes:
 \item Usuario: ``Quiero subir de categoría en el programa de viajero frecuente''.
 \end{itemize}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-14-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 El modelo GPT-3.5 se utiliza para extraer información relevante de las conversaciones, como los nombres, las edades, las millas acumuladas y las fechas de viaje. Esta información se almacena en FAISS junto con los metadatos correspondientes para facilitar su recuperación en futuras consultas.
 
 Ejemplo de extracción: ``Pedro tiene una hija llamada Ana de 20 años y un hijo llamado Juan de 10 años. Quiere viajar con su familia de Buenos Aires a Córdoba del 20 al 30 de agosto''.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-14-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-3}).
 
-\paragraph{Consultas sobre Millas y Viajes}
+\paragraph{Consultas sobre millas y viajes}
 
 Se plantea una pregunta como ``¿Cuántas millas tenía en el momento de hacer el viaje a Córdoba?''. El sistema intenta combinar la información obtenida de varios contextos para responder a la consulta. Sin embargo, se detecta un error en el razonamiento: el sistema responde que Pedro tenía 200 millas al momento del viaje, lo cual es incorrecto, ya que las millas se usaron para el pasaje.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-14-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-4}).
 
-\paragraph{Conclusiones de la catorceava iteración}
+\paragraph{Conclusiones de la decimocuarta iteración}
 
 El sistema respondió: ``Según la información recopilada en las conversaciones anteriores, en el momento de hacer el viaje a Córdoba, Pedro tenía 200 millas disponibles''. 
 
 Este resultado presenta un error de razonamiento, ya que no considera correctamente el orden cronológico de los eventos ni el uso de las millas para el pasaje.
 
-\paragraph{Posibles Mejoras}
+\paragraph{Posibles mejoras}
 
 Se identifican algunos problemas de razonamiento, particularmente al intentar unir información de diferentes contextos. Se proponen futuros pasos para mejorar el modelo:
 

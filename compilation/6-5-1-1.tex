@@ -6,10 +6,10 @@
 \paragraph{Origen del churn}
 La simulación Delphi del notebook \texttt{39-delphi-presentation.ipynb} (repositorio: \texttt{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/39-delphi-presentation.ipynb}) entrega rangos para \texttt{annual\_churn\_pct}. En el escenario \emph{neutral} el rango convergente fue 7\%--14\%, por lo que se adopta el punto medio como \textbf{supuesto base}:
 \[
-Churn_{\text{neutral}} = 10.5\% \qquad \Rightarrow \qquad Ret = 89.5\%
+Churn_{\text{neutral}} = 10{,}5\% \qquad \Rightarrow \qquad Ret = 89{,}5\%
 \]
 
-Para los escenarios pesimista y optimista se utilizan los extremos del rango Delphi: 12\% y 7\%, respectivamente.
+Para el escenario optimista se utiliza un churn del 7\%, compatible con soluciones integradas a sistemas críticos. Para el escenario pesimista se adopta el \emph{punto medio} de su banda Delphi (12\%--22\%), es decir \textbf{17\%}: tomar el extremo inferior de la banda (12\%) equivaldría a un pesimista benigno, inconsistente con un análisis de estrés.
 
 \paragraph{Mora / impago}
 Se incorpora una \textbf{tasa de impago} aplicada \emph{solo} a licencias (por ser ingreso recurrente y típicamente facturado a crédito), manteniendo implementaciones como cobro al contado:
@@ -18,64 +18,83 @@ Impago_{\text{lic}} = 2\%
 \]
 
 \paragraph{Costos de cumplimiento y seguridad}
-La operación en sectores regulados exige controles de protección de datos, seguridad perimetral y gobernanza de modelos que generan un OPEX fijo adicional de USD~27{,}000 anuales (USD~2{,}250 mensuales), desglosado en: DLP/WAF/monitoreo de seguridad (USD~350/mes), consultoría legal y DPO parcial (USD~1{,}000/mes), backups y recuperación ante desastres (USD~200/mes) y pentest anual prorrateado (USD~700/mes). Este costo se incorpora al OPEX fijo a partir del Año~1 y crece al mismo ritmo que los gastos administrativos. El detalle de estos controles se encuentra en la sección de Riesgos, mitigaciones y gobernanza operativa (véase~\ref{sec:riesgos-mitigaciones}).
+La operación en sectores regulados exige controles de protección de datos, seguridad perimetral y gobernanza de modelos que generan un OPEX fijo adicional de USD~27.000 anuales (USD~2.250 mensuales), desglosado en: DLP/WAF/monitoreo de seguridad (USD~350/mes), consultoría legal y DPO parcial (USD~1.000/mes), backups y recuperación ante desastres (USD~200/mes) y pentest anual prorrateado (USD~700/mes). Este costo se incorpora al OPEX fijo a partir del Año~1 y crece al mismo ritmo que los gastos administrativos. El detalle de estos controles se encuentra en la sección de Riesgos, mitigaciones y gobernanza operativa (véase~\ref{sec:riesgos-mitigaciones}).
 
 \paragraph{Revisión de supuestos operativos}
 Respecto del modelo preliminar, se revisaron tres supuestos operativos cuya calibración original resultaba inconsistente con los benchmarks del segmento enterprise SaaS:
 
 \begin{itemize}
-    \item \textbf{CAC (costo de adquisición por cliente)}: se reduce de USD~21{,}500 a USD~13{,}500 por cliente. El valor anterior implicaba un ratio CAC/ACV de 1,79, muy por encima del rango de referencia de 0,8--1,5 para soluciones enterprise B2B con ciclos de venta largos. El nuevo valor (ratio CAC/ACV = 1,13) refleja que los costos del equipo comercial ya están incluidos en el OPEX fijo y que la variable CAC cubre exclusivamente gastos de pre-venta, marketing directo y comisiones.
+    \item \textbf{CAC (costo de adquisición por cliente)}: se reduce de USD~21.500 a USD~13.500 por cliente. El valor anterior implicaba un ratio CAC/ACV de 1,79, muy por encima del rango de referencia de 0,8--1,5 para soluciones enterprise B2B con ciclos de venta largos. El nuevo valor (ratio CAC/ACV = 1,13) refleja que los costos del equipo comercial ya están incluidos en el OPEX fijo y que la variable CAC cubre exclusivamente gastos de pre-venta, marketing directo y comisiones. Este ajuste implica apartarse del rango Delphi para el CAC (USD~15.000--28.000), decisión que se justifica precisamente porque el panel estimó el CAC \emph{todo incluido}, mientras que aquí el costo del equipo comercial se contabiliza por separado en el OPEX fijo para evitar su doble cómputo.
     \item \textbf{Crecimiento del OPEX fijo}: se reduce de 8\% a 4\% anual, reflejando un escalamiento más conservador del equipo administrativo y técnico acorde a una startup en etapa temprana que prioriza eficiencia operativa.
-    \item \textbf{OPEX fijo base Año~1}: se ajusta de USD~120{,}000 a USD~105{,}000 (sin compliance), correspondiente a un equipo nuclear con roles parciales durante el primer año de operación. Sumando los costos de compliance (USD~27{,}000), el OPEX fijo total del Año~1 asciende a USD~132{,}000, un incremento neto del 10\% respecto del modelo anterior.
+    \item \textbf{OPEX fijo base Año~1}: se ajusta de USD~120.000 a USD~105.000 (sin compliance), correspondiente a un equipo nuclear con roles parciales durante el primer año de operación. Sumando los costos de compliance (USD~27.000), el OPEX fijo total del Año~1 asciende a USD~132.000, un incremento neto del 10\% respecto del modelo anterior.
 \end{itemize}
 
 \paragraph{Escenarios de clientes}
-Se definen tres trayectorias de adquisición de clientes nuevos por año, derivadas del Delphi simulado:
+Se definen tres trayectorias de adquisición de clientes nuevos por año, derivadas del Delphi simulado. Las cifras de los Años~1 a 3 se ubican dentro de las bandas estimadas por el panel para cada escenario (en el pesimista, el centro de la banda 1--3 / 2--5 / 3--7); las de los Años~4 a 7 son una extrapolación propia de continuidad, dado que el ejercicio Delphi solo estimó un horizonte de tres años.
 
-\begin{table}[H]
-\centering
-\caption{Trayectorias de clientes nuevos por escenario}
+\begin{center}
+\captionof{table}{Trayectorias de clientes nuevos por escenario}
 \label{tab:trayectorias-clientes}
 \footnotesize
-\begin{tabular}{l|ccccccc}
-\hline
+\begin{tabular}{lccccccc}
+\toprule
 \textbf{Escenario} & \textbf{Año 1} & \textbf{Año 2} & \textbf{Año 3} & \textbf{Año 4} & \textbf{Año 5} & \textbf{Año 6} & \textbf{Año 7} \\
-\hline
-Pesimista (churn 12\%) & 4 & 7 & 11 & 15 & 19 & 23 & 27 \\
+\midrule
+Pesimista (churn 17\%) & 2 & 3 & 5 & 7 & 9 & 11 & 13 \\
 Neutral (churn 10,5\%) & 5 & 9 & 14 & 18 & 22 & 26 & 30 \\
 Optimista (churn 7\%) & 7 & 14 & 22 & 28 & 34 & 40 & 46 \\
-\hline
+\bottomrule
 \end{tabular}
-\end{table}
+\end{center}
+
+\paragraph{Tasa de descuento}
+La tasa de descuento $r = 20{,}88\%$ se obtiene mediante el modelo CAPM ajustado por riesgo país, $Ke = R_f + \beta\cdot ERP + CRP$, con los siguientes componentes:
+
+\begin{center}
+\captionof{table}{Derivación de la tasa de descuento (CAPM con riesgo país)}
+\label{tab:capm}
+\footnotesize
+\begin{tabular}{lrl}
+\toprule
+\textbf{Componente} & \textbf{Valor} & \textbf{Fuente} \\
+\midrule
+Tasa libre de riesgo ($R_f$, bono EE.UU. 10 años) & 4,58\% & \textcite{TradingEconomics2025} \\
+Prima de riesgo de mercado madura ($ERP$) & 5,50\% & \textcite{Damodaran2024} \\
+Beta del sector software ($\beta$) & 1,10 & \textcite{Damodaran2024} \\
+Prima de riesgo país Argentina ($CRP$) & 10,25\% & \textcite{Damodaran2024} \\
+\midrule
+\textbf{Tasa de descuento} ($R_f + \beta\cdot ERP + CRP$) & \textbf{20,88\%} & \\
+\bottomrule
+\end{tabular}
+\end{center}
 
 \paragraph{Tabla de supuestos clave}
-\begin{table}[H]
-\centering
-\caption{Supuestos de churn, retención, impago y compliance (escenario neutral)}
+\begin{center}
+\captionof{table}{Supuestos de churn, retención, impago y compliance (escenario neutral)}
 \label{tab:supuestos-churn}
 \footnotesize
 \begin{tabular}{l r}
-\hline
+\toprule
 \textbf{Supuesto} & \textbf{Valor} \\
-\hline
-Precio licencia anual & USD 12{,}000 \\
-Precio implementación (one-off) & USD 10{,}000 \\
+\midrule
+Precio licencia anual & USD 12.000 \\
+Precio implementación (one-off) & USD 10.000 \\
 Costo variable por licencia anual & USD 720 \\
-Costo por implementación & USD 3{,}900 \\
-CAC por cliente nuevo & USD 13{,}500 \\
-Churn anual licencias (neutral) & 10.5\% \\
-Retención anual licencias ($1-Churn$) & 89.5\% \\
+Costo por implementación & USD 3.900 \\
+CAC por cliente nuevo & USD 13.500 \\
+Churn anual licencias (neutral) & 10,5\% \\
+Retención anual licencias ($1-Churn$) & 89,5\% \\
 Impago sobre facturación de licencias & 2\% \\
-OPEX fijo base Año~1 (RRHH + infra) & USD 105{,}000 \\
-Cumplimiento y seguridad anual & USD 27{,}000 \\
-Total OPEX fijo Año~1 & USD 132{,}000 \\
+OPEX fijo base Año~1 (RRHH + infra) & USD 105.000 \\
+Cumplimiento y seguridad anual & USD 27.000 \\
+Total OPEX fijo Año~1 & USD 132.000 \\
 Crecimiento OPEX fijo anual & 4\% \\
 $\Delta NWC$ (capital de trabajo) & 10\% de ventas netas \\
 Tasa de impuesto a las ganancias & 35\% \\
-Tasa de descuento ($r$) & 20.88\% \\
-\hline
+Tasa de descuento ($r$) & 20,88\% \\
+\bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
 \subsubsection{Modelo de renovaciones: dinámica de clientes activos}
 
@@ -90,35 +109,38 @@ Ventas_t = \underbrace{\left(Activos_t \cdot P_{\text{lic}}\right)\cdot(1-Impago
 \underbrace{\left(Nuevos_t \cdot P_{\text{impl}}\right)}_{\text{Implementaciones}}
 \]
 
+El impuesto a las ganancias se calcula incorporando el \textbf{traslado de quebrantos}: las pérdidas de los primeros años se acumulan y se compensan contra las utilidades imponibles de los ejercicios siguientes, en línea con la normativa argentina que admite el traslado de quebrantos hasta cinco años.
+
 \subsubsection{Cálculos}
 Se deja el script íntegro que genera las tablas de resultados y FCFF.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-6-5-1-1-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-6-5-1-1-1}).
 
 \subsubsection{Estado de resultados proforma (escenario neutral)}
 
-\begin{table}[H]
-\centering
-\caption{Estado de resultados proforma (escenario neutral con churn y compliance)}
+\begin{center}
+\captionof{table}{Estado de resultados proforma (escenario neutral con churn, compliance y traslado de quebrantos)}
 \label{tab:is_churn}
 \footnotesize
 \begin{adjustbox}{width=\textwidth,center}
-\begin{tabular}{l|rrrrr}
-\hline
-\textbf{Año} & \textbf{Ventas netas} & \textbf{Costo ventas} & \textbf{Margen bruto} & \textbf{Gastos operativos} & \textbf{Resultado neto} \\
-\hline
-0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 \\
-1 & \$ 108.800 & \$ 23.100 & \$ 85.700 & \$ 199.500 & \$ -119.800 \\
-2 & \$ 248.466 & \$ 44.802 & \$ 203.664 & \$ 258.780 & \$ -63.116 \\
-3 & \$ 446.467 & \$ 73.363 & \$ 373.104 & \$ 331.771 & \$ 21.016 \\
-4 & \$ 665.968 & \$ 99.953 & \$ 566.015 & \$ 391.482 & \$ 110.196 \\
-5 & \$ 913.661 & \$ 128.269 & \$ 785.392 & \$ 451.421 & \$ 215.131 \\
-6 & \$ 1.186.587 & \$ 158.130 & \$ 1.028.457 & \$ 511.598 & \$ 334.658 \\
-7 & \$ 1.482.095 & \$ 189.373 & \$ 1.292.722 & \$ 572.022 & \$ 467.805 \\
-\hline
+\begin{tabular}{lrrrrrrrr}
+\toprule
+\textbf{Año} & \textbf{Ventas netas} & \textbf{Costo ventas} & \textbf{Margen bruto} & \textbf{Gastos op.} & \textbf{D\&A} & \textbf{EBIT} & \textbf{Impuesto} & \textbf{Resultado neto} \\
+\midrule
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 108.800 & 23.100 & 85.700 & 199.500 & 6.000 & -119.800 & 0 & -119.800 \\
+2 & 248.466 & 44.802 & 203.664 & 258.780 & 8.000 & -63.116 & 0 & -63.116 \\
+3 & 446.467 & 73.363 & 373.104 & 331.771 & 9.000 & 32.333 & 0 & 32.333 \\
+4 & 665.968 & 99.953 & 566.015 & 391.482 & 5.000 & 169.533 & 6.632 & 162.901 \\
+5 & 913.661 & 128.269 & 785.392 & 451.421 & 3.000 & 330.971 & 115.840 & 215.131 \\
+6 & 1.186.587 & 158.130 & 1.028.457 & 511.598 & 2.000 & 514.859 & 180.201 & 334.658 \\
+7 & 1.482.095 & 189.373 & 1.292.722 & 572.022 & 1.000 & 719.700 & 251.895 & 467.805 \\
+\bottomrule
 \end{tabular}
 \end{adjustbox}
-\end{table}
+\end{center}
+
+\noindent La tabla cierra columna a columna: Margen bruto $-$ Gastos operativos $-$ D\&A $=$ EBIT, y EBIT $-$ Impuesto $=$ Resultado neto. El impuesto es nulo en los Años~1 a 3 por efecto del traslado de quebrantos (las pérdidas acumuladas de los Años~1--2, USD~182.916, se compensan con la utilidad del Año~3 y parte del Año~4).
 
 \subsubsection{FCFF}
 
@@ -129,60 +151,67 @@ FCFF_t = NOPAT_t + D\&A_t - CAPEX_t - \Delta NWC_t
 \]
 donde $NOPAT_t = EBIT_t - Impuesto(EBIT_t)$.
 
-\begin{table}[H]
-\centering
-\caption{Flujo de caja libre para la firma — FCFF (escenario neutral)}
+\begin{center}
+\captionof{table}{Flujo de caja libre para la firma — FCFF (escenario neutral)}
 \label{tab:fcff_churn}
 \footnotesize
 \begin{adjustbox}{width=\textwidth,center}
-\begin{tabular}{l|rrrrrrr}
-\hline
+\begin{tabular}{lrrrrrrr}
+\toprule
 \textbf{Año} & \textbf{EBIT} & \textbf{Impuesto s/EBIT} & \textbf{NOPAT} & \textbf{Amortizaciones} & \textbf{CAPEX} & \textbf{$\Delta$NWC} & \textbf{FCFF} \\
-\hline
-0 & \$ 0 & \$ 0 & \$ 0 & \$ 0 & \$ -39.800 & \$ 0 & \$ -41.800 \\
-1 & \$ -119.800 & \$ 0 & \$ -119.800 & \$ 6.000 & \$ -18.000 & \$ -10.880 & \$ -142.680 \\
-2 & \$ -63.116 & \$ 0 & \$ -63.116 & \$ 8.000 & \$ -6.000 & \$ -13.967 & \$ -75.083 \\
-3 & \$ 32.333 & \$ 11.316 & \$ 21.016 & \$ 9.000 & \$ -18.000 & \$ -19.800 & \$ -7.784 \\
-4 & \$ 169.533 & \$ 59.336 & \$ 110.196 & \$ 5.000 & \$ -6.000 & \$ -21.950 & \$ 87.246 \\
-5 & \$ 330.971 & \$ 115.840 & \$ 215.131 & \$ 3.000 & \$ 0 & \$ -24.769 & \$ 193.362 \\
-6 & \$ 514.859 & \$ 180.201 & \$ 334.658 & \$ 2.000 & \$ 0 & \$ -27.293 & \$ 309.366 \\
-7 & \$ 719.700 & \$ 251.895 & \$ 467.805 & \$ 1.000 & \$ -3.000 & \$ -29.551 & \$ 436.254 \\
-\hline
+\midrule
+0 & 0 & 0 & 0 & 0 & -39.800 & 0 & -39.800 \\
+1 & -119.800 & 0 & -119.800 & 6.000 & -18.000 & -10.880 & -142.680 \\
+2 & -63.116 & 0 & -63.116 & 8.000 & -6.000 & -13.967 & -75.083 \\
+3 & 32.333 & 0 & 32.333 & 9.000 & -18.000 & -19.800 & 3.532 \\
+4 & 169.533 & 6.632 & 162.901 & 5.000 & -6.000 & -21.950 & 139.950 \\
+5 & 330.971 & 115.840 & 215.131 & 3.000 & 0 & -24.769 & 193.362 \\
+6 & 514.859 & 180.201 & 334.658 & 2.000 & 0 & -27.293 & 309.366 \\
+7 & 719.700 & 251.895 & 467.805 & 1.000 & -3.000 & -29.551 & 436.254 \\
+\bottomrule
 \end{tabular}
 \end{adjustbox}
-\end{table}
+\end{center}
 
 \subsubsection{VAN y TIR por escenario}
 
-Con $r = 20.88\%$ anual y el $FCFF$ calculado para cada escenario, el valor actual neto se obtiene como:
+Con $r = 20{,}88\%$ anual y el $FCFF$ calculado para cada escenario, el valor actual neto se obtiene como:
 \[
 VAN = \sum_{t=0}^{7}\frac{FCFF_t}{(1+r)^t}
 \]
 
 \paragraph{Resultados por escenario}
 
-\begin{table}[H]
-\centering
-\caption{VAN, TIR y punto de equilibrio por escenario}
+\begin{center}
+\captionof{table}{VAN, TIR y punto de equilibrio por escenario}
 \label{tab:van-escenarios}
 \footnotesize
 \begin{tabular}{l r r r}
-\hline
+\toprule
 \textbf{Escenario} & \textbf{VAN (USD)} & \textbf{TIR} & \textbf{Breakeven operativo} \\
-\hline
-Pesimista & -7{,}383 & 20.09\% & Año 4 \\
-Neutral & 114{,}999 & 32.22\% & Año 3 \\
-Optimista & 485{,}809 & 59.61\% & Año 3 \\
-\hline
+\midrule
+Pesimista & -276.403 & -18,3\% & Año 5 \\
+Neutral & 148.091 & 35,7\% & Año 3 \\
+Optimista & 514.554 & 63,0\% & Año 3 \\
+\bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
 \paragraph{Interpretación}
 
-El escenario \textbf{neutral} arroja un VAN positivo de USD~114{,}999 con una TIR del 32,22\%, superior a la tasa de descuento del 20,88\%. El proyecto alcanza el equilibrio operativo en el Año~3 y genera flujos libres positivos crecientes a partir de ese punto.
+El escenario \textbf{neutral} arroja un VAN positivo de USD~148.091 con una TIR del 35,7\%, holgadamente superior a la tasa de descuento del 20,88\%. El proyecto alcanza el equilibrio operativo en el Año~3 y genera flujos libres positivos crecientes a partir de ese punto. El traslado de quebrantos eleva el VAN respecto de un cómputo de impuesto pleno, al diferir el pago del impuesto hasta consumir las pérdidas acumuladas de los primeros años.
 
-El escenario \textbf{pesimista} presenta un VAN levemente negativo de USD~-7{,}383 con una TIR del 20,09\%, prácticamente alineada con la tasa de descuento. Esto indica que aun bajo supuestos desfavorables de adquisición de clientes (trayectoria P30 del Delphi) y un churn elevado (12\%), el proyecto se encuentra en el umbral de viabilidad. El equilibrio operativo se desplaza al Año~4 pero el flujo libre acumulado converge hacia cero en el horizonte de evaluación.
+El escenario \textbf{pesimista}, reconstruido con parámetros genuinamente adversos del Delphi (churn del 17\% y una trayectoria de adquisición en el centro de la banda pesimista: 2, 3 y 5 clientes nuevos en los primeros tres años), arroja un VAN \textbf{fuertemente negativo} de USD~-276.403, con una TIR del -18,3\% y equilibrio operativo recién en el Año~5. Esto revela que el proyecto \textbf{no es viable bajo condiciones de adopción lenta y alta rotación}: su resultado depende críticamente del volumen de clientes y de la retención. Conviene señalar que la versión preliminar de este análisis adoptaba para el escenario pesimista el extremo más benigno de la banda (churn 12\% y una trayectoria de clientes superior al propio rango pesimista del Delphi), lo que arrojaba un VAN cercano al equilibrio y transmitía una robustez que el ejercicio no respalda.
 
-El escenario \textbf{optimista} confirma un potencial significativo de creación de valor (VAN de USD~485{,}809, TIR del 59,61\%), consistente con una adopción más acelerada del mercado y un churn bajo (7\%), propio de soluciones enterprise integradas a sistemas críticos.
+El escenario \textbf{optimista} confirma un potencial significativo de creación de valor (VAN de USD~514.554, TIR del 63,0\%), consistente con una adopción más acelerada del mercado y un churn bajo (7\%), propio de soluciones enterprise integradas a sistemas críticos.
 
-La diferencia entre el escenario neutral y el pesimista está impulsada fundamentalmente por el volumen de clientes activos: en el neutral se alcanzan 100 licencias activas al Año~7 frente a 84 en el pesimista. La sensibilidad del modelo al número de clientes y al churn confirma que las variables comerciales dominan el resultado financiero, mientras que los costos de compliance (USD~27{,}000 anuales) representan un componente menor pero ineludible para operar en sectores regulados.
+La amplitud entre los tres escenarios —de USD~-276.403 a USD~514.554— está impulsada fundamentalmente por el volumen de clientes activos y el churn: en el neutral se alcanzan unas 100 licencias activas al Año~7 frente a unas 37 en el pesimista. La sensibilidad del modelo a las variables comerciales confirma que estas dominan el resultado financiero, mientras que los costos de compliance (USD~27.000 anuales) representan un componente menor pero ineludible para operar en sectores regulados.
+
+\subsubsection{Unit economics: LTV, CAC y payback}
+
+Para evaluar la sostenibilidad comercial del modelo se calculan las métricas unitarias del escenario neutral. El margen bruto anual por licencia es $12.000\cdot(1-0{,}02) - 720 = $ USD~11.040. Con un churn anual del 10,5\%, la vida media de un cliente es $1/0{,}105 \approx 9{,}5$ años, de modo que el valor de vida del cliente (LTV), considerando solo el flujo de licencias, asciende a:
+\[
+LTV = \frac{\text{Margen bruto anual por licencia}}{Churn} = \frac{11.040}{0{,}105} \approx \text{USD } 105.143
+\]
+
+Frente a un CAC de USD~13.500, el ratio \textbf{LTV/CAC $\approx$ 7,8} y el \textbf{payback del CAC} es de aproximadamente $13.500/11.040 \approx 1{,}2$ años. Si bien el CAC (USD~13.500) supera el valor anual del contrato (ACV de USD~12.000), la elevada retención propia de soluciones integradas a sistemas críticos hace que el LTV multiplique cerca de ocho veces el costo de adquisición, muy por encima del umbral de referencia (LTV/CAC $\geq$ 3) habitual en SaaS enterprise. Esta relación sostiene la viabilidad comercial en los escenarios neutral y optimista, y explica por qué el escenario pesimista —con menor volumen y mayor churn— se vuelve inviable: el deterioro de la retención reduce el LTV y alarga el payback hasta comprometer el retorno.

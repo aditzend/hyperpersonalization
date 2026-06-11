@@ -1,12 +1,12 @@
-\subsubsection{Creación de una Base de Mensajes del Usuario y Activación de Filtros}
+\subsubsection{Creación de una base de mensajes del usuario y activación de filtros}
 
-En un entorno productivo, lo visto en el apartado anterior no es aplicable. Es necesario hacer una búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id} de manera estricta. En la misma iteración se experimenta con la creación de una base vectorial en la que cada vector es un mensaje que el usuario tuvo con el asistente. En ese mensaje el usuario brinda una partícula de información importante que refuerza el nivel de conocimiento que el sistema tiene del usuario.
+Como se anticipó, en un entorno productivo no alcanza con la recuperación por similitud: es necesario hacer la búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id} de manera estricta, de modo que un usuario nunca acceda a información de otro. En la misma iteración se experimenta con la creación de una base vectorial en la que cada vector es un mensaje que el usuario tuvo con el asistente. En ese mensaje el usuario brinda una partícula de información importante que refuerza el nivel de conocimiento que el sistema tiene del usuario.
 
 La recuperación se da entonces mediante un filtrado por \texttt{person\_id} y luego por similitud semántica entre una pregunta y el mensaje del usuario que mayor relación tenga con esa pregunta.
 
 El código de la notebook\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/2.ipynb}} realiza una búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id}, con el objetivo de encontrar el mensaje del usuario que más relación tenga con una pregunta mediante similitud semántica. A continuación se describen los pasos:
 
-\paragraph{Importación de Librerías y Configuración}
+\paragraph{Importación de librerías y configuración}
 
 \textbf{Creación de embeddings:} Se genera un objeto embeddings usando \texttt{OpenAIEmbeddings}, que se usará para transformar texto en vectores numéricos, permitiendo calcular la similitud entre textos.
 
@@ -14,23 +14,23 @@ El código de la notebook\footnote{Disponible en: \url{https://github.com/aditze
 
 \textbf{Creación de un mensaje:} Se crea un mensaje con el contenido ``hola, quiero ir a Río'' y un timestamp que marca el momento de creación. Este mensaje será transformado en un vector.
 
-\paragraph{Procesamiento y Almacenamiento}
+\paragraph{Procesamiento y almacenamiento}
 
 \textbf{Conversión a texto y vectorización:} El contenido del mensaje se convierte a texto con \texttt{str(message)} y luego es transformado en un vector mediante \texttt{FAISS.from\_texts()}. El índice vectorial se almacena junto con los metadatos.
 
 \textbf{Almacenamiento de la base vectorial:} El índice de vectores se guarda localmente con \texttt{conversations.save\_local()}, que crea un archivo en la ruta especificada para almacenar el índice.
 
-\paragraph{Búsqueda por Similitud Semántica}
+\paragraph{Búsqueda por similitud semántica}
 
 Se realiza una búsqueda usando \texttt{conversations.similarity\_search\_with\_score()}. La pregunta es ``¿A dónde quería ir el cliente?'' y se filtra por \texttt{person\_id} ``alexander.ditzend''. Se busca el mensaje más similar semánticamente a la pregunta.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-2-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-2-1}).
 
 \paragraph{Conclusiones de la segunda iteración}
 
 El resultado devuelto es el mensaje ``hola, quiero ir a Río'' con un puntaje de similitud de 0.50811493. Este puntaje resulta de la comparación mediante la distancia coseno entre la pregunta y el contenido del mensaje:
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-2-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-2-2}).
 
 
 Se menciona que la distancia coseno no es útil en un conjunto con un solo vector, ya que no hay otros vectores con los cuales comparar. Sin embargo, el ejemplo demuestra la factibilidad de la aproximación en búsquedas por similitud semántica.

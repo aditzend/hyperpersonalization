@@ -1,14 +1,14 @@
-\subsubsection{Razonamiento Cronológico y Extracción de Datos en Conversaciones Familiares}
+\subsubsection{Razonamiento cronológico y extracción de datos en conversaciones familiares}
 
 En la notebook 11 se implementa un experimento para extraer y organizar datos de conversaciones con un grupo familiar, buscando corregir el razonamiento cronológico del modelo de lenguaje GPT-3.5. A continuación se detallan los pasos principales del experimento.
 
-\paragraph{Carga de Librerías y Configuración}
+\paragraph{Carga de librerías y configuración}
 
 Se utiliza FAISS para realizar la búsqueda semántica y OpenAI Embeddings para convertir los textos de las conversaciones en vectores. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-1}).
 
-\paragraph{Simulación de Conversaciones Familiares}
+\paragraph{Simulación de conversaciones familiares}
 
 Se crean varias conversaciones simuladas en las que el usuario proporciona información sobre su familia, como el hecho de tener una hija mayor llamada Ana de 20 años, y un hijo menor llamado Juan de 10 años. También se incluyen detalles de un viaje familiar a Córdoba con fechas y otros aspectos relevantes.
 
@@ -19,22 +19,22 @@ Ejemplos de mensajes:
     \item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años''.
 \end{itemize}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 Se utiliza un prompt diseñado para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, incluyendo nombres, edades y fechas de eventos. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-3}).
 
 Ejemplo de extracción:
 ``Voy a sacar un pasaje para la familia de Buenos Aires a Córdoba, Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años.''
 
-\paragraph{Consultas sobre la Edad}
+\paragraph{Consultas sobre la edad}
 
 Se realiza una consulta al sistema preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde correctamente que Ana tiene 20 años. Sin embargo, no razona correctamente sobre el año actual, que es 2023, lo que significa que Ana debería tener 23 años. Este error revela una falta de ajuste cronológico en el razonamiento del modelo.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-11-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-4}).
 
 \paragraph{Conclusiones de la undécima iteración}
 

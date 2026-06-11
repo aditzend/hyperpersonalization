@@ -1,14 +1,27 @@
 \section{Metodología}
 
-Se propone una metodología de descomposición del problema en situaciones atómicas, que se resuelven con técnicas de \textit{prompting} sobre modelos de lenguaje. Con los hallazgos que se obtienen en cada una de las situaciones se avanza hacia una solución general.
+\subsection{Enfoque experimental}
+
+La estrategia metodológica consiste en descomponer el problema general —dotar a un asistente virtual de capacidades de hiperpersonalización— en situaciones atómicas que puedan resolverse de forma aislada mediante técnicas de \textit{prompting} sobre modelos de lenguaje. Con los hallazgos obtenidos en cada situación se avanza, de manera incremental, hacia una solución general. El trabajo es de naturaleza experimental: cada decisión de arquitectura se valida observando el comportamiento del sistema sobre casos de uso concretos antes de incorporarla a la solución.
+
 \subsection{Etapas de trabajo}
 
-El trabajo de investigación se divide en las siguientes etapas:
+El trabajo de investigación se organiza en las siguientes etapas sucesivas, donde cada fase refina la arquitectura de recuperación y generación de respuestas:
 
-\begin{itemize}
-	\item Experimentos de \textit{prompting} sobre problemas de alcance muy focalizado (menos de 10 ejemplos), utilizando datos generados ex profeso.
+\begin{enumerate}
+	\item Experimentos de \textit{prompting} sobre problemas de alcance muy focalizado (menos de diez ejemplos), utilizando datos generados ex profeso.
 	\item Creación de conjuntos de datos a partir de documentación real.
 	\item Generación de conjuntos de datos sintéticos.
-	\item Generalización hacia conjuntos de datos de alcance intermedio (aproximadamente un año).
-\end{itemize}
+	\item Generalización hacia conjuntos de datos de alcance intermedio (aproximadamente un año) y su almacenamiento en bases de datos con capacidad de recuperación contextual.
+\end{enumerate}
 
+\subsection{Patrón de desarrollo}
+
+Para cada problemática abordada se siguió un patrón iterativo:
+
+\begin{enumerate}
+	\item Se seleccionó una problemática enunciada como un caso de uso imposible de resolver hoy sin hiperpersonalización.
+	\item Se describió una estrategia de ataque y se desarrolló un prototipo.
+	\item Se registraron los resultados para alimentar un repositorio de \textit{prompts} exitosos.
+	\item Se repitió el proceso hasta encontrar una solución satisfactoria.
+\end{enumerate}

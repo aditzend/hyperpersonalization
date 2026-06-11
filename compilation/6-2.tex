@@ -5,7 +5,7 @@
 \paragraph{Fortalezas (Internas)}
 
 \begin{itemize}
-    \item \textbf{Diferenciación}: Combina múltiples fuentes de datos y optimiza la hiperpersonalización en tiempo real. No existen competidores aún.
+    \item \textbf{Diferenciación}: Combina múltiples fuentes de datos y optimiza la hiperpersonalización en tiempo real, una integración que las soluciones actuales del mercado no ofrecen de forma combinada.
     \item \textbf{Privacidad y seguridad}: La instalación local o en un entorno controlado por el cliente reduce las preocupaciones sobre la transferencia de datos. El modelo de despliegue on-premise facilita el cumplimiento de la Ley~25.326 de Protección de Datos Personales y de las disposiciones de la Agencia de Acceso a la Información Pública (AAIP), dado que la información personal no sale del perímetro del cliente. Esto habilita la firma de acuerdos de tratamiento de datos (DPA) con roles claros de responsable y encargado, un requisito cada vez más frecuente en los procesos de compra de sectores regulados.
     \item \textbf{Compatibilidad}: Diseñado para integrarse con diferentes sistemas y bases de datos (e.g., CRM, ERP).
     \item \textbf{Escalabilidad}: Puede adaptarse a diversas industrias y volúmenes de datos, desde pequeñas empresas hasta grandes corporaciones.
@@ -101,15 +101,15 @@ Aplicando la propuesta de valor a esta industria se recalca que el middleware ac
 
 \subparagraph{Resultados esperados}
 
-Las empresas de transporte podrían reducir entre un 30\% y un 50\% las consultas manejadas por humanos. Según Botpress, los chatbots pueden responder hasta el 79\% de las consultas rutinarias en atención al cliente. Pero se toma un valor más conservador dado que cada implementación tiene fuerte dependencia del contexto.
+Las empresas de transporte podrían reducir entre un 30\% y un 50\% las consultas manejadas por humanos. Según Botpress, los chatbots pueden responder hasta el 79\% de las consultas rutinarias en atención al cliente \parencite{Botpress2024}. Pero se toma un valor más conservador dado que cada implementación tiene fuerte dependencia del contexto.
 
-No solo se verificaría un ahorro de costos sino un incremento sustancial en ventas adicionales (asientos, equipaje, upgrades) con un engagement superior en tiempo real. McKinsey \& Company indica que la personalización puede aumentar los ingresos entre un 10\% y un 15\%, dependiendo del sector y la capacidad de ejecución. En el mismo trabajo se indica que el 71\% de los consumidores espera interacciones personalizadas, y el 76\% se siente frustrado cuando no las recibe.
+No solo se verificaría un ahorro de costos sino un incremento sustancial en ventas adicionales (asientos, equipaje, upgrades) con un engagement superior en tiempo real. McKinsey \& Company estima que la personalización puede aumentar los ingresos en torno al 15\%, con picos mayores según el sector y la capacidad de ejecución, y que cerca del 72\% de los consumidores espera que las empresas los reconozcan como individuos \parencite{McKinsey2021}.
 
 \paragraph{Industria bancaria}
 
 En esta industria se encuentran generalmente los siguientes inconvenientes:
 
-Consultas repetitivas sobre saldos, estados de cuenta, transferencias y pagos recurrentes. Estas interacciones ocupan tiempo del personal y generan frustración en los clientes si los bots no proporcionan respuestas rápidas y precisas. Los bots actuales no consideran el historial financiero del cliente, lo que resulta en recomendaciones genéricas en lugar de sugerir opciones pensadas para la situación real de cada cliente. Los bancos manejan datos financieros sensibles y deben cumplir estrictas regulaciones, como GDPR, CCPA y normativas locales de privacidad.
+Consultas repetitivas sobre saldos, estados de cuenta, transferencias y pagos recurrentes. Estas interacciones ocupan tiempo del personal y generan frustración en los clientes si los bots no proporcionan respuestas rápidas y precisas. Los bots actuales no consideran el historial financiero del cliente, lo que resulta en recomendaciones genéricas en lugar de sugerir opciones pensadas para la situación real de cada cliente. Los bancos manejan datos financieros sensibles y deben cumplir estrictas regulaciones, como la Ley~25.326 de Protección de Datos Personales y las normas del Banco Central de la República Argentina (BCRA), además de estándares internacionales como GDPR o CCPA cuando operan con datos de residentes de la Unión Europea o California.
 
 El middleware actúa como un intermediario entre los sistemas internos del banco y el motor del bot, permitiendo acceso contextualizado a los datos: Integra CRM, sistemas transaccionales y datos de clientes, proporcionando información relevante en tiempo real. La hiperpersonalización en tiempo real permite responder con precisión basándose en el historial de transacciones, hábitos financieros y necesidades específicas del cliente.
 
@@ -125,8 +125,8 @@ El middleware actúa como un intermediario entre los sistemas internos del banco
     
     \item Con middleware:
     \begin{itemize}
-        \item Bot: ``Hola, María. Tu cuenta principal tiene un saldo de \$12,500. ¿Querés programar una transferencia o conocer los detalles de tu última transacción?''
-        \item Usuario: ``Sí, necesito transferir \$2,000.''
+        \item Bot: ``Hola, María. Tu cuenta principal tiene un saldo de \$12.500. ¿Querés programar una transferencia o conocer los detalles de tu última transacción?''
+        \item Usuario: ``Sí, necesito transferir \$2.000.''
         \item Bot: ``Listo, programé la transferencia. ¿Te gustaría recibir una notificación cuando se complete?''
     \end{itemize}
 \end{enumerate}

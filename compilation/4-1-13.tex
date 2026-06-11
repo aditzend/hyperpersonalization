@@ -1,24 +1,24 @@
-\subsubsection{Optimización del Razonamiento Cronológico y Manejo de Contexto en Búsquedas Semánticas con GPT-4}
+\subsubsection{Optimización del razonamiento cronológico y manejo de contexto en búsquedas semánticas con GPT-4}
 
 En la notebook 13\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/13.ipynb}} se implementa un proceso en el cual se extrae información de conversaciones simuladas y se utilizan modelos de lenguaje como GPT-3.5 y GPT-4 para responder a preguntas del usuario basándose en la información previamente almacenada en FAISS. El objetivo es probar la capacidad de los modelos para realizar búsquedas semánticas y razonar sobre fechas y cantidades de datos obtenidos en conversaciones pasadas.
 
-\paragraph{Configuración del Sistema}
+\paragraph{Configuración del sistema}
 
 Se utilizan FAISS para realizar las búsquedas semánticas y OpenAI Embeddings para convertir los mensajes en vectores. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-1}).
 
-\paragraph{Simulación de Conversaciones}
+\paragraph{Simulación de conversaciones}
 
 Se crean varios contextos de conversación en los que el usuario interactúa con el asistente. En una de ellas, el usuario menciona que va a comprar pasajes para su familia de Buenos Aires a Córdoba, proporcionando detalles sobre los miembros de la familia (Ana, 20 años; Juan, 10 años) y las fechas de salida y regreso. Otra conversación incluye información sobre el programa de viajero frecuente, donde el usuario busca subir de categoría comprando millas.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 Se utiliza un modelo GPT-3.5 para extraer datos relevantes de las conversaciones, como los nombres, edades, y fechas de viaje, así como detalles sobre las millas acumuladas en el programa de viajero frecuente. Esta información se almacena en FAISS para ser recuperada cuando el usuario realice consultas futuras.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-3}).
 
 Un ejemplo de extracción generada por el sistema:
 
@@ -26,13 +26,13 @@ Un ejemplo de extracción generada por el sistema:
 ``Pedro quiere viajar con su familia de Buenos Aires a Córdoba. Su hija Ana tiene 20 años y su hijo Juan tiene 10 años.''
 \end{quote}
 
-\paragraph{Consultas sobre la Información Almacenada}
+\paragraph{Consultas sobre la información almacenada}
 
 Se realizan varias consultas al sistema para evaluar su capacidad de recuperación y razonamiento. A continuación se presentan los resultados más significativos:
 
 \textbf{Consulta sobre cantidad de hijos}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-4}).
 
 \textbf{Razonamiento Cronológico y Contextual}
 
@@ -50,18 +50,18 @@ Se observa que GPT-4 es más preciso en el manejo de fechas y el ajuste de edade
 
 GPT-4 demuestra un razonamiento cronológico superior, ajustando correctamente las edades basándose en el tiempo transcurrido, mientras que GPT-3.5 no actualiza la información temporal.
 
-\paragraph{Consultas Complejas con Múltiples Contextos}
+\paragraph{Consultas complejas con múltiples contextos}
 
 El sistema también fue evaluado con consultas que requieren combinar información de diferentes conversaciones:
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-13-5}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-5}).
 
 \textbf{Respuesta del sistema:}
 \begin{quote}
 ``Antes de tu última compra, tenías 500 millas.''
 \end{quote}
 
-\paragraph{Problemas de Contexto Identificados}
+\paragraph{Problemas de contexto identificados}
 
 Aunque GPT-4 maneja bien los datos cronológicos, en algunas respuestas trata al usuario en tercera persona, lo que indica un error en el reconocimiento del contexto de la conversación. Por ejemplo:
 
@@ -71,7 +71,7 @@ Aunque GPT-4 maneja bien los datos cronológicos, en algunas respuestas trata al
 
 Este problema sugiere que, aunque el razonamiento cronológico mejora, todavía hay dificultades con la comprensión contextual en ciertas respuestas.
 
-\paragraph{Conclusiones de la treceava iteración}
+\paragraph{Conclusiones de la decimotercera iteración}
 
 La notebook 13 demuestra que los modelos de lenguaje como GPT-4 son capaces de realizar búsquedas semánticas precisas y razonar correctamente sobre fechas y datos almacenados en conversaciones previas. Las principales conclusiones incluyen:
 

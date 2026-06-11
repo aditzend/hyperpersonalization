@@ -1,14 +1,14 @@
-\subsubsection{Manejo de Datos Personales y Errores de Contexto en la Gestión de Citas Médicas con GPT-3.5}
+\subsubsection{Manejo de datos personales y errores de contexto en la gestión de citas médicas con GPT-3.5}
 
 En la notebook 16\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/16.ipynb}} se realiza un experimento utilizando información proporcionada por un usuario sobre una cita médica para su madre y se busca combinar datos personales del usuario con los de su madre para completar y gestionar citas a través de un modelo de lenguaje (GPT-3.5). A continuación, se detallan los pasos principales del experimento:
 
-\paragraph{Carga de Librerías y Configuración}
+\paragraph{Carga de librerías y configuración}
 
 Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-16-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-1}).
 
-\paragraph{Simulación de Conversaciones}
+\paragraph{Simulación de conversaciones}
 
 Se simulan varios intercambios entre el usuario y el asistente virtual, donde el usuario proporciona información sobre su madre para sacar un turno médico. Se incluyen detalles como el nombre de la madre, su correo electrónico, número de teléfono, DNI y especialidad médica solicitada.
 
@@ -21,31 +21,31 @@ Ejemplos de mensajes:
 \item Asistente: ``No hay problema, sacamos el turno para ella. ¿Cuál es el DNI de ella?''.
 \end{itemize}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-16-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 El sistema GPT-3.5 es utilizado para extraer la información de la conversación, como el nombre de la madre, su email y DNI, y se almacena en FAISS junto con los metadatos de la conversación, lo que permite una búsqueda eficiente en consultas posteriores.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-16-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-3}).
 
 Ejemplo de extracción:
 
 ``El usuario proporcionó los siguientes datos: el nombre de la madre es Sylvia, su email es sylvia@gmail.com, su DNI es 12668992 y la especialidad médica es ginecología''.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-16-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-4}).
 
-\paragraph{Consulta sobre Turnos}
+\paragraph{Consulta sobre turnos}
 
 Se realiza una consulta como ``¿Tengo algún turno asignado?''. El sistema recupera los datos sobre la madre del usuario y genera una respuesta que combina información de varios contextos. Sin embargo, ocurre un error donde el sistema mezcla la información del usuario con la de su madre, creando confusión sobre quién tiene el turno asignado.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-16-5}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-5}).
 
-\paragraph{Conclusiones de la dieciseisava iteración}
+\paragraph{Conclusiones de la decimosexta iteración}
 
 A pesar de extraer correctamente la información sobre la madre del usuario, el sistema genera respuestas que mezclan los datos personales de ambos, lo que lleva a inconsistencias en la respuesta del asistente virtual. Por ejemplo, se asigna el nombre del usuario (Alexander) a los detalles del turno de su madre.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-16-6}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-6}).
 
 Como se observa en el resultado, el sistema mezcla incorrectamente el nombre del usuario (Alexander) con el email de su madre (sylvia@gmail.com), demostrando la confusión en el manejo de datos personales de múltiples personas en el contexto de la conversación.
 

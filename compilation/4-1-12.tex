@@ -1,14 +1,14 @@
-\subsubsection{Mejora del Razonamiento Cronológico en Conversaciones Familiares Utilizando GPT-3.5 y GPT-4}
+\subsubsection{Mejora del razonamiento cronológico en conversaciones familiares utilizando GPT-3.5 y GPT-4}
 
 En el notebook 12\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/12.ipynb}} se implementa un experimento para extraer datos de conversaciones con un usuario y mejorar el razonamiento cronológico utilizando tanto GPT-3.5 como GPT-4. A continuación, se detallan los pasos principales del experimento:
 
-\paragraph{Carga de Librerías y Configuración}
+\paragraph{Carga de librerías y configuración}
 
 Se utilizan FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar las conversaciones. Además, se configura una función que interactúa con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-12-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-1}).
 
-\paragraph{Simulación de Conversaciones Familiares}
+\paragraph{Simulación de conversaciones familiares}
 
 Se crean varias conversaciones simuladas en las que el usuario menciona que está planeando un viaje con su familia de Buenos Aires a Córdoba. Proporciona información sobre los miembros de su familia, como su hija mayor, Ana, de 20 años, y su hijo menor, Juan, de 10 años. También se incluyen detalles sobre el itinerario de viaje, como las fechas de salida y regreso.
 
@@ -19,24 +19,24 @@ Ejemplos de mensajes:
     \item Usuario: ``Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años''
 \end{itemize}
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-12-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-2}).
 
-\paragraph{Extracción de Datos}
+\paragraph{Extracción de datos}
 
 Se utiliza un prompt para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, como los nombres y edades de los familiares, y las fechas de viaje. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-12-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-3}).
 
 Ejemplos de extracción:
 ``Pedro quiere viajar con su familia de Buenos Aires a Córdoba. Su hija Ana tiene 20 años y su hijo Juan tiene 10 años''.
 
-\paragraph{Consultas sobre la Edad}
+\paragraph{Consultas sobre la edad}
 
 Se realiza una consulta preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde que Ana tiene 20 años, pero no ajusta la edad al año actual (2023, de acuerdo a la fecha de realización del experimento). El modelo no corrige la edad de Ana, lo que revela un problema de razonamiento cronológico.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-12-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-4}).
 
-\paragraph{Conclusiones de la doceava iteración}
+\paragraph{Conclusiones de la duodécima iteración}
 
 El modelo responde incorrectamente que Ana tiene 20 años, ya que no actualiza la edad basándose en la fecha actual, lo que indica un fallo en la interpretación temporal.
 
@@ -46,7 +46,7 @@ Respuesta obtenida: ``Según la información que tenemos en la conversación, tu
 
 Se realiza la misma consulta usando GPT-4. En este caso, GPT-4 razona correctamente que Ana tenía 20 años en 2020 y ajusta la respuesta, indicando que Ana debería tener 23 años en 2023.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-12-5}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-5}).
 
 Respuesta de GPT-4: ``Su hija Ana tenía 20 años en agosto de 2020. Dado que hoy es 13 de septiembre de 2023, Ana ahora debería tener 23 años.''
 

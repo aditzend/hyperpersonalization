@@ -1,9 +1,10 @@
 \section{Conclusiones}
-\subsection{Viabilidad}
 
-Los experimentos efectuados en la sección de desarrollo demuestran que el mecanismo diseñado cumple la premisa dotando de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y embeddings es suficiente para procesar la información necesaria siempre que la cantidad de información almacenada pueda ser procesada efectivamente por el motor de búsqueda de la base vectorial.
+\subsection{Viabilidad técnica}
 
-\subsubsection{Recursos Necesarios para la Implementación}
+Los experimentos efectuados en la sección de desarrollo demuestran que el mecanismo diseñado cumple la premisa dotando de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y \textit{embeddings} es suficiente para procesar la información necesaria siempre que la cantidad de información almacenada pueda ser procesada efectivamente por el motor de búsqueda de la base vectorial.
+
+\subsection{Recursos necesarios para la implementación}
 
 Los componentes necesarios para la implementación son los siguientes:
 
@@ -15,30 +16,36 @@ Los componentes necesarios para la implementación son los siguientes:
     \item Un servicio de generación de respuestas a base de contexto histórico.
 \end{itemize}
 
-Además de la base de datos se necesita acceso a un servicio que reciba texto y devuelva embeddings y un servicio de modelo de lenguaje. Ambos pueden correrse en una computadora de escritorio con suficiente capacidad o consumirse mediante subscripciones a proveedores de primera línea como OpenAI, Google Cloud Platform y Amazon Web Services, entre muchos otros.
+Además de la base de datos se necesita acceso a un servicio que reciba texto y devuelva \textit{embeddings} y un servicio de modelo de lenguaje. Ambos pueden correrse en una computadora de escritorio con suficiente capacidad o consumirse mediante suscripciones a proveedores de primera línea como OpenAI, Google Cloud Platform y Amazon Web Services, entre muchos otros.
 
-\subsubsection{Limitaciones de la solución actual}
+\subsection{Limitaciones identificadas}
 
-Los experimentos sobre problemas de razonamiento cronológico usando modelos ya deprecados al finalizar este trabajo como gpt-3.5 requerían retrabajo de las fuentes de información. Con el propio avance de los modelos de lenguaje estas reconfiguraciones para facilitar las tareas de razonamiento pueden no ser necesarias pero las técnicas vistas pueden servir en el caso de aplicar hiperpersonalización en modelos menos potentes, particularmente de entre mil y siete mil millones de parámetros. Este punto no es menor ya que estos modelos pueden correr hoy en dispositivos personales sin acceso a un servidor remoto con los beneficios de privacidad que esto conlleva.
-
-\subsubsection{Funcionalidades a desarrollar en fases sucesivas}
+Los experimentos sobre problemas de razonamiento cronológico usando modelos ya deprecados al finalizar este trabajo como GPT-3.5 requerían retrabajo de las fuentes de información. Con el propio avance de los modelos de lenguaje estas reconfiguraciones para facilitar las tareas de razonamiento pueden no ser necesarias pero las técnicas vistas pueden servir en el caso de aplicar hiperpersonalización en modelos menos potentes, particularmente de entre mil y siete mil millones de parámetros. Este punto no es menor ya que estos modelos pueden correr hoy en dispositivos personales sin acceso a un servidor remoto con los beneficios de privacidad que esto conlleva.
 
 El sistema planteado como solución no cuenta con manejo de memoria de conversación. Todos los mensajes se responden sin interconexión y esto claramente es inviable en un entorno productivo. Un servicio de observación debe estar corriendo en paralelo al servicio principal de la conversación extrayendo y estructurando toda la información necesaria de la conversación. En este trabajo solo se planteó cómo hacerlo a partir de una conversación simulada.
 
 Como ya se mencionó en el apartado de desarrollo, el sistema no es capaz de responder sobre más de una temática en una misma iteración. Ésta es una característica de producto que debe validarse en el mercado previamente antes de comenzar con el desarrollo.
 
+Por último, la validación realizada en este trabajo es de carácter cualitativo: se apoya en la inspección de las respuestas del sistema sobre casos de uso concretos, lo que resulta adecuado para una prueba de concepto. Una evaluación cuantitativa —con métricas de precisión y exhaustividad en la recuperación, exactitud sobre un conjunto fijo de preguntas y una comparación sistemática entre modelos— excede el alcance de este trabajo y queda planteada como línea de trabajo futuro.
+
+\subsection{Dimensión comercial}
+
 Luego de estas mejoras se debe pensar en los desafíos que se presentan fuera del ámbito académico, saliendo de la esfera de pensamiento para entrar en el complejo mundo de la implementación.
 
 En el plano operativo, el plan de negocio desarrollado en los apéndices ya incorpora un marco mínimo de cumplimiento normativo: acuerdos de tratamiento de datos (DPA) con cada cliente, controles de prevención de fuga de datos (DLP) para evitar el envío de información personal a modelos de lenguaje, retención limitada de logs, consentimientos específicos para el vertical educativo y un esquema de seguridad que incluye cifrado, backups y recuperación ante desastres. Estos controles representan la línea de base necesaria para operar en sectores regulados como banca, salud y educación, y sus costos se encuentran cuantificados en la proyección financiera.
 
+\subsection{Proyecciones futuras}
+
 No obstante, no se puede esperar que una persona vuelque la información de todos los campos de su vida en una base de datos sin garantizar la privacidad y el control de lo que comparte.
 
-Es por este motivo que el siguiente paso en el camino hacia un mundo con asistentes virtuales hiperpersonalizados debe centrarse en los mecanismos para almacenar, leer y permisionar datos en una cadena de bloques, más conocida como blockchain.
+Es por este motivo que el siguiente paso en el camino hacia un mundo con asistentes virtuales hiperpersonalizados debe centrarse en los mecanismos para almacenar, leer y permisionar datos en una cadena de bloques, más conocida como \textit{blockchain}.
 
 Este tipo de base de datos se caracteriza por la confiabilidad de los procesos de manejo de data, ya que es físicamente imposible alterar un bloque una vez que es parte de la cadena. Además su almacenamiento es distribuido y compartido entre entidades diferentes, lo que hace imposible el control central y monopólico de los datos.
 
-La contracara de este tipo de soluciones viene por el lado de la complejidad de los desarrollos, la lentitud de las operaciones y el costo de funcionamiento. En los últimos años han aparecido gran variedad de avances para mitigar estos costos y difundir el uso de blockchains en todo tipo de industrias, pero todavía no existe una solución que resuelva la escritura y lectura de grandes volúmenes de datos, a un costo accesible y a una velocidad razonable.
+La contracara de este tipo de soluciones viene por el lado de la complejidad de los desarrollos, la lentitud de las operaciones y el costo de funcionamiento. En los últimos años han aparecido gran variedad de avances para mitigar estos costos y difundir el uso de \textit{blockchains} en todo tipo de industrias, pero todavía no existe una solución que resuelva la escritura y lectura de grandes volúmenes de datos, a un costo accesible y a una velocidad razonable.
 
-La propuesta para el siguiente paso es desarrollar esa tecnología. Cuando se alcancen los objetivos antes mencionados, las operaciones sobre bases de datos mencionadas en este trabajo se reemplazarán por escrituras y lecturas sobre una blockchain. Los usuarios finales, los verdaderos dueños de los datos, podrán llevarse su información personal al servicio de inteligencia artificial que gusten. Expresado de otra manera, podrán permisionar sus datos a voluntad.
+La propuesta para el siguiente paso es desarrollar esa tecnología. Cuando se alcancen los objetivos antes mencionados, las operaciones sobre bases de datos mencionadas en este trabajo se reemplazarán por escrituras y lecturas sobre una \textit{blockchain}. Los usuarios finales, los verdaderos dueños de los datos, podrán llevarse su información personal al servicio de inteligencia artificial que gusten. Expresado de otra manera, podrán permisionar sus datos a voluntad.
+
+\subsection{Impacto y contribuciones}
 
 El equilibrio perfecto entre disfrutar de las comodidades que nos puede traer la inteligencia artificial y hacer valer nuestro derecho a la privacidad requiere diseño, trabajo y la confluencia de variadas tecnologías. El futuro que deseamos no ocurre por acción de la entropía, debe ser creado.

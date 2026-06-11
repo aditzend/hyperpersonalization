@@ -8,4 +8,13 @@ El tema fundamental de la privacidad de los datos personales no es objeto de est
 
 \subsection{Objetivos}
 
-Se plantea como objetivo principal encontrar una solución tan simple, económica y eficiente como sea posible para la construcción de sistemas conversacionales que permitan la hiperpersonalización de las interacciones con los usuarios. Desde la perspectiva de las tecnoologías aplicadas, es preferible hallar una solución subóptima con las herramientas que se encuentran en uso actualmente que una solución óptima con tecnologías difíciles de integrar, agregando complejidad al mantenimiento de todo el sistema.
+Se plantea como objetivo principal encontrar una solución tan simple, económica y eficiente como sea posible para la construcción de sistemas conversacionales que permitan la hiperpersonalización de las interacciones con los usuarios. Desde la perspectiva de las tecnologías aplicadas, es preferible hallar una solución subóptima con las herramientas que se encuentran en uso actualmente que una solución óptima con tecnologías difíciles de integrar, agregando complejidad al mantenimiento de todo el sistema.
+
+Para alcanzar este objetivo general se plantean los siguientes objetivos específicos:
+
+\begin{enumerate}
+    \item Diseñar una arquitectura de ingestión, almacenamiento y recuperación de información personal basada en \textit{embeddings} y búsqueda por similitud vectorial.
+    \item Evaluar de manera comparativa distintas tecnologías de base de datos —un caché con búsqueda vectorial (Redis y FAISS), una base de grafos y una base documental con soporte vectorial— para soportar dicha arquitectura.
+    \item Construir conjuntos de datos sintéticos de alcance anual sobre una persona y validar, mediante casos de uso, la recuperación de contexto relevante.
+    \item Identificar las limitaciones del enfoque —razonamiento cronológico, memoria conversacional y consultas que abarcan múltiples temáticas— y delinear los componentes necesarios para una implementación productiva.
+\end{enumerate}

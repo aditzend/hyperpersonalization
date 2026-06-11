@@ -1,38 +1,38 @@
-\subsubsection{Análisis de la Interpretación de Fechas y Razonamiento Cronológico}
+\subsubsection{Análisis de la interpretación de fechas y razonamiento cronológico}
 
 En este experimento se evalúa la capacidad de los modelos de lenguaje GPT-3.5 y GPT-4 para interpretar fechas y realizar razonamiento cronológico. El objetivo es determinar si estos modelos pueden entender y calcular correctamente la edad de una persona en base a fechas y datos previamente proporcionados. El código completo de este análisis está disponible en el repositorio\footnote{\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/8.ipynb}}.
 
-\paragraph{Configuración del Entorno}
+\paragraph{Configuración del entorno}
 
 Se utilizan FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de mensajes. Se define una función para interactuar con los modelos GPT-3.5 y GPT-4 mediante la API de OpenAI.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-8-1}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-8-1}).
 
-\paragraph{Creación de Contextos Conversacionales}
+\paragraph{Creación de contextos conversacionales}
 
 Se crean varios contextos que contienen conversaciones simuladas entre el usuario y el sistema. En uno de los contextos, el usuario solicita un turno para su madre, llamada Alba, y menciona que tiene 66 años. Otro contexto incluye una pregunta sobre la capital de Colombia.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-8-2}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-8-2}).
 
-\paragraph{Vectorización y Almacenamiento}
+\paragraph{Vectorización y almacenamiento}
 
 Los mensajes de estos contextos se vectorizan utilizando embeddings y se almacenan en FAISS junto con sus respectivos metadatos, lo que permite realizar búsquedas y recuperar información relacionada.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-8-3}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-8-3}).
 
-\paragraph{Consulta Simple sobre la Edad}
+\paragraph{Consulta simple sobre la edad}
 
 Se realiza una consulta simple: ``¿Qué edad tiene Alba?''. FAISS encuentra el contexto relevante, y el modelo GPT-3.5 responde correctamente que ``Alba tiene 66 años'', basándose en la información previamente proporcionada.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-8-4}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-8-4}).
 
 El resultado obtenido fue: ``Alba tiene 66 años.''
 
-\paragraph{Razonamiento Cronológico con GPT-3.5}
+\paragraph{Razonamiento cronológico con GPT-3.5}
 
 A continuación, se plantea una pregunta más compleja: ``¿Qué edad tenía Alba en 2020?''. Aquí se espera que el modelo entienda que si Alba tiene 66 años en 2023 (año actual de acuerdo a la fecha de realización del experimento), entonces en 2020 tendría 63 años. Sin embargo, GPT-3.5 falla en su respuesta.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-8-5}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-8-5}).
 
 GPT-3.5 responde incorrectamente: ``En el contexto de la conversación anterior, Alba tenía 66 años en 2020.'', indicando que el modelo no ajusta la edad de acuerdo con la fecha solicitada.
 
@@ -40,7 +40,7 @@ GPT-3.5 responde incorrectamente: ``En el contexto de la conversación anterior,
 
 Se realiza la misma consulta sobre la edad de Alba en 2020, esta vez utilizando GPT-4.
 
-La transcripción íntegra de este listado figura en el \textit{Anexo técnico} (véase el Apéndice~\ref{anexo:code-4-1-8-6}).
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-8-6}).
 
 GPT-4 responde: ``Alba nació en 1966. Por lo tanto, en 2020, tenía 54 años.'' Aunque GPT-4 realiza el cálculo correctamente, comete un error inicial al interpretar la edad como el año de nacimiento. A pesar de corregir el cálculo, este error inicial demuestra una falla en la comprensión de los datos proporcionados.
 
