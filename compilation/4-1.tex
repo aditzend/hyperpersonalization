@@ -19,7 +19,7 @@ Los \textit{embeddings} son una herramienta clave para representar datos de alta
 
 Las bases de datos que alojan vectores de \textit{embeddings} también son llamadas semánticas porque los vectores representan generalmente la conversión que hace un modelo de \textit{embeddings} de una pieza de texto, que puede ser visto como su contenido semántico.
 
-En el contexto del presente trabajo se utiliza el modelo text-embedding-3-small que utiliza 1536 dimensiones. Por lo tanto, en la base se guardarán vectores de 1536 de 16 dígitos de precisión entre -1 y 1. Cada número representa la coordenada de un vector en la dimensión de la posición que ocupa.
+En los experimentos iniciales se utiliza el modelo de \textit{embeddings} por defecto de OpenAI vigente al momento de realizarlos, de 1536 dimensiones. Por lo tanto, en la base se guardan vectores de 1536 componentes, cada una expresada como un número de punto flotante de doble precisión en el rango aproximado de $-1$ a $1$. Cada número representa la coordenada del vector en la dimensión que ocupa. En la arquitectura final (sección 4.4) se migra al modelo \textit{text-embedding-3-large}, de 3072 dimensiones.
 
 Esta etapa representa el núcleo del presente trabajo.
 

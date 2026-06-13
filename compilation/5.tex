@@ -2,7 +2,9 @@
 
 \subsection{Viabilidad técnica}
 
-Los experimentos efectuados en la sección de desarrollo demuestran que el mecanismo diseñado cumple la premisa dotando de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y \textit{embeddings} es suficiente para procesar la información necesaria siempre que la cantidad de información almacenada pueda ser procesada efectivamente por el motor de búsqueda de la base vectorial.
+Los experimentos efectuados en la sección de desarrollo demuestran que el mecanismo diseñado dota de capacidades de hiperpersonalización a un asistente virtual. La combinación de modelos de lenguaje preentrenados y \textit{embeddings} es suficiente para procesar la información necesaria siempre que la cantidad de información almacenada pueda ser procesada efectivamente por el motor de búsqueda de la base vectorial.
+
+Conviene retomar la hipótesis para precisar qué quedó efectivamente comprobado. La hipótesis planteaba que, a partir del análisis de interacciones previas, era posible construir una base de información personal del usuario y consultarla luego para aportar contexto a la generación de respuestas. El presente trabajo valida con experimentos la segunda mitad de esa afirmación —la consulta de la base y la recuperación de contexto relevante para enriquecer las respuestas—, mientras que la construcción de la base a partir de interacciones reales se abordó de manera simulada y no experimental, como se detalla en las limitaciones. Respecto del carácter \emph{híbrido} de la base, la arquitectura final almacena tanto la representación semántica (vectores de \textit{embeddings}) como campos estructurados (tipo de registro y fechas en formato ISO~8601), pero la recuperación validada se apoya en la búsqueda por similitud vectorial; el aprovechamiento conjunto de ambos componentes mediante búsqueda híbrida queda planteado como mejora y no como resultado comprobado.
 
 \subsection{Recursos necesarios para la implementación}
 
@@ -24,7 +26,7 @@ Los experimentos sobre problemas de razonamiento cronológico usando modelos ya 
 
 El sistema planteado como solución no cuenta con manejo de memoria de conversación. Todos los mensajes se responden sin interconexión y esto claramente es inviable en un entorno productivo. Un servicio de observación debe estar corriendo en paralelo al servicio principal de la conversación extrayendo y estructurando toda la información necesaria de la conversación. En este trabajo solo se planteó cómo hacerlo a partir de una conversación simulada.
 
-Como ya se mencionó en el apartado de desarrollo, el sistema no es capaz de responder sobre más de una temática en una misma iteración. Ésta es una característica de producto que debe validarse en el mercado previamente antes de comenzar con el desarrollo.
+Como ya se mencionó en el apartado de desarrollo, el sistema no es capaz de responder sobre más de una temática en una misma iteración. Se trata de una limitación técnica del flujo de recuperación implementado: su resolución —descomponer la consulta en subtemas y recuperar contexto para cada uno— queda como trabajo futuro, y la prioridad de abordarla depende de qué proporción de las consultas reales sean efectivamente compuestas.
 
 Por último, la validación realizada en este trabajo es de carácter cualitativo: se apoya en la inspección de las respuestas del sistema sobre casos de uso concretos, lo que resulta adecuado para una prueba de concepto. Una evaluación cuantitativa —con métricas de precisión y exhaustividad en la recuperación, exactitud sobre un conjunto fijo de preguntas y una comparación sistemática entre modelos— excede el alcance de este trabajo y queda planteada como línea de trabajo futuro.
 
@@ -40,7 +42,7 @@ No obstante, no se puede esperar que una persona vuelque la información de todo
 
 Es por este motivo que el siguiente paso en el camino hacia un mundo con asistentes virtuales hiperpersonalizados debe centrarse en los mecanismos para almacenar, leer y permisionar datos en una cadena de bloques, más conocida como \textit{blockchain}.
 
-Este tipo de base de datos se caracteriza por la confiabilidad de los procesos de manejo de data, ya que es físicamente imposible alterar un bloque una vez que es parte de la cadena. Además su almacenamiento es distribuido y compartido entre entidades diferentes, lo que hace imposible el control central y monopólico de los datos.
+Este tipo de base de datos se caracteriza por la confiabilidad de los procesos de manejo de datos, ya que resulta computacionalmente inviable alterar un bloque una vez que forma parte de la cadena. Además su almacenamiento es distribuido y compartido entre entidades diferentes, lo que hace imposible el control central y monopólico de los datos.
 
 La contracara de este tipo de soluciones viene por el lado de la complejidad de los desarrollos, la lentitud de las operaciones y el costo de funcionamiento. En los últimos años han aparecido gran variedad de avances para mitigar estos costos y difundir el uso de \textit{blockchains} en todo tipo de industrias, pero todavía no existe una solución que resuelva la escritura y lectura de grandes volúmenes de datos, a un costo accesible y a una velocidad razonable.
 
@@ -48,4 +50,6 @@ La propuesta para el siguiente paso es desarrollar esa tecnología. Cuando se al
 
 \subsection{Impacto y contribuciones}
 
-El equilibrio perfecto entre disfrutar de las comodidades que nos puede traer la inteligencia artificial y hacer valer nuestro derecho a la privacidad requiere diseño, trabajo y la confluencia de variadas tecnologías. El futuro que deseamos no ocurre por acción de la entropía, debe ser creado.
+Las principales contribuciones de este trabajo son: (i) una metodología iterativa para descomponer el problema de la hiperpersonalización en situaciones atómicas y resolverlas mediante prototipado sucesivo; (ii) una arquitectura de referencia —amplificación de consultas, recuperación semántica sobre una colección única y generación de respuestas con contexto— validada como prueba de concepto con recursos accesibles; (iii) la evidencia, en condiciones de laboratorio, de que la similitud semántica permite recuperar el dato correcto sin necesidad de segmentar la información en colecciones por tema; (iv) la identificación y caracterización de las limitaciones del enfoque (razonamiento cronológico, memoria conversacional y consultas multitemáticas); y (v) un plan de negocio que sitúa la solución en un contexto de viabilidad comercial y cumplimiento normativo.
+
+El equilibrio entre disfrutar de las comodidades que puede traer la inteligencia artificial y hacer valer el derecho a la privacidad requiere diseño, trabajo y la confluencia de variadas tecnologías. El futuro que se desea no ocurre por acción de la entropía: debe ser creado.

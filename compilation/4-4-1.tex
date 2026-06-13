@@ -8,9 +8,9 @@ Es ideal para investigación ya que puede correrse fácilmente en un servidor pr
 
 Con los archivos estructurados generados en el apartado anterior se hicieron las inserciones correspondientes en una instancia local de ArangoDB y se le aplicaron las preguntas de los experimentos con problemas focalizados de la sección 4.1.
 
-El siguiente es el resultado de insertar el archivo de familia en la base de datos y luego simular las preguntas que podría hacer el usuario para comprobar que el grafo familiar se navega correctamente. Luego la experimentación va un paso más allá, intentando modificar la consulta de lectura por una de escritura, obteniendo un resultado inesperadamente efectivo, ya que se logra un ingreso correcto en el grafo usando solamente una oración en lenguaje natural.
+El siguiente es el resultado de insertar el archivo de familia en la base de datos y luego simular las preguntas que podría hacer el usuario para comprobar que el grafo familiar se navega correctamente. Luego la experimentación va un paso más allá, intentando modificar la consulta de lectura por una de escritura, con un resultado prometedor en ese caso puntual, ya que se logra un ingreso correcto en el grafo usando solamente una oración en lenguaje natural.
 
-El resultado no es satisfactorio ya que la conversión entre la pregunta del usuario y la consulta a la base contiene errores de interpretación.
+El obstáculo determinante surge en la lectura: la traducción del lenguaje natural del usuario a la consulta estructurada de la base (en lenguaje AQL) contiene errores de interpretación que comprometen la confiabilidad de las respuestas. Cabe aclarar el alcance de esta conclusión: no constituye una refutación categórica de las bases de grafos, sino la constatación de que, con las herramientas de traducción lenguaje natural a AQL disponibles al momento de los experimentos, el enfoque no alcanzaba la fiabilidad requerida. Por ese motivo se decide no continuar por esta vía y explorar una base documental con soporte vectorial, donde la recuperación no depende de traducir la consulta a un lenguaje formal.
 
 A continuación se encuentra el código descripto, disponible en el repositorio del proyecto\footnote{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/26-arango-norman.ipynb}.
 

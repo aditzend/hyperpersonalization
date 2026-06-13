@@ -780,38 +780,6 @@
       \verb https://www.imarcgroup.com/intelligent-virtual-assistant-market
       \endverb
     \endentry
-    \entry{InformesExpertos2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=132e1738566e048facf8e640898c0fa2}{%
-           family={{Informes de Expertos}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{fullhash}{132e1738566e048facf8e640898c0fa2}
-      \strng{fullhashraw}{132e1738566e048facf8e640898c0fa2}
-      \strng{bibnamehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authorbibnamehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authornamehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authorfullhash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authorfullhashraw}{132e1738566e048facf8e640898c0fa2}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
-      \endverb
-      \verb{url}
-      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
-      \endverb
-    \endentry
     \entry{informes_expertos_latam_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=132e1738566e048facf8e640898c0fa2}{%
@@ -826,7 +794,6 @@
       \strng{authornamehash}{132e1738566e048facf8e640898c0fa2}
       \strng{authorfullhash}{132e1738566e048facf8e640898c0fa2}
       \strng{authorfullhashraw}{132e1738566e048facf8e640898c0fa2}
-      \field{extraname}{2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -1096,6 +1063,7 @@
       \field{month}{8}
       \field{title}{Los imperativos para el éxito de la automatización}
       \field{year}{2020}
+      \true{nocite}
       \verb{urlraw}
       \verb https://www.mckinsey.com/capabilities/operations/our-insights/the-imperatives-for-automation-success/es-ES
       \endverb
@@ -2712,38 +2680,6 @@
       \verb https://www.imarcgroup.com/intelligent-virtual-assistant-market
       \endverb
     \endentry
-    \entry{InformesExpertos2023}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=132e1738566e048facf8e640898c0fa2}{%
-           family={{Informes de Expertos}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \strng{namehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{fullhash}{132e1738566e048facf8e640898c0fa2}
-      \strng{fullhashraw}{132e1738566e048facf8e640898c0fa2}
-      \strng{bibnamehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authorbibnamehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authornamehash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authorfullhash}{132e1738566e048facf8e640898c0fa2}
-      \strng{authorfullhashraw}{132e1738566e048facf8e640898c0fa2}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Mercado de asistentes virtuales inteligentes en América Latina}
-      \field{year}{2023}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
-      \endverb
-      \verb{url}
-      \verb https://www.informesdeexpertos.com/informes/mercado-de-asistentes-virtuales-inteligentes-en-america-latina
-      \endverb
-    \endentry
     \entry{informes_expertos_latam_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=132e1738566e048facf8e640898c0fa2}{%
@@ -2758,7 +2694,6 @@
       \strng{authornamehash}{132e1738566e048facf8e640898c0fa2}
       \strng{authorfullhash}{132e1738566e048facf8e640898c0fa2}
       \strng{authorfullhashraw}{132e1738566e048facf8e640898c0fa2}
-      \field{extraname}{2}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -3028,6 +2963,7 @@
       \field{month}{8}
       \field{title}{Los imperativos para el éxito de la automatización}
       \field{year}{2020}
+      \true{nocite}
       \verb{urlraw}
       \verb https://www.mckinsey.com/capabilities/operations/our-insights/the-imperatives-for-automation-success/es-ES
       \endverb

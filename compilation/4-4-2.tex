@@ -1,6 +1,6 @@
 \subsubsection{Inserción en base de documentos con soporte vectorial y consultas}
 
-Habiendo descartado a las bases de grafos como soporte de los conocimientos usados para hiperpersonalización se experimenta en este punto con MongoDB, una base no SQL, que almacena documentos que no necesariamente tienen que responder a una estructura predefinida, lo que la hace ideal para administrar en una misma colección registros relacionados con diferentes áreas de la vida de un usuario. En el presente caso debemos insertar unidades de información relacionadas con personas, gastos y visitas al médico.
+Por los motivos expuestos en la sección anterior, se decide no continuar con las bases de grafos como soporte de los conocimientos usados para hiperpersonalización y se experimenta en este punto con MongoDB, una base no SQL, que almacena documentos que no necesariamente tienen que responder a una estructura predefinida, lo que la hace ideal para administrar en una misma colección registros relacionados con diferentes áreas de la vida de un usuario. En el presente caso debemos insertar unidades de información relacionadas con personas, gastos y visitas al médico.
 
 En una primera etapa se decidió crear colecciones separadas para cada tipo de registro pero rápidamente la solución fue descartada porque agregaría un paso de selección de tipo de registro. Por ejemplo si el asistente recibe una consulta como ``cuántos años tiene mi sobrina más chica?'', el sistema tendría que recorrer todas las colecciones disponibles para el usuario en curso y luego seleccionar en cuál de ellas hacer una búsqueda. Esto agrega probabilidad de error además de tiempo e ineficiencia. El código correspondiente a esta solución se omite del presente trabajo por no ser de relevancia.
 
@@ -20,7 +20,7 @@ El valor está entre 0 y 2, donde 0 indica que los vectores son idénticos en di
 
 Siguiendo este mecanismo se procesaron todos los conjuntos de datos sintéticos creados para simular información extraída sobre la vida de Norman, el sujeto ficticio que es el centro del presente trabajo. Como ya se explicó, todos los tipos de registros se insertaron en la misma colección llamada ``Records'' con un agregado previo para identificar el tipo de registro y quién es el dueño de ese registro, para dar lugar a posibles búsquedas filtradas si es que fueran necesarias en el futuro.
 
-La base de conocimientos sobre Norman alcanzó los 187 documentos sobre personas en su vida, registros médicos y gastos.
+La base de conocimientos sobre Norman alcanzó los 187 documentos sobre personas en su vida, registros médicos y gastos.\footnote{La cifra corresponde a los documentos efectivamente insertados en la colección \texttt{Records}. El procedimiento de ingestión incorpora únicamente los registros que cuentan con un campo de fecha (\texttt{datetime}) válido, por lo que algunos registros médicos sin fecha asociada quedaron fuera de la colección. El conteo se reparte entre los tres tipos: registros de personas, médicos y de gastos.}
 
 A continuación se procede a comprobar la eficacia de esta solución simulando una conversación entre el usuario y su asistente personal con hiperpersonalización. El primer paso consiste en amplificar el mensaje del usuario para mejorar la recuperación de registros.
 
@@ -60,6 +60,6 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-6}
 
 El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-7}).
 
-El sistema demostró capacidad para responder correctamente preguntas específicas como ``cuántos años tienen mis hijas?'' obteniendo la respuesta ``Tus hijas tienen 8 años. Los datos proporcionados mencionan a Mia y Eva, quienes son etiquetadas con la relación `daughter' (hija) y ambas tienen la edad de 8 años.''
+El sistema demostró capacidad para responder correctamente preguntas específicas como ``cuántos años tienen mis hijas?'' obteniendo la respuesta ``Tus hijas tienen 8 años. Los datos proporcionados mencionan a Mia y Eva, quienes son etiquetadas con la relación `daughter' (hija) y ambas tienen la edad de 8 años.'' Cabe señalar que la edad devuelta es el valor estático almacenado en el registro; persiste, por tanto, la limitación de razonamiento cronológico discutida en la sección 4.1, en tanto la respuesta no se reajusta respecto de la fecha de la consulta.
 
 Para consultas más complejas que combinan diferentes tipos de registros, el sistema requiere mejoras en la estrategia de amplificación para manejar preguntas compuestas que abarcan múltiples categorías de información. 

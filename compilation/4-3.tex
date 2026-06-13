@@ -1,9 +1,9 @@
 \subsection{Creación de conjuntos de datos sintéticos}
 
-Con la necesidad de simular la recolección de data confiable de una persona y habiendo pasado por la fallida experiencia descrita en el apartado anterior se optó por el camino de generar data de manera sintética tomando una persona ficticia como centro.
+Con la necesidad de simular la recolección de información confiable de una persona y habiendo pasado por la fallida experiencia descrita en el apartado anterior se optó por el camino de generar datos de manera sintética tomando una persona ficticia como centro.
 
 Utilizando un modelo de lenguaje de primer nivel (GPT-4) se desarrollaron una serie de prompts específicos para generar datos estructurados sobre eventos ficticios como visitas al médico, viajes, consumos y también la estructura familiar.
 
 Por más que la tarea haya usado IA, el proceso fue en su mayoría manual ya que el volumen de los datos solicitados excedía la ventana de generación de tokens del modelo. Los prompts se ejecutaron para cada mes y para cada área de la vida de la persona. Luego se copiaban y pegaban en un archivo JSON a mano.
 
-Al final de esta etapa se obtuvieron datos realistas, estructurados y suficientemente generales como para seguir adelante con las pruebas. 
+Al final de esta etapa se obtuvo un conjunto de datos estructurado y verosímil, suficiente para sostener las pruebas posteriores. Cabe aclarar que, al tratarse de datos generados sintéticamente con fines ilustrativos, pueden contener inconsistencias menores propias de ese origen; su propósito es ejercitar el flujo de recuperación, no constituir un registro empírico real.

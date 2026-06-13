@@ -432,6 +432,7 @@ OUTPUT 4-4-1.aux
 INPUT ./4-4-1.tex
 OUTPUT 4-4-2.aux
 INPUT ./4-4-2.tex
+INPUT /Users/alex/Library/texlive/2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 OUTPUT 5.aux
 INPUT ./5.tex
 OUTPUT 6.aux
@@ -460,7 +461,6 @@ OUTPUT 6-5-2.aux
 INPUT ./6-5-2.tex
 OUTPUT anexo-tecnico.aux
 INPUT ./anexo-tecnico.tex
-INPUT /Users/alex/Library/texlive/2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT /Users/alex/Library/texlive/2025/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
 INPUT ./apa7.aux
 INPUT ./resumen_ejecutivo.aux

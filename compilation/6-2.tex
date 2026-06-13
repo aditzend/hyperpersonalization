@@ -6,7 +6,7 @@
 
 \begin{itemize}
     \item \textbf{Diferenciación}: Combina múltiples fuentes de datos y optimiza la hiperpersonalización en tiempo real, una integración que las soluciones actuales del mercado no ofrecen de forma combinada.
-    \item \textbf{Privacidad y seguridad}: La instalación local o en un entorno controlado por el cliente reduce las preocupaciones sobre la transferencia de datos. El modelo de despliegue on-premise facilita el cumplimiento de la Ley~25.326 de Protección de Datos Personales y de las disposiciones de la Agencia de Acceso a la Información Pública (AAIP), dado que la información personal no sale del perímetro del cliente. Esto habilita la firma de acuerdos de tratamiento de datos (DPA) con roles claros de responsable y encargado, un requisito cada vez más frecuente en los procesos de compra de sectores regulados.
+    \item \textbf{Privacidad y seguridad}: La instalación local o en un entorno controlado por el cliente reduce las preocupaciones sobre la transferencia de datos. El modelo de despliegue on-premise facilita el cumplimiento de la Ley~25.326 de Protección de Datos Personales y de las disposiciones de la Agencia de Acceso a la Información Pública (AAIP), dado que el repositorio de datos personales permanece dentro del perímetro del cliente y los controles de prevención de fuga de datos evitan el envío de información personal en claro a servicios externos de inferencia. Esto habilita la firma de acuerdos de tratamiento de datos (DPA) con roles claros de responsable y encargado, un requisito cada vez más frecuente en los procesos de compra de sectores regulados.
     \item \textbf{Compatibilidad}: Diseñado para integrarse con diferentes sistemas y bases de datos (e.g., CRM, ERP).
     \item \textbf{Escalabilidad}: Puede adaptarse a diversas industrias y volúmenes de datos, desde pequeñas empresas hasta grandes corporaciones.
     \item \textbf{Valor estratégico}: Ayuda a las empresas a maximizar la eficiencia de sus asistentes virtuales, mejorando la experiencia del cliente y optimizando recursos.
@@ -15,7 +15,7 @@
 \paragraph{Debilidades (Internas)}
 
 \begin{itemize}
-    \item \textbf{Requiere personalización inicial}: Cada cliente puede necesitar adaptaciones específicas para integrar el middleware con sus sistemas.
+    \item \textbf{Requiere personalización inicial}: Cada cliente puede necesitar adaptaciones específicas para integrar el \textit{middleware} con sus sistemas.
     \item \textbf{Costos de desarrollo y mantenimiento}: Mantener compatibilidad con múltiples sistemas y ofrecer soporte técnico puede requerir recursos significativos.
     \item \textbf{Curva de aprendizaje}: Empresas con menor madurez tecnológica podrían tener dificultades para comprender o implementar la solución.
 \end{itemize}
@@ -49,7 +49,7 @@ Las empresas tienen múltiples fuentes de datos (CRM, ERP, bases de datos intern
 La falta de hiperpersonalización reduce la calidad de la interacción y la satisfacción del cliente. Esto puede llevar a pérdida de ventas, frustración del usuario y mayor carga para los canales tradicionales (como atención telefónica).
 
 \subparagraph{Privacidad y cumplimiento normativo}
-Muchas empresas no pueden alojar o transmitir sus datos fuera de sus centros de datos propios por preocupaciones legales y de seguridad. En Argentina, la Ley~25.326 establece obligaciones de consentimiento informado, finalidad específica y medidas de seguridad para todo tratamiento de datos personales. En verticales como educación, donde los usuarios finales pueden ser menores de edad, se requiere además el consentimiento explícito de padres o tutores y políticas de no-persistencia de información personal identificable (PII) en los registros del sistema. La arquitectura on-premise del middleware resuelve estas restricciones al mantener los datos dentro del perímetro del cliente, y la operación se complementa con acuerdos de tratamiento de datos (DPA) que definen roles, subencargados, plazos de retención y mecanismos de borrado.
+Muchas empresas no pueden alojar o transmitir sus datos fuera de sus centros de datos propios por preocupaciones legales y de seguridad. En Argentina, la Ley~25.326 establece obligaciones de consentimiento informado, finalidad específica y medidas de seguridad para todo tratamiento de datos personales. En verticales como educación, donde los usuarios finales pueden ser menores de edad, se requiere además el consentimiento explícito de padres o tutores y políticas de no-persistencia de información personal identificable (PII) en los registros del sistema. La arquitectura on-premise del \textit{middleware} resuelve estas restricciones al mantener los datos dentro del perímetro del cliente, y la operación se complementa con acuerdos de tratamiento de datos (DPA) que definen roles, subencargados, plazos de retención y mecanismos de borrado.
 
 \paragraph{Especificación de la propuesta de valor}
 
@@ -79,19 +79,19 @@ A continuación se detallan los problemas comunes en el sector:
 
 \subparagraph{Necesidad de cumplimiento normativo}: Las aerolíneas manejan datos sensibles (nombres, pasaportes, métodos de pago) que requieren altos estándares de seguridad.
 
-Aplicando la propuesta de valor a esta industria se recalca que el middleware actúa como un intermediario entre los sistemas internos de la empresa y el motor del bot, permitiendo acceso contextualizado a los datos, integrando CRM, sistemas de reservas (e.g., Amadeus, Sabre), y registros de clientes frecuentes. Además la hiperpersonalización en tiempo real proporciona respuestas relevantes basadas en el historial del cliente, preferencias previas y datos actuales. Por el lado del cumplimiento de normativas el aporte recae en que los datos no abandonan los servidores de la aerolínea, garantizando privacidad y seguridad.
+Aplicando la propuesta de valor a esta industria se recalca que el \textit{middleware} actúa como un intermediario entre los sistemas internos de la empresa y el motor del bot, permitiendo acceso contextualizado a los datos, integrando CRM, sistemas de reservas (e.g., Amadeus, Sabre), y registros de clientes frecuentes. Además la hiperpersonalización en tiempo real proporciona respuestas relevantes basadas en el historial del cliente, preferencias previas y datos actuales. Por el lado del cumplimiento de normativas, el aporte recae en que el repositorio de datos personales y la orquestación permanecen dentro del perímetro de la aerolínea; cuando la generación de respuestas se apoya en un modelo de lenguaje externo, los controles de prevención de fuga de datos (DLP) redactan la información personal identificable antes de cualquier envío, de modo que no se transfieren datos personales en claro fuera del perímetro.
 
 \subparagraph{Escenario práctico: Cliente frecuente solicita información}
 
 \begin{enumerate}
-    \item Sin middleware:
+    \item Sin \textit{middleware}:
     \begin{itemize}
         \item Bot: ``¿Cuál es su número de vuelo?''
         \item Usuario: Proporciona información varias veces.
         \item Bot: Da respuestas genéricas sobre cambios de vuelo o equipaje.
     \end{itemize}
     
-    \item Con middleware:
+    \item Con \textit{middleware}:
     \begin{itemize}
         \item Bot: ``Hola, Alexander. Veo que tenés un vuelo a Río de Janeiro mañana desde Buenos Aires. ¿Querés modificar tu asiento o agregar equipaje?''
         \item Usuario: ``Sí, prefiero una ventana.''
@@ -111,19 +111,19 @@ En esta industria se encuentran generalmente los siguientes inconvenientes:
 
 Consultas repetitivas sobre saldos, estados de cuenta, transferencias y pagos recurrentes. Estas interacciones ocupan tiempo del personal y generan frustración en los clientes si los bots no proporcionan respuestas rápidas y precisas. Los bots actuales no consideran el historial financiero del cliente, lo que resulta en recomendaciones genéricas en lugar de sugerir opciones pensadas para la situación real de cada cliente. Los bancos manejan datos financieros sensibles y deben cumplir estrictas regulaciones, como la Ley~25.326 de Protección de Datos Personales y las normas del Banco Central de la República Argentina (BCRA), además de estándares internacionales como GDPR o CCPA cuando operan con datos de residentes de la Unión Europea o California.
 
-El middleware actúa como un intermediario entre los sistemas internos del banco y el motor del bot, permitiendo acceso contextualizado a los datos: Integra CRM, sistemas transaccionales y datos de clientes, proporcionando información relevante en tiempo real. La hiperpersonalización en tiempo real permite responder con precisión basándose en el historial de transacciones, hábitos financieros y necesidades específicas del cliente.
+El \textit{middleware} actúa como un intermediario entre los sistemas internos del banco y el motor del bot, permitiendo acceso contextualizado a los datos: Integra CRM, sistemas transaccionales y datos de clientes, proporcionando información relevante en tiempo real. La hiperpersonalización en tiempo real permite responder con precisión basándose en el historial de transacciones, hábitos financieros y necesidades específicas del cliente.
 
 \subparagraph{Escenario práctico: Cliente solicita información sobre su cuenta}
 
 \begin{enumerate}
-    \item Sin middleware:
+    \item Sin \textit{middleware}:
     \begin{itemize}
         \item Bot: ``¿Cuál es el número de tu cuenta?''
         \item Usuario: Proporciona la información varias veces.
         \item Bot: Da respuestas genéricas sobre saldos o transferencias.
     \end{itemize}
     
-    \item Con middleware:
+    \item Con \textit{middleware}:
     \begin{itemize}
         \item Bot: ``Hola, María. Tu cuenta principal tiene un saldo de \$12.500. ¿Querés programar una transferencia o conocer los detalles de tu última transacción?''
         \item Usuario: ``Sí, necesito transferir \$2.000.''
@@ -137,19 +137,19 @@ Los clientes reciben respuestas rápidas y personalizadas, mejorando su experien
 
 Los problemas comunes de atención al cliente en las organizaciones de provisión de servicios de salud se enmarcan en preguntas frecuentes sobre cobertura, turnos médicos, y autorizaciones de estudios o tratamientos. Estas consultas ocupan un tiempo considerable del personal de atención y pueden generar demoras, lo que afecta la satisfacción de los pacientes. Por otro lado, los bots actuales no consideran el historial médico del paciente ni sus preferencias, lo que lleva a experiencias impersonales. Al igual que los ejemplos anteriores, las empresas de medicina prepaga manejan información altamente sensible (historial médico, tratamientos, datos de asegurados) y deben cumplir con regulaciones de protección de datos personales y estándares internacionales de privacidad.
 
-El middleware actúa como un intermediario entre los sistemas internos de la empresa de medicina prepaga y el motor del bot, permitiendo acceso contextualizado a los datos porque, al igual que los casos anteriores, integra CRM, historial médico y sistemas de gestión de turnos, proporcionando información precisa en tiempo real. Los bots hiperpersonalizados pueden generar respuestas adaptadas al historial del paciente, sus consultas previas y las características de su plan. Todo esto garantizando que los datos médicos permanezcan dentro del entorno seguro de la empresa, cumpliendo con las regulaciones aplicables.
+El \textit{middleware} actúa como un intermediario entre los sistemas internos de la empresa de medicina prepaga y el motor del bot, permitiendo acceso contextualizado a los datos porque, al igual que los casos anteriores, integra CRM, historial médico y sistemas de gestión de turnos, proporcionando información precisa en tiempo real. Los bots hiperpersonalizados pueden generar respuestas adaptadas al historial del paciente, sus consultas previas y las características de su plan. Todo esto garantizando que los datos médicos permanezcan dentro del entorno seguro de la empresa, cumpliendo con las regulaciones aplicables.
 
 \subparagraph{Escenario práctico: Paciente solicita un turno médico}
 
 \begin{enumerate}
-    \item Sin middleware:
+    \item Sin \textit{middleware}:
     \begin{itemize}
         \item Bot: ``¿Qué especialidad necesitas?''
         \item Usuario: Proporciona información básica y espera varios pasos para obtener opciones disponibles.
         \item Bot: Da respuestas genéricas sobre médicos sin considerar antecedentes o ubicaciones preferidas.
     \end{itemize}
     
-    \item Con middleware:
+    \item Con \textit{middleware}:
     \begin{itemize}
         \item Bot: ``Hola, Martín. Veo que necesitas un turno con un cardiólogo, como en tu consulta anterior. ¿Querés agendar con el Dr. López en la clínica cercana a tu domicilio?''
         \item Usuario: ``Sí, por favor.''

@@ -1,6 +1,6 @@
 \subsubsection{Creación de una base de mensajes del usuario y activación de filtros}
 
-Como se anticipó, en un entorno productivo no alcanza con la recuperación por similitud: es necesario hacer la búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id} de manera estricta, de modo que un usuario nunca acceda a información de otro. En la misma iteración se experimenta con la creación de una base vectorial en la que cada vector es un mensaje que el usuario tuvo con el asistente. En ese mensaje el usuario brinda una partícula de información importante que refuerza el nivel de conocimiento que el sistema tiene del usuario.
+Como se anticipó, en un entorno productivo no alcanza con la recuperación por similitud: es necesario hacer la búsqueda por distancia coseno dentro de un espacio vectorial filtrado por \texttt{person\_id} de manera estricta, de modo que un usuario nunca acceda a información de otro. En esta segunda iteración se experimenta con la creación de una base vectorial en la que cada vector es un mensaje que el usuario tuvo con el asistente. En ese mensaje el usuario brinda una partícula de información importante que refuerza el nivel de conocimiento que el sistema tiene del usuario.
 
 La recuperación se da entonces mediante un filtrado por \texttt{person\_id} y luego por similitud semántica entre una pregunta y el mensaje del usuario que mayor relación tenga con esa pregunta.
 
@@ -33,8 +33,4 @@ El resultado devuelto es el mensaje ``hola, quiero ir a Río'' con un puntaje de
 El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-2-2}).
 
 
-Se menciona que la distancia coseno no es útil en un conjunto con un solo vector, ya que no hay otros vectores con los cuales comparar. Sin embargo, el ejemplo demuestra la factibilidad de la aproximación en búsquedas por similitud semántica.
-
-El sistema filtra los vectores por un identificador de usuario y realiza una búsqueda semántica usando la distancia coseno para encontrar el mensaje que más se asemeja a la consulta planteada, permitiendo recuperar información relevante basada en los mensajes previos del usuario. Se busca ahora hacer una búsqueda por similitud semántica entre una pregunta y una pieza de información provista por el usuario.
-
-Claramente la distancia coseno no es un parámetro válido en un conjunto donde hay un solo vector pero con este simple ejemplo alcanza para comprobar la factibilidad de la aproximación. 
+El puntaje de similitud no resulta concluyente en un conjunto con un solo vector, ya que no hay otros vectores con los cuales comparar. Sin embargo, el ejemplo alcanza para comprobar la factibilidad de la aproximación: el sistema filtra los vectores por un identificador de usuario y realiza una búsqueda semántica para recuperar el mensaje que más se asemeja a la consulta planteada, a partir de los mensajes previos del usuario. Se busca ahora hacer una búsqueda por similitud semántica entre una pregunta y una pieza de información provista por el usuario.

@@ -2,11 +2,11 @@
 
 \subsection{Enfoque experimental}
 
-La estrategia metodológica consiste en descomponer el problema general —dotar a un asistente virtual de capacidades de hiperpersonalización— en situaciones atómicas que puedan resolverse de forma aislada mediante técnicas de \textit{prompting} sobre modelos de lenguaje. Con los hallazgos obtenidos en cada situación se avanza, de manera incremental, hacia una solución general. El trabajo es de naturaleza experimental: cada decisión de arquitectura se valida observando el comportamiento del sistema sobre casos de uso concretos antes de incorporarla a la solución.
+La estrategia metodológica consiste en descomponer el problema general —dotar a un asistente virtual de capacidades de hiperpersonalización— en situaciones atómicas que puedan resolverse de forma aislada mediante técnicas de \textit{prompting} sobre modelos de lenguaje. Con los hallazgos obtenidos en cada situación se avanza, de manera incremental, hacia una solución general. El trabajo es de naturaleza experimental y de carácter exploratorio-cualitativo: cada decisión de arquitectura se valida observando el comportamiento del sistema sobre casos de uso concretos antes de incorporarla a la solución. Dado que el objetivo es establecer la factibilidad técnica del enfoque —y no comparar cuantitativamente alternativas—, el criterio de validación adoptado es la inspección de las respuestas del sistema: una iteración se considera resuelta cuando el sistema recupera el dato pertinente y genera una respuesta correcta para el caso de uso planteado. Las consecuencias y los límites de este criterio cualitativo se discuten explícitamente en las conclusiones.
 
 \subsection{Etapas de trabajo}
 
-El trabajo de investigación se organiza en las siguientes etapas sucesivas, donde cada fase refina la arquitectura de recuperación y generación de respuestas:
+El trabajo de investigación se organiza en las siguientes etapas. No constituyen un refinamiento estrictamente lineal: algunas exploraciones condujeron a ramas que fueron descartadas (la extracción a partir de documentación real y, más adelante, las bases de grafos), y los hallazgos de cada etapa —incluidos los negativos— orientaron la siguiente.
 
 \begin{enumerate}
 	\item Experimentos de \textit{prompting} sobre problemas de alcance muy focalizado (menos de diez ejemplos), utilizando datos generados ex profeso.
@@ -23,5 +23,5 @@ Para cada problemática abordada se siguió un patrón iterativo:
 	\item Se seleccionó una problemática enunciada como un caso de uso imposible de resolver hoy sin hiperpersonalización.
 	\item Se describió una estrategia de ataque y se desarrolló un prototipo.
 	\item Se registraron los resultados para alimentar un repositorio de \textit{prompts} exitosos.
-	\item Se repitió el proceso hasta encontrar una solución satisfactoria.
+	\item Se repitió el proceso hasta que el sistema resolvía el caso de uso planteado según el criterio de validación descrito.
 \end{enumerate}

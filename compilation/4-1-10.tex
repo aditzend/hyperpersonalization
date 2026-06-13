@@ -40,7 +40,7 @@ Respuesta: ``Tu hija mayor, Ana, tiene 20 años.''
 
 \paragraph{Razonamiento cronológico}
 
-Luego se realiza una pregunta más compleja: ``¿Qué edad tenía mi hija mayor cuando hicimos el viaje a Córdoba?''. En este caso, el modelo responde correctamente que Ana tenía 20 años durante el viaje, que ocurrió en 2020. Este resultado muestra que el modelo puede realizar un razonamiento correcto cuando se proporciona contexto cronológico.
+Luego se realiza una pregunta más compleja: ``¿Qué edad tenía mi hija mayor cuando hicimos el viaje a Córdoba?''. En este caso, el modelo devuelve que Ana tenía 20 años durante el viaje, registrado en 2020. La respuesta es correcta, aunque conviene matizar que coincide con el valor de edad almacenado y no exige aún un cálculo temporal: la dificultad aparece, como se ve a continuación, cuando se le pide derivar una fecha a partir de esa edad.
 
 El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-5}).
 
@@ -48,7 +48,7 @@ Respuesta: ``Tu hija mayor, Ana, tenía 20 años cuando hicieron el viaje a Cór
 
 \paragraph{Errores en el cálculo de la fecha de nacimiento}
 
-Se le pregunta al modelo: ``¿En qué año nació mi hija mayor?''. Inicialmente, el modelo hace bien los cálculos y responde que Ana nació en el año 2000, pero no toma en cuenta que el año actual es 2023 de acuerdo a la fecha de realización del experimento, lo que debería ajustar la edad de Ana a 23 años. Tras ajustar el prompt y proporcionar la fecha actual explícitamente, el modelo aún comete errores, sugiriendo que Ana nació en 2003, lo que es incorrecto.
+Se le pregunta al modelo: ``¿En qué año nació mi hija mayor?''. El problema de fondo es que la edad se almacenó sin una fecha de referencia, por lo que el modelo no dispone de un ancla temporal confiable para derivar el año de nacimiento. Inicialmente responde que Ana nació en el año 2000 —restando 20 a un año de referencia implícito—, sin tener en cuenta que el experimento se ejecuta en 2023, lo que llevaría a una edad actual de 23 años. Tras ajustar el \textit{prompt} y proporcionar la fecha actual de forma explícita, el modelo sigue sin resolverlo correctamente y ahora sugiere 2003. Ninguno de los dos cálculos es confiable: el experimento evidencia que, sin una fecha de referencia almacenada junto al dato, el razonamiento cronológico del modelo es inconsistente.
 
 El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-6}).
 

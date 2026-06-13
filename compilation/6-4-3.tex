@@ -13,7 +13,7 @@ Costo estimado: USD 300/mes.
 
 \subsubsection{Cumplimiento normativo y seguridad}
 
-La operación de un middleware que procesa datos personales en sectores regulados (banca, salud, educación) exige controles de seguridad y compliance que generan costos operativos recurrentes. Estos costos se incorporan como OPEX fijo mensual y se detallan a continuación.
+La operación de un \textit{middleware} que procesa datos personales en sectores regulados (banca, salud, educación) exige controles de seguridad y compliance que generan costos operativos recurrentes. Estos costos se incorporan como OPEX fijo mensual y se detallan a continuación.
 
 \paragraph{Prevención de fuga de datos y seguridad perimetral}
 Incluye herramientas de DLP (Data Loss Prevention) para evitar el envío de PII a modelos de lenguaje, WAF (Web Application Firewall) con rate-limiting, y monitoreo de seguridad con alertas. Se contemplan soluciones como AWS WAF, reglas de redacción de PII en logs y rotación trimestral de claves.
@@ -74,5 +74,8 @@ Se calcula un 5\% sobre las ventas para cada año para ir incrementando acorde a
 
 \paragraph{Gastos generales}
 Por cualquier gasto oculto que pueda surgir de operar con un equipo de personas de manera totalmente remota se toma un 1\% del costo total de recursos humanos. Esto no incluye la compra de computadoras ya que se evalúan como bien de uso de la empresa y se pueden amortizar.
+
+\paragraph{Costo de inferencia de los modelos de lenguaje}
+Cada respuesta del asistente implica dos llamadas a un modelo de lenguaje —la amplificación de la consulta y la generación de la respuesta—. Tomando como referencia los precios de un modelo de la familia Claude Sonnet (aproximadamente USD~3 por millón de \textit{tokens} de entrada y USD~15 por millón de \textit{tokens} de salida), y un consumo típico por conversación del orden de unos pocos miles de \textit{tokens} de entrada y algunos cientos de salida, el costo de inferencia se estima en torno a USD~0,017 por conversación. Por tratarse de un consumo medible y directamente atribuible a cada cliente, se traslada al cliente como costo pasante (\textit{pass-through}): la facturación de este concepto iguala al costo incurrido, por lo que su efecto neto sobre el flujo de fondos —y, por ende, sobre el VAN— es nulo. El volumen total depende de la intensidad de uso de cada implementación, por lo que se factura por consumo real en lugar de incorporarse como un monto fijo a la proyección.
 
 \noindent\textit{Nota sobre el modelo financiero:} en la evaluación de la sección~\ref{sec:evaluacion-financiera-churn}, los gastos de publicidad y prensa se consideran incluidos dentro del costo de adquisición de clientes (CAC), que concentra los desembolsos comerciales y de marketing directo, mientras que los gastos generales quedan comprendidos en el OPEX fijo administrativo. De este modo se evita su doble cómputo en el estado de resultados proforma.

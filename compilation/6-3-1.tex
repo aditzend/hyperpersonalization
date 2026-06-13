@@ -6,7 +6,7 @@ Según \textcite{mentzer2005sales}, los métodos cualitativos son los más adecu
 
 Para estimar variables de demanda y unit economics realizamos un Delphi simulado asistido por IA. A diferencia del método Delphi ortodoxo, que requiere un panel de expertos humanos que itera en rondas anónimas hasta lograr consenso, aquí simulamos perfiles de expertos con un modelo de lenguaje (LLM), ejecutando múltiples rondas y consolidando métricas de consenso (mediana, IQR).
 
-El procedimiento constó de: (i) definición de variables a estimar (nuevos clientes por año, ACV/precio, CAC, churn anual, tiempo de implementación); (ii) fijación de anclas empíricas a partir de fuentes primarias (reportes sectoriales) para acotar rangos; (iii) generación de cinco \emph{perfiles de experto} —CEO de startup, gerente de producto, analista de mercado, consultor en tecnología e investigador académico, detallados más adelante— con una primera ronda de estimaciones; (iv) segunda ronda con retroalimentación de estadísticas agregadas (medianas y cuartiles) y pedido de revisión; (v) consolidación por mediana y rango intercuartílico (IQR); (vi) validación de plausibilidad contra benchmarks publicados.
+El procedimiento constó de: (i) definición de variables a estimar (nuevos clientes por año, ACV/precio, CAC, \textit{churn} anual, tiempo de implementación); (ii) fijación de anclas empíricas a partir de fuentes primarias (reportes sectoriales) para acotar rangos; (iii) generación de cinco \emph{perfiles de experto} —CEO de \textit{startup}, gerente de producto, analista de mercado, consultor en tecnología e investigador académico, detallados más adelante— con una primera ronda de estimaciones; (iv) segunda ronda con retroalimentación de estadísticas agregadas (medianas y cuartiles) y pedido de revisión; (v) consolidación por mediana y rango intercuartílico (IQR); (vi) validación de plausibilidad contra \textit{benchmarks} publicados.
 
 \textbf{Limitación:} al no involucrar expertos humanos reales, el resultado no constituye consenso experto; se interpreta como escenarios informados por el LLM bajo restricciones de datos. Por ello, los resultados se usan para armar escenarios Pesimista/Base/Optimista y para análisis de sensibilidad, no como pronóstico puntual.
 
@@ -54,13 +54,13 @@ Se simularon cinco perfiles especializados:
     \item \textbf{Investigador académico:} Investigador académico en inteligencia artificial conversacional
 \end{itemize}
 
-Variables estimadas: nuevos clientes por año, precio anual (ACV), costo de adquisición de clientes (CAC), tasa de churn anual, tiempo de implementación.
+Variables estimadas: nuevos clientes por año, precio anual (ACV), costo de adquisición de clientes (CAC), tasa de \textit{churn} anual, tiempo de implementación.
 
 
 \paragraph{Fundamentación empírica para el método Delphi}
 % \label{sec:anclas_empiricas}
 
-La estimación de variables críticas para la proyección de adopción de un sistema de hiperpersonalización aplicado al desarrollo de asistentes virtuales requiere el uso de evidencia sólida y verificable. En el marco del método Delphi, es fundamental que los expertos participantes cuenten con un conjunto de referencias empíricas que les permitan acotar razonablemente los valores iniciales, evitando sesgos de sobreoptimismo, heurísticas individuales o extrapolaciones no fundamentadas. Para ello, se ha realizado una revisión exhaustiva de literatura técnica, estudios de mercado, reportes industriales y análisis de consultoras globales que cubren tres dimensiones centrales: (i) adopción de IA y asistentes conversacionales en empresas; (ii) madurez de la personalización y experiencia del cliente; y (iii) métricas operativas relevantes tales como potencial de mercado, inversión proyectada, tiempos de implementación, barreras de adopción y rotación de clientes (churn).
+La estimación de variables críticas para la proyección de adopción de un sistema de hiperpersonalización aplicado al desarrollo de asistentes virtuales requiere el uso de evidencia sólida y verificable. En el marco del método Delphi, es fundamental que los expertos participantes cuenten con un conjunto de referencias empíricas que les permitan acotar razonablemente los valores iniciales, evitando sesgos de sobreoptimismo, heurísticas individuales o extrapolaciones no fundamentadas. Para ello, se ha realizado una revisión exhaustiva de literatura técnica, estudios de mercado, reportes industriales y análisis de consultoras globales que cubren tres dimensiones centrales: (i) adopción de IA y asistentes conversacionales en empresas; (ii) madurez de la personalización y experiencia del cliente; y (iii) métricas operativas relevantes tales como potencial de mercado, inversión proyectada, tiempos de implementación, barreras de adopción y rotación de clientes (\textit{churn}).
 
 \textcite{ILIA2025} proporciona un diagnóstico regional sistemático sobre capacidades, brechas y nivel de adopción efectiva de IA en América Latina. Este informe se utilizará como \textbf{ancla empírica} para acotar supuestos sobre el ritmo de incorporación de clientes (especialmente en etapas iniciales), así como para fundamentar restricciones operativas asociadas a gobernanza, disponibilidad de talento e integración de datos, que afectan directamente tiempos de implementación y fricciones de adopción.
 
@@ -71,7 +71,7 @@ La revisión de evidencia de \textcite{GerosaHermansen2025EconomicWorkforceAI} s
 Finalmente, el trabajo de \textcite{atlantico2024_digital_transformation} aporta evidencia sobre el grado de transformación digital y madurez de adopción tecnológica en América Latina. Este reporte se utilizará como \textbf{ancla empírica} complementaria para sostener supuestos sobre readiness organizacional, complejidad de despliegues y plazos típicos de implementación, especialmente en contextos donde la automatización y la integración de sistemas aún presentan heterogeneidad marcada entre sectores y tamaños de empresa.
 
 
-El reporte de \textcite{zendesk2024_cxtrends} aporta datos consistentes sobre la evolución del \emph{Customer Experience} (CX) en América Latina, incluyendo niveles de automatización, uso de asistentes conversacionales, expectativas de personalización y la disposición de las organizaciones a incorporar soluciones basadas en IA. Estos informes permiten comprender el grado de madurez regional y constituyen una referencia directa para estimar cuántas organizaciones en Argentina y la región estarían en condiciones de adoptar un middleware de hiperpersonalización.
+El reporte de \textcite{zendesk2024_cxtrends} aporta datos consistentes sobre la evolución del \emph{Customer Experience} (CX) en América Latina, incluyendo niveles de automatización, uso de asistentes conversacionales, expectativas de personalización y la disposición de las organizaciones a incorporar soluciones basadas en IA. Estos informes permiten comprender el grado de madurez regional y constituyen una referencia directa para estimar cuántas organizaciones en Argentina y la región estarían en condiciones de adoptar un \textit{middleware} de hiperpersonalización.
 
 
 Por su parte, la encuesta global de \textcite{mckinsey2025stateofai} proporciona estimaciones robustas sobre adopción corporativa de IA, impacto económico, fuentes de valor, barreras de implementación y métricas de retorno. Estas fuentes funcionan como referencia para inferir la velocidad de penetración esperada, los patrones de adopción organizacional, y los factores que potencian o inhiben la expansión de soluciones avanzadas.
@@ -101,7 +101,7 @@ Se solicita que sus respuestas tomen en consideración los rangos, tendencias, n
 Estas cifras no son objetivos ni predicciones finales. Funcionan como \textbf{bandas empíricas de referencia} para evitar estimaciones irreales. Sus proyecciones deben ubicarse \textbf{mayoritariamente dentro de estos rangos}, salvo justificación explícita.
 \end{quote}
 
-\noindent A continuación se sintetizan \textbf{anclas empíricas cuantitativas} extraídas \textbf{exclusivamente} de las fuentes provistas. Cuando una variable solicitada no aparece cuantificada en dichas fuentes (p.\ ej., métricas comerciales finas como CAC o churn), se explicita como \textbf{no disponible en fuentes provistas}, evitando completar con supuestos externos.
+\noindent A continuación se sintetizan \textbf{anclas empíricas cuantitativas} extraídas \textbf{exclusivamente} de las fuentes provistas. Cuando una variable solicitada no aparece cuantificada en dichas fuentes (p.\ ej., métricas comerciales finas como CAC o \textit{churn}), se explicita como \textbf{no disponible en fuentes provistas}, evitando completar con supuestos externos.
 
 \paragraph{Contexto macro de IA en Latinoamérica}
 
@@ -132,14 +132,14 @@ Estas cifras no son objetivos ni predicciones finales. Funcionan como \textbf{ba
 
   \item \textbf{Precios y contratos (pilotos pagos / PoC; ACV de implementaciones; upsell; porcentaje de expansión).} \textbf{No cuantificado en fuentes provistas.} (Las fuentes analizan inversión, adopción y brechas macro, pero no publican bandas de pricing B2B para proveedores.)
 
-  \item \textbf{CAC y eficiencia comercial (CAC/ACV; payback; prima por operar fuera de mercados principales).} \textbf{No cuantificado en fuentes provistas.}
+  \item \textbf{CAC y eficiencia comercial (CAC/ACV; \textit{payback}; prima por operar fuera de mercados principales).} \textbf{No cuantificado en fuentes provistas.}
 
   \item \textbf{Churn anual y renovación.} \textbf{No cuantificado en fuentes provistas.}
 
   \item \textbf{Implementación (tiempo medio por cliente; desvíos).} \textbf{No cuantificado en fuentes provistas} como métrica estándar comparable en los cuatro documentos.
 \end{itemize}
 
-\noindent \textit{Nota metodológica para el panel:} aunque no se reportan métricas comerciales (CAC, churn, conversiones, bandas de ACV) en las fuentes base, el Delphi puede estimarlas, pero \textbf{la carga de la prueba} recae en el experto cuando se propongan valores extremos; en particular, deben ser coherentes con (i) el tamaño/crecimiento del mercado regional, (ii) la subinversión relativa de la región vs. el mundo, y (iii) la prevalencia de adopción reportada (como proxy). \parencite{GerosaHermansen2025EconomicWorkforceAI,JungKatz2025ImpactoEconomicoIAALC}
+\noindent \textit{Nota metodológica para el panel:} aunque no se reportan métricas comerciales (CAC, \textit{churn}, conversiones, bandas de ACV) en las fuentes base, el Delphi puede estimarlas, pero \textbf{la carga de la prueba} recae en el experto cuando se propongan valores extremos; en particular, deben ser coherentes con (i) el tamaño/crecimiento del mercado regional, (ii) la subinversión relativa de la región vs. el mundo, y (iii) la prevalencia de adopción reportada (como proxy). \parencite{GerosaHermansen2025EconomicWorkforceAI,JungKatz2025ImpactoEconomicoIAALC}
 
 \subparagraph{Distribución geográfica del gasto en IA}
 
@@ -181,14 +181,14 @@ Las bandas de ACV se fundamentan en reportes de mercado global sobre asistentes 
 \subparagraph{Ancla de costo de adquisición de clientes (CAC)}
 El CAC se ancla en restricciones estructurales identificadas por el ILIA 2025 relativas a la dependencia de proveedores externos, la escasez de talento especializado y la complejidad organizacional de los proyectos de IA en la región \cite{ILIA2025}. Estas condiciones implican procesos comerciales largos, con alta carga de preventa técnica, pilotos y validaciones internas, lo que descarta supuestos de adquisición de bajo costo o escalamiento puramente digital. Los reportes de mercado de IMARC y Allied Market Research refuerzan indirectamente este marco al describir modelos de venta enterprise intensivos en recursos comerciales y técnicos \cite{IMARCIVA2024,AlliedMarketResearchIVA2024}.
 
-\subparagraph{Ancla de churn anual}
+\subparagraph{Ancla de \textit{churn} anual}
 La estimación del churn anual se apoya en la distinción entre iniciativas piloto y sistemas en producción señalada por el ILIA 2025. El informe documenta una alta tasa de discontinuidad en proyectos experimentales, pero una vez que las soluciones de IA se integran a procesos centrales, el costo de sustitución aumenta significativamente, reduciendo la rotación \cite{ILIA2025}. Esta evidencia permite establecer bandas de churn diferenciadas por escenario, evitando la aplicación mecánica de métricas típicas de SaaS liviano a soluciones enterprise integradas. El marco general de madurez de mercado presentado por IMARC resulta consistente con esta diferenciación \cite{IMARCIVA2024}.
 
 \subparagraph{Ancla de tiempo medio de implementación}
 El tiempo de implementación se fundamenta en las brechas de capacidades, integración de datos y gobernanza identificadas por el ILIA 2025, que prolongan los ciclos de despliegue de soluciones de IA en organizaciones latinoamericanas \cite{ILIA2025}. El análisis de Intelligent CIO complementa este punto al destacar que, pese al interés creciente, muchas organizaciones carecen de la urgencia y preparación necesarias para implementaciones rápidas \cite{IntelligentCIO2025}. Estas fuentes establecen una restricción operativa clara que impide asumir tiempos de implementación breves o modelos de adopción plug-and-play.
 
 \subparagraph{Síntesis metodológica}
-En conjunto, las anclas empíricas aquí desarrolladas delimitan un espacio de pronóstico coherente con la evidencia disponible: un mercado en expansión, pero con adopción gradual; valores contractuales elevados en el segmento enterprise; costos de adquisición altos y persistentes; churn moderado una vez superada la fase piloto; y tiempos de implementación prolongados. Estas anclas constituyen el marco común de referencia para los panelistas del método Delphi simulado.
+En conjunto, las anclas empíricas aquí desarrolladas delimitan el contexto macro del pronóstico a partir de la evidencia disponible: un mercado en expansión pero con adopción gradual, la subinversión relativa de la región y tiempos de implementación prolongados. En cambio, las variables estrictamente comerciales (bandas de ACV, CAC y \textit{churn}) no se encuentran cuantificadas en las fuentes provistas, según se señaló: sus rangos son estimaciones del propio panel Delphi simulado, acotadas para resultar coherentes con ese contexto macro. Tanto las anclas como esta salvedad constituyen el marco común de referencia para los panelistas.
 
 
 
