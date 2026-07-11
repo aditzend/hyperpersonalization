@@ -1,12 +1,10 @@
 \subsubsection{Mejora del razonamiento cronológico en conversaciones familiares utilizando GPT-3.5 y GPT-4}
 
-En el notebook 12\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/12.ipynb}} se implementa un experimento para extraer datos de conversaciones con un usuario y mejorar el razonamiento cronológico utilizando tanto GPT-3.5 como GPT-4. A continuación, se detallan los pasos principales del experimento:
+En la notebook 12\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/12.ipynb}} se implementa un experimento para extraer datos de conversaciones con un usuario y mejorar el razonamiento cronológico utilizando tanto GPT-3.5 como GPT-4. A continuación, se detallan los pasos principales del experimento:
 
 \paragraph{Carga de librerías y configuración}
 
-Se utilizan FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar las conversaciones. Además, se configura una función que interactúa con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-1}).
+Se utilizan FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar las conversaciones. Además, se configura una función que interactúa con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-12-1}).
 
 \paragraph{Simulación de conversaciones familiares}
 
@@ -23,18 +21,14 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-2
 
 \paragraph{Extracción de datos}
 
-Se utiliza un prompt para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, como los nombres y edades de los familiares, y las fechas de viaje. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-3}).
+Se utiliza un prompt para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, como los nombres y edades de los familiares, y las fechas de viaje. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior (Anexo técnico, p.~\pageref{anexo:code-4-1-12-3}).
 
 Ejemplos de extracción:
 ``Pedro quiere viajar con su familia de Buenos Aires a Córdoba. Su hija Ana tiene 20 años y su hijo Juan tiene 10 años''.
 
 \paragraph{Consultas sobre la edad}
 
-Se realiza una consulta preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde que Ana tiene 20 años, pero no ajusta la edad al año actual (2023, de acuerdo a la fecha de realización del experimento). El modelo no corrige la edad de Ana, lo que revela un problema de razonamiento cronológico.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-4}).
+Se realiza una consulta preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde que Ana tiene 20 años, pero no ajusta la edad al año actual (2023, de acuerdo con la fecha de realización del experimento). El modelo no corrige la edad de Ana, lo que revela un problema de razonamiento cronológico (Anexo técnico, p.~\pageref{anexo:code-4-1-12-4}).
 
 \paragraph{Conclusiones de la duodécima iteración}
 
@@ -44,12 +38,10 @@ Respuesta obtenida: ``Según la información que tenemos en la conversación, tu
 
 \paragraph{Prueba con GPT-4}
 
-Se realiza la misma consulta usando GPT-4. En este caso, GPT-4 razona correctamente que Ana tenía 20 años en 2020 y ajusta la respuesta, indicando que Ana debería tener 23 años en 2023.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-12-5}).
+Se realiza la misma consulta usando GPT-4. En este caso, GPT-4 razona correctamente que Ana tenía 20 años en 2020 y ajusta la respuesta, indicando que Ana debería tener 23 años en 2023 (Anexo técnico, p.~\pageref{anexo:code-4-1-12-5}).
 
 Respuesta de GPT-4: ``Su hija Ana tenía 20 años en agosto de 2020. Dado que hoy es 13 de septiembre de 2023, Ana ahora debería tener 23 años.''
 
 Esto demuestra una mejora en la capacidad de razonamiento cronológico de GPT-4 en comparación con GPT-3.5.
 
-El notebook 12 muestra que, mientras que GPT-3.5 tiene dificultades para razonar correctamente sobre fechas y ajustarlas en función del tiempo, GPT-4 puede manejar mejor el razonamiento cronológico y dar respuestas más precisas. Esto sugiere que el uso de GPT-4 mejora significativamente el manejo de datos temporales en este tipo de conversaciones. 
+La notebook 12 muestra que, mientras que GPT-3.5 tiene dificultades para razonar correctamente sobre fechas y ajustarlas en función del tiempo, GPT-4 puede manejar mejor el razonamiento cronológico y dar respuestas más precisas. Esto sugiere que el uso de GPT-4 mejora significativamente el manejo de datos temporales en este tipo de conversaciones. 

@@ -1,16 +1,12 @@
 \subsubsection{Análisis del enfoque en la recuperación de información sobre un pariente del usuario}
 
-En la notebook 6 (\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/6.ipynb}) se experimenta con el cambio de foco en una conversación, dirigiéndola hacia un pariente cercano del usuario para corroborar a quién corresponde la información proporcionada y verificar si el sistema puede recuperar correctamente esa información. A continuación, se analizan los pasos del experimento:
+En la notebook 6\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/6.ipynb}} se experimenta con el cambio de foco en una conversación, dirigiéndola hacia un pariente cercano del usuario para corroborar a quién corresponde la información proporcionada y verificar si el sistema puede recuperar correctamente esa información. A continuación, se analizan los pasos del experimento:
 
 \paragraph{Carga de librerías y configuración}
 
-Se configuran las librerías necesarias, como FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de los mensajes. También se incluye una función para interactuar con el modelo de lenguaje GPT-3.5 a través de una API.
+Se configuran las librerías necesarias, como FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de los mensajes. También se incluye una función para interactuar con el modelo de lenguaje GPT-3.5 a través de una API (Anexo técnico, p.~\pageref{anexo:code-4-1-6-1}).
 
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-6-1}).
-
-La función para interactuar con GPT-3.5 se define como:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-6-2}).
+La función para interactuar con GPT-3.5 se define como (Anexo técnico, p.~\pageref{anexo:code-4-1-6-2}).
 
 \paragraph{Simulación de una conversación}
 
@@ -25,28 +21,21 @@ Ejemplos de mensajes:
     \item Usuario: ``66''.
 \end{itemize}
 
-La estructura de datos utilizada para almacenar los mensajes es:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-6-3}).
+La estructura de datos utilizada para almacenar los mensajes es (Anexo técnico, p.~\pageref{anexo:code-4-1-6-3}).
 
 \paragraph{Vectorización y almacenamiento}
 
-Cada mensaje de la conversación se convierte en texto plano y luego se vectoriza utilizando embeddings. Estos vectores se almacenan en FAISS junto con los metadatos para permitir una búsqueda eficiente en futuras consultas.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-6-4}).
+Cada mensaje de la conversación se convierte en texto plano y luego se vectoriza utilizando embeddings. Estos vectores se almacenan en FAISS junto con los metadatos para permitir una búsqueda eficiente en futuras consultas (Anexo técnico, p.~\pageref{anexo:code-4-1-6-4}).
 
 \paragraph{Consulta sobre el pariente del usuario}
 
-Se realiza una consulta del usuario (``¿qué sabes de mi madre?'') para verificar si el sistema puede recuperar la información relevante proporcionada en conversaciones anteriores. FAISS busca en la base de datos de vectores utilizando similitud semántica, y el sistema trata de usar el resultado como contexto para generar una respuesta con el modelo GPT-3.5.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-6-5}).
+Se realiza una consulta del usuario (``¿qué sabes de mi madre?'') para verificar si el sistema puede recuperar la información relevante proporcionada en conversaciones anteriores. FAISS busca en la base de datos de vectores utilizando similitud semántica, y el sistema trata de usar el resultado como contexto para generar una respuesta con el modelo GPT-3.5 (Anexo técnico, p.~\pageref{anexo:code-4-1-6-5}).
 
 \paragraph{Problema en la recuperación de información}
 
 A pesar de que el sistema encuentra el mensaje relevante (``¿Cuál es el nombre de tu madre?''), el modelo de lenguaje no logra utilizar adecuadamente el contexto para generar una respuesta precisa. En lugar de utilizar la información sobre el nombre y la edad de la madre proporcionados anteriormente, el modelo responde de forma incorrecta, indicando que no tiene información sobre la madre del usuario.
 
-El contexto recuperado fue:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-6-6}).
+El contexto recuperado fue (Anexo técnico, p.~\pageref{anexo:code-4-1-6-6}).
 
 Sin embargo, la respuesta del modelo fue:
 \begin{quote}

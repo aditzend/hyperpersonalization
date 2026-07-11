@@ -18,37 +18,9 @@ A pesar del potencial demostrado, las herramientas tecnológicas actuales para c
 
 \subsubsection{Planteo del problema}
 
-En el contexto de un asistente virtual, la distinción entre personalización e hiperpersonalización se manifiesta no solo en recomendaciones u ofertas, sino también en la calidad de la asistencia brindada. A continuación se ejemplifica esta diferencia mediante una simulación de conversación entre un asistente virtual (A) y una usuaria o usuario (U) en un sitio de reservas de viajes.
+En el contexto de un asistente virtual, la distinción entre personalización e hiperpersonalización se manifiesta no solo en recomendaciones u ofertas, sino también en la calidad de la asistencia brindada. La Introducción ilustra esta diferencia con una simulación de conversación en un sitio de reservas de viajes, contrastando tres escenarios —sin personalización, personalización convencional e hiperpersonalización—, cuyos extremos se resumen aquí. En el escenario \emph{sin personalización}, el asistente no se apoya en datos contextuales y obliga a reingresar toda la información en cada sesión —origen, cantidad de pasajeros, menores—, lo que genera fricción e impacta en las ventas y la satisfacción del cliente. En el escenario \emph{hiperpersonalizado}, en cambio, el asistente combina datos de comportamiento en tiempo real, información de localización y el acceso a una base estructurada de datos personales para inferir la composición familiar del usuario y resolver el pedido en muy pocas interacciones.
 
-\paragraph{Sin personalización}
-\begin{quote}
-	\begin{tabbing}
-		A: \= Hola, ¿cómo puedo ayudarle hoy? \\
-		U: \> Quiero sacar un pasaje a Río de Janeiro con la familia. \\
-		A: \> Entiendo, ¿puede indicarme desde dónde partirá? \\
-		U: \> Buenos Aires. \\
-		A: \> ¿Cuántas personas? \\
-		U: \> Cinco. \\
-		A: \> ¿Cuántos menores? \\
-		U: \> Dos.
-	\end{tabbing}
-\end{quote}
-
-El sistema no se apoya en datos contextuales de la persona. En cada sesión deben ingresarse nuevamente todos los datos. Este es el punto clave que genera fricción en el uso cotidiano e impacta en las ventas y la satisfacción del cliente.
-
-\paragraph{Hiperpersonalización}
-\begin{quote}
-	\begin{tabbing}
-		A: \= Hola, ¿cómo puedo ayudarle hoy? ¿Desea ver opciones para paquetes a Río de Janeiro? \\
-		U: \> Sí, sí, iría con la familia. Mi madre no se suma esta vez, lo único. \\
-		A: \> Entiendo. Veo que se encuentra en Buenos Aires, ¿va a partir desde esa ciudad? \\
-		U: \> Sí. \\
-		A: \> ¿Viajará entonces con sus dos hijas menores y su esposa? \\
-		U: \> Sí.
-	\end{tabbing}
-\end{quote}
-
-El sistema combina datos de comportamiento en tiempo real (como la navegación) con información de localización y acceso a una base estructurada de datos personales que permite comprender la composición familiar y formular respuestas adecuadas al contexto actual. El problema central de esta tesis es, precisamente, la imposibilidad de los sistemas actuales de recordar la información pertinente de cada usuario de forma estructurada y emplearla en tiempo real para enriquecer la conversación.
+El problema central de esta tesis es, precisamente, la imposibilidad de los sistemas actuales de recordar la información pertinente de cada usuario de forma estructurada y emplearla en tiempo real para enriquecer la conversación.
 
 \subsubsection{Justificación e impacto}
 
@@ -134,7 +106,7 @@ Con los datos sintéticos disponibles se experimentó con ArangoDB, una base de 
 
 Descartadas las bases de grafos, se adoptó MongoDB, una base NoSQL que almacena documentos sin estructura predefinida, ideal para administrar en una misma colección registros de diferentes áreas de la vida de un usuario —personas, gastos y visitas médicas—. Inicialmente se evaluó crear colecciones separadas por tipo de registro, pero la opción se descartó rápidamente: ante una consulta como ``¿cuántos años tiene mi sobrina más chica?'', el sistema tendría que recorrer todas las colecciones del usuario y seleccionar dónde buscar, lo que agrega probabilidad de error, tiempo e ineficiencia. La decisión de \textbf{colección única} confirma, a nivel de arquitectura, el hallazgo de la Etapa 1 de que no es necesario segmentar la información por tipo de registro, ya que la similitud semántica basta para recuperar el dato pertinente dentro de una misma colección.
 
-La arquitectura seleccionada toma cada pieza de información, la convierte a texto plano, le calcula los \textit{embeddings} con \textit{text-embedding-3-large} (3072 dimensiones) y la inserta en una colección única llamada \texttt{Records}, junto con un campo de tipo de registro y de propietario para habilitar eventuales búsquedas filtradas en el futuro. Para realizar la búsqueda vectorial se crea un índice de búsqueda en MongoDB Atlas especificando el campo de los \textit{embeddings}, su dimensión y la distancia coseno como métrica. Si bien se probó con éxito una instancia local del servicio, para mayor confiabilidad se utilizó la capa gratuita de MongoDB Atlas en la nube. La base de conocimientos sobre Norman alcanzó los 187 documentos.
+La arquitectura seleccionada toma cada pieza de información, la convierte a texto plano, le calcula los \textit{embeddings} con \textit{text-embedding-3-large} (3072 dimensiones) y la inserta en una colección única llamada \texttt{Records}, junto con un campo de tipo de registro y de propietario para habilitar eventuales búsquedas filtradas en el futuro. Para realizar la búsqueda vectorial se crea un índice de búsqueda en MongoDB Atlas especificando el campo de los \textit{embeddings}, su dimensión y la distancia coseno como métrica. Si bien se probó con éxito una instancia local del servicio, para mayor confiabilidad se utilizó la capa gratuita de MongoDB Atlas en la nube. La base de conocimientos sobre Norman alcanzó los 187 documentos: de los 202 registros generados en la Etapa~3, el procedimiento de ingestión incorporó únicamente los que contaban con un campo de fecha (\texttt{datetime}) válido, quedando excluidos 15 registros médicos sin fecha asociada.
 
 El flujo de respuesta a una consulta opera en tres pasos. Primero, el mensaje del usuario se \textbf{amplifica} para mejorar la recuperación: por ejemplo, ``¿hace cuánto no voy al dentista?'' se expande con términos relacionados con visitas y registros odontológicos. Segundo, se calcula el \textit{embedding} de la consulta amplificada y se realiza la \textbf{búsqueda vectorial} por distancia coseno, recuperando los $k$ resultados más cercanos (típicamente $k=5$, ajustable según la exactitud observada). Tercero, los resultados se entregan en formato texto —no como vectores, para evitar errores de \textit{overflow} de tokens— como contexto a un modelo de lenguaje que combina la pregunta original con dicho contexto para generar la respuesta.
 
@@ -151,7 +123,7 @@ La validación fue satisfactoria. El sistema respondió correctamente preguntas 
 \midrule
 1 & \textit{Prompting} focalizado & Redis + FAISS (local) & Intermedia: no hace falta segmentar por tipo de registro \\
 2 & Ingestión de documentos reales & PDF $\rightarrow$ texto $\rightarrow$ RAG & Descartada: extracción de PDF demasiado costosa \\
-3 & Generación de datos sintéticos & GPT-4, JSON (ISO 8601) & 187 documentos sobre la vida de ``Norman'' \\
+3 & Generación de datos sintéticos & GPT-4, JSON (ISO 8601) & 202 registros generados sobre la vida de ``Norman'' \\
 4a & Base de grafos & ArangoDB + LangChain & Descartada: errores en la conversión consulta$\rightarrow$AQL \\
 4b & Base documental vectorial & MongoDB Atlas (3072 dim) & \textbf{Arquitectura final validada} \\
 \bottomrule
@@ -181,7 +153,7 @@ Los experimentos efectuados demuestran que el mecanismo diseñado cumple la prem
 
 \subsubsection{Limitaciones identificadas}
 
-Persisten retos por resolver antes de una adopción productiva. En primer lugar, los experimentos de razonamiento cronológico con modelos ya deprecados al cierre de este trabajo, como GPT-3.5, requerían retrabajo de las fuentes de información; con el avance de los modelos estas reconfiguraciones pueden volverse innecesarias, pero las técnicas vistas siguen siendo valiosas para aplicar hiperpersonalización en modelos menos potentes —de entre mil y siete mil millones de parámetros— capaces de correr en dispositivos personales, con los beneficios de privacidad que ello conlleva. En segundo lugar, el sistema no cuenta con manejo de memoria conversacional: cada mensaje se responde sin interconexión, lo que exige un servicio de observación que corra en paralelo extrayendo y estructurando la información de la conversación. Por último, el sistema no resuelve preguntas sobre múltiples temáticas en una misma iteración; se trata de una limitación del flujo de recuperación cuya resolución queda como trabajo futuro. Cabe señalar, además, que la validación de esta tesis es de carácter cualitativo —por inspección de respuestas sobre casos concretos—; una evaluación cuantitativa, con métricas de recuperación y exactitud sobre un conjunto fijo de preguntas, queda planteada como trabajo futuro.
+Persisten retos por resolver antes de una adopción productiva. En primer lugar, los experimentos de razonamiento cronológico con modelos ya deprecados al cierre de este trabajo, como GPT-3.5, requerían retrabajo de las fuentes de información; con el avance de los modelos estas reconfiguraciones pueden volverse innecesarias, pero las técnicas vistas siguen siendo valiosas para aplicar hiperpersonalización en modelos menos potentes —de entre mil y siete mil millones de parámetros— capaces de correr en dispositivos personales, con los beneficios de privacidad que ello conlleva. En segundo lugar, el sistema no cuenta con manejo de memoria conversacional: cada mensaje se responde sin interconexión, lo que exige un servicio de observación que corra en paralelo extrayendo y estructurando la información de la conversación. Por último, el sistema no resuelve preguntas sobre múltiples temáticas en una misma iteración; se trata de una limitación del flujo de recuperación cuya resolución queda como trabajo futuro. Cabe señalar, además, que la validación de esta tesis es de carácter cualitativo —por inspección de respuestas sobre casos concretos—, complementada por una síntesis cuantitativa de los resultados documentados (que evidencia, por ejemplo, la marcada superioridad de GPT-4 sobre GPT-3.5 en razonamiento cronológico); una evaluación controlada con \textit{baseline}, métricas de recuperación y exactitud sobre un conjunto fijo y amplio de preguntas queda planteada como trabajo futuro.
 
 \subsubsection{Dimensión comercial}
 

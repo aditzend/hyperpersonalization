@@ -1,42 +1,30 @@
 \subsubsection{Análisis del proceso de vectorización de conversaciones y búsqueda semántica}
 
-En la notebook 5 (\url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/5.ipynb}) se simula una base de datos de conversaciones entre un asistente y un usuario, y se explora cómo el sistema puede navegar cronológicamente por esa base para extraer información útil durante una conversación. A continuación, se analizan los pasos que se han llevado a cabo:
+En la notebook 5\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/5.ipynb}} se simula una base de datos de conversaciones entre un asistente y un usuario, y se explora cómo el sistema puede navegar cronológicamente por esa base para extraer información útil durante una conversación. A continuación, se analizan los pasos que se han llevado a cabo:
 
 \paragraph{Carga de librerías y configuración inicial}
 
-Se utiliza FAISS para almacenar y buscar de manera eficiente textos vectorizados basados en las conversaciones entre el asistente y el usuario. Se cargan las embeddings de OpenAI, y se define la ruta para el almacenamiento de los vectores.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-5-1}).
+Se utiliza FAISS para almacenar y buscar de manera eficiente textos vectorizados basados en las conversaciones entre el asistente y el usuario. Se cargan las embeddings de OpenAI, y se define la ruta para el almacenamiento de los vectores (Anexo técnico, p.~\pageref{anexo:code-4-1-5-1}).
 
 \paragraph{Simulación de una base de datos de conversaciones}
 
-Se crea una lista con varios mensajes entre el usuario y el sistema, donde cada mensaje contiene metadatos como \texttt{session\_id}, \texttt{person\_id}, \texttt{message\_id} y un timestamp (\texttt{created\_at}). Cada intercambio de mensajes entre el usuario y el asistente queda registrado cronológicamente, incluyendo preguntas y respuestas como ``¿Cuál es la capital de Argentina?'' y ``Buenos Aires''.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-5-2}).
+Se crea una lista con varios mensajes entre el usuario y el sistema, donde cada mensaje contiene metadatos como \texttt{session\_id}, \texttt{person\_id}, \texttt{message\_id} y un timestamp (\texttt{created\_at}). Cada intercambio de mensajes entre el usuario y el asistente queda registrado cronológicamente, incluyendo preguntas y respuestas como ``¿Cuál es la capital de Argentina?'' y ``Buenos Aires'' (Anexo técnico, p.~\pageref{anexo:code-4-1-5-2}).
 
 \paragraph{Vectorización de los mensajes}
 
-Los mensajes de las conversaciones son convertidos en texto plano y luego vectorizados. Los embeddings resultantes se añaden a la base vectorial de FAISS junto con los metadatos, lo que permite que las búsquedas futuras no solo tengan en cuenta el contenido del mensaje, sino también su contexto, como el identificador de la sesión y el momento en que fue creado.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-5-3}).
+Los mensajes de las conversaciones son convertidos en texto plano y luego vectorizados. Los embeddings resultantes se añaden a la base vectorial de FAISS junto con los metadatos, lo que permite que las búsquedas futuras no solo tengan en cuenta el contenido del mensaje, sino también su contexto, como el identificador de la sesión y el momento en que fue creado (Anexo técnico, p.~\pageref{anexo:code-4-1-5-3}).
 
 \paragraph{Búsqueda semántica y razonamiento contextual}
 
-Se realizan búsquedas basadas en las consultas del usuario, como ``¿Hace cuánto hablamos de Perú?'' o ``¿Te pregunté por Brasil?''. FAISS busca el mensaje más relevante utilizando similitud semántica. Una vez que se encuentra el mensaje adecuado, se genera un contexto que se pasa como entrada al modelo de lenguaje GPT-3.5. Esto permite al sistema recordar detalles previos de la conversación, como fechas y temas discutidos, y generar una respuesta precisa.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-5-4}).
+Se realizan búsquedas basadas en las consultas del usuario, como ``¿Hace cuánto hablamos de Perú?'' o ``¿Te pregunté por Brasil?''. FAISS busca el mensaje más relevante utilizando similitud semántica. Una vez que se encuentra el mensaje adecuado, se genera un contexto que se pasa como entrada al modelo de lenguaje GPT-3.5. Esto permite al sistema recordar detalles previos de la conversación, como fechas y temas discutidos, y generar una respuesta precisa (Anexo técnico, p.~\pageref{anexo:code-4-1-5-4}).
 
 \paragraph{Uso del modelo de lenguaje para respuestas informadas}
 
-Se construyen prompts basados en los resultados de la búsqueda semántica, los cuales incluyen tanto el contenido del mensaje como los metadatos asociados. El sistema utiliza este contexto para generar respuestas informadas. Por ejemplo, al preguntar ``¿Alguna vez hablamos de Colombia?'', el modelo responde que el usuario había preguntado sobre Colombia en una sesión anterior, proporcionando el contexto cronológico y de contenido correspondiente.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-5-5}).
+Se construyen prompts basados en los resultados de la búsqueda semántica, los cuales incluyen tanto el contenido del mensaje como los metadatos asociados. El sistema utiliza este contexto para generar respuestas informadas. Por ejemplo, al preguntar ``¿Alguna vez hablamos de Colombia?'', el modelo responde que el usuario había preguntado sobre Colombia en una sesión anterior, proporcionando el contexto cronológico y de contenido correspondiente (Anexo técnico, p.~\pageref{anexo:code-4-1-5-5}).
 
 \paragraph{Mejora con la inclusión de marcas temporales}
 
-Se incorporan marcas temporales en los mensajes para que el asistente pueda proporcionar respuestas más precisas, especificando cuándo se discutió un tema determinado. Esto mejora la capacidad del sistema para manejar consultas que requieren un entendimiento temporal, como ``¿Hace cuánto te pregunté por Argentina?''.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-5-6}).
+Se incorporan marcas temporales en los mensajes para que el asistente pueda proporcionar respuestas más precisas, especificando cuándo se discutió un tema determinado. Esto mejora la capacidad del sistema para manejar consultas que requieren un entendimiento temporal, como ``¿Hace cuánto te pregunté por Argentina?'' (Anexo técnico, p.~\pageref{anexo:code-4-1-5-6}).
 
 El resultado de esta consulta fue: ``Según la metadata de la conversación, me preguntaste sobre la capital de Argentina el 25 de Agosto del 2023 a las 12:00:00 PM (UTC). ¿Hay algo más en lo que te pueda ayudar?''
 

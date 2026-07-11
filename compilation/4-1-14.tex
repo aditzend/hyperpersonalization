@@ -4,9 +4,7 @@ En la \textit{notebook} 14\footnote{Disponible en: \url{https://github.com/aditz
 
 \paragraph{Carga de librerías y configuración}
 
-Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-1}).
+Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-14-1}).
 
 \paragraph{Simulación de conversaciones}
 
@@ -26,15 +24,11 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-2
 
 El modelo GPT-3.5 se utiliza para extraer información relevante de las conversaciones, como los nombres, las edades, las millas acumuladas y las fechas de viaje. Esta información se almacena en FAISS junto con los metadatos correspondientes para facilitar su recuperación en futuras consultas.
 
-Ejemplo de extracción: ``Pedro tiene una hija llamada Ana de 20 años y un hijo llamado Juan de 10 años. Quiere viajar con su familia de Buenos Aires a Córdoba del 20 al 30 de agosto''.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-3}).
+Ejemplo de extracción: ``Pedro tiene una hija llamada Ana de 20 años y un hijo llamado Juan de 10 años. Quiere viajar con su familia de Buenos Aires a Córdoba del 20 al 30 de agosto'' (Anexo técnico, p.~\pageref{anexo:code-4-1-14-3}).
 
 \paragraph{Consultas sobre millas y viajes}
 
-Se plantea una pregunta como ``¿Cuántas millas tenía en el momento de hacer el viaje a Córdoba?''. El sistema intenta combinar la información obtenida de varios contextos para responder a la consulta. Sin embargo, se detecta un error en el razonamiento: el sistema responde que Pedro tenía 200 millas al momento del viaje, lo cual es incorrecto, ya que las millas se usaron para el pasaje.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-14-4}).
+Se plantea una pregunta como ``¿Cuántas millas tenía en el momento de hacer el viaje a Córdoba?''. El sistema intenta combinar la información obtenida de varios contextos para responder a la consulta. Sin embargo, se detecta un error en el razonamiento: el sistema responde que Pedro tenía 200 millas al momento del viaje, lo cual es incorrecto, ya que las millas se usaron para el pasaje (Anexo técnico, p.~\pageref{anexo:code-4-1-14-4}).
 
 \paragraph{Conclusiones de la decimocuarta iteración}
 

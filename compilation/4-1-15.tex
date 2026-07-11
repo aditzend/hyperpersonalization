@@ -4,9 +4,7 @@ En la notebook 15\footnote{Disponible en: \url{https://github.com/aditzend/hyper
 
 \paragraph{Carga de librerías y configuración}
 
-Se utilizan FAISS para las búsquedas semánticas y OpenAI Embeddings para vectorizar las conversaciones. También se configura una función que interactúa con el modelo GPT-3.5 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-1}).
+Se utilizan FAISS para las búsquedas semánticas y OpenAI Embeddings para vectorizar las conversaciones. También se configura una función que interactúa con el modelo GPT-3.5 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-15-1}).
 
 \paragraph{Simulación de conversaciones sobre citas médicas}
 
@@ -25,9 +23,7 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-2
 
 \paragraph{Extracción de datos}
 
-El modelo GPT-3.5 extrae los datos proporcionados en la conversación, como el nombre de la madre del usuario, su DNI, el correo electrónico y la especialidad médica solicitada. Esta información se almacena en FAISS junto con los metadatos para facilitar su búsqueda posterior.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-3}).
+El modelo GPT-3.5 extrae los datos proporcionados en la conversación, como el nombre de la madre del usuario, su DNI, el correo electrónico y la especialidad médica solicitada. Esta información se almacena en FAISS junto con los metadatos para facilitar su búsqueda posterior (Anexo técnico, p.~\pageref{anexo:code-4-1-15-3}).
 
 Ejemplo de extracción:
 
@@ -35,9 +31,7 @@ Ejemplo de extracción:
 
 \paragraph{Consultas sobre la información almacenada}
 
-El usuario pregunta al asistente ``¿Tengo algún turno asignado?'', y el sistema recupera la información sobre el turno de Sylvia. Aunque la respuesta del asistente es correcta en cuanto a los detalles del turno, se observa que el modelo mezcla ligeramente la información del usuario con la de su madre, lo que sugiere problemas en la distinción entre las dos personas.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-15-4}).
+El usuario pregunta al asistente ``¿Tengo algún turno asignado?'', y el sistema recupera la información sobre el turno de Sylvia. Aunque la respuesta del asistente es correcta en cuanto a los detalles del turno, se observa que el modelo mezcla ligeramente la información del usuario con la de su madre, lo que sugiere problemas en la distinción entre las dos personas (Anexo técnico, p.~\pageref{anexo:code-4-1-15-4}).
 
 \paragraph{Conclusiones de la decimoquinta iteración}
 

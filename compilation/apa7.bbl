@@ -244,7 +244,6 @@
       \field{journaltitle}{arXiv preprint arXiv:2206.02254}
       \field{title}{Augmenting Netflix search with in-session adapted recommendations}
       \field{year}{2022}
-      \true{nocite}
       \verb{urlraw}
       \verb https://arxiv.org/pdf/2206.02254
       \endverb
@@ -920,7 +919,6 @@
       \field{title}{Billion-scale similarity search with GPUs}
       \field{volume}{7}
       \field{year}{2019}
-      \true{nocite}
       \field{pages}{535\bibrangedash 547}
       \range{pages}{13}
       \verb{doi}
@@ -2144,7 +2142,6 @@
       \field{journaltitle}{arXiv preprint arXiv:2206.02254}
       \field{title}{Augmenting Netflix search with in-session adapted recommendations}
       \field{year}{2022}
-      \true{nocite}
       \verb{urlraw}
       \verb https://arxiv.org/pdf/2206.02254
       \endverb
@@ -2820,7 +2817,6 @@
       \field{title}{Billion-scale similarity search with GPUs}
       \field{volume}{7}
       \field{year}{2019}
-      \true{nocite}
       \field{pages}{535\bibrangedash 547}
       \range{pages}{13}
       \verb{doi}

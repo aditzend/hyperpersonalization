@@ -1,0 +1,33 @@
+\subsection{Síntesis cuantitativa de los resultados experimentales}
+
+La validación de este trabajo es de carácter cualitativo, por inspección de las respuestas del sistema sobre una persona ficticia. A modo de cierre, y sin pretender constituir una evaluación controlada con \textit{baseline} ni un \textit{benchmark} estandarizado, esta sección consolida en términos cuantitativos los resultados ya documentados experimento por experimento en las secciones anteriores. Las cifras deben leerse con la cautela que imponen el tamaño reducido de la muestra y el hecho de que provienen de un único caso de estudio sintético; su propósito es ofrecer una lectura agregada de los hallazgos, no una medición de validez externa.
+
+\subsubsection{Razonamiento cronológico: GPT-3.5 frente a GPT-4}
+
+El conjunto de experimentos orientados al razonamiento cronológico —el cálculo de la edad de una persona a partir de una fecha de referencia— permite comparar el desempeño de GPT-3.5 y GPT-4 sobre tareas equivalentes. La Tabla~\ref{tab:cronologico} resume el resultado documentado en cada iteración.
+
+\begin{center}
+\captionof{table}{Resultado documentado del razonamiento cronológico por iteración}
+\label{tab:cronologico}
+\footnotesize
+\begin{tabular}{clcc}
+\toprule
+Iteración & Consulta o tarea & GPT-3.5 & GPT-4 \\
+\midrule
+8  & Edad de Alba en un año pasado                       & Incorrecto & Parcial \\
+9  & Edad de Alba en 2020 (contexto reestructurado)      & Correcto   & --- \\
+10 & Edad actual a partir de datos familiares            & Incorrecto & --- \\
+11 & Edad actual de Ana                                  & Incorrecto & --- \\
+12 & Edad actual de Ana                                  & Incorrecto & Correcto \\
+13 & Edades actuales de las hijas                         & Incorrecto & Correcto \\
+\midrule
+\multicolumn{2}{l}{Aciertos plenos} & 1 / 6 & 2 / 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Sobre las seis iteraciones en las que se evaluó GPT-3.5, el modelo resolvió correctamente el razonamiento cronológico en una sola (iteración~9), y únicamente tras reestructurar y limpiar el contexto suministrado; esto representa una tasa de acierto de 1 sobre 6 (17~\%) en las condiciones de estos experimentos. GPT-4, evaluado en tres de esas iteraciones, acertó plenamente en dos (iteraciones~12 y~13) y de forma parcial en una (iteración~8, donde realizó el cálculo correcto pero interpretó inicialmente la edad como año de nacimiento). La diferencia es consistente con la conclusión cualitativa del cuerpo: el razonamiento temporal mejora de manera marcada con GPT-4, mientras que con GPT-3.5 depende críticamente de la estructura del contexto provisto.
+
+\subsubsection{Recuperación de información}
+
+En los experimentos de recuperación sobre espacios vectoriales reducidos, el sistema respondió correctamente la totalidad de las consultas formuladas: las cuatro preguntas semánticas de la tercera iteración se resolvieron con exactitud (4 de 4). En la arquitectura final sobre MongoDB Atlas, las consultas de prueba sobre los 187 documentos de Norman se resolvieron de forma satisfactoria, con la única excepción documentada de las preguntas compuestas que abarcan múltiples temáticas en una sola iteración. Estas cifras corresponden, nuevamente, a un único caso de estudio y no son extrapolables a escala productiva; una evaluación con un conjunto fijo y amplio de preguntas, métricas de precisión y exhaustividad por valor de $k$ y comparación entre modelos queda planteada como trabajo futuro.

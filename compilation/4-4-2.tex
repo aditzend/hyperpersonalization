@@ -4,9 +4,7 @@ Por los motivos expuestos en la sección anterior, se decide no continuar con la
 
 En una primera etapa se decidió crear colecciones separadas para cada tipo de registro pero rápidamente la solución fue descartada porque agregaría un paso de selección de tipo de registro. Por ejemplo si el asistente recibe una consulta como ``cuántos años tiene mi sobrina más chica?'', el sistema tendría que recorrer todas las colecciones disponibles para el usuario en curso y luego seleccionar en cuál de ellas hacer una búsqueda. Esto agrega probabilidad de error además de tiempo e ineficiencia. El código correspondiente a esta solución se omite del presente trabajo por no ser de relevancia.
 
-La arquitectura seleccionada consiste en tomar una pieza de información, como la del siguiente ejemplo y calcularle los embeddings antes de guardarla en la base.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-2-1}).
+La arquitectura seleccionada consiste en tomar una pieza de información, como la del siguiente ejemplo y calcularle los embeddings antes de guardarla en la base (Anexo técnico, p.~\pageref{anexo:code-4-4-2-1}).
 
 Todo el objeto se convierte a texto plano antes de la conversión y al obtener el vector se guarda en el campo `vector' y se inserta en la colección única llamada `Records'.
 
@@ -20,7 +18,7 @@ El valor está entre 0 y 2, donde 0 indica que los vectores son idénticos en di
 
 Siguiendo este mecanismo se procesaron todos los conjuntos de datos sintéticos creados para simular información extraída sobre la vida de Norman, el sujeto ficticio que es el centro del presente trabajo. Como ya se explicó, todos los tipos de registros se insertaron en la misma colección llamada ``Records'' con un agregado previo para identificar el tipo de registro y quién es el dueño de ese registro, para dar lugar a posibles búsquedas filtradas si es que fueran necesarias en el futuro.
 
-La base de conocimientos sobre Norman alcanzó los 187 documentos sobre personas en su vida, registros médicos y gastos.\footnote{La cifra corresponde a los documentos efectivamente insertados en la colección \texttt{Records}. El procedimiento de ingestión incorpora únicamente los registros que cuentan con un campo de fecha (\texttt{datetime}) válido, por lo que algunos registros médicos sin fecha asociada quedaron fuera de la colección. El conteo se reparte entre los tres tipos: registros de personas, médicos y de gastos.}
+La base de conocimientos sobre Norman alcanzó los 187 documentos sobre personas en su vida, registros médicos y gastos.\footnote{La cifra corresponde a los documentos efectivamente insertados en la colección \texttt{Records}. De los 202 registros sintéticos generados (119 de gastos, 67 médicos y 16 de personas), el procedimiento de ingestión incorpora únicamente los que cuentan con un campo de fecha (\texttt{datetime}) válido, por lo que 15 registros médicos sin fecha asociada quedaron fuera de la colección: 119 gastos, 52 registros médicos y 16 personas totalizan los 187 documentos insertados.}
 
 A continuación se procede a comprobar la eficacia de esta solución simulando una conversación entre el usuario y su asistente personal con hiperpersonalización. El primer paso consiste en amplificar el mensaje del usuario para mejorar la recuperación de registros.
 
@@ -34,7 +32,7 @@ Al final de la notebook se ejecutan diferentes preguntas con resultados satisfac
 
 Este punto puede ser resuelto por un paso anterior a la amplificación que reformule una pregunta combinada como dos preguntas separadas. Cada pregunta recibe el tratamiento existente y se combinan al final los contextos.
 
-A continuación el código de los procesos detallados\footnote{Código completo disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/34-populate-records-in-atlas.ipynb}}.
+A continuación el código de los procesos detallados\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/34-populate-records-in-atlas.ipynb}}.
 
 \paragraph{Configuración inicial y conexión a MongoDB Atlas}
 

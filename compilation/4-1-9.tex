@@ -1,12 +1,10 @@
 \subsubsection{Influencia de la estructura del contexto en el razonamiento cronológico}
 
-En la notebook 9 se experimenta con la forma en que la estructura del contexto afecta el razonamiento cronológico y la extracción de datos por parte de modelos de lenguaje como GPT-3.5. A continuación, se analizan los pasos principales del experimento realizado en \href{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/9.ipynb}{9.ipynb}.
+En la notebook 9\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/9.ipynb}} se experimenta con la forma en que la estructura del contexto afecta el razonamiento cronológico y la extracción de datos por parte de modelos de lenguaje como GPT-3.5. A continuación, se analizan los pasos principales del experimento.
 
 \paragraph{Configuración del entorno experimental}
 
-Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. Se configura también una función que interactúa con los modelos de lenguaje a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-1}).
+Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. Se configura también una función que interactúa con los modelos de lenguaje a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-9-1}).
 
 \paragraph{Contextos condensados y simulación de conversaciones}
 
@@ -26,26 +24,20 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-2}
 
 \paragraph{Extracción de datos con GPT-3.5}
 
-En lugar de simplemente almacenar las conversaciones, se utiliza el modelo GPT-3.5 para extraer la información clave de cada conversación. Esto incluye detalles como el nombre y la edad de la madre del usuario, así como la fecha y hora en que la información fue recopilada. Esta extracción se almacena en FAISS junto con los metadatos de la conversación.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-3}).
+En lugar de simplemente almacenar las conversaciones, se utiliza el modelo GPT-3.5 para extraer la información clave de cada conversación. Esto incluye detalles como el nombre y la edad de la madre del usuario, así como la fecha y hora en que la información fue recopilada. Esta extracción se almacena en FAISS junto con los metadatos de la conversación (Anexo técnico, p.~\pageref{anexo:code-4-1-9-3}).
 
 \paragraph{Ejemplo de extracción obtenida:}
 ``El usuario mencionó que quiere un turno para su madre. La madre del usuario se llama Alba y tiene 66 años.''
 
 \paragraph{Consultas simples y razonamiento cronológico}
 
-Se comienza con una consulta simple: ``¿Qué edad tiene Alba?''. El sistema encuentra el contexto relevante y responde correctamente: ``Alba tiene 66 años''.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-4}).
+Se comienza con una consulta simple: ``¿Qué edad tiene Alba?''. El sistema encuentra el contexto relevante y responde correctamente: ``Alba tiene 66 años'' (Anexo técnico, p.~\pageref{anexo:code-4-1-9-4}).
 
 Luego, se plantea una consulta más compleja: ``¿Qué edad tenía Alba en 2020?''. En este caso, GPT-3.5 logra razonar correctamente y responde que Alba tenía 63 años en 2020, basándose en la edad actual de 66 años.
 
 \paragraph{Consultas adicionales sobre fechas}
 
-Se continúa con una pregunta más difícil: ``¿Qué edad tenía Alba en 1970?''. El sistema nuevamente razona correctamente y responde que Alba tenía 13 años en 1970, lo que demuestra que, con la forma correcta de estructurar y almacenar el contexto, GPT-3.5 es capaz de realizar razonamientos cronológicos precisos.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-5}).
+Se continúa con una pregunta más difícil: ``¿Qué edad tenía Alba en 1970?''. El sistema nuevamente razona correctamente y responde que Alba tenía 13 años en 1970, lo que demuestra que, con la forma correcta de estructurar y almacenar el contexto, GPT-3.5 es capaz de realizar razonamientos cronológicos precisos (Anexo técnico, p.~\pageref{anexo:code-4-1-9-5}).
 
 \textbf{Resultados obtenidos:}
 \begin{itemize}
@@ -56,9 +48,7 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-5}
 
 \paragraph{Consulta sobre reconocimiento de datos personales}
 
-Finalmente, se realiza una consulta general: ``¿Conoces a mi madre?''. El sistema responde de manera acertada, reconociendo a Alba y proporcionando los detalles previamente almacenados: ``Sí, conozco a tu madre. Su nombre es Alba y tiene 66 años''.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-9-6}).
+Finalmente, se realiza una consulta general: ``¿Conoces a mi madre?''. El sistema responde de manera acertada, reconociendo a Alba y proporcionando los detalles previamente almacenados: ``Sí, conozco a tu madre. Su nombre es Alba y tiene 66 años'' (Anexo técnico, p.~\pageref{anexo:code-4-1-9-6}).
 
 \paragraph{Conclusiones de la novena iteración}
 

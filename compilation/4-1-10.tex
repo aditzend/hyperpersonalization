@@ -4,9 +4,7 @@ En la notebook 10\footnote{Disponible en: \url{https://github.com/aditzend/hyper
 
 \paragraph{Carga de librerías y configuración}
 
-Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-1}).
+Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para vectorizar los mensajes. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-10-1}).
 
 \paragraph{Creación de un conjunto de datos familiar}
 
@@ -23,34 +21,26 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-2
 
 \paragraph{Extracción de datos}
 
-El modelo GPT-3.5 se utiliza para extraer la información significativa de cada conversación. Estos datos incluyen detalles sobre los miembros de la familia, las edades, las fechas de viaje y otros aspectos relevantes. La información extraída se almacena en FAISS junto con los metadatos, lo que facilita su recuperación posterior.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-3}).
+El modelo GPT-3.5 se utiliza para extraer la información significativa de cada conversación. Estos datos incluyen detalles sobre los miembros de la familia, las edades, las fechas de viaje y otros aspectos relevantes. La información extraída se almacena en FAISS junto con los metadatos, lo que facilita su recuperación posterior (Anexo técnico, p.~\pageref{anexo:code-4-1-10-3}).
 
 \paragraph{Ejemplo de extracción:}
 ``Pedro tiene una hija mayor llamada Ana, que tiene 20 años, y un hijo menor llamado Juan, que tiene 10 años. Su esposa se llama María''.
 
 \paragraph{Consultas sobre edades}
 
-Se plantea una consulta simple: ``¿Qué edad tiene mi hija mayor?''. El sistema encuentra el contexto relevante y responde que Ana tiene 20 años, sin tener en cuenta que estamos en 2023, lo que indica una falta de razonamiento cronológico adecuado.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-4}).
+Se plantea una consulta simple: ``¿Qué edad tiene mi hija mayor?''. El sistema encuentra el contexto relevante y responde que Ana tiene 20 años, sin tener en cuenta que estamos en 2023, lo que indica una falta de razonamiento cronológico adecuado (Anexo técnico, p.~\pageref{anexo:code-4-1-10-4}).
 
 Respuesta: ``Tu hija mayor, Ana, tiene 20 años.''
 
 \paragraph{Razonamiento cronológico}
 
-Luego se realiza una pregunta más compleja: ``¿Qué edad tenía mi hija mayor cuando hicimos el viaje a Córdoba?''. En este caso, el modelo devuelve que Ana tenía 20 años durante el viaje, registrado en 2020. La respuesta es correcta, aunque conviene matizar que coincide con el valor de edad almacenado y no exige aún un cálculo temporal: la dificultad aparece, como se ve a continuación, cuando se le pide derivar una fecha a partir de esa edad.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-5}).
+Luego se realiza una pregunta más compleja: ``¿Qué edad tenía mi hija mayor cuando hicimos el viaje a Córdoba?''. En este caso, el modelo devuelve que Ana tenía 20 años durante el viaje, registrado en 2020. La respuesta es correcta, aunque conviene matizar que coincide con el valor de edad almacenado y no exige aún un cálculo temporal: la dificultad aparece, como se ve a continuación, cuando se le pide derivar una fecha a partir de esa edad (Anexo técnico, p.~\pageref{anexo:code-4-1-10-5}).
 
 Respuesta: ``Tu hija mayor, Ana, tenía 20 años cuando hicieron el viaje a Córdoba.''
 
 \paragraph{Errores en el cálculo de la fecha de nacimiento}
 
-Se le pregunta al modelo: ``¿En qué año nació mi hija mayor?''. El problema de fondo es que la edad se almacenó sin una fecha de referencia, por lo que el modelo no dispone de un ancla temporal confiable para derivar el año de nacimiento. Inicialmente responde que Ana nació en el año 2000 —restando 20 a un año de referencia implícito—, sin tener en cuenta que el experimento se ejecuta en 2023, lo que llevaría a una edad actual de 23 años. Tras ajustar el \textit{prompt} y proporcionar la fecha actual de forma explícita, el modelo sigue sin resolverlo correctamente y ahora sugiere 2003. Ninguno de los dos cálculos es confiable: el experimento evidencia que, sin una fecha de referencia almacenada junto al dato, el razonamiento cronológico del modelo es inconsistente.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-10-6}).
+Se le pregunta al modelo: ``¿En qué año nació mi hija mayor?''. El problema de fondo es que la edad se almacenó sin una fecha de referencia, por lo que el modelo no dispone de un ancla temporal confiable para derivar el año de nacimiento. Inicialmente responde que Ana nació en el año 2000 —restando 20 a un año de referencia implícito—, sin tener en cuenta que el experimento se ejecuta en 2023, lo que llevaría a una edad actual de 23 años. Tras ajustar el \textit{prompt} y proporcionar la fecha actual de forma explícita, el modelo sigue sin resolverlo correctamente y ahora sugiere 2003. Ninguno de los dos cálculos es confiable: el experimento evidencia que, sin una fecha de referencia almacenada junto al dato, el razonamiento cronológico del modelo es inconsistente (Anexo técnico, p.~\pageref{anexo:code-4-1-10-6}).
 
 Primera respuesta: ``Según la información que tengo, su hija mayor, Ana, tiene 20 años. Si restamos 20 años a la fecha actual, podemos determinar que Ana nació en el año 2000.''
 

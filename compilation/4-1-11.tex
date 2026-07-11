@@ -1,12 +1,10 @@
 \subsubsection{Razonamiento cronológico y extracción de datos en conversaciones familiares}
 
-En la notebook 11 se implementa un experimento para extraer y organizar datos de conversaciones con un grupo familiar, buscando corregir el razonamiento cronológico del modelo de lenguaje GPT-3.5. A continuación se detallan los pasos principales del experimento.
+En la notebook 11\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/11.ipynb}} se implementa un experimento para extraer y organizar datos de conversaciones con un grupo familiar, buscando corregir el razonamiento cronológico del modelo de lenguaje GPT-3.5. A continuación se detallan los pasos principales del experimento.
 
 \paragraph{Carga de librerías y configuración}
 
-Se utiliza FAISS para realizar la búsqueda semántica y OpenAI Embeddings para convertir los textos de las conversaciones en vectores. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-1}).
+Se utiliza FAISS para realizar la búsqueda semántica y OpenAI Embeddings para convertir los textos de las conversaciones en vectores. También se configura una función para interactuar con el modelo GPT-3.5 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-11-1}).
 
 \paragraph{Simulación de conversaciones familiares}
 
@@ -23,18 +21,14 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-2
 
 \paragraph{Extracción de datos}
 
-Se utiliza un prompt diseñado para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, incluyendo nombres, edades y fechas de eventos. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-3}).
+Se utiliza un prompt diseñado para que el modelo GPT-3.5 extraiga la información relevante de cada conversación, incluyendo nombres, edades y fechas de eventos. Esta información se almacena junto con los metadatos en FAISS para facilitar su búsqueda posterior (Anexo técnico, p.~\pageref{anexo:code-4-1-11-3}).
 
 Ejemplo de extracción:
 ``Voy a sacar un pasaje para la familia de Buenos Aires a Córdoba, Ana es mi hija mayor, tiene 20 años. Juan es mi hijo menor, tiene 10 años.''
 
 \paragraph{Consultas sobre la edad}
 
-Se realiza una consulta al sistema preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde correctamente que Ana tiene 20 años. Sin embargo, no razona correctamente sobre el año actual, que es 2023, lo que significa que Ana debería tener 23 años. Este error revela una falta de ajuste cronológico en el razonamiento del modelo.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-11-4}).
+Se realiza una consulta al sistema preguntando ``¿Qué edad tiene mi hija mayor?''. El sistema recupera la información y responde correctamente que Ana tiene 20 años. Sin embargo, no razona correctamente sobre el año actual, que es 2023, lo que significa que Ana debería tener 23 años. Este error revela una falta de ajuste cronológico en el razonamiento del modelo (Anexo técnico, p.~\pageref{anexo:code-4-1-11-4}).
 
 \paragraph{Conclusiones de la undécima iteración}
 
@@ -45,5 +39,3 @@ La respuesta del sistema fue: ``Tu hija mayor tiene 20 años.''
 Persiste el problema de razonamiento sobre la fecha. El dato de la edad es de 2020, la respuesta correcta es 23 años considerando que la consulta se realiza en 2023.
 
 La notebook 11 muestra que, si bien el modelo GPT-3.5 puede extraer correctamente datos de conversaciones y responder a preguntas basadas en esa información, sigue teniendo dificultades para razonar cronológicamente. Aunque se le proporciona contexto sobre las fechas actuales, el modelo no ajusta correctamente la edad de las personas en función del tiempo transcurrido. Esto indica la necesidad de mejorar los mecanismos de razonamiento temporal en los modelos de lenguaje.
-
-\textit{Código disponible en:} \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/11.ipynb} 

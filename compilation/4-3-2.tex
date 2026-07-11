@@ -2,31 +2,17 @@
 
 Un proceso similar al de la creación del árbol familiar fue aplicado a construir una historia clínica de Norman con especial enfoque en la correcta estructuración de las fechas (formato ISO 8601), el tipo de dolencia, la medicación prescrita, hospital visitado y cualquier detalle de relevancia para asemejar un registro real.
 
-Se continúa con la normalización al idioma inglés como decisión de diseño, orientada a aprovechar que los modelos empleados fueron entrenados mayoritariamente sobre texto en inglés; en la práctica, esto tiende a reducir el consumo de tokens y a favorecer el rendimiento del procesamiento.
+Como decisión de diseño se adoptó la normalización de los registros al idioma inglés, orientada a aprovechar que los modelos empleados fueron entrenados mayoritariamente sobre texto en inglés; en la práctica, esto tiende a reducir el consumo de tokens y a favorecer el rendimiento del procesamiento. Este criterio se mantiene en el resto de los conjuntos de datos sintéticos.
 
 El resultado, que abarca el período de abril de 2023 a marzo de 2024, se presenta a continuación.
-
-\paragraph{Enero 2024 (01-2024.json)}
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-1}).
-
-\textit{Nota:} Código disponible en \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/28-medical-graph.ipynb}
-
-\paragraph{Febrero 2024 (02-2024.json)}
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-2}).
-
-\paragraph{Marzo 2024 (03-2024.json)}
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-3}).
 
 \paragraph{Abril 2023 (04-2023.json)}
 
 El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-4}).
 
-\paragraph{Registros médicos adicionales}
+\paragraph{Registros médicos adicionales (mayo a diciembre de 2023)}
 
-Los meses restantes (mayo a diciembre de 2023, con excepción de septiembre, que no registró eventos médicos) siguen un patrón similar de estructuración de datos, incluyendo:
+Los meses de mayo a diciembre de 2023 (con excepción de septiembre, que no registró eventos médicos) siguen un patrón similar de estructuración de datos, incluyendo:
 
 \begin{itemize}
 \item Mayo 2023: Consulta endocrinológica para función tiroidea y terapia física rutinaria
@@ -38,6 +24,18 @@ Los meses restantes (mayo a diciembre de 2023, con excepción de septiembre, que
 \item Diciembre 2023: Consulta por alergias estacionales y vacuna anual contra la gripe
 \end{itemize}
 
+\paragraph{Enero 2024 (01-2024.json)}
+
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-1}).
+
+\paragraph{Febrero 2024 (02-2024.json)}
+
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-2}).
+
+\paragraph{Marzo 2024 (03-2024.json)}
+
+El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-3-2-3}).
+
 Cada registro médico mantiene la misma estructura de campos: fecha y hora en formato ISO 8601, descripción, tipo de visita, especialidad médica, nombre del doctor, síntomas experimentados, hospital o centro de atención, medicamentos prescritos, terapias recibidas y notas adicionales.
 
-\textit{Nota:} El conjunto completo de datos médicos está disponible en \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/28-medical-graph.ipynb} 
+\textit{Nota:} El conjunto completo de datos médicos está disponible en \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/28-medical-graph.ipynb}

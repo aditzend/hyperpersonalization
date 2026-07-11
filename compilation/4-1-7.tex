@@ -1,12 +1,10 @@
 \subsubsection{Análisis de la mejora en la estructura del contexto para la recuperación de información}
 
-En la notebook 7 se experimenta con la reconfiguración de la estructura del contexto brindado al modelo, con el objetivo de mejorar la claridad y limpieza de los datos que se le proporcionan, y comprobar si este enfoque permite al modelo recuperar la información solicitada de manera más efectiva. El código completo está disponible en el repositorio: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/7.ipynb}. A continuación, se analizan los pasos seguidos en esta notebook:
+En la notebook 7\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/7.ipynb}} se experimenta con la reconfiguración de la estructura del contexto brindado al modelo, con el objetivo de mejorar la claridad y limpieza de los datos que se le proporcionan, y comprobar si este enfoque permite al modelo recuperar la información solicitada de manera más efectiva. A continuación, se analizan los pasos seguidos en esta notebook:
 
 \paragraph{Carga de librerías y configuración}
 
-Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de los mensajes. Además, se implementa una función para interactuar con el modelo GPT-3.5 a través de la API.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-7-1}).
+Se utiliza FAISS para la búsqueda semántica y OpenAI Embeddings para la vectorización de los mensajes. Además, se implementa una función para interactuar con el modelo GPT-3.5 a través de la API (Anexo técnico, p.~\pageref{anexo:code-4-1-7-1}).
 
 \paragraph{Estructura de contextos}
 
@@ -26,31 +24,23 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-7-2}
 
 \paragraph{Vectorización y almacenamiento}
 
-Los contextos se convierten en texto plano y se vectorizan utilizando embeddings. Estos vectores se almacenan en FAISS con sus respectivos metadatos, lo que permite realizar búsquedas semánticas y recuperar la conversación completa cuando sea necesario.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-7-3}).
+Los contextos se convierten en texto plano y se vectorizan utilizando embeddings. Estos vectores se almacenan en FAISS con sus respectivos metadatos, lo que permite realizar búsquedas semánticas y recuperar la conversación completa cuando sea necesario (Anexo técnico, p.~\pageref{anexo:code-4-1-7-3}).
 
 \paragraph{Consulta sobre el pariente del usuario}
 
-Se realiza una consulta del usuario (``¿qué sabes de mi madre?'') para ver si el sistema puede recuperar correctamente la información relacionada con la madre proporcionada en conversaciones anteriores. FAISS encuentra el mensaje adecuado, pero el modelo de lenguaje no logra responder de manera precisa. El sistema responde que no tiene información adicional sobre la madre del usuario, lo cual sugiere un problema en la comprensión del contexto.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-7-4}).
+Se realiza una consulta del usuario (``¿qué sabes de mi madre?'') para ver si el sistema puede recuperar correctamente la información relacionada con la madre proporcionada en conversaciones anteriores. FAISS encuentra el mensaje adecuado, pero el modelo de lenguaje no logra responder de manera precisa. El sistema responde que no tiene información adicional sobre la madre del usuario, lo cual sugiere un problema en la comprensión del contexto (Anexo técnico, p.~\pageref{anexo:code-4-1-7-4}).
 
 \textbf{Resultado:} El modelo vuelve a fallar con una pregunta general, respondiendo: ``Lo siento, como sistema de procesamiento de datos mi memoria solo retiene la información necesaria para responder a la solicitud de turnos de tu madre. No tengo acceso a información personal adicional sobre ella. ¿Hay algo más en lo que pueda ayudarte?''
 
 \paragraph{Pregunta específica sobre un tema}
 
-Luego, se realiza una consulta más específica (``¿Una vez te pregunté por Colombia, no?''). En este caso, el sistema responde correctamente, recordando que la capital de Colombia es Bogotá. Esto demuestra que el sistema tiene un mejor rendimiento cuando la consulta es más directa y se enfoca en un tema específico previamente discutido.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-7-5}).
+Luego, se realiza una consulta más específica (``¿Una vez te pregunté por Colombia, no?''). En este caso, el sistema responde correctamente, recordando que la capital de Colombia es Bogotá. Esto demuestra que el sistema tiene un mejor rendimiento cuando la consulta es más directa y se enfoca en un tema específico previamente discutido (Anexo técnico, p.~\pageref{anexo:code-4-1-7-5}).
 
 \textbf{Resultado:} Con una pregunta específica sobre otro tema no tiene problemas. El sistema responde: ``Sí, me hiciste una pregunta sobre Colombia y te respondí que la capital es Bogotá. ¿Puedo ayudarte en algo más?''
 
 \paragraph{Mejora en la recuperación de información}
 
-Se vuelve a probar con una pregunta relacionada con el turno de la madre del usuario (``¿Te acuerdas cuándo era el turno de mi madre?''). Esta vez, el sistema logra recuperar correctamente la información, indicando que el turno es para el 30 de agosto a las 15:00. Esto sugiere que el problema inicial podría estar relacionado con la ambigüedad o generalidad de la primera consulta.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-7-6}).
+Se vuelve a probar con una pregunta relacionada con el turno de la madre del usuario (``¿Te acuerdas cuándo era el turno de mi madre?''). Esta vez, el sistema logra recuperar correctamente la información, indicando que el turno es para el 30 de agosto a las 15:00. Esto sugiere que el problema inicial podría estar relacionado con la ambigüedad o generalidad de la primera consulta (Anexo técnico, p.~\pageref{anexo:code-4-1-7-6}).
 
 \textbf{Resultado:} Con otra pregunta específica sobre el tema que generó la falla anteriormente, se observa que se puede hacer una recuperación satisfactoria. El sistema responde: ``Sí, el turno de tu madre es para el 30 de agosto a las 15:00 horas.''
 

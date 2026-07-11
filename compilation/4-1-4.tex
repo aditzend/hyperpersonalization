@@ -1,56 +1,39 @@
 \subsubsection{Implementación de búsquedas semánticas con Redis y FAISS para la gestión de sesiones de usuario}
 
-En la notebook 4 se realiza un experimento utilizando Redis para almacenar y recuperar información de sesiones y mensajes asociados a un usuario, y posteriormente realizar búsquedas semánticas sobre esos datos utilizando FAISS. A continuación se describen los pasos observados en la notebook \footnote{Código disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/4.ipynb}}.
+En la notebook 4 se realiza un experimento utilizando Redis para almacenar y recuperar información de sesiones y mensajes asociados a un usuario, y posteriormente realizar búsquedas semánticas sobre esos datos utilizando FAISS. A continuación se describen los pasos observados en la notebook\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/4.ipynb}}.
 
 \paragraph{Carga de librerías y configuración}
 
-Se importan las librerías necesarias, como Redis para gestionar la base de datos en memoria, y FAISS para realizar búsquedas semánticas sobre los datos almacenados. También se configuran las variables de entorno necesarias, como el host y puerto de Redis.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-1}).
+Se importan las librerías necesarias, como Redis para gestionar la base de datos en memoria, y FAISS para realizar búsquedas semánticas sobre los datos almacenados. También se configuran las variables de entorno necesarias, como el host y puerto de Redis (Anexo técnico, p.~\pageref{anexo:code-4-1-4-1}).
 
 \paragraph{Almacenamiento de información en Redis}
 
-Se definen varios objetos de tipo JSON que representan a un usuario (en este caso llamado Jane) y sus respectivas sesiones de interacción con el sistema. Cada sesión contiene una serie de mensajes que fueron intercambiados entre el usuario y el sistema.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-2}).
+Se definen varios objetos de tipo JSON que representan a un usuario (en este caso llamado Jane) y sus respectivas sesiones de interacción con el sistema. Cada sesión contiene una serie de mensajes que fueron intercambiados entre el usuario y el sistema (Anexo técnico, p.~\pageref{anexo:code-4-1-4-2}).
 
 Ejemplo de estructura almacenada: \texttt{'session\_id': '10', 'person\_id': '10', 'name': 'Jane', 'messages': [\{'role': 'user', 'content': 'Hello'\}, \{'role': 'system', 'content': 'Hello 2'\}]}.
 
 \paragraph{Recuperación de una sesión específica}
 
-Se realizan consultas en Redis para recuperar una sesión particular del usuario, utilizando el \texttt{session\_id}. Esto permite obtener solo los datos de esa sesión sin necesidad de cargar toda la información del usuario.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-3}).
+Se realizan consultas en Redis para recuperar una sesión particular del usuario, utilizando el \texttt{session\_id}. Esto permite obtener solo los datos de esa sesión sin necesidad de cargar toda la información del usuario (Anexo técnico, p.~\pageref{anexo:code-4-1-4-3}).
 
 \paragraph{Agregación de mensajes a la sesión}
 
-Se almacenan múltiples sesiones asociadas al mismo usuario, y se van añadiendo mensajes a cada sesión. La estructura de los mensajes incluye información sobre el rol (usuario o sistema) y el contenido del mensaje.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-4}).
+Se almacenan múltiples sesiones asociadas al mismo usuario, y se van añadiendo mensajes a cada sesión. La estructura de los mensajes incluye información sobre el rol (usuario o sistema) y el contenido del mensaje (Anexo técnico, p.~\pageref{anexo:code-4-1-4-4}).
 
 \paragraph{Almacenamiento en FAISS}
 
-Después de recuperar la información de las sesiones desde Redis, se convierte el contenido de los mensajes en texto plano, y se calculan los embeddings utilizando OpenAIEmbeddings. Los mensajes se almacenan en FAISS con metadatos que incluyen el \texttt{person\_id} y el \texttt{session\_id} del usuario, lo que permite filtrar las búsquedas por estos campos.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-5}).
+Después de recuperar la información de las sesiones desde Redis, se convierte el contenido de los mensajes en texto plano, y se calculan los embeddings utilizando OpenAIEmbeddings. Los mensajes se almacenan en FAISS con metadatos que incluyen el \texttt{person\_id} y el \texttt{session\_id} del usuario, lo que permite filtrar las búsquedas por estos campos (Anexo técnico, p.~\pageref{anexo:code-4-1-4-5}).
 
 \paragraph{Búsquedas semánticas en FAISS}
 
-Se realizan varias consultas para buscar sesiones o mensajes específicos en función de una consulta de texto. FAISS busca por similitud semántica entre la consulta y los mensajes almacenados, devolviendo el mensaje más cercano. Por ejemplo, una consulta como \enquote{¿cuál es la primera sesión?} devuelve la sesión más relacionada según la similitud semántica de los mensajes.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-6}).
+Se realizan varias consultas para buscar sesiones o mensajes específicos en función de una consulta de texto. FAISS busca por similitud semántica entre la consulta y los mensajes almacenados, devolviendo el mensaje más cercano. Por ejemplo, una consulta como ``¿cuál es la primera sesión?'' devuelve la sesión más relacionada según la similitud semántica de los mensajes (Anexo técnico, p.~\pageref{anexo:code-4-1-4-6}).
 
 \paragraph{Uso de marcas temporales para mejorar la búsqueda}
 
-Se añade un campo de marca temporal (timestamp) a los mensajes en formato semántico para poder identificar mejor el orden de los mensajes o sesiones, ya que solo con la similitud semántica no siempre se logra obtener resultados precisos en cuanto al orden cronológico.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-7}).
+Se añade un campo de marca temporal (timestamp) a los mensajes en formato semántico para poder identificar mejor el orden de los mensajes o sesiones, ya que solo con la similitud semántica no siempre se logra obtener resultados precisos en cuanto al orden cronológico (Anexo técnico, p.~\pageref{anexo:code-4-1-4-7}).
 
 \paragraph{Conclusiones de la cuarta iteración}
 
-El sistema devuelve los mensajes más similares a las consultas realizadas, basándose en la búsqueda semántica. Aunque la búsqueda semántica funciona bien, se observa que es necesario añadir marcas temporales o más contexto para mejorar los resultados en casos donde el orden de los mensajes es relevante.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-4-8}).
-
+El sistema devuelve los mensajes más similares a las consultas realizadas, basándose en la búsqueda semántica. Aunque la búsqueda semántica funciona bien, se observa que es necesario añadir marcas temporales o más contexto para mejorar los resultados en casos donde el orden de los mensajes es relevante (Anexo técnico, p.~\pageref{anexo:code-4-1-4-8}).
 
 La notebook 4 implementa un sistema que almacena sesiones de usuario en Redis, realiza búsquedas semánticas en FAISS basándose en los mensajes de esas sesiones, y mejora el proceso añadiendo marcas temporales para organizar los resultados cronológicamente. 

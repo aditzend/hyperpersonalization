@@ -1,17 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'apa7.blg'
-[29] biber-darwin:340> INFO - === Fri Jun 12, 2026, 16:42:41
-[36] Biber.pm:420> INFO - Reading 'apa7.bcf'
+[28] biber-darwin:340> INFO - === Sun Jun 14, 2026, 14:09:49
+[37] Biber.pm:420> INFO - Reading 'apa7.bcf'
 [75] Biber.pm:991> INFO - Using all citekeys in bib section 0
-[85] Biber.pm:4463> INFO - Processing section 0
+[84] Biber.pm:4463> INFO - Processing section 0
 [89] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[90] bibtex.pm:1713> INFO - LaTeX decoding ...
+[91] bibtex.pm:1713> INFO - LaTeX decoding ...
 [106] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[248] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[248] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[248] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[296] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[296] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[296] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[319] bbl.pm:676> INFO - Writing 'apa7.bbl' with encoding 'UTF-8'
-[339] bbl.pm:779> INFO - Output to apa7.bbl
+[239] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[239] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[239] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[285] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[285] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[285] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[309] bbl.pm:676> INFO - Writing 'apa7.bbl' with encoding 'UTF-8'
+[329] bbl.pm:779> INFO - Output to apa7.bbl

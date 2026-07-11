@@ -22,15 +22,10 @@ El código de la notebook\footnote{Disponible en: \url{https://github.com/aditze
 
 \paragraph{Búsqueda por similitud semántica}
 
-Se realiza una búsqueda usando \texttt{conversations.similarity\_search\_with\_score()}. La pregunta es ``¿A dónde quería ir el cliente?'' y se filtra por \texttt{person\_id} ``alexander.ditzend''. Se busca el mensaje más similar semánticamente a la pregunta.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-2-1}).
+Se realiza una búsqueda usando \texttt{conversations.similarity\_search\_with\_score()}. La pregunta es ``¿A dónde quería ir el cliente?'' y se filtra por \texttt{person\_id} ``alexander.ditzend''. Se busca el mensaje más similar semánticamente a la pregunta (Anexo técnico, p.~\pageref{anexo:code-4-1-2-1}).
 
 \paragraph{Conclusiones de la segunda iteración}
 
-El resultado devuelto es el mensaje ``hola, quiero ir a Río'' con un puntaje de similitud de 0.50811493. Este puntaje resulta de la comparación mediante la distancia coseno entre la pregunta y el contenido del mensaje:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-2-2}).
-
+El resultado devuelto es el mensaje ``hola, quiero ir a Río'' con un puntaje de similitud de 0.50811493. Este puntaje resulta de la comparación mediante la distancia coseno entre la pregunta y el contenido del mensaje (Anexo técnico, p.~\pageref{anexo:code-4-1-2-2}).
 
 El puntaje de similitud no resulta concluyente en un conjunto con un solo vector, ya que no hay otros vectores con los cuales comparar. Sin embargo, el ejemplo alcanza para comprobar la factibilidad de la aproximación: el sistema filtra los vectores por un identificador de usuario y realiza una búsqueda semántica para recuperar el mensaje que más se asemeja a la consulta planteada, a partir de los mensajes previos del usuario. Se busca ahora hacer una búsqueda por similitud semántica entre una pregunta y una pieza de información provista por el usuario.

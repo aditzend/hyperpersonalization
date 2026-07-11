@@ -12,65 +12,8 @@ El siguiente es el resultado de insertar el archivo de familia en la base de dat
 
 El obstáculo determinante surge en la lectura: la traducción del lenguaje natural del usuario a la consulta estructurada de la base (en lenguaje AQL) contiene errores de interpretación que comprometen la confiabilidad de las respuestas. Cabe aclarar el alcance de esta conclusión: no constituye una refutación categórica de las bases de grafos, sino la constatación de que, con las herramientas de traducción lenguaje natural a AQL disponibles al momento de los experimentos, el enfoque no alcanzaba la fiabilidad requerida. Por ese motivo se decide no continuar por esta vía y explorar una base documental con soporte vectorial, donde la recuperación no depende de traducir la consulta a un lenguaje formal.
 
-A continuación se encuentra el código descripto, disponible en el repositorio del proyecto\footnote{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/26-arango-norman.ipynb}.
+A continuación se encuentra el código descripto, disponible en el repositorio del proyecto\footnote{Disponible en: \url{https://github.com/aditzend/hyperpersonalization/blob/main/app/notebooks/26-arango-norman.ipynb}}.
 
-\paragraph{Inserción de los datos de Norman en la base de datos de ArangoDB}
+\paragraph{Resumen de la implementación}
 
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-1}).
-
-Resultado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-2}).
-
-Se elimina el grafo Norman si ya existe:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-3}).
-
-Se crean las colecciones necesarias:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-4}).
-
-Resultado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-5}).
-
-Instanciación del grafo ArangoDB-LangChain:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-6}).
-
-Resultado del esquema generado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-7}).
-
-Configuración de la cadena de consultas:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-8}).
-
-\paragraph{Pruebas de consultas en lenguaje natural}
-
-Se procede a hacer una pregunta desde un tercero ajeno a la persona de estudio en lenguaje natural:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-9}).
-
-Resultado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-10}).
-
-Segunda consulta:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-11}).
-
-Resultado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-12}).
-
-\paragraph{Prueba de escritura en la base de datos}
-
-Se prueba la capacidad de escritura usando lenguaje natural:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-13}).
-
-Resultado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-14}).
-
-Verificación de la inserción:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-15}).
-
-Resultado:
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-4-1-16}).
+Por tratarse de una vía descartada, el detalle del código y sus salidas se remiten al Anexo técnico y aquí solo se sintetizan las tres fases del experimento. La fase de carga e instanciación comprende la inserción de los datos de Norman y su resultado, la eliminación del grafo previo, la creación de las colecciones, la instanciación del grafo con LangChain y la configuración de la cadena de consultas (Anexo técnico, pp.~\pageref{anexo:code-4-4-1-1}, \pageref{anexo:code-4-4-1-2}, \pageref{anexo:code-4-4-1-3}, \pageref{anexo:code-4-4-1-4}, \pageref{anexo:code-4-4-1-5}, \pageref{anexo:code-4-4-1-6}, \pageref{anexo:code-4-4-1-7} y \pageref{anexo:code-4-4-1-8}). Las pruebas de lectura en lenguaje natural, con sus respectivos resultados, recogen las consultas formuladas por un tercero ajeno a la persona de estudio (Anexo técnico, pp.~\pageref{anexo:code-4-4-1-9}, \pageref{anexo:code-4-4-1-10}, \pageref{anexo:code-4-4-1-11} y \pageref{anexo:code-4-4-1-12}). Por último, la prueba de escritura mediante una sola oración en lenguaje natural y su verificación —el caso puntual que resultó prometedor— se detallan en el anexo (Anexo técnico, pp.~\pageref{anexo:code-4-4-1-13}, \pageref{anexo:code-4-4-1-14}, \pageref{anexo:code-4-4-1-15} y \pageref{anexo:code-4-4-1-16}).

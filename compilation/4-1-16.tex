@@ -4,9 +4,7 @@ En la notebook 16\footnote{Disponible en: \url{https://github.com/aditzend/hyper
 
 \paragraph{Carga de librerías y configuración}
 
-Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-1}).
+Se utilizan FAISS para realizar búsquedas semánticas y OpenAI Embeddings para vectorizar los mensajes de las conversaciones. También se configura una función para interactuar con los modelos GPT-3.5 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-16-1}).
 
 \paragraph{Simulación de conversaciones}
 
@@ -25,27 +23,19 @@ El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-2
 
 \paragraph{Extracción de datos}
 
-El sistema GPT-3.5 es utilizado para extraer la información de la conversación, como el nombre de la madre, su email y DNI, y se almacena en FAISS junto con los metadatos de la conversación, lo que permite una búsqueda eficiente en consultas posteriores.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-3}).
+El sistema GPT-3.5 es utilizado para extraer la información de la conversación, como el nombre de la madre, su email y DNI, y se almacena en FAISS junto con los metadatos de la conversación, lo que permite una búsqueda eficiente en consultas posteriores (Anexo técnico, p.~\pageref{anexo:code-4-1-16-3}).
 
 Ejemplo de extracción:
 
-``El usuario proporcionó los siguientes datos: el nombre de la madre es Sylvia, su email es sylvia@gmail.com, su DNI es 12668992 y la especialidad médica es ginecología''.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-4}).
+``El usuario proporcionó los siguientes datos: el nombre de la madre es Sylvia, su email es sylvia@gmail.com, su DNI es 12668992 y la especialidad médica es ginecología'' (Anexo técnico, p.~\pageref{anexo:code-4-1-16-4}).
 
 \paragraph{Consulta sobre turnos}
 
-Se realiza una consulta como ``¿Tengo algún turno asignado?''. El sistema recupera los datos sobre la madre del usuario y genera una respuesta que combina información de varios contextos. Sin embargo, ocurre un error donde el sistema mezcla la información del usuario con la de su madre, creando confusión sobre quién tiene el turno asignado.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-5}).
+Se realiza una consulta como ``¿Tengo algún turno asignado?''. El sistema recupera los datos sobre la madre del usuario y genera una respuesta que combina información de varios contextos. Sin embargo, ocurre un error donde el sistema mezcla la información del usuario con la de su madre, creando confusión sobre quién tiene el turno asignado (Anexo técnico, p.~\pageref{anexo:code-4-1-16-5}).
 
 \paragraph{Conclusiones de la decimosexta iteración}
 
-A pesar de extraer correctamente la información sobre la madre del usuario, el sistema genera respuestas que mezclan los datos personales de ambos, lo que lleva a inconsistencias en la respuesta del asistente virtual. Por ejemplo, se asigna el nombre del usuario (Alexander) a los detalles del turno de su madre.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-16-6}).
+A pesar de extraer correctamente la información sobre la madre del usuario, el sistema genera respuestas que mezclan los datos personales de ambos, lo que lleva a inconsistencias en la respuesta del asistente virtual. Por ejemplo, se asigna el nombre del usuario (Alexander) a los detalles del turno de su madre (Anexo técnico, p.~\pageref{anexo:code-4-1-16-6}).
 
 Como se observa en el resultado, el sistema mezcla incorrectamente el nombre del usuario (Alexander) con el email de su madre (sylvia@gmail.com), demostrando la confusión en el manejo de datos personales de múltiples personas en el contexto de la conversación.
 

@@ -4,21 +4,15 @@ En la notebook 13\footnote{Disponible en: \url{https://github.com/aditzend/hyper
 
 \paragraph{Configuración del sistema}
 
-Se utilizan FAISS para realizar las búsquedas semánticas y OpenAI Embeddings para convertir los mensajes en vectores. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-1}).
+Se utilizan FAISS para realizar las búsquedas semánticas y OpenAI Embeddings para convertir los mensajes en vectores. También se configura una función para interactuar con los modelos GPT-3.5 y GPT-4 a través de la API de OpenAI (Anexo técnico, p.~\pageref{anexo:code-4-1-13-1}).
 
 \paragraph{Simulación de conversaciones}
 
-Se crean varios contextos de conversación en los que el usuario interactúa con el asistente. En una de ellas, el usuario menciona que va a comprar pasajes para su familia de Buenos Aires a Córdoba, proporcionando detalles sobre los miembros de la familia (Ana, 20 años; Juan, 10 años) y las fechas de salida y regreso. Otra conversación incluye información sobre el programa de viajero frecuente, donde el usuario busca subir de categoría comprando millas.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-2}).
+Se crean varios contextos de conversación en los que el usuario interactúa con el asistente. En una de ellas, el usuario menciona que va a comprar pasajes para su familia de Buenos Aires a Córdoba, proporcionando detalles sobre los miembros de la familia (Ana, 20 años; Juan, 10 años) y las fechas de salida y regreso. Otra conversación incluye información sobre el programa de viajero frecuente, donde el usuario busca subir de categoría comprando millas (Anexo técnico, p.~\pageref{anexo:code-4-1-13-2}).
 
 \paragraph{Extracción de datos}
 
-Se utiliza un modelo GPT-3.5 para extraer datos relevantes de las conversaciones, como los nombres, edades, y fechas de viaje, así como detalles sobre las millas acumuladas en el programa de viajero frecuente. Esta información se almacena en FAISS para ser recuperada cuando el usuario realice consultas futuras.
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-3}).
+Se utiliza un modelo GPT-3.5 para extraer datos relevantes de las conversaciones, como los nombres, edades, y fechas de viaje, así como detalles sobre las millas acumuladas en el programa de viajero frecuente. Esta información se almacena en FAISS para ser recuperada cuando el usuario realice consultas futuras (Anexo técnico, p.~\pageref{anexo:code-4-1-13-3}).
 
 Un ejemplo de extracción generada por el sistema:
 
@@ -34,7 +28,7 @@ Se realizan varias consultas al sistema para evaluar su capacidad de recuperaci�
 
 El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-4}).
 
-\textbf{Razonamiento Cronológico y Contextual}
+\textbf{Razonamiento cronológico y contextual}
 
 Se observa que GPT-4 es más preciso en el manejo de fechas y el ajuste de edades en función del tiempo transcurrido. Por ejemplo, en una consulta sobre las edades actuales de los hijos:
 
@@ -52,9 +46,7 @@ GPT-4 demuestra un razonamiento cronológico superior, ajustando correctamente l
 
 \paragraph{Consultas complejas con múltiples contextos}
 
-El sistema también fue evaluado con consultas que requieren combinar información de diferentes conversaciones:
-
-El listado completo figura en el Anexo técnico (p.~\pageref{anexo:code-4-1-13-5}).
+El sistema también fue evaluado con consultas que requieren combinar información de diferentes conversaciones (Anexo técnico, p.~\pageref{anexo:code-4-1-13-5}).
 
 \textbf{Respuesta del sistema:}
 \begin{quote}
